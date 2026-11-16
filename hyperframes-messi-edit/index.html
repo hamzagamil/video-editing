@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Cairo"; font-weight: 900; src: url("assets/fonts/cairo-arabic-900-normal.woff2") format("woff2"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; }
+      @font-face { font-family: "Cairo"; font-weight: 900; src: url("assets/fonts/cairo-latin-900-normal.woff2") format("woff2"); unicode-range: U+0000-00FF; }
+      /* Palette from PROMPT_MESSI_AR.md §7 (contrast measured there). */
+      :root {
+        --bg-dark: #0b132b; --bg-card: #1c2541; --accent-gold: #ffd700; --accent-blue: #3a86ff;
+        --ink: #1b1d1e; --paper: #e9e0d3; --cream: #fffdf8;
+        --accent-blue-dark: #1a56c4; --accent-gold-dark: #7a5c00;
+        --ground: var(--bg-dark);
+        --font-display: "Cairo", sans-serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--ground);
+      }
+      #root {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-display);
+      }
+      #title {
+        color: var(--accent-gold);
+        font-size: 72px;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="10"
+      data-width="1080"
+      data-height="1920"
+    >
+      <h1 id="title" class="clip" data-start="0" data-duration="10" data-track-index="0">بانتظار الملفات</h1>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      // Example: tl.fromTo("#title", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 0);
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
