@@ -1,0 +1,40 @@
+<!--STYLE-->
+#g2-k { top: 300px; font-size: 50px; }
+#g2-band { position:absolute; inset:0; }
+#g2-name { top: 636px; font-size: 140px; }
+#g2-name .mask { display:inline-block; }
+#g2-h1 { top: 520px; font-size: 260px; }
+#g2-h2 { top: 880px; font-size: 196px; color: var(--accent-warm-dark); white-space:nowrap; }
+<!--/STYLE-->
+    <div id="g2-k" class="kicker"><span id="g2-k1" class="w">الاسم</span> <span id="g2-k2" class="w">اللي</span> <span id="g2-k3" class="w">كان</span> <span id="g2-k4" class="w">كله</span> <span id="g2-k5" class="w">يرمز</span> <span id="g2-k6" class="w">إلى</span></div>
+    <div id="g2-band">
+      <svg viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+        <path id="g2-bandshape" d="M150 600 H930 Q970 600 970 640 V820 Q970 860 930 860 H150 Q110 860 110 820 V640 Q110 600 150 600 Z" fill="#FFFDF7" stroke="#1B1D1E" stroke-width="8" />
+        <path id="g2-stitch" d="M160 624 H920 Q946 624 946 650 V810 Q946 836 920 836 H160 Q134 836 134 810 V650 Q134 624 160 624 Z" fill="none" stroke="#1B1D1E" stroke-width="3" stroke-dasharray="14 12" opacity="0.55" />
+        <rect id="g2-tab" x="110" y="680" width="26" height="100" rx="6" fill="#E66A21" />
+      </svg>
+      <div id="g2-name" class="hero"><span class="mask"><span id="g2-n1" class="in">حسام</span></span> <span class="mask"><span id="g2-n2" class="in">حسن</span></span></div>
+    </div>
+    <div id="g2-h1" class="hero"><span class="mask"><span class="in">الروح</span></span></div>
+    <div id="g2-h2" class="hero"><span class="mask"><span class="in">والعزيمة</span></span></div>
+  <script>
+  const tl = gsap.timeline({ paused: true });
+  const rise = (s, t, d = 0.34) => tl.fromTo(s, t < 0.06 ? { yPercent: 38, opacity: 0.55 } : { yPercent: 108, opacity: 0 }, { yPercent: 0, opacity: 1, duration: d, ease: "expo.out" }, t);
+  const bin = (s, t, d = 0.16) => tl.fromTo(s, t < 0.06 ? { opacity: 0.5, filter: "blur(4px)" } : { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: d, ease: "power2.out" }, t);
+  const bout = (s, t, d = 0.14) => tl.fromTo(s, { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: d, ease: "power2.in", immediateRender: false }, t);
+
+  tl.fromTo("#g2-bandshape, #g2-stitch, #g2-tab", { opacity: 0.5, scaleX: 0.93, transformOrigin: "540px 730px" }, { opacity: 1, scaleX: 1, duration: 0.36, ease: "expo.out", stagger: 0.04 }, 0);
+  rise("#g2-n1", 0);
+  rise("#g2-n2", {{w23}});
+  bin("#g2-k1", {{w24}});
+  bin("#g2-k2", {{w25}});
+  bin("#g2-k3", {{w26}});
+  bin("#g2-k4", {{w27}});
+  bin("#g2-k5", {{w28}});
+  bin("#g2-k6", {{w29}});
+  bout("#g2-k", {{w30}} - 0.12);
+  tl.fromTo("#g2-band", { y: 0, scale: 1, transformOrigin: "540px 730px" }, { y: -330, scale: 0.5, duration: 0.5, ease: "power3.inOut" }, {{w30}} - 0.16);
+  rise("#g2-h1 .in", {{w30}});
+  rise("#g2-h2 .in", {{w31}});
+  window.__timelines["{{ID}}"] = tl;
+  </script>

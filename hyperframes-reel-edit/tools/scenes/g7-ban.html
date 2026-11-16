@@ -1,0 +1,50 @@
+<!--STYLE-->
+#g7-k { top: 296px; font-size: 88px; font-weight: 900; color: var(--ink); }
+#g7-card { position:absolute; left:150px; top:480px; width:290px; height:400px; background:var(--accent-warm); border-radius:26px;
+  box-shadow: 0 22px 46px rgba(200,82,24,.28); }
+#g7-card i { position:absolute; inset:22px; border:3px solid rgba(255,253,247,.35); border-radius:16px; }
+#g7-num { position:absolute; left:500px; width:420px; top:410px; direction:ltr; text-align:center; font-weight:900; font-size:380px; line-height:1.05; color:var(--ink); }
+#g7-unit { position:absolute; left:500px; width:420px; top:876px; text-align:center; font-weight:800; font-size:96px; line-height:1.2; color:var(--ink); }
+.g7-slot { position:absolute; top:1040px; width:252px; height:140px; background:var(--cream); border:4px solid var(--ink); border-radius:20px; overflow:hidden; }
+.g7-slot svg { left:0; top:0; }
+.g7-bar { position:absolute; left:18px; right:18px; top:48px; height:44px; border-radius:8px; background:var(--ink); }
+#g7-src { top: 1206px; font-size: 64px; font-weight: 800; color: var(--ink-soft); }
+<!--/STYLE-->
+    <div id="g7-tag" class="tag"><b>03</b> <i>/ 04</i></div>
+    <div id="g7-k" class="kicker"><span id="g7-k1" class="w">عقوبة</span> <span id="g7-k2" class="w">الإيقاف</span></div>
+    <div id="g7-card"><i></i></div>
+    <div id="g7-num"><span class="mask"><span class="in">3</span></span></div>
+    <div id="g7-unit">مباريات</div>
+    <div id="g7-s1" class="g7-slot" style="left:710px">
+      <svg viewBox="0 0 252 140" width="252" height="140" aria-hidden="true"><g fill="none" stroke="#1B1D1E" stroke-width="3" opacity=".35"><path d="M126 16 V124" /><circle cx="126" cy="70" r="28" /><rect x="18" y="16" width="216" height="108" rx="6" /></g></svg>
+      <div id="g7-b1" class="g7-bar"></div>
+    </div>
+    <div id="g7-s2" class="g7-slot" style="left:414px">
+      <svg viewBox="0 0 252 140" width="252" height="140" aria-hidden="true"><g fill="none" stroke="#1B1D1E" stroke-width="3" opacity=".35"><path d="M126 16 V124" /><circle cx="126" cy="70" r="28" /><rect x="18" y="16" width="216" height="108" rx="6" /></g></svg>
+      <div id="g7-b2" class="g7-bar"></div>
+    </div>
+    <div id="g7-s3" class="g7-slot" style="left:118px">
+      <svg viewBox="0 0 252 140" width="252" height="140" aria-hidden="true"><g fill="none" stroke="#1B1D1E" stroke-width="3" opacity=".35"><path d="M126 16 V124" /><circle cx="126" cy="70" r="28" /><rect x="18" y="16" width="216" height="108" rx="6" /></g></svg>
+      <div id="g7-b3" class="g7-bar"></div>
+    </div>
+    <div id="g7-src" class="hero"><span id="g7-r1" class="w">من</span> <span id="g7-r2" class="w">الفيفا</span></div>
+  <script>
+  const tl = gsap.timeline({ paused: true });
+  const rise = (s, t, d = 0.34) => tl.fromTo(s, t < 0.06 ? { yPercent: 38, opacity: 0.55 } : { yPercent: 108, opacity: 0 }, { yPercent: 0, opacity: 1, duration: d, ease: "expo.out" }, t);
+  const bin = (s, t, d = 0.16) => tl.fromTo(s, t < 0.06 ? { opacity: 0.5, filter: "blur(4px)" } : { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: d, ease: "power2.out" }, t);
+
+  tl.fromTo("#g7-tag", { opacity: 0.4 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 0);
+  bin("#g7-k1", 0);
+  tl.fromTo("#g7-card", { opacity: 0.6, x: -46, rotation: 10, transformOrigin: "50% 100%" }, { opacity: 1, x: 0, rotation: -8, duration: 0.5, ease: "expo.out" }, 0);
+  bin("#g7-k2", {{w108}});
+  rise("#g7-num .in", {{w111}}, 0.3);
+  tl.fromTo("#g7-num", { scale: 1.18, transformOrigin: "50% 60%" }, { scale: 1, duration: 0.42, ease: "expo.out" }, {{w111}});
+  bin("#g7-unit", {{w112}});
+  tl.fromTo("#g7-s1, #g7-s2, #g7-s3", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.32, ease: "expo.out", stagger: 0.06 }, {{w111}} - 0.1);
+  tl.fromTo("#g7-b1", { scaleX: 0, transformOrigin: "100% 50%" }, { scaleX: 1, duration: 0.16, ease: "power3.out" }, {{w112}} + 0.08);
+  tl.fromTo("#g7-b2", { scaleX: 0, transformOrigin: "100% 50%" }, { scaleX: 1, duration: 0.16, ease: "power3.out" }, {{w112}} + 0.24);
+  tl.fromTo("#g7-b3", { scaleX: 0, transformOrigin: "100% 50%" }, { scaleX: 1, duration: 0.16, ease: "power3.out" }, {{w112}} + 0.40);
+  bin("#g7-r1", {{w113}});
+  bin("#g7-r2", {{w114}});
+  window.__timelines["{{ID}}"] = tl;
+  </script>

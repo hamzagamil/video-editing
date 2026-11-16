@@ -1,0 +1,48 @@
+<!--STYLE-->
+#g6-k { top: 290px; font-size: 80px; font-weight: 900; color: var(--ink); }
+#g6-card { position:absolute; left:470px; top:510px; width:500px; height:340px; background:var(--cream);
+  border:5px solid var(--ink); border-radius:28px; box-shadow: 0 20px 44px rgba(27,29,30,.12); }
+#g6-q { position:absolute; top:40px; right:44px; width:120px; height:84px; }
+.g6-bar { position:absolute; right:44px; height:16px; border-radius:8px; background:rgba(27,29,30,.2); }
+#g6-sub { top: 960px; font-size: 64px; font-weight: 800; color: var(--ink-soft); }
+#g6-h { top: 1030px; font-size: 190px; }
+<!--/STYLE-->
+    <div id="g6-tag" class="tag"><b>02</b> <i>/ 04</i></div>
+    <div id="g6-k" class="kicker"><span id="g6-k1" class="w">تصريحات</span> <span id="g6-k2" class="w">حسام</span></div>
+    <svg viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <g transform="translate(0 -90)" fill="none" stroke="#1B1D1E" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+        <path id="g6-head" d="M300 560 C 345 560 380 595 380 640 V 740 C 380 785 345 820 300 820 C 255 820 220 785 220 740 V 640 C 220 595 255 560 300 560 Z" pathLength="100" stroke-dasharray="100 120" />
+        <path id="g6-grille" d="M232 650 H368 M226 700 H374 M232 750 H368" stroke-width="5" opacity=".55" pathLength="100" stroke-dasharray="100 120" />
+        <path id="g6-yoke" d="M178 720 C 178 870 422 870 422 720" pathLength="100" stroke-dasharray="100 120" />
+        <path id="g6-stand" d="M300 860 V 1010 M220 1010 H380" pathLength="100" stroke-dasharray="100 120" />
+      </g>
+      <path id="g6-tail" d="M560 846 L520 920 L620 846" fill="#FFFDF7" stroke="#1B1D1E" stroke-width="5" stroke-linejoin="round" />
+    </svg>
+    <div id="g6-card">
+      <svg id="g6-q" viewBox="0 0 120 84" width="120" height="84" aria-hidden="true"><path d="M0 84 V44 Q0 6 44 0 V18 Q22 24 22 44 H46 V84 Z M68 84 V44 Q68 6 112 0 V18 Q90 24 90 44 H114 V84 Z" fill="#E66A21" /></svg>
+      <div class="g6-bar" style="top:150px;width:420px"></div>
+      <div class="g6-bar" style="top:196px;width:380px"></div>
+      <div class="g6-bar" style="top:242px;width:250px"></div>
+    </div>
+    <div id="g6-sub" class="hero"><span id="g6-s1" class="w">عن</span> <span id="g6-s2" class="w">محمد</span></div>
+    <div id="g6-h" class="hero"><span class="mask"><span class="in">الشناوي</span></span></div>
+  <script>
+  const tl = gsap.timeline({ paused: true });
+  const rise = (s, t, d = 0.34) => tl.fromTo(s, t < 0.06 ? { yPercent: 38, opacity: 0.55 } : { yPercent: 108, opacity: 0 }, { yPercent: 0, opacity: 1, duration: d, ease: "expo.out" }, t);
+  const bin = (s, t, d = 0.16) => tl.fromTo(s, t < 0.06 ? { opacity: 0.5, filter: "blur(4px)" } : { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: d, ease: "power2.out" }, t);
+  const draw = (s, t, d, e = "power2.inOut") => tl.fromTo(s, { strokeDashoffset: t < 0.06 ? 72 : 110 }, { strokeDashoffset: 0, duration: d, ease: e }, t);
+
+  tl.fromTo("#g6-tag", { opacity: 0.4 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 0);
+  bin("#g6-k1", 0);
+  draw("#g6-head", 0, 0.42);
+  draw("#g6-grille", 0.3, 0.3);
+  draw("#g6-yoke", 0.24, 0.36);
+  draw("#g6-stand", 0.42, 0.3);
+  tl.fromTo("#g6-card, #g6-tail", { opacity: 0, scale: 0.9, transformOrigin: "20% 100%" }, { opacity: 1, scale: 1, duration: 0.4, ease: "expo.out" }, 0.38);
+  tl.fromTo(".g6-bar", { scaleX: 0, transformOrigin: "100% 50%" }, { scaleX: 1, duration: 0.3, ease: "power3.out", stagger: 0.07 }, 0.6);
+  bin("#g6-k2", {{w93}});
+  bin("#g6-s1", {{w94}});
+  bin("#g6-s2", {{w95}});
+  rise("#g6-h .in", {{w96}});
+  window.__timelines["{{ID}}"] = tl;
+  </script>

@@ -1,0 +1,38 @@
+<!--STYLE-->
+#g8-k { top: 290px; font-size: 52px; }
+#g8-h { top: 330px; font-size: 196px; }
+#g8-core { position:absolute; left:440px; top:860px; width:200px; height:200px; border-radius:50%; background:var(--ink);
+  color:var(--cream); font:800 46px/200px 'Cairo',sans-serif; text-align:center; }
+.g8-pill { position:absolute; height:104px; padding:0 40px; border-radius:52px; border:5px solid var(--ink);
+  background:var(--cream); font:800 60px/94px 'Cairo',sans-serif; white-space:nowrap; text-align:center; }
+#g8-p1 { left:610px; top:741px; }
+#g8-p2 { left:120px; top:1103px; background:var(--accent-warm); border-color:var(--accent-warm); color:var(--cream); }
+<!--/STYLE-->
+    <div id="g8-k" class="kicker"><span id="g8-k1" class="w">تحولت</span> <span id="g8-k2" class="w">ساعتها</span> <span id="g8-k3" class="w">إلى</span></div>
+    <div id="g8-h" class="hero"><span class="mask"><span class="in">أزمة</span></span></div>
+    <svg viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <circle id="g8-r1" cx="540" cy="960" r="150" fill="none" stroke="#1B1D1E" stroke-width="5" />
+      <circle id="g8-r2" cx="540" cy="960" r="250" fill="none" stroke="#1B1D1E" stroke-width="5" opacity=".7" />
+      <circle id="g8-r3" cx="540" cy="960" r="340" fill="none" stroke="#E66A21" stroke-width="6" />
+    </svg>
+    <div id="g8-core">شخصية</div>
+    <div id="g8-p1" class="g8-pill">إعلامية</div>
+    <div id="g8-p2" class="g8-pill">مؤسسية</div>
+  <script>
+  const tl = gsap.timeline({ paused: true });
+  const rise = (s, t, d = 0.34) => tl.fromTo(s, t < 0.06 ? { yPercent: 38, opacity: 0.55 } : { yPercent: 108, opacity: 0 }, { yPercent: 0, opacity: 1, duration: d, ease: "expo.out" }, t);
+  const bin = (s, t, d = 0.16) => tl.fromTo(s, t < 0.06 ? { opacity: 0.5, filter: "blur(4px)" } : { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: d, ease: "power2.out" }, t);
+  const ring = (s, t) => tl.fromTo(s, { scale: 0.55, opacity: 0, transformOrigin: "540px 960px" }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, t);
+
+  bin("#g8-k1", 0);
+  tl.fromTo("#g8-core", { scale: 0.72, opacity: 0.6 }, { scale: 1, opacity: 1, duration: 0.36, ease: "expo.out" }, 0);
+  ring("#g8-r1", 0.24);
+  bin("#g8-k2", {{w129}});
+  ring("#g8-r2", {{w129}});
+  bin("#g8-k3", {{w130}});
+  rise("#g8-h .in", {{w131}});
+  tl.fromTo("#g8-p1", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.34, ease: "expo.out" }, {{w132}});
+  ring("#g8-r3", {{w133}} - 0.12);
+  tl.fromTo("#g8-p2", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.34, ease: "expo.out" }, {{w133}});
+  window.__timelines["{{ID}}"] = tl;
+  </script>

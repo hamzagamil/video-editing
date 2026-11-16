@@ -1,0 +1,61 @@
+<!--STYLE-->
+#g1-k { top: 312px; }
+#g1-k .rule { display:inline-block; width:46px; height:6px; border-radius:3px; background:var(--accent-warm); vertical-align:middle; margin-left:16px; }
+#g1-h1 { top: 366px; font-size: 220px; }
+#g1-h2 { top: 366px; font-size: 210px; }
+#g1-sub { top: 654px; font-size: 60px; font-weight: 800; color: var(--ink-soft); }
+#g1-h3 { top: 396px; left: 60px; right: 130px; font-size: 138px; color: var(--accent-warm-dark); white-space:nowrap; }
+#g1-h3 .mask { display:inline-block; }
+.g1-lbl { position:absolute; width:320px; text-align:center; font:800 48px/1.2 'Cairo',sans-serif; color:var(--ink); }
+<!--/STYLE-->
+    <div id="g1-k" class="kicker"><span class="rule"></span><span class="w">الكرة</span> <span class="w">المصرية</span></div>
+    <div id="g1-h1" class="hero"><span class="mask"><span class="in">أسطورة</span></span></div>
+    <div id="g1-h2" class="hero"><span class="mask"><span class="in">مدرب</span></span></div>
+    <div id="g1-sub" class="hero"><span id="g1-s1" class="w">يقود</span> <span id="g1-s2" class="w">المنتخب</span></div>
+    <div id="g1-h3" class="hero"><span class="mask"><span id="g1-h3a" class="in">كأس</span></span> <span class="mask"><span id="g1-h3b" class="in">العالم</span></span></div>
+    <svg id="g1-svg" viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <path id="g1-route1" d="M720 1160 C 720 1070, 560 1090, 520 990" fill="none" stroke="#1B1D1E" stroke-width="9" stroke-linecap="round" pathLength="100" stroke-dasharray="100 120" />
+      <path id="g1-route2" d="M520 990 C 480 900, 330 930, 300 886" fill="none" stroke="#1B1D1E" stroke-width="9" stroke-linecap="round" pathLength="100" stroke-dasharray="100 120" />
+      <circle id="g1-n1" cx="720" cy="1160" r="20" fill="#1B1D1E" />
+      <circle id="g1-n2" cx="520" cy="990" r="20" fill="#1B1D1E" />
+      <g transform="translate(20 -60)" fill="none" stroke="#1B1D1E" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+        <path id="g1-cup" d="M196 716 L364 716 C364 800 322 852 280 858 C238 852 196 800 196 716 Z" pathLength="100" stroke-dasharray="100 120" />
+        <path id="g1-hl" d="M200 738 C150 738 150 806 214 812" pathLength="100" stroke-dasharray="100 120" />
+        <path id="g1-hr" d="M360 738 C410 738 410 806 346 812" pathLength="100" stroke-dasharray="100 120" />
+        <path id="g1-stem" d="M280 858 L280 902 M244 902 L316 902 L328 946 L232 946 Z" pathLength="100" stroke-dasharray="100 120" />
+      </g>
+      <path id="g1-rim" transform="translate(20 -60)" d="M190 716 L370 716" stroke="#D8A44A" stroke-width="10" stroke-linecap="round" pathLength="100" stroke-dasharray="100 120" fill="none" />
+    </svg>
+    <div id="g1-l1" class="g1-lbl" style="left:380px;top:1122px;width:300px;text-align:right">أسطورة</div>
+    <div id="g1-l2" class="g1-lbl" style="left:566px;top:930px;width:260px;text-align:left">مدرب</div>
+  <script>
+  const tl = gsap.timeline({ paused: true });
+  const rise = (s, t, d = 0.34) => tl.fromTo(s, t < 0.06 ? { yPercent: 38, opacity: 0.55 } : { yPercent: 108, opacity: 0 }, { yPercent: 0, opacity: 1, duration: d, ease: "expo.out" }, t);
+  const bin = (s, t, d = 0.16) => tl.fromTo(s, t < 0.06 ? { opacity: 0.5, filter: "blur(4px)" } : { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: d, ease: "power2.out" }, t);
+  const bout = (s, t, d = 0.14) => tl.fromTo(s, { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: d, ease: "power2.in", immediateRender: false }, t);
+  const draw = (s, t, d, e = "power2.inOut") => tl.fromTo(s, { strokeDashoffset: t < 0.06 ? 72 : 110 }, { strokeDashoffset: 0, duration: d, ease: e }, t);
+  const pop = (s, t) => tl.fromTo(s, { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.3, ease: "expo.out" }, t);
+
+  rise("#g1-h1 .in", 0);
+  pop("#g1-n1", 0.08);
+  bin("#g1-l1", 0.18);
+  bin("#g1-k", {{w6}});
+  bout("#g1-h1", {{w8}} - 0.1);
+  rise("#g1-h2 .in", {{w8}});
+  draw("#g1-route1", {{w8}}, 0.55);
+  pop("#g1-n2", {{w8}} + 0.5);
+  bin("#g1-l2", {{w8}} + 0.56);
+  bin("#g1-s1", {{w9}});
+  bin("#g1-s2", {{w10}});
+  bout("#g1-h2", {{w12}} - 0.1);
+  bout("#g1-sub", {{w12}} - 0.1);
+  rise("#g1-h3a", {{w12}});
+  rise("#g1-h3b", {{w13}});
+  draw("#g1-route2", {{w12}} - 0.06, 0.34);
+  draw("#g1-cup", {{w12}} + 0.1, 0.4);
+  draw("#g1-hl", {{w12}} + 0.3, 0.2);
+  draw("#g1-hr", {{w12}} + 0.3, 0.2);
+  draw("#g1-stem", {{w12}} + 0.34, 0.24);
+  draw("#g1-rim", {{w12}} + 0.56, 0.18, "power3.out");
+  window.__timelines["{{ID}}"] = tl;
+  </script>

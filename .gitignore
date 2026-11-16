@@ -1,0 +1,11 @@
+# raw + rendered media (too large for git)
+*.mov
+*.MOV
+*.mp4
+*.wav
+node_modules/
+.cache/
+.hyperframes/
+hyperframes-reel-edit/work/
+hyperframes-reel-edit/.media/audio/
+__pycache__/

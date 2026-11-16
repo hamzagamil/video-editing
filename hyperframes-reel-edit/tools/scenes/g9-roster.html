@@ -1,0 +1,58 @@
+<!--STYLE-->
+#g9-k { top: 290px; font-size: 56px; }
+#g9-card { position:absolute; left:130px; top:380px; width:820px; height:800px; background:var(--cream);
+  border:5px solid var(--ink); border-radius:24px; box-shadow: 0 24px 50px rgba(27,29,30,.13); }
+#g9-hd { position:absolute; top:34px; right:54px; font:800 46px/1.2 'Cairo',sans-serif; color:var(--ink-soft); }
+#g9-role { position:absolute; top:118px; right:54px; font:700 40px/1.2 'Cairo',sans-serif; color:var(--ink-soft); }
+#g9-name { position:absolute; top:154px; right:54px; font:900 100px/1.2 'Cairo',sans-serif; color:var(--ink); }
+.g9-row { position:absolute; right:54px; left:54px; height:90px; }
+.g9-row .av { position:absolute; right:0; top:10px; width:70px; height:70px; border-radius:50%; border:4px solid var(--ink); opacity:.55; }
+.g9-row .b1 { position:absolute; right:100px; top:20px; width:330px; height:20px; border-radius:10px; background:rgba(27,29,30,.22); }
+.g9-row .b2 { position:absolute; right:100px; top:56px; width:210px; height:14px; border-radius:7px; background:rgba(27,29,30,.12); }
+.g9-strike { position:absolute; right:40px; left:40px; height:10px; border-radius:5px; background:var(--accent-warm); }
+#g9-stamp { position:absolute; left:170px; top:940px; padding:0 44px; border:9px solid var(--accent-warm); border-radius:20px;
+  color:var(--accent-warm); font:900 150px/1.25 'Cairo',sans-serif; background:rgba(246,240,231,.82); }
+#g9-ctx { top: 1210px; font-size: 68px; font-weight: 800; }
+<!--/STYLE-->
+    <div id="g9-k" class="kicker"><span id="g9-k1" class="w">فاضطرت</span> <span id="g9-k2" class="w">إن</span> <span id="g9-k3" class="w">هي</span> <span id="g9-k4" class="w">تقيل</span></div>
+    <div id="g9-card">
+      <div id="g9-hd">الجهاز الفني</div>
+      <div id="g9-role">المدير الفني</div>
+      <div id="g9-name"><span id="g9-n1" class="w">حسام</span> <span id="g9-n2" class="w">حسن</span></div>
+      <div id="g9-x0" class="g9-strike" style="top:226px"></div>
+      <div id="g9-r1" class="g9-row" style="top:350px"><i class="av"></i><i class="b1"></i><i class="b2"></i></div>
+      <div id="g9-r2" class="g9-row" style="top:450px"><i class="av"></i><i class="b1"></i><i class="b2"></i></div>
+      <div id="g9-r3" class="g9-row" style="top:550px"><i class="av"></i><i class="b1"></i><i class="b2"></i></div>
+      <div id="g9-r4" class="g9-row" style="top:650px"><i class="av"></i><i class="b1"></i><i class="b2"></i></div>
+      <div id="g9-x1" class="g9-strike" style="top:390px"></div>
+      <div id="g9-x2" class="g9-strike" style="top:490px"></div>
+      <div id="g9-x3" class="g9-strike" style="top:590px"></div>
+      <div id="g9-x4" class="g9-strike" style="top:690px"></div>
+    </div>
+    <div id="g9-stamp">إقالة</div>
+    <div id="g9-ctx" class="hero"><span id="g9-c1" class="w">والجهاز</span> <span id="g9-c2" class="w">المعاون</span> <span id="g9-c3" class="w warmd">كله</span></div>
+  <script>
+  const tl = gsap.timeline({ paused: true });
+  const bin = (s, t, d = 0.16) => tl.fromTo(s, t < 0.06 ? { opacity: 0.5, filter: "blur(4px)" } : { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: d, ease: "power2.out" }, t);
+  const strike = (s, t) => tl.fromTo(s, { scaleX: 0, transformOrigin: "100% 50%" }, { scaleX: 1, duration: 0.2, ease: "power3.out" }, t);
+
+  tl.fromTo("#g9-card", { opacity: 0.6, y: 34 }, { opacity: 1, y: 0, duration: 0.42, ease: "expo.out" }, 0);
+  bin("#g9-k1", 0);
+  tl.fromTo("#g9-hd, #g9-role", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 0.14);
+  tl.fromTo("#g9-r1, #g9-r2, #g9-r3, #g9-r4", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.3, ease: "expo.out", stagger: 0.06 }, 0.2);
+  bin("#g9-k2", {{w148}});
+  bin("#g9-k3", {{w149}});
+  bin("#g9-k4", {{w150}});
+  tl.fromTo("#g9-stamp", { opacity: 0, scale: 1.7, rotation: -4 }, { opacity: 1, scale: 1, rotation: -12, duration: 0.2, ease: "power4.out" }, {{w150}});
+  bin("#g9-n1", {{w151}});
+  bin("#g9-n2", {{w152}});
+  strike("#g9-x0", {{w152e}});
+  bin("#g9-c1", {{w153}});
+  strike("#g9-x1", {{w153}});
+  strike("#g9-x2", {{w153}} + 0.16);
+  bin("#g9-c2", {{w154}});
+  strike("#g9-x3", {{w154}});
+  strike("#g9-x4", {{w154}} + 0.16);
+  bin("#g9-c3", {{w155}});
+  window.__timelines["{{ID}}"] = tl;
+  </script>

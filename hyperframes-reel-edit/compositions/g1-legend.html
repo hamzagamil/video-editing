@@ -1,0 +1,98 @@
+<template>
+  <style>
+@font-face{font-family:'Cairo';font-style:normal;font-weight:400;font-display:block;src:url('assets/fonts/cairo-arabic-400-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:400;font-display:block;src:url('assets/fonts/cairo-latin-400-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:600;font-display:block;src:url('assets/fonts/cairo-arabic-600-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:600;font-display:block;src:url('assets/fonts/cairo-latin-600-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:700;font-display:block;src:url('assets/fonts/cairo-arabic-700-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:700;font-display:block;src:url('assets/fonts/cairo-latin-700-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:800;font-display:block;src:url('assets/fonts/cairo-arabic-800-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:800;font-display:block;src:url('assets/fonts/cairo-latin-800-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:900;font-display:block;src:url('assets/fonts/cairo-arabic-900-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:900;font-display:block;src:url('assets/fonts/cairo-latin-900-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+
+#root { position:absolute; inset:0; overflow:hidden; direction:rtl;   --paper:#E9E0D3; --paper-dark:#D4C8B8; --paper-light:#F6F0E7; --cream:#FFFDF7;  --ink:#1B1D1E; --ink-soft:#3A3D3E; --accent-warm:#E66A21; --accent-warm-dark:#C85218;  --accent-cool:#2A8791; --accent-cool-dark:#216A72; --accent-gold:#D8A44A;
+  background: radial-gradient(120% 85% at 50% 30%, #F6F0E7 0%, #E9E0D3 56%, #DACDBB 100%);
+  font-family:'Cairo', sans-serif; color:var(--ink); }
+#root .sheet { position:absolute; inset:46px; border:2px solid rgba(27,29,30,.09); border-radius:4px; }
+#root .kicker { position:absolute; left:80px; right:80px; text-align:center; font-weight:700;
+  font-size:46px; line-height:1.3; color:var(--ink-soft); }
+#root .hero { position:absolute; left:70px; right:70px; text-align:center; font-weight:900;
+  line-height:1.12; color:var(--ink); }
+#root .mask { display:block; overflow:hidden; padding:0.2em 0.06em 0.36em; margin:-0.1em -0.06em -0.2em; }
+#root .mask > .in { display:block; }
+#root .w { display:inline-block; }
+#root .warm { color:var(--accent-warm); }
+#root .cool { color:var(--accent-cool); }
+#root .warmd { color:var(--accent-warm-dark); }
+#root .tag { position:absolute; top:150px; right:84px; font:800 34px/1 'Cairo',sans-serif;
+  letter-spacing:.02em; color:var(--ink); direction:ltr; }
+#root .tag b { color:var(--accent-warm); }
+#root .tag i { font-style:normal; color:rgba(27,29,30,.35); }
+#root svg { position:absolute; overflow:visible; }
+
+#g1-k { top: 312px; }
+#g1-k .rule { display:inline-block; width:46px; height:6px; border-radius:3px; background:var(--accent-warm); vertical-align:middle; margin-left:16px; }
+#g1-h1 { top: 366px; font-size: 220px; }
+#g1-h2 { top: 366px; font-size: 210px; }
+#g1-sub { top: 654px; font-size: 60px; font-weight: 800; color: var(--ink-soft); }
+#g1-h3 { top: 396px; left: 60px; right: 130px; font-size: 138px; color: var(--accent-warm-dark); white-space:nowrap; }
+#g1-h3 .mask { display:inline-block; }
+.g1-lbl { position:absolute; width:320px; text-align:center; font:800 48px/1.2 'Cairo',sans-serif; color:var(--ink); }
+
+  </style>
+  <div id="root" data-composition-id="g1" data-width="1080" data-height="1920" data-duration="4.3" lang="ar" dir="rtl">
+    <div class="sheet" aria-hidden="true"></div>
+<div id="g1-k" class="kicker"><span class="rule"></span><span class="w">الكرة</span> <span class="w">المصرية</span></div>
+    <div id="g1-h1" class="hero"><span class="mask"><span class="in">أسطورة</span></span></div>
+    <div id="g1-h2" class="hero"><span class="mask"><span class="in">مدرب</span></span></div>
+    <div id="g1-sub" class="hero"><span id="g1-s1" class="w">يقود</span> <span id="g1-s2" class="w">المنتخب</span></div>
+    <div id="g1-h3" class="hero"><span class="mask"><span id="g1-h3a" class="in">كأس</span></span> <span class="mask"><span id="g1-h3b" class="in">العالم</span></span></div>
+    <svg id="g1-svg" viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <path id="g1-route1" d="M720 1160 C 720 1070, 560 1090, 520 990" fill="none" stroke="#1B1D1E" stroke-width="9" stroke-linecap="round" pathLength="100" stroke-dasharray="100 120" />
+      <path id="g1-route2" d="M520 990 C 480 900, 330 930, 300 886" fill="none" stroke="#1B1D1E" stroke-width="9" stroke-linecap="round" pathLength="100" stroke-dasharray="100 120" />
+      <circle id="g1-n1" cx="720" cy="1160" r="20" fill="#1B1D1E" />
+      <circle id="g1-n2" cx="520" cy="990" r="20" fill="#1B1D1E" />
+      <g transform="translate(20 -60)" fill="none" stroke="#1B1D1E" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+        <path id="g1-cup" d="M196 716 L364 716 C364 800 322 852 280 858 C238 852 196 800 196 716 Z" pathLength="100" stroke-dasharray="100 120" />
+        <path id="g1-hl" d="M200 738 C150 738 150 806 214 812" pathLength="100" stroke-dasharray="100 120" />
+        <path id="g1-hr" d="M360 738 C410 738 410 806 346 812" pathLength="100" stroke-dasharray="100 120" />
+        <path id="g1-stem" d="M280 858 L280 902 M244 902 L316 902 L328 946 L232 946 Z" pathLength="100" stroke-dasharray="100 120" />
+      </g>
+      <path id="g1-rim" transform="translate(20 -60)" d="M190 716 L370 716" stroke="#D8A44A" stroke-width="10" stroke-linecap="round" pathLength="100" stroke-dasharray="100 120" fill="none" />
+    </svg>
+    <div id="g1-l1" class="g1-lbl" style="left:380px;top:1122px;width:300px;text-align:right">أسطورة</div>
+    <div id="g1-l2" class="g1-lbl" style="left:566px;top:930px;width:260px;text-align:left">مدرب</div>
+  </div>
+  <script>
+  const tl = gsap.timeline({ paused: true });
+  const rise = (s, t, d = 0.34) => tl.fromTo(s, t < 0.06 ? { yPercent: 38, opacity: 0.55 } : { yPercent: 108, opacity: 0 }, { yPercent: 0, opacity: 1, duration: d, ease: "expo.out" }, t);
+  const bin = (s, t, d = 0.16) => tl.fromTo(s, t < 0.06 ? { opacity: 0.5, filter: "blur(4px)" } : { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: d, ease: "power2.out" }, t);
+  const bout = (s, t, d = 0.14) => tl.fromTo(s, { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: d, ease: "power2.in", immediateRender: false }, t);
+  const draw = (s, t, d, e = "power2.inOut") => tl.fromTo(s, { strokeDashoffset: t < 0.06 ? 72 : 110 }, { strokeDashoffset: 0, duration: d, ease: e }, t);
+  const pop = (s, t) => tl.fromTo(s, { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.3, ease: "expo.out" }, t);
+
+  rise("#g1-h1 .in", 0);
+  pop("#g1-n1", 0.08);
+  bin("#g1-l1", 0.18);
+  bin("#g1-k", 0.58);
+  bout("#g1-h1", 1.62 - 0.1);
+  rise("#g1-h2 .in", 1.62);
+  draw("#g1-route1", 1.62, 0.55);
+  pop("#g1-n2", 1.62 + 0.5);
+  bin("#g1-l2", 1.62 + 0.56);
+  bin("#g1-s1", 2.14);
+  bin("#g1-s2", 2.6);
+  bout("#g1-h2", 3.32 - 0.1);
+  bout("#g1-sub", 3.32 - 0.1);
+  rise("#g1-h3a", 3.32);
+  rise("#g1-h3b", 3.56);
+  draw("#g1-route2", 3.32 - 0.06, 0.34);
+  draw("#g1-cup", 3.32 + 0.1, 0.4);
+  draw("#g1-hl", 3.32 + 0.3, 0.2);
+  draw("#g1-hr", 3.32 + 0.3, 0.2);
+  draw("#g1-stem", 3.32 + 0.34, 0.24);
+  draw("#g1-rim", 3.32 + 0.56, 0.18, "power3.out");
+  window.__timelines["g1"] = tl;
+  </script>
+</template>

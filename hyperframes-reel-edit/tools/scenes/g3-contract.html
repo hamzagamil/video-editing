@@ -1,0 +1,41 @@
+<!--STYLE-->
+#g3-k { top: 290px; font-size: 76px; font-weight: 900; color: var(--ink); }
+#g3-card { position:absolute; left:190px; top:400px; width:700px; height:840px; background:var(--cream);
+  border:5px solid var(--ink); border-radius:16px; box-shadow: 0 24px 50px rgba(27,29,30,.14); }
+#g3-title { position:absolute; top:44px; right:56px; font:900 60px/1.2 'Cairo',sans-serif; color:var(--ink); }
+#g3-title i { display:block; width:120px; height:8px; margin-top:8px; margin-right:auto; border-radius:4px; background:var(--accent-warm); }
+.g3-line { position:absolute; right:56px; height:8px; border-radius:4px; background:rgba(27,29,30,.16); }
+#g3-year { position:absolute; left:0; right:0; top:450px; direction:ltr; text-align:center; font-weight:900; font-size:230px; line-height:1.1; color:var(--accent-warm-dark); }
+#g3-card svg { left:0; top:0; }
+<!--/STYLE-->
+    <div id="g3-k" class="kicker"><span id="g3-k1" class="w">وكان</span> <span id="g3-k2" class="w">عقده</span> <span id="g3-k3" class="w">مستمر</span></div>
+    <div id="g3-card">
+      <div id="g3-title">العقد<i></i></div>
+      <div class="g3-line" id="g3-l1" style="top:200px;width:588px"></div>
+      <div class="g3-line" id="g3-l2" style="top:252px;width:540px"></div>
+      <div class="g3-line" id="g3-l3" style="top:304px;width:588px"></div>
+      <div class="g3-line" id="g3-l4" style="top:356px;width:420px"></div>
+      <div id="g3-year"><span class="mask"><span class="in">2030</span></span></div>
+      <svg viewBox="0 0 700 840" width="700" height="840" aria-hidden="true">
+        <path id="g3-sigline" d="M60 770 L330 770" stroke="#1B1D1E" stroke-width="4" stroke-linecap="round" fill="none" opacity=".4" />
+        <path id="g3-sig" d="M78 750 C 110 690, 140 780, 170 730 S 230 710, 250 750 S 300 720, 318 740" stroke="#1B1D1E" stroke-width="6" stroke-linecap="round" fill="none" pathLength="100" stroke-dasharray="100 120" />
+        <path id="g3-crack" d="M36 110 L180 250 L140 320 L330 460 L298 530 L480 690 L446 720 L668 832" stroke="#E66A21" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" fill="none" pathLength="100" stroke-dasharray="100 120" />
+      </svg>
+    </div>
+  <script>
+  const tl = gsap.timeline({ paused: true });
+  const rise = (s, t, d = 0.34) => tl.fromTo(s, t < 0.06 ? { yPercent: 38, opacity: 0.55 } : { yPercent: 108, opacity: 0 }, { yPercent: 0, opacity: 1, duration: d, ease: "expo.out" }, t);
+  const bin = (s, t, d = 0.16) => tl.fromTo(s, t < 0.06 ? { opacity: 0.5, filter: "blur(4px)" } : { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: d, ease: "power2.out" }, t);
+  const draw = (s, t, d, e = "power2.inOut") => tl.fromTo(s, { strokeDashoffset: t < 0.06 ? 72 : 110 }, { strokeDashoffset: 0, duration: d, ease: e }, t);
+
+  tl.fromTo("#g3-card", { opacity: 0.6, y: 34, rotation: -4 }, { opacity: 1, y: 0, rotation: -2, duration: 0.42, ease: "expo.out" }, 0);
+  bin("#g3-k1", 0);
+  tl.fromTo(".g3-line", { scaleX: 0, transformOrigin: "100% 50%" }, { scaleX: 1, duration: 0.3, ease: "power3.out", stagger: 0.05 }, 0.16);
+  bin("#g3-k2", {{w49}});
+  bin("#g3-k3", {{w50}});
+  draw("#g3-sig", {{w50}}, 0.45);
+  rise("#g3-year .in", {{w51}}, 0.36);
+  tl.fromTo("#g3-year", { scale: 1.1, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.5, ease: "expo.out" }, {{w51}});
+  draw("#g3-crack", {{D}} - 0.34, 0.26, "power3.in");
+  window.__timelines["{{ID}}"] = tl;
+  </script>

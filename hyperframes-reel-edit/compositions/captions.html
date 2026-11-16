@@ -1,0 +1,198 @@
+<template>
+  <style>
+@font-face{font-family:'Cairo';font-style:normal;font-weight:400;font-display:block;src:url('assets/fonts/cairo-arabic-400-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:400;font-display:block;src:url('assets/fonts/cairo-latin-400-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:600;font-display:block;src:url('assets/fonts/cairo-arabic-600-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:600;font-display:block;src:url('assets/fonts/cairo-latin-600-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:700;font-display:block;src:url('assets/fonts/cairo-arabic-700-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:700;font-display:block;src:url('assets/fonts/cairo-latin-700-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:800;font-display:block;src:url('assets/fonts/cairo-arabic-800-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:800;font-display:block;src:url('assets/fonts/cairo-latin-800-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:900;font-display:block;src:url('assets/fonts/cairo-arabic-900-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:900;font-display:block;src:url('assets/fonts/cairo-latin-900-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+
+#root { position:absolute; inset:0; pointer-events:none; }
+#root .cg { position:absolute; left:0; right:0; top:1180px; text-align:center; direction:rtl;
+  font-family:'Cairo', sans-serif; font-weight:800; line-height:1.18; color:#FFFDF8; overflow:visible; }
+#root .ci { position:relative; isolation:isolate; display:inline-block; max-width:900px; padding:0 34px; }
+#root .ci::before { content:""; position:absolute; left:-70px; right:-70px; top:-34px; bottom:-30px; z-index:0;
+  background: radial-gradient(closest-side, rgba(14,12,10,.72) 0%, rgba(14,12,10,.62) 52%, rgba(14,12,10,.28) 80%, rgba(14,12,10,0) 100%); }
+#root .cw { display:inline-block; opacity:.55; position:relative; z-index:1;
+  text-shadow: 0 2px 3px rgba(12,10,8,.5), 0 0 14px rgba(12,10,8,.35); }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1080" data-height="1920" lang="ar" dir="rtl">
+    <div id="c01" class="cg clip" data-start="0.0333" data-duration="0.7" data-track-index="0" style="font-size:86px"><div id="c01-in" class="ci"><span id="c01-w2" class="cw">حسام</span> <span id="c01-w3" class="cw">حسن،</span></div></div>
+    <div id="c02" class="cg clip" data-start="5.0667" data-duration="0.8333" data-track-index="0" style="font-size:86px"><div id="c02-in" class="ci"><span id="c02-w14" class="cw">إلى</span> <span id="c02-w15" class="cw">الخروج</span></div></div>
+    <div id="c03" class="cg clip" data-start="5.9" data-duration="1.3667" data-track-index="0" style="font-size:86px"><div id="c03-in" class="ci"><span id="c03-w16" class="cw">من</span> <span id="c03-w17" class="cw">الباب</span> <span id="c03-w18" class="cw hl-o">الضيق</span></div></div>
+    <div id="c04" class="cg clip" data-start="7.2667" data-duration="1.0" data-track-index="0" style="font-size:86px"><div id="c04-in" class="ci"><span id="c04-w19" class="cw">يوم</span> <span id="c04-w20" class="cw hl-t">7</span> <span id="c04-w21" class="cw hl-t">نوفمبر.</span></div></div>
+    <div id="c05" class="cg clip" data-start="12.9667" data-duration="0.9666" data-track-index="0" style="font-size:86px"><div id="c05-in" class="ci"><span id="c05-w32" class="cw">انتهت</span> <span id="c05-w33" class="cw">رحلته</span></div></div>
+    <div id="c06" class="cg clip" data-start="13.9333" data-duration="1.5334" data-track-index="0" style="font-size:86px"><div id="c06-in" class="ci"><span id="c06-w34" class="cw">مع</span> <span id="c06-w35" class="cw">المنتخب</span> <span id="c06-w36" class="cw">المصري</span></div></div>
+    <div id="c07" class="cg clip" data-start="15.4667" data-duration="0.9333" data-track-index="0" style="font-size:86px"><div id="c07-in" class="ci"><span id="c07-w37" class="cw">بشكل</span> <span id="c07-w38" class="cw">محدش</span> <span id="c07-w39" class="cw hl-o">يصدّقه.</span></div></div>
+    <div id="c08" class="cg clip" data-start="16.4" data-duration="0.5333" data-track-index="0" style="font-size:86px"><div id="c08-in" class="ci"><span id="c08-w40" class="cw hl-o">السؤال</span> <span id="c08-w41" class="cw">هنا:</span></div></div>
+    <div id="c09" class="cg clip" data-start="16.9333" data-duration="0.6334" data-track-index="0" style="font-size:86px"><div id="c09-in" class="ci"><span id="c09-w42" class="cw">إزاي</span> <span id="c09-w43" class="cw">مدرب</span></div></div>
+    <div id="c10" class="cg clip" data-start="17.5667" data-duration="1.4" data-track-index="0" style="font-size:80px"><div id="c10-in" class="ci"><span id="c10-w44" class="cw">قاد</span> <span id="c10-w45" class="cw">مصر</span> <span id="c10-w46" class="cw">في</span> <span id="c10-w47" class="cw">المونديال،</span></div></div>
+    <div id="c11" class="cg clip" data-start="21.6667" data-duration="0.8" data-track-index="0" style="font-size:86px"><div id="c11-in" class="ci"><span id="c11-w52" class="cw">يمشي</span> <span id="c11-w53" class="cw hl-o">فجأة؟</span></div></div>
+    <div id="c12" class="cg clip" data-start="22.4667" data-duration="0.7666" data-track-index="0" style="font-size:86px"><div id="c12-in" class="ci"><span id="c12-w54" class="cw">هل</span> <span id="c12-w55" class="cw">السبب</span></div></div>
+    <div id="c13" class="cg clip" data-start="26.5333" data-duration="0.6" data-track-index="0" style="font-size:86px"><div id="c13-in" class="ci"><span id="c13-w63" class="cw">كانت</span> <span id="c13-w64" class="cw">أكبر</span></div></div>
+    <div id="c14" class="cg clip" data-start="27.1333" data-duration="0.9667" data-track-index="0" style="font-size:86px"><div id="c14-in" class="ci"><span id="c14-w65" class="cw">من</span> <span id="c14-w66" class="cw">إنه</span> <span id="c14-w67" class="cw">هو</span> <span id="c14-w68" class="cw">يقدر</span></div></div>
+    <div id="c15" class="cg clip" data-start="28.1" data-duration="0.9" data-track-index="0" style="font-size:86px"><div id="c15-in" class="ci"><span id="c15-w69" class="cw hl-t">يسيطر</span> <span id="c15-w70" class="cw">عليها؟</span></div></div>
+    <div id="c16" class="cg clip" data-start="29.0" data-duration="1.4333" data-track-index="0" style="font-size:84px"><div id="c16-in" class="ci"><span id="c16-w71" class="cw hl-o">الأزمات</span> <span id="c16-w72" class="cw">داخل</span> <span id="c16-w73" class="cw">المنتخب</span></div></div>
+    <div id="c17" class="cg clip" data-start="30.4333" data-duration="1.5334" data-track-index="0" style="font-size:86px"><div id="c17-in" class="ci"><span id="c17-w74" class="cw">بدأت</span> <span id="c17-w75" class="cw">لما</span></div></div>
+    <div id="c18" class="cg clip" data-start="31.9667" data-duration="1.5333" data-track-index="0" style="font-size:86px"><div id="c18-in" class="ci"><span id="c18-w76" class="cw">الفترة</span> <span id="c18-w77" class="cw">الأخيرة</span> <span id="c18-w78" class="cw">لما</span></div></div>
+    <div id="c19" class="cg clip" data-start="37.8" data-duration="1.7333" data-track-index="0" style="font-size:86px"><div id="c19-in" class="ci"><span id="c19-w86" class="cw">وبعدها</span> <span id="c19-w87" class="cw">محمد</span> <span id="c19-w88" class="cw">صلاح</span></div></div>
+    <div id="c20" class="cg clip" data-start="39.5333" data-duration="1.0334" data-track-index="0" style="font-size:86px"><div id="c20-in" class="ci"><span id="c20-w89" class="cw hl-o">غادر</span> <span id="c20-w90" class="cw">المنتخب.</span></div></div>
+    <div id="c21" class="cg clip" data-start="40.5667" data-duration="0.4333" data-track-index="0" style="font-size:86px"><div id="c21-in" class="ci"><span id="c21-w91" class="cw">وكمان</span></div></div>
+    <div id="c22" class="cg clip" data-start="44.4667" data-duration="0.9" data-track-index="0" style="font-size:86px"><div id="c22-in" class="ci"><span id="c22-w97" class="cw">خسّرته</span></div></div>
+    <div id="c23" class="cg clip" data-start="45.3667" data-duration="1.1333" data-track-index="0" style="font-size:86px"><div id="c23-in" class="ci"><span id="c23-w98" class="cw">شريحة</span> <span id="c23-w99" class="cw">كبيرة</span> <span id="c23-w100" class="cw">جدًا</span></div></div>
+    <div id="c24" class="cg clip" data-start="46.5" data-duration="1.4" data-track-index="0" style="font-size:84px"><div id="c24-in" class="ci"><span id="c24-w101" class="cw">من</span> <span id="c24-w102" class="cw hl-o">الجماهير</span> <span id="c24-w103" class="cw">المصرية.</span></div></div>
+    <div id="c25" class="cg clip" data-start="47.9" data-duration="1.3667" data-track-index="0" style="font-size:86px"><div id="c25-in" class="ci"><span id="c25-w104" class="cw">وفوق</span> <span id="c25-w105" class="cw">كل</span> <span id="c25-w106" class="cw">ده،</span></div></div>
+    <div id="c26" class="cg clip" data-start="52.8667" data-duration="0.5333" data-track-index="0" style="font-size:86px"><div id="c26-in" class="ci"><span id="c26-w115" class="cw">بعد</span> <span id="c26-w116" class="cw">أحداث</span></div></div>
+    <div id="c27" class="cg clip" data-start="53.4" data-duration="1.0333" data-track-index="0" style="font-size:86px"><div id="c27-in" class="ci"><span id="c27-w117" class="cw">مباراة</span> <span id="c27-w118" class="cw hl-t">الأرجنتين</span></div></div>
+    <div id="c28" class="cg clip" data-start="54.4333" data-duration="0.9667" data-track-index="0" style="font-size:86px"><div id="c28-in" class="ci"><span id="c28-w119" class="cw">في</span> <span id="c28-w120" class="cw">كأس</span> <span id="c28-w121" class="cw">العالم.</span></div></div>
+    <div id="c29" class="cg clip" data-start="55.4" data-duration="0.9667" data-track-index="0" style="font-size:86px"><div id="c29-in" class="ci"><span id="c29-w122" class="cw">زاد</span> <span id="c29-w123" class="cw">عليها</span></div></div>
+    <div id="c30" class="cg clip" data-start="56.3667" data-duration="1.1666" data-track-index="0" style="font-size:86px"><div id="c30-in" class="ci"><span id="c30-w124" class="cw">حياته</span> <span id="c30-w125" class="cw hl-o">الشخصية،</span></div></div>
+    <div id="c31" class="cg clip" data-start="57.5333" data-duration="1.5334" data-track-index="0" style="font-size:86px"><div id="c31-in" class="ci"><span id="c31-w126" class="cw">والأزمات</span> <span id="c31-w127" class="cw">الشخصية</span></div></div>
+    <div id="c32" class="cg clip" data-start="62.7667" data-duration="1.1666" data-track-index="0" style="font-size:86px"><div id="c32-in" class="ci"><span id="c32-w134" class="cw">هل</span> <span id="c32-w135" class="cw">اضطرت</span> <span id="c32-w136" class="cw hl-o">الجبلاية</span></div></div>
+    <div id="c33" class="cg clip" data-start="63.9333" data-duration="0.8334" data-track-index="0" style="font-size:86px"><div id="c33-in" class="ci"><span id="c33-w137" class="cw">وقتها</span></div></div>
+    <div id="c34" class="cg clip" data-start="64.7667" data-duration="0.9" data-track-index="0" style="font-size:86px"><div id="c34-in" class="ci"><span id="c34-w138" class="cw">إن</span> <span id="c34-w139" class="cw">هي</span> <span id="c34-w140" class="cw">تشوف</span></div></div>
+    <div id="c35" class="cg clip" data-start="65.6667" data-duration="1.4666" data-track-index="0" style="font-size:86px"><div id="c35-in" class="ci"><span id="c35-w141" class="cw">إن</span> <span id="c35-w142" class="cw">ده</span> <span id="c35-w143" class="cw">مش</span></div></div>
+    <div id="c36" class="cg clip" data-start="67.1333" data-duration="1.4667" data-track-index="0" style="font-size:86px"><div id="c36-in" class="ci"><span id="c36-w144" class="cw">من</span> <span id="c36-w145" class="cw hl-t">مصلحة</span> <span id="c36-w146" class="cw">المنتخب،</span></div></div>
+    <div id="c37" class="cg clip" data-start="73.2667" data-duration="3.6666" data-track-index="0" style="font-size:86px"><div id="c37-in" class="ci"><span id="c37-w156" class="cw">والبديل</span> <span id="c37-w157" class="cw">كان</span> <span id="c37-w158" class="cw">ساعتها</span></div></div>
+    <div id="c38" class="cg clip" data-start="76.9333" data-duration="0.8" data-track-index="0" style="font-size:86px"><div id="c38-in" class="ci"><span id="c38-w159" class="cw hl-o">علي</span> <span id="c38-w160" class="cw hl-o">ماهر</span></div></div>
+  </div>
+  <script>
+  const tl = gsap.timeline({ paused: true });
+  tl.fromTo("#c01-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 0.0333);
+  tl.fromTo("#c01-w2", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 0.058);
+  tl.fromTo("#c01-w3", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 0.403);
+  tl.fromTo("#c02-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 5.0667);
+  tl.fromTo("#c02-w14", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 5.108);
+  tl.fromTo("#c02-w15", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 5.387);
+  tl.fromTo("#c03-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 5.9);
+  tl.fromTo("#c03-w16", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 5.947);
+  tl.fromTo("#c03-w17", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 6.247);
+  tl.fromTo("#c03-w18", {opacity:0.5, color:"#FFFDF8"}, {opacity:1, duration:0.067, ease:"none", color:"#FF8A3D"}, 6.74);
+  tl.fromTo("#c04-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 7.2667);
+  tl.fromTo("#c04-w19", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 7.295);
+  tl.fromTo("#c04-w20", {opacity:0.5, color:"#FFFDF8"}, {opacity:1, duration:0.067, ease:"none", color:"#62C6CF"}, 7.593);
+  tl.fromTo("#c04-w21", {opacity:0.5, color:"#FFFDF8"}, {opacity:1, duration:0.067, ease:"none", color:"#62C6CF"}, 7.793);
+  tl.fromTo("#c05-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 12.9667);
+  tl.fromTo("#c05-w32", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 12.993);
+  tl.fromTo("#c05-w33", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 13.493);
+  tl.fromTo("#c06-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 13.9333);
+  tl.fromTo("#c06-w34", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 13.973);
+  tl.fromTo("#c06-w35", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 14.173);
+  tl.fromTo("#c06-w36", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 15.053);
+  tl.fromTo("#c07-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 15.4667);
+  tl.fromTo("#c07-w37", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 15.493);
+  tl.fromTo("#c07-w38", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 15.793);
+  tl.fromTo("#c07-w39", {opacity:0.5, color:"#FFFDF8"}, {opacity:1, duration:0.067, ease:"none", color:"#FF8A3D"}, 16.133);
+  tl.fromTo("#c08-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 16.4);
+  tl.fromTo("#c08-w40", {opacity:0.5, color:"#FFFDF8"}, {opacity:1, duration:0.067, ease:"none", color:"#FF8A3D"}, 16.439);
+  tl.fromTo("#c08-w41", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 16.84);
+  tl.fromTo("#c09-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 16.9333);
+  tl.fromTo("#c09-w42", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 16.98);
+  tl.fromTo("#c09-w43", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 17.26);
+  tl.fromTo("#c10-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 17.5667);
+  tl.fromTo("#c10-w44", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 17.62);
+  tl.fromTo("#c10-w45", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 17.92);
+  tl.fromTo("#c10-w46", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 18.2);
+  tl.fromTo("#c10-w47", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 18.34);
+  tl.fromTo("#c11-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 21.6667);
+  tl.fromTo("#c11-w52", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 21.675);
+  tl.fromTo("#c11-w53", {opacity:0.5, color:"#FFFDF8"}, {opacity:1, duration:0.067, ease:"none", color:"#FF8A3D"}, 22.084);
+  tl.fromTo("#c12-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 22.4667);
+  tl.fromTo("#c12-w54", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 22.494);
+  tl.fromTo("#c12-w55", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 22.754);
+  tl.fromTo("#c13-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 26.5333);
+  tl.fromTo("#c13-w63", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 26.558);
+  tl.fromTo("#c13-w64", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 26.868);
+  tl.fromTo("#c14-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 27.1333);
+  tl.fromTo("#c14-w65", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 27.179);
+  tl.fromTo("#c14-w66", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 27.377);
+  tl.fromTo("#c14-w67", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 27.631);
+  tl.fromTo("#c14-w68", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 27.829);
+  tl.fromTo("#c15-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 28.1);
+  tl.fromTo("#c15-w69", {opacity:0.5, color:"#FFFDF8"}, {opacity:1, duration:0.067, ease:"none", color:"#62C6CF"}, 28.14);
+  tl.fromTo("#c15-w70", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 28.507);
+  tl.fromTo("#c16-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 29.0);
+  tl.fromTo("#c16-w71", {opacity:0.5, color:"#FFFDF8"}, {opacity:1, duration:0.067, ease:"none", color:"#FF8A3D"}, 29.042);
+  tl.fromTo("#c16-w72", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 29.407);
+  tl.fromTo("#c16-w73", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 29.787);
+  tl.fromTo("#c17-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 30.4333);
+  tl.fromTo("#c17-w74", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 30.467);
+  tl.fromTo("#c17-w75", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 31.087);
+  tl.fromTo("#c18-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 31.9667);
+  tl.fromTo("#c18-w76", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 32.007);
+  tl.fromTo("#c18-w77", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 32.387);
+  tl.fromTo("#c18-w78", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 32.927);
+  tl.fromTo("#c19-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 37.8);
+  tl.fromTo("#c19-w86", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 37.8);
+  tl.fromTo("#c19-w87", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 38.245);
+  tl.fromTo("#c19-w88", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 38.724);
+  tl.fromTo("#c20-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 39.5333);
+  tl.fromTo("#c20-w89", {opacity:0.5, color:"#FFFDF8"}, {opacity:1, duration:0.067, ease:"none", color:"#FF8A3D"}, 39.587);
+  tl.fromTo("#c20-w90", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 40.027);
+  tl.fromTo("#c21-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 40.5667);
+  tl.fromTo("#c21-w91", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 40.603);
+  tl.fromTo("#c22-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 44.4667);
+  tl.fromTo("#c22-w97", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 44.51);
+  tl.fromTo("#c23-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 45.3667);
+  tl.fromTo("#c23-w98", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 45.412);
+  tl.fromTo("#c23-w99", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 45.913);
+  tl.fromTo("#c23-w100", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 46.213);
+  tl.fromTo("#c24-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 46.5);
+  tl.fromTo("#c24-w101", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 46.553);
+  tl.fromTo("#c24-w102", {opacity:0.5, color:"#FFFDF8"}, {opacity:1, duration:0.067, ease:"none", color:"#FF8A3D"}, 46.713);
+  tl.fromTo("#c24-w103", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 47.193);
+  tl.fromTo("#c25-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 47.9);
+  tl.fromTo("#c25-w104", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 47.942);
+  tl.fromTo("#c25-w105", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 48.467);
+  tl.fromTo("#c25-w106", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 48.607);
+  tl.fromTo("#c26-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 52.8667);
+  tl.fromTo("#c26-w115", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 52.873);
+  tl.fromTo("#c26-w116", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 53.033);
+  tl.fromTo("#c27-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 53.4);
+  tl.fromTo("#c27-w117", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 53.453);
+  tl.fromTo("#c27-w118", {opacity:0.5, color:"#FFFDF8"}, {opacity:1, duration:0.067, ease:"none", color:"#62C6CF"}, 53.953);
+  tl.fromTo("#c28-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 54.4333);
+  tl.fromTo("#c28-w119", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 54.47);
+  tl.fromTo("#c28-w120", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 54.773);
+  tl.fromTo("#c28-w121", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 55.013);
+  tl.fromTo("#c29-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 55.4);
+  tl.fromTo("#c29-w122", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 55.441);
+  tl.fromTo("#c29-w123", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 55.881);
+  tl.fromTo("#c30-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 56.3667);
+  tl.fromTo("#c30-w124", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 56.42);
+  tl.fromTo("#c30-w125", {opacity:0.5, color:"#FFFDF8"}, {opacity:1, duration:0.067, ease:"none", color:"#FF8A3D"}, 56.86);
+  tl.fromTo("#c31-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 57.5333);
+  tl.fromTo("#c31-w126", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 57.56);
+  tl.fromTo("#c31-w127", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 58.16);
+  tl.fromTo("#c32-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 62.7667);
+  tl.fromTo("#c32-w134", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 62.78);
+  tl.fromTo("#c32-w135", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 62.953);
+  tl.fromTo("#c32-w136", {opacity:0.5, color:"#FFFDF8"}, {opacity:1, duration:0.067, ease:"none", color:"#FF8A3D"}, 63.453);
+  tl.fromTo("#c33-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 63.9333);
+  tl.fromTo("#c33-w137", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 63.973);
+  tl.fromTo("#c34-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 64.7667);
+  tl.fromTo("#c34-w138", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 64.804);
+  tl.fromTo("#c34-w139", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 65.008);
+  tl.fromTo("#c34-w140", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 65.212);
+  tl.fromTo("#c35-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 65.6667);
+  tl.fromTo("#c35-w141", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 65.71);
+  tl.fromTo("#c35-w142", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 66.56);
+  tl.fromTo("#c35-w143", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 67.02);
+  tl.fromTo("#c36-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 67.1333);
+  tl.fromTo("#c36-w144", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 67.18);
+  tl.fromTo("#c36-w145", {opacity:0.5, color:"#FFFDF8"}, {opacity:1, duration:0.067, ease:"none", color:"#62C6CF"}, 67.28);
+  tl.fromTo("#c36-w146", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 67.88);
+  tl.fromTo("#c37-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 73.2667);
+  tl.fromTo("#c37-w156", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 73.269);
+  tl.fromTo("#c37-w157", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 74.483);
+  tl.fromTo("#c37-w158", {opacity:0.5}, {opacity:1, duration:0.067, ease:"none"}, 75.048);
+  tl.fromTo("#c38-in", {opacity:0, y:16}, {opacity:1, y:0, duration:0.1, ease:"power2.out"}, 76.9333);
+  tl.fromTo("#c38-w159", {opacity:0.5, color:"#FFFDF8"}, {opacity:1, duration:0.067, ease:"none", color:"#FF8A3D"}, 76.981);
+  tl.fromTo("#c38-w160", {opacity:0.5, color:"#FFFDF8"}, {opacity:1, duration:0.067, ease:"none", color:"#FF8A3D"}, 77.353);
+  window.__timelines["captions"] = tl;
+  </script>
+</template>

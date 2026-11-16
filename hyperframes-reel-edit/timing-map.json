@@ -1,0 +1,1913 @@
+{
+ "fps": 30,
+ "source": "../rawreel.mov",
+ "proxy": "assets/media/aroll.mp4",
+ "output_duration_speech": 77.7333,
+ "segments": [
+  {
+   "id": "a01",
+   "src_start": 5.7667,
+   "src_end": 10.8,
+   "out_start": 0.0,
+   "out_end": 5.0333,
+   "duration": 5.0333,
+   "frames": 151,
+   "src_frame_in": 173,
+   "out_frame_in": 0
+  },
+  {
+   "id": "a02",
+   "src_start": 11.2667,
+   "src_end": 12.9,
+   "out_start": 5.0333,
+   "out_end": 6.6667,
+   "duration": 1.6334,
+   "frames": 49,
+   "src_frame_in": 338,
+   "out_frame_in": 151
+  },
+  {
+   "id": "a03",
+   "src_start": 13.0333,
+   "src_end": 13.6,
+   "out_start": 6.6667,
+   "out_end": 7.2333,
+   "duration": 0.5666,
+   "frames": 17,
+   "src_frame_in": 391,
+   "out_frame_in": 200
+  },
+  {
+   "id": "a04",
+   "src_start": 14.2,
+   "src_end": 15.0333,
+   "out_start": 7.2333,
+   "out_end": 8.0667,
+   "duration": 0.8334,
+   "frames": 25,
+   "src_frame_in": 426,
+   "out_frame_in": 217
+  },
+  {
+   "id": "a05",
+   "src_start": 15.4,
+   "src_end": 15.5667,
+   "out_start": 8.0667,
+   "out_end": 8.2333,
+   "duration": 0.1666,
+   "frames": 5,
+   "src_frame_in": 462,
+   "out_frame_in": 242
+  },
+  {
+   "id": "a06",
+   "src_start": 15.8667,
+   "src_end": 18.9,
+   "out_start": 8.2333,
+   "out_end": 11.2667,
+   "duration": 3.0334,
+   "frames": 91,
+   "src_frame_in": 476,
+   "out_frame_in": 247
+  },
+  {
+   "id": "a07",
+   "src_start": 19.3667,
+   "src_end": 20.3,
+   "out_start": 11.2667,
+   "out_end": 12.2,
+   "duration": 0.9333,
+   "frames": 28,
+   "src_frame_in": 581,
+   "out_frame_in": 338
+  },
+  {
+   "id": "a08",
+   "src_start": 20.8667,
+   "src_end": 24.4,
+   "out_start": 12.2,
+   "out_end": 15.7333,
+   "duration": 3.5333,
+   "frames": 106,
+   "src_frame_in": 626,
+   "out_frame_in": 366
+  },
+  {
+   "id": "a09",
+   "src_start": 24.5,
+   "src_end": 25.1333,
+   "out_start": 15.7333,
+   "out_end": 16.3667,
+   "duration": 0.6334,
+   "frames": 19,
+   "src_frame_in": 735,
+   "out_frame_in": 472
+  },
+  {
+   "id": "a10",
+   "src_start": 26.2667,
+   "src_end": 29.5333,
+   "out_start": 16.3667,
+   "out_end": 19.6333,
+   "duration": 3.2666,
+   "frames": 98,
+   "src_frame_in": 788,
+   "out_frame_in": 491
+  },
+  {
+   "id": "a11",
+   "src_start": 30.1333,
+   "src_end": 32.1,
+   "out_start": 19.6333,
+   "out_end": 21.6,
+   "duration": 1.9667,
+   "frames": 59,
+   "src_frame_in": 904,
+   "out_frame_in": 589
+  },
+  {
+   "id": "a12",
+   "src_start": 32.8667,
+   "src_end": 36.7667,
+   "out_start": 21.6,
+   "out_end": 25.5,
+   "duration": 3.9,
+   "frames": 117,
+   "src_frame_in": 986,
+   "out_frame_in": 648
+  },
+  {
+   "id": "a13",
+   "src_start": 37.1667,
+   "src_end": 38.1667,
+   "out_start": 25.5,
+   "out_end": 26.5,
+   "duration": 1.0,
+   "frames": 30,
+   "src_frame_in": 1115,
+   "out_frame_in": 765
+  },
+  {
+   "id": "a14",
+   "src_start": 38.2667,
+   "src_end": 40.7333,
+   "out_start": 26.5,
+   "out_end": 28.9667,
+   "duration": 2.4667,
+   "frames": 74,
+   "src_frame_in": 1148,
+   "out_frame_in": 795
+  },
+  {
+   "id": "a15",
+   "src_start": 42.1,
+   "src_end": 46.5667,
+   "out_start": 28.9667,
+   "out_end": 33.4333,
+   "duration": 4.4666,
+   "frames": 134,
+   "src_frame_in": 1263,
+   "out_frame_in": 869
+  },
+  {
+   "id": "a16",
+   "src_start": 46.7667,
+   "src_end": 48.1667,
+   "out_start": 33.4333,
+   "out_end": 34.8333,
+   "duration": 1.4,
+   "frames": 42,
+   "src_frame_in": 1403,
+   "out_frame_in": 1003
+  },
+  {
+   "id": "a17",
+   "src_start": 49.1333,
+   "src_end": 52.0333,
+   "out_start": 34.8333,
+   "out_end": 37.7333,
+   "duration": 2.9,
+   "frames": 87,
+   "src_frame_in": 1474,
+   "out_frame_in": 1045
+  },
+  {
+   "id": "a18",
+   "src_start": 52.5,
+   "src_end": 53.4333,
+   "out_start": 37.7333,
+   "out_end": 38.6667,
+   "duration": 0.9334,
+   "frames": 28,
+   "src_frame_in": 1575,
+   "out_frame_in": 1132
+  },
+  {
+   "id": "a19",
+   "src_start": 53.9,
+   "src_end": 55.7667,
+   "out_start": 38.6667,
+   "out_end": 40.5333,
+   "duration": 1.8666,
+   "frames": 56,
+   "src_frame_in": 1617,
+   "out_frame_in": 1160
+  },
+  {
+   "id": "a20",
+   "src_start": 56.7667,
+   "src_end": 60.6667,
+   "out_start": 40.5333,
+   "out_end": 44.4333,
+   "duration": 3.9,
+   "frames": 117,
+   "src_frame_in": 1703,
+   "out_frame_in": 1216
+  },
+  {
+   "id": "a21",
+   "src_start": 61.3,
+   "src_end": 62.2,
+   "out_start": 44.4333,
+   "out_end": 45.3333,
+   "duration": 0.9,
+   "frames": 27,
+   "src_frame_in": 1839,
+   "out_frame_in": 1333
+  },
+  {
+   "id": "a22",
+   "src_start": 62.4,
+   "src_end": 64.9333,
+   "out_start": 45.3333,
+   "out_end": 47.8667,
+   "duration": 2.5334,
+   "frames": 76,
+   "src_frame_in": 1872,
+   "out_frame_in": 1360
+  },
+  {
+   "id": "a23",
+   "src_start": 65.6,
+   "src_end": 66.8,
+   "out_start": 47.8667,
+   "out_end": 49.0667,
+   "duration": 1.2,
+   "frames": 36,
+   "src_frame_in": 1968,
+   "out_frame_in": 1436
+  },
+  {
+   "id": "a24",
+   "src_start": 67.8667,
+   "src_end": 68.0333,
+   "out_start": 49.0667,
+   "out_end": 49.2333,
+   "duration": 0.1666,
+   "frames": 5,
+   "src_frame_in": 2036,
+   "out_frame_in": 1472
+  },
+  {
+   "id": "a25",
+   "src_start": 68.9333,
+   "src_end": 69.7333,
+   "out_start": 49.2333,
+   "out_end": 50.0333,
+   "duration": 0.8,
+   "frames": 24,
+   "src_frame_in": 2068,
+   "out_frame_in": 1477
+  },
+  {
+   "id": "a26",
+   "src_start": 69.8,
+   "src_end": 75.1333,
+   "out_start": 50.0333,
+   "out_end": 55.3667,
+   "duration": 5.3334,
+   "frames": 160,
+   "src_frame_in": 2094,
+   "out_frame_in": 1501
+  },
+  {
+   "id": "a27",
+   "src_start": 76.8,
+   "src_end": 77.2333,
+   "out_start": 55.3667,
+   "out_end": 55.8,
+   "duration": 0.4333,
+   "frames": 13,
+   "src_frame_in": 2304,
+   "out_frame_in": 1661
+  },
+  {
+   "id": "a28",
+   "src_start": 77.6,
+   "src_end": 80.8,
+   "out_start": 55.8,
+   "out_end": 59.0,
+   "duration": 3.2,
+   "frames": 96,
+   "src_frame_in": 2328,
+   "out_frame_in": 1674
+  },
+  {
+   "id": "a29",
+   "src_start": 81.2667,
+   "src_end": 81.9667,
+   "out_start": 59.0,
+   "out_end": 59.7,
+   "duration": 0.7,
+   "frames": 21,
+   "src_frame_in": 2438,
+   "out_frame_in": 1770
+  },
+  {
+   "id": "a30",
+   "src_start": 82.9,
+   "src_end": 85.9,
+   "out_start": 59.7,
+   "out_end": 62.7,
+   "duration": 3.0,
+   "frames": 90,
+   "src_frame_in": 2487,
+   "out_frame_in": 1791
+  },
+  {
+   "id": "a31",
+   "src_start": 86.8667,
+   "src_end": 88.9,
+   "out_start": 62.7,
+   "out_end": 64.7333,
+   "duration": 2.0333,
+   "frames": 61,
+   "src_frame_in": 2606,
+   "out_frame_in": 1881
+  },
+  {
+   "id": "a32",
+   "src_start": 89.6,
+   "src_end": 90.5,
+   "out_start": 64.7333,
+   "out_end": 65.6333,
+   "duration": 0.9,
+   "frames": 27,
+   "src_frame_in": 2688,
+   "out_frame_in": 1942
+  },
+  {
+   "id": "a33",
+   "src_start": 91.1333,
+   "src_end": 94.0333,
+   "out_start": 65.6333,
+   "out_end": 68.5333,
+   "duration": 2.9,
+   "frames": 87,
+   "src_frame_in": 2734,
+   "out_frame_in": 1969
+  },
+  {
+   "id": "a34",
+   "src_start": 95.3333,
+   "src_end": 97.5,
+   "out_start": 68.5333,
+   "out_end": 70.7,
+   "duration": 2.1667,
+   "frames": 65,
+   "src_frame_in": 2860,
+   "out_frame_in": 2056
+  },
+  {
+   "id": "a35",
+   "src_start": 97.6333,
+   "src_end": 99.8,
+   "out_start": 70.7,
+   "out_end": 72.8667,
+   "duration": 2.1667,
+   "frames": 65,
+   "src_frame_in": 2929,
+   "out_frame_in": 2121
+  },
+  {
+   "id": "a36",
+   "src_start": 100.0,
+   "src_end": 100.3333,
+   "out_start": 72.8667,
+   "out_end": 73.2,
+   "duration": 0.3333,
+   "frames": 10,
+   "src_frame_in": 3000,
+   "out_frame_in": 2186
+  },
+  {
+   "id": "a37",
+   "src_start": 101.3333,
+   "src_end": 102.5333,
+   "out_start": 73.2,
+   "out_end": 74.4,
+   "duration": 1.2,
+   "frames": 36,
+   "src_frame_in": 3040,
+   "out_frame_in": 2196
+  },
+  {
+   "id": "a38",
+   "src_start": 102.7333,
+   "src_end": 105.1667,
+   "out_start": 74.4,
+   "out_end": 76.8333,
+   "duration": 2.4333,
+   "frames": 73,
+   "src_frame_in": 3082,
+   "out_frame_in": 2232
+  },
+  {
+   "id": "a39",
+   "src_start": 106.0,
+   "src_end": 106.9,
+   "out_start": 76.8333,
+   "out_end": 77.7333,
+   "duration": 0.9,
+   "frames": 27,
+   "src_frame_in": 3180,
+   "out_frame_in": 2305
+  }
+ ],
+ "removed": [
+  {
+   "src_start": 0.0,
+   "src_end": 5.7667,
+   "why": "camera set-up, greeting 'مساء الخير' while settling"
+  },
+  {
+   "src_start": 10.8,
+   "src_end": 11.2667,
+   "why": "pause 0.63s → kept 0.17s"
+  },
+  {
+   "src_start": 12.9,
+   "src_end": 13.0333,
+   "why": "pause 0.30s → kept 0.17s"
+  },
+  {
+   "src_start": 13.6,
+   "src_end": 14.2,
+   "why": "pause 0.76s → kept 0.16s"
+  },
+  {
+   "src_start": 15.0333,
+   "src_end": 15.4,
+   "why": "pause 0.51s → kept 0.15s"
+  },
+  {
+   "src_start": 15.5667,
+   "src_end": 15.8667,
+   "why": "pause 0.46s → kept 0.16s"
+  },
+  {
+   "src_start": 18.9,
+   "src_end": 19.3667,
+   "why": "pause 0.62s → kept 0.15s"
+  },
+  {
+   "src_start": 20.3,
+   "src_end": 20.8667,
+   "why": "pause 0.74s → kept 0.17s"
+  },
+  {
+   "src_start": 24.4,
+   "src_end": 24.5,
+   "why": "pause 0.25s → kept 0.15s"
+  },
+  {
+   "src_start": 25.1333,
+   "src_end": 26.2667,
+   "why": "pause 1.30s → kept 0.17s"
+  },
+  {
+   "src_start": 29.5333,
+   "src_end": 30.1333,
+   "why": "pause 0.78s → kept 0.18s"
+  },
+  {
+   "src_start": 32.1,
+   "src_end": 32.8667,
+   "why": "pause 0.93s → kept 0.17s"
+  },
+  {
+   "src_start": 36.7667,
+   "src_end": 37.1667,
+   "why": "pause 0.58s → kept 0.18s"
+  },
+  {
+   "src_start": 38.1667,
+   "src_end": 38.2667,
+   "why": "pause 0.25s → kept 0.15s"
+  },
+  {
+   "src_start": 40.7333,
+   "src_end": 42.1,
+   "why": "pause 1.53s → kept 0.17s"
+  },
+  {
+   "src_start": 46.5667,
+   "src_end": 46.7667,
+   "why": "pause 0.37s → kept 0.17s"
+  },
+  {
+   "src_start": 48.1667,
+   "src_end": 49.1333,
+   "why": "pause 1.14s → kept 0.18s"
+  },
+  {
+   "src_start": 52.0333,
+   "src_end": 52.5,
+   "why": "pause 0.64s → kept 0.18s"
+  },
+  {
+   "src_start": 53.4333,
+   "src_end": 53.9,
+   "why": "pause 0.62s → kept 0.15s"
+  },
+  {
+   "src_start": 55.7667,
+   "src_end": 56.7667,
+   "why": "pause 1.18s → kept 0.18s"
+  },
+  {
+   "src_start": 60.6667,
+   "src_end": 61.3,
+   "why": "pause 0.82s → kept 0.19s"
+  },
+  {
+   "src_start": 62.2,
+   "src_end": 62.4,
+   "why": "pause 0.39s → kept 0.19s"
+  },
+  {
+   "src_start": 64.9333,
+   "src_end": 65.6,
+   "why": "pause 0.83s → kept 0.16s"
+  },
+  {
+   "src_start": 66.8,
+   "src_end": 67.8667,
+   "why": "pause 1.24s → kept 0.17s"
+  },
+  {
+   "src_start": 68.0333,
+   "src_end": 68.9333,
+   "why": "pause 1.05s → kept 0.15s"
+  },
+  {
+   "src_start": 69.7333,
+   "src_end": 69.8,
+   "why": "pause 0.24s → kept 0.18s"
+  },
+  {
+   "src_start": 75.1333,
+   "src_end": 76.8,
+   "why": "pause 1.85s → kept 0.18s"
+  },
+  {
+   "src_start": 77.2333,
+   "src_end": 77.6,
+   "why": "pause 0.55s → kept 0.19s"
+  },
+  {
+   "src_start": 80.8,
+   "src_end": 81.2667,
+   "why": "pause 0.66s → kept 0.20s"
+  },
+  {
+   "src_start": 81.9667,
+   "src_end": 82.9,
+   "why": "pause 1.07s → kept 0.14s"
+  },
+  {
+   "src_start": 85.9,
+   "src_end": 86.8667,
+   "why": "pause 1.14s → kept 0.17s"
+  },
+  {
+   "src_start": 88.9,
+   "src_end": 89.6,
+   "why": "pause 0.89s → kept 0.19s"
+  },
+  {
+   "src_start": 90.5,
+   "src_end": 91.1333,
+   "why": "pause 0.81s → kept 0.18s"
+  },
+  {
+   "src_start": 94.0333,
+   "src_end": 95.3333,
+   "why": "pause 1.48s → kept 0.18s"
+  },
+  {
+   "src_start": 97.5,
+   "src_end": 97.6333,
+   "why": "pause 0.27s → kept 0.14s"
+  },
+  {
+   "src_start": 99.8,
+   "src_end": 100.0,
+   "why": "pause 0.38s → kept 0.18s"
+  },
+  {
+   "src_start": 100.3333,
+   "src_end": 101.3333,
+   "why": "pause 1.18s → kept 0.18s"
+  },
+  {
+   "src_start": 102.5333,
+   "src_end": 102.7333,
+   "why": "pause 0.38s → kept 0.18s"
+  },
+  {
+   "src_start": 105.1667,
+   "src_end": 106.0,
+   "why": "pause 1.22s → kept 0.38s"
+  },
+  {
+   "src_start": 106.9,
+   "src_end": 111.8917,
+   "why": "trailing 'و…', 'طيب', presenter stands up"
+  }
+ ],
+ "words_output": [
+  {
+   "id": "w2",
+   "text": "حسام",
+   "src_start": 5.825,
+   "src_end": 6.17,
+   "start": 0.058,
+   "end": 0.403
+  },
+  {
+   "id": "w3",
+   "text": "حسن،",
+   "src_start": 6.17,
+   "src_end": 6.34,
+   "start": 0.403,
+   "end": 0.573
+  },
+  {
+   "id": "w4",
+   "text": "من",
+   "src_start": 6.34,
+   "src_end": 6.52,
+   "start": 0.573,
+   "end": 0.753
+  },
+  {
+   "id": "w5",
+   "text": "أسطورة",
+   "src_start": 6.52,
+   "src_end": 7.08,
+   "start": 0.753,
+   "end": 1.313
+  },
+  {
+   "id": "w6",
+   "text": "الكرة",
+   "src_start": 7.08,
+   "src_end": 7.38,
+   "start": 1.313,
+   "end": 1.613
+  },
+  {
+   "id": "w7",
+   "text": "المصرية،",
+   "src_start": 7.38,
+   "src_end": 8.12,
+   "start": 1.613,
+   "end": 2.353
+  },
+  {
+   "id": "w8",
+   "text": "لمدرب",
+   "src_start": 8.12,
+   "src_end": 8.64,
+   "start": 2.353,
+   "end": 2.873
+  },
+  {
+   "id": "w9",
+   "text": "يقود",
+   "src_start": 8.64,
+   "src_end": 9.1,
+   "start": 2.873,
+   "end": 3.333
+  },
+  {
+   "id": "w10",
+   "text": "المنتخب",
+   "src_start": 9.1,
+   "src_end": 9.7,
+   "start": 3.333,
+   "end": 3.933
+  },
+  {
+   "id": "w11",
+   "text": "في",
+   "src_start": 9.7,
+   "src_end": 9.82,
+   "start": 3.933,
+   "end": 4.053
+  },
+  {
+   "id": "w12",
+   "text": "كأس",
+   "src_start": 9.82,
+   "src_end": 10.06,
+   "start": 4.053,
+   "end": 4.293
+  },
+  {
+   "id": "w13",
+   "text": "العالم،",
+   "src_start": 10.06,
+   "src_end": 10.707,
+   "start": 4.293,
+   "end": 4.94
+  },
+  {
+   "id": "w14",
+   "text": "إلى",
+   "src_start": 11.341,
+   "src_end": 11.62,
+   "start": 5.108,
+   "end": 5.387
+  },
+  {
+   "id": "w15",
+   "text": "الخروج",
+   "src_start": 11.62,
+   "src_end": 12.18,
+   "start": 5.387,
+   "end": 5.947
+  },
+  {
+   "id": "w16",
+   "text": "من",
+   "src_start": 12.18,
+   "src_end": 12.48,
+   "start": 5.947,
+   "end": 6.247
+  },
+  {
+   "id": "w17",
+   "text": "الباب",
+   "src_start": 12.48,
+   "src_end": 12.806,
+   "start": 6.247,
+   "end": 6.573
+  },
+  {
+   "id": "w18",
+   "text": "الضيق",
+   "src_start": 13.107,
+   "src_end": 13.503,
+   "start": 6.74,
+   "end": 7.136
+  },
+  {
+   "id": "w19",
+   "text": "يوم",
+   "src_start": 14.262,
+   "src_end": 14.56,
+   "start": 7.295,
+   "end": 7.593
+  },
+  {
+   "id": "w20",
+   "text": "7",
+   "src_start": 14.56,
+   "src_end": 14.76,
+   "start": 7.593,
+   "end": 7.793
+  },
+  {
+   "id": "w21",
+   "text": "نوفمبر.",
+   "src_start": 14.76,
+   "src_end": 14.941,
+   "start": 7.793,
+   "end": 7.974
+  },
+  {
+   "id": "w22",
+   "text": "حسام",
+   "src_start": 15.933,
+   "src_end": 16.26,
+   "start": 8.3,
+   "end": 8.627
+  },
+  {
+   "id": "w23",
+   "text": "حسن،",
+   "src_start": 16.26,
+   "src_end": 16.56,
+   "start": 8.627,
+   "end": 8.927
+  },
+  {
+   "id": "w24",
+   "text": "الاسم",
+   "src_start": 16.56,
+   "src_end": 17.0,
+   "start": 8.927,
+   "end": 9.367
+  },
+  {
+   "id": "w25",
+   "text": "اللي",
+   "src_start": 17.0,
+   "src_end": 17.28,
+   "start": 9.367,
+   "end": 9.647
+  },
+  {
+   "id": "w26",
+   "text": "كان",
+   "src_start": 17.28,
+   "src_end": 17.66,
+   "start": 9.647,
+   "end": 10.027
+  },
+  {
+   "id": "w27",
+   "text": "كله",
+   "src_start": 17.66,
+   "src_end": 17.94,
+   "start": 10.027,
+   "end": 10.307
+  },
+  {
+   "id": "w28",
+   "text": "يرمز",
+   "src_start": 17.94,
+   "src_end": 18.6,
+   "start": 10.307,
+   "end": 10.967
+  },
+  {
+   "id": "w29",
+   "text": "إلى",
+   "src_start": 18.6,
+   "src_end": 18.81,
+   "start": 10.967,
+   "end": 11.177
+  },
+  {
+   "id": "w30",
+   "text": "الروح",
+   "src_start": 19.427,
+   "src_end": 20.202,
+   "start": 11.327,
+   "end": 12.102
+  },
+  {
+   "id": "w31",
+   "text": "والعزيمة،",
+   "src_start": 20.938,
+   "src_end": 21.66,
+   "start": 12.271,
+   "end": 12.993
+  },
+  {
+   "id": "w32",
+   "text": "انتهت",
+   "src_start": 21.66,
+   "src_end": 22.16,
+   "start": 12.993,
+   "end": 13.493
+  },
+  {
+   "id": "w33",
+   "text": "رحلته",
+   "src_start": 22.16,
+   "src_end": 22.64,
+   "start": 13.493,
+   "end": 13.973
+  },
+  {
+   "id": "w34",
+   "text": "مع",
+   "src_start": 22.64,
+   "src_end": 22.84,
+   "start": 13.973,
+   "end": 14.173
+  },
+  {
+   "id": "w35",
+   "text": "المنتخب",
+   "src_start": 22.84,
+   "src_end": 23.72,
+   "start": 14.173,
+   "end": 15.053
+  },
+  {
+   "id": "w36",
+   "text": "المصري",
+   "src_start": 23.72,
+   "src_end": 24.16,
+   "start": 15.053,
+   "end": 15.493
+  },
+  {
+   "id": "w37",
+   "text": "بشكل",
+   "src_start": 24.16,
+   "src_end": 24.309,
+   "start": 15.493,
+   "end": 15.642
+  },
+  {
+   "id": "w38",
+   "text": "محدش",
+   "src_start": 24.56,
+   "src_end": 24.9,
+   "start": 15.793,
+   "end": 16.133
+  },
+  {
+   "id": "w39",
+   "text": "يصدّقه.",
+   "src_start": 24.9,
+   "src_end": 25.036,
+   "start": 16.133,
+   "end": 16.269
+  },
+  {
+   "id": "w40",
+   "text": "السؤال",
+   "src_start": 26.339,
+   "src_end": 26.74,
+   "start": 16.439,
+   "end": 16.84
+  },
+  {
+   "id": "w41",
+   "text": "هنا:",
+   "src_start": 26.74,
+   "src_end": 26.88,
+   "start": 16.84,
+   "end": 16.98
+  },
+  {
+   "id": "w42",
+   "text": "إزاي",
+   "src_start": 26.88,
+   "src_end": 27.16,
+   "start": 16.98,
+   "end": 17.26
+  },
+  {
+   "id": "w43",
+   "text": "مدرب",
+   "src_start": 27.16,
+   "src_end": 27.52,
+   "start": 17.26,
+   "end": 17.62
+  },
+  {
+   "id": "w44",
+   "text": "قاد",
+   "src_start": 27.52,
+   "src_end": 27.82,
+   "start": 17.62,
+   "end": 17.92
+  },
+  {
+   "id": "w45",
+   "text": "مصر",
+   "src_start": 27.82,
+   "src_end": 28.1,
+   "start": 17.92,
+   "end": 18.2
+  },
+  {
+   "id": "w46",
+   "text": "في",
+   "src_start": 28.1,
+   "src_end": 28.24,
+   "start": 18.2,
+   "end": 18.34
+  },
+  {
+   "id": "w47",
+   "text": "المونديال،",
+   "src_start": 28.24,
+   "src_end": 28.88,
+   "start": 18.34,
+   "end": 18.98
+  },
+  {
+   "id": "w48",
+   "text": "وكان",
+   "src_start": 28.88,
+   "src_end": 29.419,
+   "start": 18.98,
+   "end": 19.519
+  },
+  {
+   "id": "w49",
+   "text": "عقده",
+   "src_start": 30.195,
+   "src_end": 30.52,
+   "start": 19.695,
+   "end": 20.02
+  },
+  {
+   "id": "w50",
+   "text": "مستمر",
+   "src_start": 30.52,
+   "src_end": 31.12,
+   "start": 20.02,
+   "end": 20.62
+  },
+  {
+   "id": "w51",
+   "text": "لـ2030،",
+   "src_start": 31.12,
+   "src_end": 32.007,
+   "start": 20.62,
+   "end": 21.507
+  },
+  {
+   "id": "w52",
+   "text": "يمشي",
+   "src_start": 32.942,
+   "src_end": 33.351,
+   "start": 21.675,
+   "end": 22.084
+  },
+  {
+   "id": "w53",
+   "text": "فجأة؟",
+   "src_start": 33.351,
+   "src_end": 33.761,
+   "start": 22.084,
+   "end": 22.494
+  },
+  {
+   "id": "w54",
+   "text": "هل",
+   "src_start": 33.761,
+   "src_end": 34.021,
+   "start": 22.494,
+   "end": 22.754
+  },
+  {
+   "id": "w55",
+   "text": "السبب",
+   "src_start": 34.021,
+   "src_end": 34.505,
+   "start": 22.754,
+   "end": 23.238
+  },
+  {
+   "id": "w56",
+   "text": "هو",
+   "src_start": 34.505,
+   "src_end": 34.766,
+   "start": 23.238,
+   "end": 23.499
+  },
+  {
+   "id": "w57",
+   "text": "كان",
+   "src_start": 34.766,
+   "src_end": 35.1,
+   "start": 23.499,
+   "end": 23.833
+  },
+  {
+   "id": "w58",
+   "text": "فني،",
+   "src_start": 35.1,
+   "src_end": 35.435,
+   "start": 23.833,
+   "end": 24.168
+  },
+  {
+   "id": "w59",
+   "text": "ولا",
+   "src_start": 35.435,
+   "src_end": 35.77,
+   "start": 24.168,
+   "end": 24.503
+  },
+  {
+   "id": "w60",
+   "text": "مشاكل",
+   "src_start": 35.77,
+   "src_end": 36.254,
+   "start": 24.503,
+   "end": 24.987
+  },
+  {
+   "id": "w61",
+   "text": "خارج",
+   "src_start": 36.254,
+   "src_end": 36.663,
+   "start": 24.987,
+   "end": 25.396
+  },
+  {
+   "id": "w62",
+   "text": "الملعب",
+   "src_start": 37.246,
+   "src_end": 38.073,
+   "start": 25.579,
+   "end": 26.406
+  },
+  {
+   "id": "w63",
+   "text": "كانت",
+   "src_start": 38.325,
+   "src_end": 38.635,
+   "start": 26.558,
+   "end": 26.868
+  },
+  {
+   "id": "w64",
+   "text": "أكبر",
+   "src_start": 38.635,
+   "src_end": 38.946,
+   "start": 26.868,
+   "end": 27.179
+  },
+  {
+   "id": "w65",
+   "text": "من",
+   "src_start": 38.946,
+   "src_end": 39.144,
+   "start": 27.179,
+   "end": 27.377
+  },
+  {
+   "id": "w66",
+   "text": "إنه",
+   "src_start": 39.144,
+   "src_end": 39.398,
+   "start": 27.377,
+   "end": 27.631
+  },
+  {
+   "id": "w67",
+   "text": "هو",
+   "src_start": 39.398,
+   "src_end": 39.596,
+   "start": 27.631,
+   "end": 27.829
+  },
+  {
+   "id": "w68",
+   "text": "يقدر",
+   "src_start": 39.596,
+   "src_end": 39.907,
+   "start": 27.829,
+   "end": 28.14
+  },
+  {
+   "id": "w69",
+   "text": "يسيطر",
+   "src_start": 39.907,
+   "src_end": 40.274,
+   "start": 28.14,
+   "end": 28.507
+  },
+  {
+   "id": "w70",
+   "text": "عليها؟",
+   "src_start": 40.274,
+   "src_end": 40.641,
+   "start": 28.507,
+   "end": 28.874
+  },
+  {
+   "id": "w71",
+   "text": "الأزمات",
+   "src_start": 42.175,
+   "src_end": 42.54,
+   "start": 29.042,
+   "end": 29.407
+  },
+  {
+   "id": "w72",
+   "text": "داخل",
+   "src_start": 42.54,
+   "src_end": 42.92,
+   "start": 29.407,
+   "end": 29.787
+  },
+  {
+   "id": "w73",
+   "text": "المنتخب",
+   "src_start": 42.92,
+   "src_end": 43.6,
+   "start": 29.787,
+   "end": 30.467
+  },
+  {
+   "id": "w74",
+   "text": "بدأت",
+   "src_start": 43.6,
+   "src_end": 44.22,
+   "start": 30.467,
+   "end": 31.087
+  },
+  {
+   "id": "w75",
+   "text": "لما",
+   "src_start": 44.22,
+   "src_end": 45.14,
+   "start": 31.087,
+   "end": 32.007
+  },
+  {
+   "id": "w76",
+   "text": "الفترة",
+   "src_start": 45.14,
+   "src_end": 45.52,
+   "start": 32.007,
+   "end": 32.387
+  },
+  {
+   "id": "w77",
+   "text": "الأخيرة",
+   "src_start": 45.52,
+   "src_end": 46.06,
+   "start": 32.387,
+   "end": 32.927
+  },
+  {
+   "id": "w78",
+   "text": "لما",
+   "src_start": 46.06,
+   "src_end": 46.47,
+   "start": 32.927,
+   "end": 33.337
+  },
+  {
+   "id": "w79",
+   "text": "انتقادات",
+   "src_start": 46.842,
+   "src_end": 47.26,
+   "start": 33.509,
+   "end": 33.927
+  },
+  {
+   "id": "w80",
+   "text": "لمحمد",
+   "src_start": 47.26,
+   "src_end": 47.76,
+   "start": 33.927,
+   "end": 34.427
+  },
+  {
+   "id": "w81",
+   "text": "صلاح",
+   "src_start": 47.76,
+   "src_end": 48.061,
+   "start": 34.427,
+   "end": 34.728
+  },
+  {
+   "id": "w82",
+   "text": "وتبديله",
+   "src_start": 49.205,
+   "src_end": 50.5,
+   "start": 34.905,
+   "end": 36.2
+  },
+  {
+   "id": "w83",
+   "text": "في",
+   "src_start": 50.5,
+   "src_end": 50.7,
+   "start": 36.2,
+   "end": 36.4
+  },
+  {
+   "id": "w84",
+   "text": "مباراة",
+   "src_start": 50.7,
+   "src_end": 51.28,
+   "start": 36.4,
+   "end": 36.98
+  },
+  {
+   "id": "w85",
+   "text": "أنجولا،",
+   "src_start": 51.28,
+   "src_end": 51.923,
+   "start": 36.98,
+   "end": 37.623
+  },
+  {
+   "id": "w86",
+   "text": "وبعدها",
+   "src_start": 52.566,
+   "src_end": 53.012,
+   "start": 37.799,
+   "end": 38.245
+  },
+  {
+   "id": "w87",
+   "text": "محمد",
+   "src_start": 53.012,
+   "src_end": 53.339,
+   "start": 38.245,
+   "end": 38.572
+  },
+  {
+   "id": "w88",
+   "text": "صلاح",
+   "src_start": 53.957,
+   "src_end": 54.82,
+   "start": 38.724,
+   "end": 39.587
+  },
+  {
+   "id": "w89",
+   "text": "غادر",
+   "src_start": 54.82,
+   "src_end": 55.26,
+   "start": 39.587,
+   "end": 40.027
+  },
+  {
+   "id": "w90",
+   "text": "المنتخب.",
+   "src_start": 55.26,
+   "src_end": 55.651,
+   "start": 40.027,
+   "end": 40.418
+  },
+  {
+   "id": "w91",
+   "text": "وكمان",
+   "src_start": 56.836,
+   "src_end": 57.24,
+   "start": 40.603,
+   "end": 41.007
+  },
+  {
+   "id": "w92",
+   "text": "تصريحات",
+   "src_start": 57.24,
+   "src_end": 57.757,
+   "start": 41.007,
+   "end": 41.524
+  },
+  {
+   "id": "w93",
+   "text": "حسام",
+   "src_start": 57.966,
+   "src_end": 58.64,
+   "start": 41.733,
+   "end": 42.407
+  },
+  {
+   "id": "w94",
+   "text": "عن",
+   "src_start": 58.64,
+   "src_end": 59.2,
+   "start": 42.407,
+   "end": 42.967
+  },
+  {
+   "id": "w95",
+   "text": "محمد",
+   "src_start": 59.2,
+   "src_end": 59.8,
+   "start": 42.967,
+   "end": 43.567
+  },
+  {
+   "id": "w96",
+   "text": "الشناوي",
+   "src_start": 59.8,
+   "src_end": 60.554,
+   "start": 43.567,
+   "end": 44.321
+  },
+  {
+   "id": "w97",
+   "text": "خسّرته",
+   "src_start": 61.377,
+   "src_end": 62.089,
+   "start": 44.51,
+   "end": 45.222
+  },
+  {
+   "id": "w98",
+   "text": "شريحة",
+   "src_start": 62.479,
+   "src_end": 62.98,
+   "start": 45.412,
+   "end": 45.913
+  },
+  {
+   "id": "w99",
+   "text": "كبيرة",
+   "src_start": 62.98,
+   "src_end": 63.28,
+   "start": 45.913,
+   "end": 46.213
+  },
+  {
+   "id": "w100",
+   "text": "جدًا",
+   "src_start": 63.28,
+   "src_end": 63.62,
+   "start": 46.213,
+   "end": 46.553
+  },
+  {
+   "id": "w101",
+   "text": "من",
+   "src_start": 63.62,
+   "src_end": 63.78,
+   "start": 46.553,
+   "end": 46.713
+  },
+  {
+   "id": "w102",
+   "text": "الجماهير",
+   "src_start": 63.78,
+   "src_end": 64.26,
+   "start": 46.713,
+   "end": 47.193
+  },
+  {
+   "id": "w103",
+   "text": "المصرية.",
+   "src_start": 64.26,
+   "src_end": 64.844,
+   "start": 47.193,
+   "end": 47.777
+  },
+  {
+   "id": "w104",
+   "text": "وفوق",
+   "src_start": 65.675,
+   "src_end": 66.2,
+   "start": 47.942,
+   "end": 48.467
+  },
+  {
+   "id": "w105",
+   "text": "كل",
+   "src_start": 66.2,
+   "src_end": 66.34,
+   "start": 48.467,
+   "end": 48.607
+  },
+  {
+   "id": "w106",
+   "text": "ده،",
+   "src_start": 66.34,
+   "src_end": 66.695,
+   "start": 48.607,
+   "end": 48.962
+  },
+  {
+   "id": "w107",
+   "text": "عقوبة",
+   "src_start": 68.987,
+   "src_end": 69.635,
+   "start": 49.287,
+   "end": 49.935
+  },
+  {
+   "id": "w108",
+   "text": "الإيقاف",
+   "src_start": 69.878,
+   "src_end": 70.5,
+   "start": 50.111,
+   "end": 50.733
+  },
+  {
+   "id": "w109",
+   "text": "اللي",
+   "src_start": 70.5,
+   "src_end": 70.6,
+   "start": 50.733,
+   "end": 50.833
+  },
+  {
+   "id": "w110",
+   "text": "جت",
+   "src_start": 70.6,
+   "src_end": 70.84,
+   "start": 50.833,
+   "end": 51.073
+  },
+  {
+   "id": "w111",
+   "text": "3",
+   "src_start": 70.84,
+   "src_end": 71.08,
+   "start": 51.073,
+   "end": 51.313
+  },
+  {
+   "id": "w112",
+   "text": "مباريات",
+   "src_start": 71.08,
+   "src_end": 71.86,
+   "start": 51.313,
+   "end": 52.093
+  },
+  {
+   "id": "w113",
+   "text": "من",
+   "src_start": 71.86,
+   "src_end": 72.04,
+   "start": 52.093,
+   "end": 52.273
+  },
+  {
+   "id": "w114",
+   "text": "الفيفا",
+   "src_start": 72.04,
+   "src_end": 72.64,
+   "start": 52.273,
+   "end": 52.873
+  },
+  {
+   "id": "w115",
+   "text": "بعد",
+   "src_start": 72.64,
+   "src_end": 72.8,
+   "start": 52.873,
+   "end": 53.033
+  },
+  {
+   "id": "w116",
+   "text": "أحداث",
+   "src_start": 72.8,
+   "src_end": 73.22,
+   "start": 53.033,
+   "end": 53.453
+  },
+  {
+   "id": "w117",
+   "text": "مباراة",
+   "src_start": 73.22,
+   "src_end": 73.72,
+   "start": 53.453,
+   "end": 53.953
+  },
+  {
+   "id": "w118",
+   "text": "الأرجنتين",
+   "src_start": 73.72,
+   "src_end": 74.027,
+   "start": 53.953,
+   "end": 54.26
+  },
+  {
+   "id": "w119",
+   "text": "في",
+   "src_start": 74.237,
+   "src_end": 74.54,
+   "start": 54.47,
+   "end": 54.773
+  },
+  {
+   "id": "w120",
+   "text": "كأس",
+   "src_start": 74.54,
+   "src_end": 74.78,
+   "start": 54.773,
+   "end": 55.013
+  },
+  {
+   "id": "w121",
+   "text": "العالم.",
+   "src_start": 74.78,
+   "src_end": 75.024,
+   "start": 55.013,
+   "end": 55.257
+  },
+  {
+   "id": "w122",
+   "text": "زاد",
+   "src_start": 76.874,
+   "src_end": 77.127,
+   "start": 55.441,
+   "end": 55.694
+  },
+  {
+   "id": "w123",
+   "text": "عليها",
+   "src_start": 77.681,
+   "src_end": 78.22,
+   "start": 55.881,
+   "end": 56.42
+  },
+  {
+   "id": "w124",
+   "text": "حياته",
+   "src_start": 78.22,
+   "src_end": 78.66,
+   "start": 56.42,
+   "end": 56.86
+  },
+  {
+   "id": "w125",
+   "text": "الشخصية،",
+   "src_start": 78.66,
+   "src_end": 79.36,
+   "start": 56.86,
+   "end": 57.56
+  },
+  {
+   "id": "w126",
+   "text": "والأزمات",
+   "src_start": 79.36,
+   "src_end": 79.96,
+   "start": 57.56,
+   "end": 58.16
+  },
+  {
+   "id": "w127",
+   "text": "الشخصية",
+   "src_start": 79.96,
+   "src_end": 80.687,
+   "start": 58.16,
+   "end": 58.887
+  },
+  {
+   "id": "w128",
+   "text": "تحولت",
+   "src_start": 81.349,
+   "src_end": 81.88,
+   "start": 59.082,
+   "end": 59.613
+  },
+  {
+   "id": "w129",
+   "text": "ساعتها",
+   "src_start": 82.951,
+   "src_end": 83.44,
+   "start": 59.751,
+   "end": 60.24
+  },
+  {
+   "id": "w130",
+   "text": "إلى",
+   "src_start": 83.44,
+   "src_end": 83.6,
+   "start": 60.24,
+   "end": 60.4
+  },
+  {
+   "id": "w131",
+   "text": "أزمة",
+   "src_start": 83.6,
+   "src_end": 84.1,
+   "start": 60.4,
+   "end": 60.9
+  },
+  {
+   "id": "w132",
+   "text": "إعلامية",
+   "src_start": 84.1,
+   "src_end": 84.9,
+   "start": 60.9,
+   "end": 61.7
+  },
+  {
+   "id": "w133",
+   "text": "ومؤسسية.",
+   "src_start": 84.9,
+   "src_end": 85.807,
+   "start": 61.7,
+   "end": 62.607
+  },
+  {
+   "id": "w134",
+   "text": "هل",
+   "src_start": 86.947,
+   "src_end": 87.12,
+   "start": 62.78,
+   "end": 62.953
+  },
+  {
+   "id": "w135",
+   "text": "اضطرت",
+   "src_start": 87.12,
+   "src_end": 87.62,
+   "start": 62.953,
+   "end": 63.453
+  },
+  {
+   "id": "w136",
+   "text": "الجبلاية",
+   "src_start": 87.62,
+   "src_end": 88.14,
+   "start": 63.453,
+   "end": 63.973
+  },
+  {
+   "id": "w137",
+   "text": "وقتها",
+   "src_start": 88.14,
+   "src_end": 88.785,
+   "start": 63.973,
+   "end": 64.618
+  },
+  {
+   "id": "w138",
+   "text": "إن",
+   "src_start": 89.671,
+   "src_end": 89.875,
+   "start": 64.804,
+   "end": 65.008
+  },
+  {
+   "id": "w139",
+   "text": "هي",
+   "src_start": 89.875,
+   "src_end": 90.079,
+   "start": 65.008,
+   "end": 65.212
+  },
+  {
+   "id": "w140",
+   "text": "تشوف",
+   "src_start": 90.079,
+   "src_end": 90.399,
+   "start": 65.212,
+   "end": 65.532
+  },
+  {
+   "id": "w141",
+   "text": "إن",
+   "src_start": 91.21,
+   "src_end": 92.06,
+   "start": 65.71,
+   "end": 66.56
+  },
+  {
+   "id": "w142",
+   "text": "ده",
+   "src_start": 92.06,
+   "src_end": 92.52,
+   "start": 66.56,
+   "end": 67.02
+  },
+  {
+   "id": "w143",
+   "text": "مش",
+   "src_start": 92.52,
+   "src_end": 92.68,
+   "start": 67.02,
+   "end": 67.18
+  },
+  {
+   "id": "w144",
+   "text": "من",
+   "src_start": 92.68,
+   "src_end": 92.78,
+   "start": 67.18,
+   "end": 67.28
+  },
+  {
+   "id": "w145",
+   "text": "مصلحة",
+   "src_start": 92.78,
+   "src_end": 93.38,
+   "start": 67.28,
+   "end": 67.88
+  },
+  {
+   "id": "w146",
+   "text": "المنتخب،",
+   "src_start": 93.38,
+   "src_end": 93.917,
+   "start": 67.88,
+   "end": 68.417
+  },
+  {
+   "id": "w147",
+   "text": "فاضطرت",
+   "src_start": 95.399,
+   "src_end": 96.155,
+   "start": 68.599,
+   "end": 69.355
+  },
+  {
+   "id": "w148",
+   "text": "إن",
+   "src_start": 96.155,
+   "src_end": 96.507,
+   "start": 69.355,
+   "end": 69.707
+  },
+  {
+   "id": "w149",
+   "text": "هي",
+   "src_start": 96.507,
+   "src_end": 96.86,
+   "start": 69.707,
+   "end": 70.06
+  },
+  {
+   "id": "w150",
+   "text": "تقيل",
+   "src_start": 96.86,
+   "src_end": 97.414,
+   "start": 70.06,
+   "end": 70.614
+  },
+  {
+   "id": "w151",
+   "text": "حسام",
+   "src_start": 97.684,
+   "src_end": 98.42,
+   "start": 70.751,
+   "end": 71.487
+  },
+  {
+   "id": "w152",
+   "text": "حسن",
+   "src_start": 98.42,
+   "src_end": 98.72,
+   "start": 71.487,
+   "end": 71.787
+  },
+  {
+   "id": "w153",
+   "text": "والجهاز",
+   "src_start": 98.72,
+   "src_end": 99.22,
+   "start": 71.787,
+   "end": 72.287
+  },
+  {
+   "id": "w154",
+   "text": "المعاون",
+   "src_start": 99.22,
+   "src_end": 99.687,
+   "start": 72.287,
+   "end": 72.754
+  },
+  {
+   "id": "w155",
+   "text": "كله.",
+   "src_start": 100.067,
+   "src_end": 100.225,
+   "start": 72.934,
+   "end": 73.092
+  },
+  {
+   "id": "w156",
+   "text": "والبديل",
+   "src_start": 101.402,
+   "src_end": 102.435,
+   "start": 73.269,
+   "end": 74.302
+  },
+  {
+   "id": "w157",
+   "text": "كان",
+   "src_start": 102.816,
+   "src_end": 103.148,
+   "start": 74.483,
+   "end": 74.815
+  },
+  {
+   "id": "w158",
+   "text": "ساعتها",
+   "src_start": 103.381,
+   "src_end": 104.93,
+   "start": 75.048,
+   "end": 76.597
+  },
+  {
+   "id": "w159",
+   "text": "علي",
+   "src_start": 106.148,
+   "src_end": 106.52,
+   "start": 76.981,
+   "end": 77.353
+  },
+  {
+   "id": "w160",
+   "text": "ماهر",
+   "src_start": 106.52,
+   "src_end": 106.9,
+   "start": 77.353,
+   "end": 77.733
+  }
+ ]
+}

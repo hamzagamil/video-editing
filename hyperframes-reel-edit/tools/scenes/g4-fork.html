@@ -1,0 +1,34 @@
+<!--STYLE-->
+#g4-k { top: 300px; font-size: 64px; font-weight: 800; }
+.g4-lbl { position:absolute; top:960px; text-align:center; font-weight:900; line-height:1.06; }
+#g4-r { left:590px; width:400px; font-size:130px; color:var(--ink); }
+#g4-l { left:90px; width:420px; font-size:112px; color:var(--accent-warm-dark); }
+<!--/STYLE-->
+    <div id="g4-k" class="kicker">هل السبب…</div>
+    <svg viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <path id="g4-stem" d="M540 420 L540 720" stroke="#1B1D1E" stroke-width="10" stroke-linecap="round" fill="none" pathLength="100" stroke-dasharray="100 120" />
+      <path id="g4-br" d="M540 720 C540 830 800 820 800 940" stroke="#1B1D1E" stroke-width="10" stroke-linecap="round" fill="none" pathLength="100" stroke-dasharray="100 120" />
+      <path id="g4-bl" d="M540 720 C540 830 300 820 300 940" stroke="#E66A21" stroke-width="12" stroke-linecap="round" fill="none" pathLength="100" stroke-dasharray="100 120" />
+      <circle id="g4-dot" cx="540" cy="720" r="18" fill="#1B1D1E" />
+    </svg>
+    <div id="g4-r" class="g4-lbl"><span class="mask"><span class="in">فني؟</span></span></div>
+    <div id="g4-l" class="g4-lbl"><span class="mask"><span id="g4-l1" class="in">خارج</span></span><span class="mask"><span id="g4-l2" class="in">الملعب؟</span></span></div>
+  <script>
+  const tl = gsap.timeline({ paused: true });
+  const rise = (s, t, d = 0.34) => tl.fromTo(s, t < 0.06 ? { yPercent: 38, opacity: 0.55 } : { yPercent: 108, opacity: 0 }, { yPercent: 0, opacity: 1, duration: d, ease: "expo.out" }, t);
+  const draw = (s, t, d, e = "power2.inOut") => tl.fromTo(s, { strokeDashoffset: t < 0.06 ? 72 : 110 }, { strokeDashoffset: 0, duration: d, ease: e }, t);
+
+  tl.fromTo("#g4-k", { opacity: 0.5, filter: "blur(4px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power2.out" }, 0);
+  draw("#g4-stem", 0, 0.3, "power3.out");
+  tl.fromTo("#g4-dot", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.26, ease: "expo.out" }, 0.26);
+  draw("#g4-br", {{w57}}, 0.36);
+  rise("#g4-r .in", {{w58}});
+  draw("#g4-bl", {{w59}}, 0.42);
+  rise("#g4-l1", {{w61}});
+  rise("#g4-l2", {{w62}});
+  tl.fromTo("#g4-r", { opacity: 1, scale: 1, transformOrigin: "50% 0%" }, { opacity: 0.32, scale: 0.84, duration: 0.4, ease: "power2.inOut", immediateRender: false }, {{w62}} + 0.3);
+  tl.fromTo("#g4-br", { opacity: 1 }, { opacity: 0.3, duration: 0.4, ease: "power2.inOut", immediateRender: false }, {{w62}} + 0.3);
+  tl.fromTo("#g4-l", { scale: 1, transformOrigin: "50% 0%" }, { scale: 1.08, duration: 0.45, ease: "expo.out", immediateRender: false }, {{w62}} + 0.3);
+  tl.fromTo("#g4-bl", { strokeWidth: 12 }, { strokeWidth: 18, duration: 0.4, ease: "power2.out", immediateRender: false }, {{w62}} + 0.3);
+  window.__timelines["{{ID}}"] = tl;
+  </script>

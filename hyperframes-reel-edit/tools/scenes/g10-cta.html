@@ -1,0 +1,26 @@
+<!--STYLE-->
+#g10-a { top: 600px; font-size: 176px; }
+#g10-b { top: 840px; font-size: 104px; color: var(--accent-warm-dark); }
+#g10-c { top: 1214px; font-size: 64px; font-weight: 800; color: var(--ink-soft); }
+.g10-dot { position:absolute; top:1004px; width:22px; height:22px; border-radius:50%; background:var(--accent-gold); }
+<!--/STYLE-->
+    <svg viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <path id="g10-fill" d="M170 520 H910 Q970 520 970 580 V1020 Q970 1080 910 1080 H820 L870 1180 L720 1080 H170 Q110 1080 110 1020 V580 Q110 520 170 520 Z" fill="#FFFDF7" />
+      <path id="g10-bubble" d="M170 520 H910 Q970 520 970 580 V1020 Q970 1080 910 1080 H820 L870 1180 L720 1080 H170 Q110 1080 110 1020 V580 Q110 520 170 520 Z" fill="none" stroke="#1B1D1E" stroke-width="9" stroke-linejoin="round" pathLength="100" stroke-dasharray="100 120" />
+    </svg>
+    <div id="g10-a" class="hero"><span class="mask"><span class="in">فني؟</span></span></div>
+    <div id="g10-b" class="hero"><span class="mask"><span class="in">ولا خارج الملعب؟</span></span></div>
+    <i id="g10-d1" class="g10-dot" style="left:190px"></i><i id="g10-d2" class="g10-dot" style="left:226px"></i><i id="g10-d3" class="g10-dot" style="left:262px"></i>
+    <div id="g10-c" class="hero">اكتب رأيك في التعليقات</div>
+  <script>
+  const tl = gsap.timeline({ paused: true });
+  const rise = (s, t, d = 0.34) => tl.fromTo(s, t < 0.06 ? { yPercent: 38, opacity: 0.55 } : { yPercent: 108, opacity: 0 }, { yPercent: 0, opacity: 1, duration: d, ease: "expo.out" }, t);
+
+  tl.fromTo("#g10-bubble", { strokeDashoffset: 60 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut" }, 0);
+  tl.fromTo("#g10-fill", { opacity: 0.4 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0);
+  rise("#g10-a .in", 0);
+  rise("#g10-b .in", 0.28);
+  tl.fromTo("#g10-d1, #g10-d2, #g10-d3", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.24, ease: "expo.out", stagger: 0.06 }, 0.5);
+  tl.fromTo("#g10-c", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out" }, 0.4);
+  window.__timelines["{{ID}}"] = tl;
+  </script>
