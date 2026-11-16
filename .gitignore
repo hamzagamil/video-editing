@@ -11,3 +11,5 @@ hyperframes-reel-edit/.media/audio/
 __pycache__/
 hyperframes-messi-edit/work/
 hyperframes-messi-edit/.media/audio/
+hyperframes-messi-edit/assets/b-roll/*
+!hyperframes-messi-edit/assets/b-roll/.gitkeep

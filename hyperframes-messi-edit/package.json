@@ -1,0 +1,19 @@
+{
+  "name": "hyperframes-messi-edit",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.9.56 preview",
+    "check": "npx --yes hyperframes@0.9.56 check",
+    "render": "npx --yes hyperframes@0.9.56 render",
+    "publish": "npx --yes hyperframes@0.9.56 publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hyperframes": "^0.9.56"
+  },
+  "private": true,
+  "type": "module"
+}
