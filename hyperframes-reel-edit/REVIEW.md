@@ -40,3 +40,15 @@
   «لمدرب». With more time I would start the route a beat earlier.
 - G8 rings are the most abstract metaphor; they read as "spreading", but a stranger may need the
   words.
+
+## Delivery render (after Studio approval)
+- `npx hyperframes render --quality delivery --fps 30 --sdr --format mp4 --strict` → `final_reel.mp4`
+  (114.2 MB, rendered in 6 m 15 s; software GL, screenshot capture).
+- ffprobe: H.264 High, yuv420p, 1080×1920, 30/1 fps, 2410 frames, 80.333 s (= root data-duration);
+  AAC-LC 48 kHz stereo, 80.333 s.
+- Loudness (ebur128 on the file): −13.7 LUFS integrated, LRA 3.1 LU, peak −1.5 dBFS.
+- blackdetect: 0 black intervals. Decoded frames at 0, 0.73, 5.03, 12.95, 30, 49.3, 70.5, 77.7,
+  80.3 s match the composition (ending on the completed CTA card).
+- A/V sync: audio onsets after 9 trimmed pauses land −8 ms on average from the planned word
+  times (max 58 ms, detector noise); the deliberate pre-name pause lands within 22 ms at 77 s,
+  so no drift accumulates.
