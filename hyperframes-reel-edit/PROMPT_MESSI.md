@@ -1,30 +1,44 @@
-# Director's prompt — Arabic editorial football reel (Messi) with HyperFrames
+# Director's prompt — «هندسة الماتريكس»: Arabic editorial reel about Messi's football brain (HyperFrames)
 
 > Paste everything below the line as one message, with exactly one `rawreel.*` talking-head video
-> in the project folder. It extends `PROMPT.md` (the hardened technical brief from the previous
-> reel) with a director's pass, a football art direction, a fact/rights guard for a reel about a
-> real, active player, and a scored self-review loop before the preview gate.
+> (the speaker reading the script in §3) in the project folder. It carries the hardened technical
+> brief from the previous reel (`PROMPT.md`), a director's pre-plan built line by line on the
+> known script, a visual concept made for this script, and a fact/rights guard for a reel about a
+> real, active player.
 
 ---
 
-You are the **director, senior Arabic short-form editor, motion designer, and HyperFrames implementer** of this reel. The subject of the narration is **Lionel Messi** (ليونيل ميسي / ليو). You are not a subtitle operator: you own the story, the rhythm, the image system, and the final quality. Every cut, crop, word, and object must have a reason you can state in one sentence.
+You are the **director, senior Arabic short-form editor, motion designer, and HyperFrames implementer** of this reel. The subject is **Lionel Messi** (ليونيل ميسي / ليو) and, more precisely, **how his mind reads the game before it happens**. You are not a subtitle operator: you own the story, rhythm, image system, and final quality. Every cut, crop, word, and object must have a reason you can say in one sentence.
 
-Inside the project folder there is exactly one raw talking-head video whose filename begins with `rawreel` (`.mp4`, `.mov`, …). There is no reference video, no SRT, no storyboard, no B-roll, no photos, no match footage. Do not ask for any.
+Inside the project folder there is exactly one raw talking-head video whose filename begins with `rawreel` (`.mp4`, `.mov`, …). There is no reference video, no SRT, no B-roll, no photos, no match footage. Do not ask for any. The expected script is in §3; the storyboard pre-plan is in §6.
 
 Inspect, transcribe, direct, edit, design, animate, validate, self-review, preview, and render a premium Arabic 9:16 reel using **HyperFrames as the primary and final system**. Build the complete working project — not recommendations, snippets, or an EDL. **Stop only once**, at the Studio-preview approval gate, before rendering.
 
 ---
 
-## 0. The quality bar in one paragraph
+## 0. The idea and the quality bar
 
-It must feel like a football magazine came alive on a phone: an immediate face-first hook with a fast push-in, a hard cut on the first big claim into a full-screen editorial page (warm paper, one bold monochrome football symbol, huge Arabic headline), back to the presenter for credibility, a longer "hero" scene at the emotional peak, a confident payoff on the face, and a designed closing card. Restrained, precise, truthful, and readable with the sound off.
+**Thesis (the speaker's own framing):** «ميسي مش بيجري أسرع من المدافع.. ميسي عايش في المستقبل».
+
+**Visual concept — "The Engineer's Notebook" (دفتر المهندس):** the script calls Messi's play «هندسة», «خريطة», «خطة مهندسة», «معادلة رياضية على سبورة». So the reel's graphic world is a warm paper engineering notebook laid over a football pitch: faint graph-paper grid, graphite construction lines, compass arcs, protractor angles, dimension arrows, hand-ruled tactics diagrams. The "Matrix / computer / update / NPC" language of the script is translated **into this paper world** — measurements, blueprints, lag, progress bars drawn in ink — never into green code rain, neon, or sci-fi HUDs.
+
+**Semantic colour code — the same in every scene, so the viewer learns it:**
+
+| Role | Colour | Drawn as |
+| --- | --- | --- |
+| Messi (his dot, his path, his decisive action) | burnt orange `--accent-warm` | a solid dot with a small **10**, a confident solid line |
+| Opponents / defenders / the ordinary player | ink / graphite | hollow dots, hatched figures, heavier but slower lines |
+| The future / the scan / the prediction | sky `--sky` | **dashed** lines, ghost dots one step ahead |
+| Genius / the number 10 | gold `--gold` | micro-accent only (a rule under the 10, one star) |
+
+**Quality bar:** a football magazine and an engineer's notebook come alive on a phone. Immediate face-first hook with a fast push, a hard cut on «بيبص في الناحية التانية» into the first diagram, the presenter for credibility, diagrams that assemble exactly on the spoken word, one unforgettable hero sequence (the dribble, §6 G12), a confident payoff on the face, and a designed comment card. Restrained, precise, truthful, readable with the sound off.
 
 ---
 
 ## 1. Framework and skills
 
 - HyperFrames is the source of truth for composition, source-range editing, captions, interludes, animation, audio placement, Studio preview, validation, and render. No pure Remotion rebuild; Remotion only if an installed HyperFrames workflow explicitly requires it.
-- Read the installed skills, in this order, and obey them: `/hyperframes`, `/general-video` (this job is a footage remix: silence removal, hard cuts, reframes, captions, full-screen interludes), `/hyperframes-core`, `/hyperframes-creative`, `/hyperframes-animation`, `/hyperframes-keyframes`, `/hyperframes-studio`, `/media-use`, `/hyperframes-audio`, `/hyperframes-registry`, `/hyperframes-cli`. Read the `/hyperframes` references too (`types/vertical.md`, `film.md`, `captions.md`, `overlays.md`, `motion.md`, `format.md`, `review.md`) where present.
+- Read the installed skills, in this order, and obey them: `/hyperframes`, `/general-video` (footage remix: silence removal, hard cuts, reframes, captions, full-screen interludes), `/hyperframes-core`, `/hyperframes-creative`, `/hyperframes-animation`, `/hyperframes-keyframes`, `/hyperframes-studio`, `/media-use`, `/hyperframes-audio`, `/hyperframes-registry`, `/hyperframes-cli`. Read the `/hyperframes` references too (`types/vertical.md`, `film.md`, `captions.md`, `overlays.md`, `motion.md`, `format.md`, `review.md`) where present.
 - If the skills are not available as slash commands, install the CLI locally and read them from `node_modules/hyperframes/dist/skills/`. If neither works, that is a blocker (§19).
 - Work in a new child folder `hyperframes-messi-edit/` (`npm i hyperframes`, `npx hyperframes init … --skip-skills`). Never modify the original `rawreel` file.
 - Search `npx hyperframes catalog` before hand-building any named effect, texture, caption style, or transition.
@@ -34,195 +48,202 @@ It must feel like a football magazine came alive on a phone: an immediate face-f
 
 1. `ffprobe`: duration, width/height, **rotation**, frame rate, codecs, pixel format, **colour transfer/primaries**, audio sample rate/channels. Record everything in `source-analysis.md`.
 2. **HDR footage** (iPhone HLG: `arib-std-b67` / `bt2020`): convert to SDR BT.709 first. Compare on one frame a plain transfer conversion (`zscale=tin=arib-std-b67:t=bt709:pin=bt2020:p=bt709:min=bt2020nc:m=bt709:r=tv:npl=203`) against hable/mobius/reinhard tonemaps; keep the one with natural skin and real contrast. Build a 1080×1920 H.264 proxy at the native frame rate with a short GOP (`-g` = fps/2) for seek-safety.
-3. Contact sheets at 1–2 fps across the whole source. Measure in canvas pixels: face centre, eye line, chin, active hands, free negative space, set-up/tear-down sections to cut.
+3. Contact sheets at 1–2 fps across the whole source. Measure in canvas pixels: face centre, eye line, chin, active hands, free negative space, set-up/tear-down and **retakes** to cut.
 4. Audio on an extracted WAV: integrated loudness, noise floor in pauses, silence map (`silencedetect -35 dB, d=0.2`). Never cut from numbers alone — verify against speech and visible gestures.
 
-## 3. Transcription (Egyptian Arabic, football vocabulary)
+## 3. The expected script and transcription
 
-1. `npx hyperframes transcribe <wav> --model large-v3 --language ar` (never an `.en` model). If the model download fails behind a proxy, fetch `ggml-large-v3.bin` into `~/.cache/hyperframes/whisper/models/`, verify its sha256, and request the needed hosts if blocked.
+The speaker reads this script (Egyptian Arabic). **It is a reference, not the truth: the audio is authoritative.** The speaker may ad-lib, skip, repeat, or re-take lines.
+
+```text
+تخيل إنك بتلعب قدام لاعب... بيبص في الناحية التانية، وبيلعب الكورة في الناحية التانية خالص لزميله! لاعب بيقعد يتمشى ٨٠ في المية من الماتش، وهو في الحقيقة قاعد بيرسم 'خريطة' لكل قدم في الملعب. دي مش صدفة... ده عقل بيشتغل بسرعة كمبيوتر عملاق. دي هندسة 'الماتريكس' على روشتة ليونيل ميسي.
+العلماء وخبراء التكتيك قعدوا يدرسوا ميسي، واكتشفوا مصطلح غريب اسمه 'الماسح الضوئي'. ميسي هو أكتر لاعب في تاريخ الكورة بيبص حواليه قبل ما الكورة تجيله! وهو لسه الكورة في رجل زميله، عقل ميسي بيكون حسب سرعة اللاعب، ومكان المدافع، والزاوية اللي بين رجلين الحارس. عشان كده لما الكورة بتوصله، هو بيكون 'شاف المستقبل' قبل ما يحصل بثانية كاملة!
+عارف ده معناه ايه؟ معناه إن ميسي مش بيبتكر الكورة في لحظتها... هو بينفذ خطة 'مهندسة' في عقله قبل ما إنت أصلاً ترمش.
+تعال أقولك على سر مرعب.. علمياً، المدافع العادي بيشوف الحركة، وبعدين عقله بيبعت إشارة لعضله عشان يتحرك، العملية دي بتاخد حوالي ٣ إلى ٤ أعشار الثانية. بس مع ميسي؟ الوقت ده مش بيساوي حاجة!
+أبحاث علم الأعصاب أثبتت إن عقل ميسي مش بيستنى رد الفعل.. ميسي هو اللي بيبرمج رد فعل المدافع من قبل ما الكورة تيجيله أصلًا! هو عارف إن لو عمل 'الكتف يمين'، المدافع هيتحرك شمال بنسبة ٩٩٪. ميسي مش بيجري أسرع من المدافع.. ميسي 'عايش في المستقبل' بـ ثواني كاملة قدام عقل الخصم. المدافع بيبقى عامل زي الآلة المكسورة اللي بتحاول تلحق 'تحديث' ميسي، بس دايماً بيكون متأخر بخطوة!
+المدافعين العاديين بيجروا ورا الكورة... لكن قدام ميسي، المدافع هو اللي بيجري ورا 'وهم'. ميسي بيمشي ببطء يخلّي المدافع يقرب منه ويحس بالأمان... وفي اللحظة اللي المدافع بيقرر يمد رجله عشان يقطع الكورة، ميسي بيديها 'تتش' صغير يمين أو شمال... البوم! المدافع بيبقى في عالم تاني.
+ميسي مش بيمر من المنافسين عشان يفرسهم، ميسي بيمر منهم كأنه بيكتب معادلة رياضية على سبورة؛ بسيطة، مبهرة، ومستحيل تتكرر.
+الكورة في رجله مش أداة لعب.. الكورة دي أداة موسيقية، وهو العازف الوحيد اللي فاهم كل نوتة فيها. لعيبة كتير بتجري وتسجل أهداف، بس التاريخ مش بيفتكر مين جري أسرع... التاريخ بيفتكر مين خلى الكورة تنام في رجليه وتسمع كلامه. ده مش لاعب كورة... دي عبقرية اتولدت بالغلط في جسم بني آدم.
+لو كنت فاكر إن ميسي شاطر بس عشان بيعرف يجيب أجوال، تبقاش فاهم حاجة.. شاركنا في الكومنتات، أكتر لقطة حسيت فيها إن ميسي بيلعب 'فيديو جيم' والناس كلها NPCs كانت ضد مين؟
+```
+
+Transcription procedure:
+
+1. `npx hyperframes transcribe <wav> --model large-v3 --language ar` (never an `.en` model). If the model download fails behind a proxy, fetch `ggml-large-v3.bin` into `~/.cache/hyperframes/whisper/models/`, verify its sha256, and request the needed hosts if blocked. Pass the start of the script as the initial prompt where the tool allows it, to bias spelling of names and terms.
 2. Real word timing: whisper.cpp with DTW (`whisper-cli -m ggml-large-v3.bin -l ar -nfa -dtw large.v3 -ojf`). Never trust evenly spread segment timings.
-3. Align: wording from the best dialect pass, times from DTW, every word clamped into the measured speech chunks. Find chunks with no words and words sitting in silence; fix by hand; document every override.
-4. **Football glossary — correct mis-hearings only when the audio supports it:** ميسي، ليو، ليونيل، الأرجنتين، منتخب التانجو، الألبيسيليستي، روساريو، لاماسيا، برشلونة/البارسا، باريس سان جيرمان، إنتر ميامي، الكامب نو، الكرة الذهبية / البالون دور، كوبا أمريكا، كأس العالم / المونديال، دوري الأبطال/التشامبيونز، الليجا، مارادونا، رونالدو، جوارديولا، سكالوني، تشافي، إنييستا، سواريز، نيمار، دي ماريا، هاتريك، أسيست، مراوغة، ركلة حرة، العشرة/رقم 10، GOAT، الكلاسيكو.
-5. Manual review against the audio: names, dialect, English/Spanish terms, every number and date. Never animate an unverified transcript. Write any remaining uncertainty down.
+3. **Diff the transcript against the script** word by word and write `SCRIPT_DIFF.md`: ad-libs, skipped words, re-takes (keep the best take, cut the others), and words where whisper and the script disagree. Where the audio clearly matches the script, use the script's spelling. Where the speaker actually said something different, **the audio wins** and the on-screen text follows what was said.
+4. Align: wording from step 3, times from DTW, every word clamped into the measured speech chunks. Find chunks with no words and words sitting in silence; fix by hand; document every override.
+5. Glossary for this script: ميسي، ليونيل، الماتريكس، روشتة، الماسح الضوئي، علم الأعصاب، الكتف يمين، تحديث، وهم، تتش، البوم، يفرسهم (check the audio — the speaker may say «يفترسهم»), معادلة، سبورة، أداة موسيقية، نوتة، أجوال، فيديو جيم، NPCs، الكومنتات.
 6. Save: `transcript.json` (`id`, `text`, `start`, `end` per word), `captions.srt` (on the final reel timeline), `source-analysis.md`, `timing-map.json` (every retained range → output start/end, frame-exact, plus removed ranges with reasons).
 
-## 4. Director's pass — before any design (write `DIRECTOR_NOTES.md`)
+## 4. Length
 
-Answer these from the verified transcript. Short, decisive, no generic filler.
-
-1. **Thesis** — the one sentence the reel argues (in Arabic, in the speaker's own terms).
-2. **Angle** — what kind of Messi story this is (legacy, comeback, rivalry, record, a single match, a myth vs. reality, a lesson…). The visual language follows the angle.
-3. **Emotional arc** — split the narration into beats and give each an energy level 1–5. Draw it as a text graph. There must be one clear peak and at least one deliberate release.
-4. **Hero moment** — the single beat that gets the most ambitious scene (longest build, strongest hierarchy, the one image the viewer remembers). Usually the peak of the arc, not the hook.
-5. **Hook options** — list three candidate first-cut points (the exact word for the hard cut into the first interlude) and choose one with a reason: strongest claim, most surprising number, or most famous name.
-6. **Earned stillness** — pick 1–2 places where the edit deliberately holds: a kept 0.35–0.6 s pause before the biggest line, or the presenter held without a crop change while saying something emotional. Stillness makes the cuts hit.
-7. **Mute test plan** — for every beat, what the viewer understands with the sound off (most reels are watched muted). If a beat fails, fix it with typography, not more motion.
-8. **Ending** — what the last spoken line is, and what the closing card says (§10 rules).
+The script is ≈470 words, so expect **≈2:00–2:40 after silence removal**. Keep the whole argument (do not drop lines) unless I give you a target duration. Interludes ≈ one per 7–9 s → the ≈16 scenes pre-planned in §6. Measure the real trimmed duration and record the decision in `DIRECTOR_NOTES.md`.
 
 ## 5. Fact and rights guard (non-negotiable for a real, active player)
 
-Write `FACT_CHECK.md`: a table of every factual claim in the transcript (titles, trophies, goals, records, dates, clubs, transfers, quotes, comparisons) with three columns — exact spoken phrase, how it is shown on screen, status:
+Write `FACT_CHECK.md`: every factual claim with the exact spoken phrase, how it appears on screen, and a status — `speaker-claim`, `well-established`, or `check-with-user`. Pre-filled for this script (verify against the actual audio):
 
-- `speaker-claim` — shown as the speaker said it, nothing added;
-- `well-established` — a fact you are confident is true as stated;
-- `check-with-user` — possibly wrong, ambiguous, or **time-sensitive** (Messi's career is ongoing; records, clubs, and tournament results change — never assume his current club, retirement status, or the latest tournament outcome from memory).
+| Spoken claim | Status | On-screen rule |
+| --- | --- | --- |
+| «بيقعد يتمشى ٨٠ في المية من الماتش» | speaker-claim (widely reported in match analyses; not a fixed official figure) | show «80٪» as the speaker's number; no source label |
+| «مصطلح غريب اسمه الماسح الضوئي» | speaker-claim (the research term is "scanning"; the Arabic is the speaker's rendering) | show «الماسح الضوئي»; optional tiny Latin `scanning` in `<bdi>` only if it helps |
+| «ميسي هو أكتر لاعب في تاريخ الكورة بيبص حواليه» | **check-with-user** (superlative; published scanning studies highlight other midfielders too) | show exactly as spoken, no fake chart or ranking |
+| «٣ إلى ٤ أعشار الثانية» | speaker-claim (typical order of magnitude for human reaction time) | «0.3–0.4 ث» timer bar, no citation |
+| «أبحاث علم الأعصاب أثبتت …» | **check-with-user** (no specific study is named) | keep on the presenter's face; **no fake paper, journal, university, or chart** |
+| «بنسبة ٩٩٪» | speaker-claim, rhetorical | show as rhetoric (big «99٪»), never as a measured statistic |
+| «بثانية كاملة» vs. later «بـ ثواني كاملة» | **check-with-user** (internal inconsistency) | show each exactly as spoken |
 
 Rules:
 
-- **Never put a number, title, date, or record on screen that the speaker did not say.** Do not "upgrade" a claim with extra stats. Do not silently correct the speaker; list suspected errors under `check-with-user` and mention them at the preview gate.
-- Do not invent quotes from Messi or anyone else. A quote card is allowed only for words the speaker explicitly attributes, worded exactly as spoken.
-- **No real imagery or likeness:** no photos or video of Messi or any player, no scraped or downloaded images, no match footage, no TV graphics, and **no AI-generated likeness or face of Messi or any real person.** Messi is represented only through symbols: the number 10, a left foot / boot outline, a ball trajectory, a generic jersey silhouette, a captain's armband, a pitch diagram, a career route.
-- **No marks:** no club crests, AFA/FIFA/UEFA/CONMEBOL/league logos, sponsor marks, kit-maker stripes or swooshes, or replicas of real trophies. Trophies are drawn as **generic, abstract** cups/balls/medals (e.g. "a line-drawn cup", "a golden sphere"), never the recognisable World Cup, Champions League, or Ballon d'Or designs.
-- Club or national-team **colours** may appear only as small semantic chips when that team is named (e.g. a sky-blue/white stripe band on «الأرجنتين»), never as the reel's identity, never with a crest.
-- No music, crowd recordings, commentary audio, or anthems you did not generate or get bundled locally with a clear licence. Record provenance of every asset in `.media/manifest.jsonl`.
+- **Never put a number, title, date, record, study, or source on screen that the speaker did not say.** Do not silently correct the speaker; mention every `check-with-user` item at the preview gate.
+- **No real imagery or likeness:** no photos or video of Messi or any player, no scraped/downloaded images, no match footage, no TV graphics, and **no AI-generated face or likeness of Messi or any real person.** Messi is the orange dot with a small 10, a left-boot outline, his path.
+- **No marks:** no club crests, AFA/FIFA/UEFA/league logos, sponsor marks, kit-maker stripes; no replicas of real trophies.
+- "Matrix" is the speaker's metaphor; **do not imitate the film's look** (no green falling code, no film typography). "Video game / NPCs" is drawn as a generic, hand-inked game UI — no real game's interface, characters, or fonts.
+- No music, crowd recordings, commentary, or anthems you did not generate or get bundled locally with a clear licence. Record provenance of every asset in `.media/manifest.jsonl`.
 
-If a beat can only be shown truthfully with an unavailable real asset, replace it with an abstract diagram or a typography treatment.
+## 6. Director's pre-plan — storyboard by script line
 
-## 6. Art direction — "Matchday Editorial"
+Write the final version to `DIRECTOR_NOTES.md` (thesis, energy arc as a text graph, hero moment, hook choice, earned stillness, mute-test notes) and `STORYBOARD.md` (exact verified phrase per scene, frame-snapped output times, crop states, energy 1–5, A/B ratio). **Use this plan as the starting point.** You may move a boundary, merge, or swap A↔G after measuring real durations, but write down why — and keep the hook, the semantic colour code, the three signature moments, and the hero sequence.
 
-Think: a vintage matchday programme crossed with a modern sports magazine and a coach's tactics board. Tactile paper, ink, chalk, print.
+Legend: **A** = presenter (crop 1.00 / 1.08 / 1.15), **G** = full-screen notebook page. Every boundary is a hard cut on a spoken word.
 
-### Palette (personal, unbranded)
+| # | World | Driving phrase | Treatment | Energy |
+| --- | --- | --- | --- | --- |
+| A0 | A · push 1.00→1.12 | «تخيل إنك بتلعب قدام لاعب...» | Frame 0 = face. Push 0.6–0.8 s, `expo.out`. First caption «تخيل» during the push. | 3 |
+| G1 | G · hook | «بيبص في الناحية التانية، وبيلعب الكورة في الناحية التانية خالص لزميله!» | **No-look pass.** Top-down pitch strip. Orange 10-dot; on «بيبص» a sky **dashed** vision cone opens one way; on «بيلعب الكورة» an orange pass line draws the opposite way to a hollow teammate dot. Hero «الناحية التانية» (the second one, orange). | 4 |
+| G2 | G · map | «لاعب بيقعد يتمشى ٨٠ في المية من الماتش، وهو في الحقيقة قاعد بيرسم 'خريطة' لكل قدم في الملعب.» | **Footsteps → map.** «80٪» hero numeral; a slow trail of footprints walks across; on «بيرسم خريطة» the footprints turn into graph-paper grid squares that fill the whole pitch with measured ticks. | 3 |
+| A1 | A · punch 1.08 | «دي مش صدفة... ده عقل بيشتغل بسرعة كمبيوتر عملاق.» | On the face. Captions: «مش صدفة» / «كمبيوتر عملاق» (orange). | 3 |
+| G3 | G · title page | «دي هندسة 'الماتريكس' على روشتة ليونيل ميسي.» | **The notebook's title page.** «هندسة الماتريكس» at full display size, assembled with compass arcs and construction lines; «ليونيل ميسي» small above a gold-ruled **10**. This is the reel's thesis plate. | 4 |
+| A2 | A · 1.00 | «العلماء وخبراء التكتيك قعدوا يدرسوا ميسي، واكتشفوا مصطلح غريب اسمه» | Credibility on the face. «مصطلح غريب» orange. Cut hard right before «الماسح». | 3 |
+| G4 | G · scan | «'الماسح الضوئي'. ميسي هو أكتر لاعب في تاريخ الكورة بيبص حواليه قبل ما الكورة تجيله!» | **The scan.** Orange 10-dot from above; sky dashed arcs sweep around it like a drawn radar, each sweep leaving a small tick (no counts, no chart). Hero «الماسح الضوئي»; supporting «بيبص حواليه». | 4 |
+| A3 | A · 1.08 | «وهو لسه الكورة في رجل زميله،» | Short face beat (setup for the list). | 3 |
+| G5 | G · list ×3 | «عقل ميسي بيكون حسب سرعة اللاعب، ومكان المدافع، والزاوية اللي بين رجلين الحارس.» | **Three measurements**, each module lands on its word and becomes active (orange), then settles to ink: ① «سرعة اللاعب» — a velocity vector with a dimension arrow; ② «مكان المدافع» — a hollow defender dot with a coordinate pin; ③ «الزاوية» — goal frame, the keeper's two legs as lines, a protractor arc drawn between them. | 4 |
+| G6 | G · future | «عشان كده لما الكورة بتوصله، هو بيكون 'شاف المستقبل' قبل ما يحصل بثانية كاملة!» | **Ghost ahead.** A time ruler; the orange dot at «الآن», a sky dashed ghost dot one notch ahead labelled «+1 ث». Hero «شاف المستقبل». (Merge with G5 as one continuous page if the speech runs on without a pause.) | 4 |
+| A4 | A · punch 1.15 | «عارف ده معناه ايه؟ معناه إن ميسي مش بيبتكر الكورة في لحظتها...» | Close on the question. Hold the crop — **earned stillness #1.** | 3 |
+| G7 | G · plan + blink | «هو بينفذ خطة 'مهندسة' في عقله قبل ما إنت أصلاً ترمش.» | **Signature moment ① — the blink.** A blueprint plan («خطة مهندسة») draws and executes as a path; on «ترمش» two paper bars close and open over the frame in 3–4 frames like an eyelid — and the plan is already complete. That blink is the cut back to the face. | 4 |
+| A5 | A · punch 1.15 | «تعال أقولك على سر مرعب..» | Keep a 0.4–0.6 s pause after «مرعب» — **earned stillness #2.** «سر مرعب» orange. | 4 |
+| G8 | G · process | «علمياً، المدافع العادي بيشوف الحركة، وبعدين عقله بيبعت إشارة لعضله عشان يتحرك، العملية دي بتاخد حوالي ٣ إلى ٤ أعشار الثانية.» | **The ordinary chain (all ink).** Three linked stations — eye → a simple line-drawn head profile → a leg muscle outline — the connector draws station by station on «بيشوف» / «إشارة» / «يتحرك»; then a timer bar fills to «0.3–0.4 ث». Heavier, slower motion than any Messi element. No glowing brains. | 3 |
+| A6 | A · punch 1.08 | «بس مع ميسي؟ الوقت ده مش بيساوي حاجة!» | Face. «مش بيساوي حاجة» orange. | 4 |
+| A7 | A · 1.00 | «أبحاث علم الأعصاب أثبتت إن عقل ميسي مش بيستنى رد الفعل..» | **Stays on the face** (credibility claim, no fake study visual). | 3 |
+| G9 | G · shoulder feint | «ميسي هو اللي بيبرمج رد فعل المدافع من قبل ما الكورة تيجيله أصلًا! هو عارف إن لو عمل 'الكتف يمين'، المدافع هيتحرك شمال بنسبة ٩٩٪.» | **Programming the defender.** Top-down duel: on «الكتف يمين» an orange shoulder arrow dips right; the ink defender dot slides left along a sky dashed "predicted" line drawn *before* he moves. «99٪» lands as rhetoric-sized hero numeral. | 4 |
+| A8 | A · punch 1.15 | «ميسي مش بيجري أسرع من المدافع.. ميسي 'عايش في المستقبل' بـ ثواني كاملة قدام عقل الخصم.» | **The thesis on the face.** «عايش في المستقبل» across two caption states, orange. | 5 |
+| G10 | G · lag | «المدافع بيبقى عامل زي الآلة المكسورة اللي بتحاول تلحق 'تحديث' ميسي، بس دايماً بيكون متأخر بخطوة!» | **Signature moment ② — the lag.** An ink-drawn progress bar «تحديث»: Messi's bar (orange) completes; the defender's bar stutters. The defender element alone gets the reel's **only** disruption effect: 2–3 offset graphite ghost copies stepping a frame behind (no RGB split, no noise). «متأخر بخطوة» hero. | 4 |
+| A9 | A · 1.08 | «المدافعين العاديين بيجروا ورا الكورة... لكن قدام ميسي، المدافع هو اللي بيجري ورا 'وهم'.» | Face. «وهم» orange. | 4 |
+| G11 | G · hero, part 1 | «ميسي بيمشي ببطء يخلّي المدافع يقرب منه ويحس بالأمان...» | **Hero sequence begins — the trap.** Slow orange footsteps; the ink defender closes in; a calm sky circle «الأمان» forms around him. Deliberately slow motion — the stillness before the hit. | 4 |
+| A10 | A · 1.15 | «وفي اللحظة اللي المدافع بيقرر يمد رجله عشان يقطع الكورة،» | Tension on the face, close crop, no movement. | 5 |
+| G12 | G · hero, part 2 | «ميسي بيديها 'تتش' صغير يمين أو شمال... البوم! المدافع بيبقى في عالم تاني.» | **Signature moment ③ — the touch.** Same diagram as G11 (shared-element continuity): the defender's leg line extends; on «تتش» a tiny orange touch arrow; one held beat; on «البوم!» hard hierarchy hit — «البوم» fills the frame for 6–10 frames with the reel's single low impact SFX, the safe circle shatters into two arcs, the defender dot is displaced off the page edge. «في عالم تاني» settles small. | 5 |
+| A11 | A · 1.08 | «ميسي مش بيمر من المنافسين عشان يفرسهم،» | Face (contrast setup). | 3 |
+| G13 | G · equation | «ميسي بيمر منهم كأنه بيكتب معادلة رياضية على سبورة؛ بسيطة، مبهرة، ومستحيل تتكرر.» | **The dribble as an equation.** A chalk-on-paper board: the orange dribble path is written stroke by stroke as if handwritten, ink defender dots as terms; then three words stack on their words: «بسيطة» (ink), «مبهرة» (ink), «مستحيل تتكرر» (orange, biggest). | 4 |
+| G14 | G · music | «الكورة في رجله مش أداة لعب.. الكورة دي أداة موسيقية، وهو العازف الوحيد اللي فاهم كل نوتة فيها.» | **The ball as a note.** Five staff lines draw; small balls sit on them as notes; on «العازف الوحيد» one orange ball-note lifts above the staff. Hero «أداة موسيقية». (Start on the face for «مش أداة لعب» if the rhythm needs it.) | 3 |
+| A12 | A · 1.00 | «لعيبة كتير بتجري وتسجل أهداف، بس التاريخ مش بيفتكر مين جري أسرع...» | Face. «مين جري أسرع» half-opacity context, then cut. | 3 |
+| G15 | G · stillness | «التاريخ بيفتكر مين خلى الكورة تنام في رجليه وتسمع كلامه.» | **The quietest page.** A left-boot outline from above, a ball resting against it; almost no motion — one slow line draw. Hero «تنام في رجليه». | 3 |
+| A13 | A · punch 1.15 | «ده مش لاعب كورة... دي عبقرية اتولدت بالغلط في جسم بني آدم.» | **Payoff on the face**, longest hold of a single crop. «عبقرية» in orange (the only caption with a gold underline). | 5 |
+| A14 | A · 1.00 → 1.08 | «لو كنت فاكر إن ميسي شاطر بس عشان بيعرف يجيب أجوال، تبقاش فاهم حاجة.. شاركنا في الكومنتات،» | CTA setup on the face; punch on «شاركنا». | 4 |
+| G16 | G · CTA card | «أكتر لقطة حسيت فيها إن ميسي بيلعب 'فيديو جيم' والناس كلها NPCs كانت ضد مين؟» | **Comment card.** Hand-inked generic game frame: the orange 10-dot with a small «P1» tag, ink dots labelled `NPC` (in `<bdi>`); a comment-bubble outline draws; hero «ضد مين؟»; small «اكتب في الكومنتات». Hold fully built ≥ 1.0 s after the last word. No black ending, no reset tail. | 4 |
 
-```css
---paper:#E9E0D3; --paper-dark:#D4C8B8; --paper-light:#F6F0E7; --cream:#FFFDF7;
---ink:#1B1D1E;   --ink-soft:#3A3D3E;
---accent-warm:#E66A21; --accent-warm-dark:#C85218;   /* main emphasis: conflict, peak, hero word */
---sky:#75AADB;         --sky-ink:#2F5F8A;            /* secondary: Argentina / identity, used sparingly */
---gold:#D8A44A;                                      /* micro-accent: titles, trophies, the "10" only */
---pitch:#3F6B4A;                                     /* rare: pitch-diagram lines only */
-```
-
-- Paper/cream/ink dominate every interlude. Burnt orange is the main emphasis. Sky is the secondary accent and stays rare. Gold is a micro-accent only (a cup rim, a star, the 10). Pitch green only for diagram lines, never a background.
-- **Text contrast:** orange text on paper uses `--accent-warm-dark`; sky text on paper uses `--sky-ink`; `#E66A21` and `#75AADB` are for fills, strokes, and chips. On footage use lighter tints of the accents so they stay ≥ 3:1.
-- Textures (resolved locally via `/media-use` or a registry primitive, never fetched at render): subtle paper grain, optional halftone dot on one object per scene, optional chalk stroke for tactical arrows. One texture per scene at most.
-- Avoid: stadium-light lens flares, neon, fire/lightning effects, glossy 3D trophies, sports-broadcast HUD templates, glassmorphism, rainbow palettes, particles.
-
-### Symbol library (pick from the transcript; never the same object twice)
-
-| Spoken idea | Symbolic object (SVG/CSS, monochrome + one accent) |
-| --- | --- |
-| greatness / GOAT / legacy | a large **10** set like a jersey number, with a thin gold rule; or a stacked "hall" of plaque cards |
-| a goal / finishing | a ball's curved trajectory drawn into a goal-frame outline; net lines tighten on the spoken word |
-| dribbling / vision | a chalk tactics board: dots as defenders, one dotted path weaving through them |
-| a career move / transfer | a route map: city/club **names as text nodes** (no crests) connected by a drawn path, RTL direction |
-| a trophy / title | a generic line-drawn cup; a slot fills or a star is added on the word |
-| a final / a single match | a scoreboard card or a match ticket stub with only the spoken details |
-| a record / a number | the numeral as hero typography, counting only if the speaker counts; a ruler/tally |
-| rivalry / comparison | a split page or a balance scale; the winning side gains weight and the accent |
-| pressure / criticism / doubt | a newspaper-headline card with redaction bars, a fractured card, a falling line |
-| captaincy / leadership | an armband outline with the spoken word set in it |
-| left foot / technique | a boot outline from above with a strike arc |
-| comeback / redemption | a path that dips and climbs, the climb drawn on the spoken phrase |
-| question / CTA | an oversized keyword + a comment-bubble outline |
+Target ratio ≈ 48–55 % presenter / 45–52 % pages; check it after measuring and adjust only by meaning.
 
 ## 7. World A — the presenter
 
-- The presenter stays visually dominant in A sections. Clean hard cuts. Three crop states: **1.00** base, **≈1.08** emphasis, **≈1.15** close. Change crop on a new claim, contrast, punchline, or payoff — not every sentence.
+- The presenter dominates A sections. Clean hard cuts. Three crop states: **1.00** base, **≈1.08** emphasis, **≈1.15** close; changes only where §6 (or a measured reason) says, not every sentence.
 - Crop = scale on an **untimed wrapper** around the timed `<video>` clips, transform origin on the measured face point so eyes and chin stay fixed. Never animate the timed `.clip`. Keep eyes, chin, and active hands inside frame at every crop.
-- Natural colour only: no sharpening, no crushed blacks, no orange skin. A very light warm lift is allowed if it helps the footage sit next to the paper scenes.
+- Natural colour: no sharpening, no crushed blacks, no orange skin. A very light warm lift is allowed so the footage sits next to the paper pages.
 
-## 8. World B — full-screen editorial interludes
+## 8. World B — the notebook pages
 
-Each interlude is a designed 9:16 page, not a stock insert:
+- Each page: warm paper with a faint graph-paper grid (`--paper-dark` at low opacity), **one** focal diagram/object, **one** dominant Arabic keyword at display size plus small context, progressive assembly synced to the spoken words, a readable hold, a decisive cut.
+- Structure every page as **entrance → build → proof/hold → exit/cut**.
+- **The first frame of every page already shows the scene** (entrances that start at local t≈0 begin part-way revealed). An empty paper frame on a hard cut reads as a mount flash.
+- Pitch diagrams are top-down and minimal: only the lines the idea needs (a touchline, a box, a goal frame), in `--pitch` or graphite at 1.5–3 px.
+- No second subtitle layer on pages: the spoken phrase becomes the page's typography, each chunk revealed at its spoken moment.
 
-- warm paper ground; **one** strong monochrome symbolic object from §6; **one** dominant Arabic keyword at display size plus small supporting context; progressive assembly synced to the spoken words; a readable hold; a decisive cut.
-- Structure every scene as **entrance → build → proof/hold → exit/cut**. One focal object and one dominant phrase at a time.
-- **The first frame of every interlude already shows the scene** (entrances that start at local t≈0 begin part-way revealed). An empty paper frame on a hard cut reads as a mount flash.
-- The hero-moment scene (§4.4) is the longest and richest: 3–5 modules or a full transformation, active element oversized in orange, completed elements settling to ink/cream/sky.
-- No second subtitle layer on interludes: the spoken phrase becomes the scene's typography, each chunk revealed at its spoken moment. Keep every important claim; invent nothing.
+## 9. Art direction — palette and texture
 
-## 9. Pacing, structure, and length
+```css
+--paper:#E9E0D3; --paper-dark:#D4C8B8; --paper-light:#F6F0E7; --cream:#FFFDF7;
+--ink:#1B1D1E;   --ink-soft:#3A3D3E;   --graphite:#5A5C5E;
+--accent-warm:#E66A21; --accent-warm-dark:#C85218;   /* Messi + main emphasis */
+--sky:#75AADB;         --sky-ink:#2F5F8A;            /* future / scan / prediction (dashed) */
+--gold:#D8A44A;                                      /* the 10 and «عبقرية» only */
+--pitch:#3F6B4A;                                     /* rare: pitch-diagram lines only */
+```
 
-- Ratio ≈ **45–55 % presenter / 45–55 % interludes**, adapted to meaning: emotional or credibility-critical lines stay on the face.
-- Interlude length: short 1.8–2.5 s, normal 2.8–4.0 s, hero scene up to ≈4.5–5 s if the speech needs it.
-- Rhythm: presenter open 0.7–1.2 s → hard cut on the hook claim → presenter for context → mechanism/contrast interlude → presenter → **hero scene at the peak** → presenter for the payoff → CTA setup on the face → optional closing card.
-- **Length decision, stated in `DIRECTOR_NOTES.md`:** silence removal is always applied. If the trimmed speech is ≤ ≈40 s, keep it all with 4–6 scenes. If longer, keep the whole argument (do not drop factual claims) and scale to ≈ one interlude per 7–8 s — unless I tell you a target duration.
-- Never alternate on a clock. Meaning decides every boundary, and every boundary is a hard cut on a spoken word.
+- **Text contrast:** orange text on paper uses `--accent-warm-dark`; sky text uses `--sky-ink`; `#E66A21` and `#75AADB` are for fills, strokes, and chips. On footage, use lighter tints so they stay ≥ 3:1.
+- Textures resolved locally via `/media-use` or a registry primitive: subtle paper grain, graph grid, optional chalk stroke for G13 only. One texture per page at most.
+- Avoid: green code rain, neon, glowing brains, circuit boards, sci-fi HUDs, lens flares, fire/lightning, glossy 3D, glassmorphism, particles, rainbow palettes.
 
 ## 10. Opening and ending
 
-**Opening:** frame 0 is the face — never black, logo, title, or a fade. Push 1.00 → ≈1.12 over 0.55–0.85 s with a strong ease-out (`expo.out`), no bounce, no return. The first small word-timed caption appears during the push. The first hard cut into an interlude lands on the chosen hook word within 1.0–2.0 s.
+**Opening:** frame 0 is the face — never black, logo, title, or fade. Push 1.00 → ≈1.12 over 0.55–0.85 s, `expo.out`, no bounce, no return. First small caption during the push. Hard cut into G1 on «بيبص في الناحية التانية», within ≈1–2 s.
 
-**Ending:** keep the presenter visible through the CTA setup; on the spoken CTA keyword, punch in or hard-cut to the closing card (oversized keyword, one minimal outline icon, one short Arabic instruction). Hold it fully built ≥ 12–18 frames after the last word (≥ 2 s if there is no spoken CTA). **If the speaker gives no CTA**, the card re-asks the speaker's own question or thesis (e.g. their own framing of the debate) with «اكتب رأيك في التعليقات» — do not invent a GOAT debate the speaker did not raise. Never end on black, never reset an animation at the tail.
+**Ending:** presenter visible through the CTA setup (A14); hard cut to G16 on «أكتر لقطة»; card fully built and held ≥ 1.0 s after «ضد مين؟». Never end on black, never reset an animation at the tail.
 
 ## 11. Arabic typography and bidi
 
 - Check the real font inventory (`fc-list :lang=ar`, then `document.fonts.check()` in the preview). Preferred: Cairo, Tajawal, Noto Kufi Arabic, Noto Sans Arabic, IBM Plex Sans Arabic. If none is installed, install Cairo from the OFL Fontsource package (`npm i @fontsource/cairo`), copy Arabic + Latin woff2 (400–900) into `assets/fonts/`, and declare `@font-face` with `unicode-range` in **every** file that uses it. Report how the font was obtained.
-- Weights: 900 display headlines, 800 captions/supporting, 700 labels, 500 small copy. Never a synthesized weight.
+- Weights: 900 display, 800 captions/supporting, 700 labels, 500 small copy. Never a synthesized weight.
 - `dir="rtl"` everywhere; whole-word spans; natural Arabic line breaks; **never split or animate individual letters**.
 - **Reveal masks need room for Arabic dots and hamza:** `overflow:hidden` masks get ≈0.2em top / 0.36em bottom padding with matching negative margins, or the dots under «ي» get clipped.
-- **Mixed scripts:** wrap Latin tokens (GOAT, PSG, Ballon d'Or) and numerals in `<bdi>` or `unicode-bidi:isolate` so they never reorder the Arabic line. Use one digit system consistently across the reel (default Western digits 0–9 for scores, years, and records). Do not glue a small «لـ»/«بـ» to a big numeral — set them as separate tokens.
-- Big numerals (10, scores, years) are allowed as hero typography only when spoken.
+- **Mixed scripts:** wrap Latin tokens (`NPC`, `P1`, `scanning`) and numerals in `<bdi>` or `unicode-bidi:isolate`. One digit system across the reel: Western digits (`80٪`, `0.3–0.4 ث`, `99٪`, `10`, `+1 ث`). Do not glue «بـ»/«لـ» to a big numeral — separate tokens.
+- Directional words matter in this script («يمين» / «شمال»): pitch diagrams are drawn from **the viewer's** point of view, and «الكتف يمين» moves visually to the viewer's right. Check every arrow against its word.
 
 ## 12. Captions (presenter sections only)
 
 - Word-timed from the verified transcript; **hand-author** semantic 1–4-word groups (machine grouping splits Arabic phrases badly).
 - ≈61–68 % of frame height, over the torso, never over the face at any crop, above platform UI. Display font at 800, compact line height, no opaque pill.
-- Cream `#FFFDF8`; not-yet-spoken words at ≈50–55 %; **one** highlighted word per group (a name, number, or the key verb) in the warm accent, sky rarely (e.g. «الأرجنتين»), gold never in captions.
-- If the clothing/background behind the captions is bright or busy, use a feathered radial shadow sized to each group (transparent at the edges) so contrast stays ≥ 3:1.
+- Cream `#FFFDF8`; not-yet-spoken words at ≈50–55 %; **one** highlighted word per group in orange (the highlight words are named in §6), sky rarely (only for «المستقبل»), gold only the underline under «عبقرية».
+- If the clothing/background behind the captions is bright or busy, use a feathered radial shadow sized to each group so contrast stays ≥ 3:1.
 - 2–4-frame opacity/vertical settle or a clean hard replacement. No bouncing karaoke, no per-letter wobble, no overshoot on every word.
 
 ## 13. Motion language
 
-Energy comes from hierarchy changes, progressive assembly, and decisive cuts — not nonstop movement. Use **2–4 motion rules per scene** from:
+Energy comes from hierarchy changes, progressive assembly, and decisive cuts — not nonstop movement. **2–4 motion rules per page** from: masked word rise; short staggered assembly; scale settle; **path draw** (`stroke-dashoffset`, long-tailed ease, completing on the spoken word); small object pose change; restrained page drift (≤ 2 %); shared-element continuity (G11 → G12 use the same diagram).
 
-- masked word/line rise; short staggered assembly; scale settle;
-- **path draw** — ball trajectories, dribble routes, career routes, tactical arrows drawn with `stroke-dashoffset` on a long-tailed ease, timed so the path completes on the spoken word;
-- small object pose change (a cup tilts upright, a card flips, an armband tightens);
-- restrained camera drift on the page (≤ 2 %);
-- semantic hand-off between scenes when two consecutive interludes share an idea (e.g. the ball that finishes one path starts the next).
+**Motion encodes the idea:** Messi's elements move with crisp, early, decisive eases; defenders' elements move later and heavier; sky "future" lines always appear **before** the thing they predict. This is the whole reel in one rule.
 
-Timing at the measured fps: entrances 6–12 frames on long-tailed ease-outs, exits shorter, stagger 2–5 frames, readable hold 10–20 frames; hard cuts over dissolves.
+Timing at the measured fps: entrances 6–12 frames, exits shorter, stagger 2–5 frames, readable hold 10–20 frames; hard cuts over dissolves. The blink (G7) and the «البوم» hit (G12) are the only "transition" effects in the reel; the lag ghosts (G10) are the only disruption effect.
 
-Forbidden: continuous random motion, glitch (unless the transcript is literally about a mistake/error), liquid morphs, chrome/3D text, fire or lightning, particles, excessive parallax, spinning objects, transition-pack variety, animations that reset at the tail.
+Forbidden: continuous random motion, any other glitch, liquid morphs, chrome/3D text, particles, excessive parallax, spinning objects, transition-pack variety, animations that reset at the tail.
 
 Seek-safe only: one paused GSAP timeline per composition registered on `window.__timelines`, `fromTo` everywhere, no `Date.now()`, `performance.now()`, unseeded `Math.random()`, timers, or `repeat:-1`. **Scene-unique ids for every GSAP selector** (scene scripts share one document).
 
 ## 14. Silence removal and source editing
 
-- Remove leading/trailing dead air and set-up/tear-down. Internal pauses > ≈0.24 s → keep ≈3 frames after speech and ≈2 before the next word. Keep the "earned stillness" pauses from §4.6 longer on purpose. Do not delete every breath.
-- Never cut inside a syllable (check suspicious spots on a spectrogram); never cut off a hand gesture that completes the sentence.
-- Separate `<video>` clips with `data-media-start` (source offset), `data-duration` (retained length), `data-start` (output placement), all on the frame grid; derive each duration from the rounded edges so neighbours abut exactly. If audio is separated, its ranges match the picture exactly. Dialogue continues uninterrupted under interludes.
+- Remove leading/trailing dead air, set-up/tear-down, and bad takes. Internal pauses > ≈0.24 s → keep ≈3 frames after speech and ≈2 before the next word. **Keep longer on purpose:** after «سر مرعب..» (0.4–0.6 s), the «...» before «البوم!» (one held beat), and before «ده مش لاعب كورة...». Do not delete every breath.
+- Never cut inside a syllable (check suspicious spots on a spectrogram); never cut off a gesture that completes the sentence.
+- Separate `<video>` clips with `data-media-start` / `data-duration` / `data-start`, all on the frame grid; derive each duration from the rounded edges so neighbours abut exactly. If audio is separated, its ranges match the picture exactly. Dialogue continues uninterrupted under pages.
 
 ## 15. Audio and sound design
 
 - The original dialogue is authoritative. Denoise only if the noise floor needs it; no robotic gating. High-pass ≈70 Hz, gentle compression, two-pass loudnorm to ≈ **−14 LUFS** integrated, ≤ **−1 dBTP**, no pumping.
-- No music unless supplied. Voice-only is preferable to unlicensed music.
-- Sound design (bundled `/media-use` or locally generated only, provenance recorded): 3–6 soft, meaningful hits on visible actions — a path completing into the goal frame, a card stamp, the cup settling, the closing-card lockup. A short referee-whistle or soft crowd swell is allowed **once**, only if locally generated/licensed, only at the hero moment, and at least ≈15 dB under the voice. No commentary, no chants, no anthems.
+- No music unless supplied. Voice-only beats unlicensed music.
+- SFX (bundled `/media-use` or locally generated, provenance recorded), all well under the voice: a soft paper/pencil tick on G3's title lock; a tiny blink "tick" on «ترمش» (G7); a soft UI stutter under the lag (G10); **one** low impact/whoosh on «البوم!» (G12) — the loudest SFX, still ≥ 10 dB under the voice; a soft lockup on the CTA card. Nothing else.
 
 ## 16. Implementation contract
 
 - 1080×1920, native fps (else 30000/1001, reported), final H.264 + AAC MP4.
-- Readable Studio tracks: A-roll picture, dialogue audio, graphic scenes, captions (one captions host, `data-track-kind="captions"`), SFX.
-- One sub-composition per interlude; `class="clip"` with the supported `data-*` timing attributes; never animate `display`/`visibility`/`autoAlpha` on a `.clip` — animate a child wrapper. Unique ids across the assembled document.
-- Safe zones: essential text within x 80–1000, y 140–1650, and as far as possible inside the platform clear band `check` uses (≈ y 290–1250, x 120–888). Closing card comfortably above the bottom controls.
+- Readable Studio tracks: A-roll picture, dialogue audio, pages, captions (one captions host, `data-track-kind="captions"`), SFX.
+- One sub-composition per page; `class="clip"` with the supported `data-*` timing attributes; never animate `display`/`visibility`/`autoAlpha` on a `.clip` — animate a child wrapper. Unique ids across the assembled document.
+- Safe zones: essential text within x 80–1000, y 140–1650, and as far as possible inside the platform clear band `check` uses (≈ y 290–1250, x 120–888). CTA card comfortably above the bottom controls.
 - No render-time network requests of any kind.
 
 ## 17. Verification and the director's review loop
 
-1. Write `BRIEF.md`, `source-analysis.md`, transcript artifacts, `DIRECTOR_NOTES.md`, `FACT_CHECK.md`, `STORYBOARD.md` (exact verified phrase per scene, frame-snapped output times, crop states, energy level, A/B ratio), and `timing-map.json`. Then build the full project — do not stop after planning.
+1. Write `BRIEF.md`, `source-analysis.md`, transcript artifacts, `SCRIPT_DIFF.md`, `DIRECTOR_NOTES.md`, `FACT_CHECK.md`, `STORYBOARD.md`, `timing-map.json`. Then build the full project — do not stop after planning.
 2. `npx hyperframes lint` after the first structural pass and after every major timing change.
 3. `npx hyperframes check --json` until **0 errors**; fix contrast, overlap, font, motion, and layout findings; justify every warning you keep.
-4. `npx hyperframes keyframes` for the opening push, every crop change, and every scene hand-off.
-5. Snapshots: exact first frame; push at 0/25/50/75/100 %; every hard cut ±1 frame; first frame, midpoint, and completed state of every interlude; every module state of the hero scene; closing-card hold; final-minus-hold and the exact final frame. Then `npx hyperframes snapshot --review` (seams + phone sheets at 360 px).
-6. **Director's review — score every scene 1–5** in `REVIEW.md` on:
-   - **Hook** — face at frame 0, push lands, first cut within 2 s on the strongest word;
-   - **Clarity** — one focal object, one dominant phrase, readable at 360 px;
-   - **Mute test** — the beat is understood with the sound off;
-   - **Sync** — every reveal lands on its spoken word (±2 frames);
-   - **Truth** — nothing on screen beyond what was said; no likeness, crest, or trophy replica;
-   - **Craft** — Arabic shaping, dot clearance, contrast, no flashes, no reset tails;
-   - **Rhythm** — boundaries motivated by meaning; the hero moment feels like the peak.
-   Anything below 4 gets fixed and re-snapshotted. Do **at least one full revision pass** before the preview gate, and name the weakest shot and what you would do with more time.
-7. Check for: black flashes, empty first frames, missing-font frames, broken shaping, clipped dots or captions, bidi reordering, sub-composition mount flashes, lingering scenes, reset tails, A/V desync.
-8. `npx hyperframes preview --background`, confirm it answers 200, give me the **preview URL**, the scores, and every `check-with-user` item from `FACT_CHECK.md`. **Wait for approval.** This is the only pause.
-9. After approval: `npx hyperframes render --quality delivery --fps <fps> --sdr --format mp4 --strict -o final_reel.mp4`. Also export `cover.png` (1080×1920) from the strongest interlude frame as a thumbnail candidate.
+4. `npx hyperframes keyframes` for the opening push, every crop change, and the G11 → G12 hand-off.
+5. Snapshots: exact first frame; push at 0/25/50/75/100 %; every hard cut ±1 frame; first frame, midpoint, and completed state of every page; each module of G5; the blink frames in G7; the lag in G10; G12 before/at/after «البوم»; CTA hold; final-minus-hold and the exact final frame. Then `npx hyperframes snapshot --review` (seams + phone sheets at 360 px).
+6. **Director's review — score every scene 1–5** in `REVIEW.md` on: **Hook** (face at frame 0, push lands, first cut on «بيبص في الناحية التانية»); **Clarity** (one focal object, one dominant phrase, readable at 360 px); **Mute test** (understood with sound off); **Sync** (every reveal on its spoken word ±2 frames); **Colour code** (orange = Messi, ink = defender, dashed sky = future — never broken); **Truth** (nothing beyond what was said, no likeness/crest/trophy/fake study); **Craft** (shaping, dot clearance, bidi, arrows match يمين/شمال, contrast, no flashes, no reset tails); **Rhythm** (boundaries by meaning; G12 feels like the peak). Anything below 4 gets fixed and re-snapshotted. Do **at least one full revision pass** before the preview gate; name the weakest shot and what you would do with more time.
+7. Check for: black flashes, empty first frames, missing-font frames, broken shaping, clipped dots or captions, bidi reordering, sub-composition mount flashes, lingering pages, reset tails, A/V desync.
+8. `npx hyperframes preview --background`, confirm it answers 200, give me the **preview URL**, the scores, the `SCRIPT_DIFF.md` summary, and every `check-with-user` item. **Wait for approval.** This is the only pause.
+9. After approval: `npx hyperframes render --quality delivery --fps <fps> --sdr --format mp4 --strict -o final_reel.mp4`, and export `cover.png` (1080×1920) from the strongest page — G3 «هندسة الماتريكس» or G12 «البوم» — as a thumbnail candidate.
 10. Verify with ffprobe (1080×1920, expected fps, H.264, AAC, non-zero size, duration = root `data-duration`), ebur128 loudness, blackdetect, decoded frames at key times, and A/V sync (audio onsets vs planned word times).
 
 ## 18. Delivery report
 
-The project folder, `final_reel.mp4`, `cover.png`, `captions.srt`, `transcript.json`, `timing-map.json`, and a short report: original/final duration, removed ranges, number of scenes, the hero moment, actual A/B ratio, fonts and weights (and how the font was obtained), registry/media dependencies with provenance, director's scores after revision, validation status, kept warnings with reasons, transcript uncertainty, and open fact-check items.
+The project folder, `final_reel.mp4`, `cover.png`, `captions.srt`, `transcript.json`, `timing-map.json`, and a short report: original/final duration, removed ranges and re-takes, number of scenes, the hero moment, actual A/B ratio, fonts and weights (and how the font was obtained), registry/media dependencies with provenance, director's scores after revision, validation status, kept warnings with reasons, transcript uncertainty and script differences, open fact-check items.
 
 ## 19. Stop and report — never pretend success
 
