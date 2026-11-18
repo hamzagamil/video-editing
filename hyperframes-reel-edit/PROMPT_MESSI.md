@@ -57,12 +57,12 @@ The speaker reads this script (Egyptian Arabic). **It is a reference, not the tr
 
 ```text
 تخيل إنك بتلعب قدام لاعب... بيبص في الناحية التانية، وبيلعب الكورة في الناحية التانية خالص لزميله! لاعب بيقعد يتمشى ٨٠ في المية من الماتش، وهو في الحقيقة قاعد بيرسم 'خريطة' لكل قدم في الملعب. دي مش صدفة... ده عقل بيشتغل بسرعة كمبيوتر عملاق. دي هندسة 'الماتريكس' على روشتة ليونيل ميسي.
-العلماء وخبراء التكتيك قعدوا يدرسوا ميسي، واكتشفوا مصطلح غريب اسمه 'الماسح الضوئي'. ميسي هو أكتر لاعب في تاريخ الكورة بيبص حواليه قبل ما الكورة تجيله! وهو لسه الكورة في رجل زميله، عقل ميسي بيكون حسب سرعة اللاعب، ومكان المدافع، والزاوية اللي بين رجلين الحارس. عشان كده لما الكورة بتوصله، هو بيكون 'شاف المستقبل' قبل ما يحصل بثانية كاملة!
+العلماء وخبراء التكتيك قعدوا يدرسوا ميسي، واكتشفوا مصطلح غريب اسمه 'الماسح الضوئي'. ميسي من أكتر اللعيبة في تاريخ الكورة اللي بيبصوا حواليهم قبل ما الكورة تجيلهم! وهو لسه الكورة في رجل زميله، عقل ميسي بيكون حسب سرعة اللاعب، ومكان المدافع، والزاوية اللي بين رجلين الحارس. عشان كده لما الكورة بتوصله، هو بيكون 'شاف المستقبل' قبل ما يحصل بثانية كاملة!
 عارف ده معناه ايه؟ معناه إن ميسي مش بيبتكر الكورة في لحظتها... هو بينفذ خطة 'مهندسة' في عقله قبل ما إنت أصلاً ترمش.
 تعال أقولك على سر مرعب.. علمياً، المدافع العادي بيشوف الحركة، وبعدين عقله بيبعت إشارة لعضله عشان يتحرك، العملية دي بتاخد حوالي ٣ إلى ٤ أعشار الثانية. بس مع ميسي؟ الوقت ده مش بيساوي حاجة!
-أبحاث علم الأعصاب أثبتت إن عقل ميسي مش بيستنى رد الفعل.. ميسي هو اللي بيبرمج رد فعل المدافع من قبل ما الكورة تيجيله أصلًا! هو عارف إن لو عمل 'الكتف يمين'، المدافع هيتحرك شمال بنسبة ٩٩٪. ميسي مش بيجري أسرع من المدافع.. ميسي 'عايش في المستقبل' بـ ثواني كاملة قدام عقل الخصم. المدافع بيبقى عامل زي الآلة المكسورة اللي بتحاول تلحق 'تحديث' ميسي، بس دايماً بيكون متأخر بخطوة!
+خبراء كتير بيقولوا إن عقل ميسي مش بيستنى رد الفعل.. ميسي هو اللي بيبرمج رد فعل المدافع من قبل ما الكورة تيجيله أصلًا! هو عارف إن لو عمل 'الكتف يمين'، المدافع هيتحرك شمال بنسبة ٩٩٪. ميسي مش بيجري أسرع من المدافع.. ميسي 'عايش في المستقبل' بثانية كاملة قدام عقل الخصم. المدافع بيبقى عامل زي الآلة المكسورة اللي بتحاول تلحق 'تحديث' ميسي، بس دايماً بيكون متأخر بخطوة!
 المدافعين العاديين بيجروا ورا الكورة... لكن قدام ميسي، المدافع هو اللي بيجري ورا 'وهم'. ميسي بيمشي ببطء يخلّي المدافع يقرب منه ويحس بالأمان... وفي اللحظة اللي المدافع بيقرر يمد رجله عشان يقطع الكورة، ميسي بيديها 'تتش' صغير يمين أو شمال... البوم! المدافع بيبقى في عالم تاني.
-ميسي مش بيمر من المنافسين عشان يفرسهم، ميسي بيمر منهم كأنه بيكتب معادلة رياضية على سبورة؛ بسيطة، مبهرة، ومستحيل تتكرر.
+ميسي مش بيمر من المنافسين عشان يفترسهم، ميسي بيمر منهم كأنه بيكتب معادلة رياضية على سبورة؛ بسيطة، مبهرة، ومستحيل تتكرر.
 الكورة في رجله مش أداة لعب.. الكورة دي أداة موسيقية، وهو العازف الوحيد اللي فاهم كل نوتة فيها. لعيبة كتير بتجري وتسجل أهداف، بس التاريخ مش بيفتكر مين جري أسرع... التاريخ بيفتكر مين خلى الكورة تنام في رجليه وتسمع كلامه. ده مش لاعب كورة... دي عبقرية اتولدت بالغلط في جسم بني آدم.
 لو كنت فاكر إن ميسي شاطر بس عشان بيعرف يجيب أجوال، تبقاش فاهم حاجة.. شاركنا في الكومنتات، أكتر لقطة حسيت فيها إن ميسي بيلعب 'فيديو جيم' والناس كلها NPCs كانت ضد مين؟
 ```
@@ -73,7 +73,7 @@ Transcription procedure:
 2. Real word timing: whisper.cpp with DTW (`whisper-cli -m ggml-large-v3.bin -l ar -nfa -dtw large.v3 -ojf`). Never trust evenly spread segment timings.
 3. **Diff the transcript against the script** word by word and write `SCRIPT_DIFF.md`: ad-libs, skipped words, re-takes (keep the best take, cut the others), and words where whisper and the script disagree. Where the audio clearly matches the script, use the script's spelling. Where the speaker actually said something different, **the audio wins** and the on-screen text follows what was said.
 4. Align: wording from step 3, times from DTW, every word clamped into the measured speech chunks. Find chunks with no words and words sitting in silence; fix by hand; document every override.
-5. Glossary for this script: ميسي، ليونيل، الماتريكس، روشتة، الماسح الضوئي، علم الأعصاب، الكتف يمين، تحديث، وهم، تتش، البوم، يفرسهم (check the audio — the speaker may say «يفترسهم»), معادلة، سبورة، أداة موسيقية، نوتة، أجوال، فيديو جيم، NPCs، الكومنتات.
+5. Glossary for this script: ميسي، ليونيل، الماتريكس، روشتة، الماسح الضوئي، خبراء، الكتف يمين، تحديث، وهم، تتش، البوم، يفترسهم, معادلة، سبورة، أداة موسيقية، نوتة، أجوال، فيديو جيم، NPCs، الكومنتات.
 6. Save: `transcript.json` (`id`, `text`, `start`, `end` per word), `captions.srt` (on the final reel timeline), `source-analysis.md`, `timing-map.json` (every retained range → output start/end, frame-exact, plus removed ranges with reasons).
 
 ## 4. Length
@@ -88,11 +88,11 @@ Write `FACT_CHECK.md`: every factual claim with the exact spoken phrase, how it 
 | --- | --- | --- |
 | «بيقعد يتمشى ٨٠ في المية من الماتش» | speaker-claim (widely reported in match analyses; not a fixed official figure) | show «80٪» as the speaker's number; no source label |
 | «مصطلح غريب اسمه الماسح الضوئي» | speaker-claim (the research term is "scanning"; the Arabic is the speaker's rendering) | show «الماسح الضوئي»; optional tiny Latin `scanning` in `<bdi>` only if it helps |
-| «ميسي هو أكتر لاعب في تاريخ الكورة بيبص حواليه» | **check-with-user** (superlative; published scanning studies highlight other midfielders too) | show exactly as spoken, no fake chart or ranking |
+| «ميسي من أكتر اللعيبة في تاريخ الكورة اللي بيبصوا حواليهم» | speaker-claim (softened from a single-player superlative; scanning studies highlight several elite midfielders) | show exactly as spoken, no fake chart or ranking |
 | «٣ إلى ٤ أعشار الثانية» | speaker-claim (typical order of magnitude for human reaction time) | «0.3–0.4 ث» timer bar, no citation |
-| «أبحاث علم الأعصاب أثبتت …» | **check-with-user** (no specific study is named) | keep on the presenter's face; **no fake paper, journal, university, or chart** |
+| «خبراء كتير بيقولوا إن عقل ميسي …» | speaker-claim (attributed opinion, no study named) | keep on the presenter's face; **no fake paper, journal, university, or chart** |
 | «بنسبة ٩٩٪» | speaker-claim, rhetorical | show as rhetoric (big «99٪»), never as a measured statistic |
-| «بثانية كاملة» vs. later «بـ ثواني كاملة» | **check-with-user** (internal inconsistency) | show each exactly as spoken |
+| «بثانية كاملة» (said twice) | speaker-claim, rhetorical | «+1 ث» on G6 only; never presented as a measurement |
 
 Rules:
 
@@ -116,7 +116,7 @@ Legend: **A** = presenter (crop 1.00 / 1.08 / 1.15), **G** = full-screen noteboo
 | A1 | A · punch 1.08 | «دي مش صدفة... ده عقل بيشتغل بسرعة كمبيوتر عملاق.» | On the face. Captions: «مش صدفة» / «كمبيوتر عملاق» (orange). | 3 |
 | G3 | G · title page | «دي هندسة 'الماتريكس' على روشتة ليونيل ميسي.» | **The notebook's title page.** «هندسة الماتريكس» at full display size, assembled with compass arcs and construction lines; «ليونيل ميسي» small above a gold-ruled **10**. This is the reel's thesis plate. | 4 |
 | A2 | A · 1.00 | «العلماء وخبراء التكتيك قعدوا يدرسوا ميسي، واكتشفوا مصطلح غريب اسمه» | Credibility on the face. «مصطلح غريب» orange. Cut hard right before «الماسح». | 3 |
-| G4 | G · scan | «'الماسح الضوئي'. ميسي هو أكتر لاعب في تاريخ الكورة بيبص حواليه قبل ما الكورة تجيله!» | **The scan.** Orange 10-dot from above; sky dashed arcs sweep around it like a drawn radar, each sweep leaving a small tick (no counts, no chart). Hero «الماسح الضوئي»; supporting «بيبص حواليه». | 4 |
+| G4 | G · scan | «'الماسح الضوئي'. ميسي من أكتر اللعيبة في تاريخ الكورة اللي بيبصوا حواليهم قبل ما الكورة تجيلهم!» | **The scan.** Orange 10-dot from above; sky dashed arcs sweep around it like a drawn radar, each sweep leaving a small tick (no counts, no chart). Hero «الماسح الضوئي»; supporting «بيبص حواليه». | 4 |
 | A3 | A · 1.08 | «وهو لسه الكورة في رجل زميله،» | Short face beat (setup for the list). | 3 |
 | G5 | G · list ×3 | «عقل ميسي بيكون حسب سرعة اللاعب، ومكان المدافع، والزاوية اللي بين رجلين الحارس.» | **Three measurements**, each module lands on its word and becomes active (orange), then settles to ink: ① «سرعة اللاعب» — a velocity vector with a dimension arrow; ② «مكان المدافع» — a hollow defender dot with a coordinate pin; ③ «الزاوية» — goal frame, the keeper's two legs as lines, a protractor arc drawn between them. | 4 |
 | G6 | G · future | «عشان كده لما الكورة بتوصله، هو بيكون 'شاف المستقبل' قبل ما يحصل بثانية كاملة!» | **Ghost ahead.** A time ruler; the orange dot at «الآن», a sky dashed ghost dot one notch ahead labelled «+1 ث». Hero «شاف المستقبل». (Merge with G5 as one continuous page if the speech runs on without a pause.) | 4 |
@@ -125,15 +125,15 @@ Legend: **A** = presenter (crop 1.00 / 1.08 / 1.15), **G** = full-screen noteboo
 | A5 | A · punch 1.15 | «تعال أقولك على سر مرعب..» | Keep a 0.4–0.6 s pause after «مرعب» — **earned stillness #2.** «سر مرعب» orange. | 4 |
 | G8 | G · process | «علمياً، المدافع العادي بيشوف الحركة، وبعدين عقله بيبعت إشارة لعضله عشان يتحرك، العملية دي بتاخد حوالي ٣ إلى ٤ أعشار الثانية.» | **The ordinary chain (all ink).** Three linked stations — eye → a simple line-drawn head profile → a leg muscle outline — the connector draws station by station on «بيشوف» / «إشارة» / «يتحرك»; then a timer bar fills to «0.3–0.4 ث». Heavier, slower motion than any Messi element. No glowing brains. | 3 |
 | A6 | A · punch 1.08 | «بس مع ميسي؟ الوقت ده مش بيساوي حاجة!» | Face. «مش بيساوي حاجة» orange. | 4 |
-| A7 | A · 1.00 | «أبحاث علم الأعصاب أثبتت إن عقل ميسي مش بيستنى رد الفعل..» | **Stays on the face** (credibility claim, no fake study visual). | 3 |
+| A7 | A · 1.00 | «خبراء كتير بيقولوا إن عقل ميسي مش بيستنى رد الفعل..» | **Stays on the face** (credibility claim, no fake study visual). | 3 |
 | G9 | G · shoulder feint | «ميسي هو اللي بيبرمج رد فعل المدافع من قبل ما الكورة تيجيله أصلًا! هو عارف إن لو عمل 'الكتف يمين'، المدافع هيتحرك شمال بنسبة ٩٩٪.» | **Programming the defender.** Top-down duel: on «الكتف يمين» an orange shoulder arrow dips right; the ink defender dot slides left along a sky dashed "predicted" line drawn *before* he moves. «99٪» lands as rhetoric-sized hero numeral. | 4 |
-| A8 | A · punch 1.15 | «ميسي مش بيجري أسرع من المدافع.. ميسي 'عايش في المستقبل' بـ ثواني كاملة قدام عقل الخصم.» | **The thesis on the face.** «عايش في المستقبل» across two caption states, orange. | 5 |
+| A8 | A · punch 1.15 | «ميسي مش بيجري أسرع من المدافع.. ميسي 'عايش في المستقبل' بثانية كاملة قدام عقل الخصم.» | **The thesis on the face.** «عايش في المستقبل» across two caption states, orange. | 5 |
 | G10 | G · lag | «المدافع بيبقى عامل زي الآلة المكسورة اللي بتحاول تلحق 'تحديث' ميسي، بس دايماً بيكون متأخر بخطوة!» | **Signature moment ② — the lag.** An ink-drawn progress bar «تحديث»: Messi's bar (orange) completes; the defender's bar stutters. The defender element alone gets the reel's **only** disruption effect: 2–3 offset graphite ghost copies stepping a frame behind (no RGB split, no noise). «متأخر بخطوة» hero. | 4 |
 | A9 | A · 1.08 | «المدافعين العاديين بيجروا ورا الكورة... لكن قدام ميسي، المدافع هو اللي بيجري ورا 'وهم'.» | Face. «وهم» orange. | 4 |
 | G11 | G · hero, part 1 | «ميسي بيمشي ببطء يخلّي المدافع يقرب منه ويحس بالأمان...» | **Hero sequence begins — the trap.** Slow orange footsteps; the ink defender closes in; a calm sky circle «الأمان» forms around him. Deliberately slow motion — the stillness before the hit. | 4 |
 | A10 | A · 1.15 | «وفي اللحظة اللي المدافع بيقرر يمد رجله عشان يقطع الكورة،» | Tension on the face, close crop, no movement. | 5 |
 | G12 | G · hero, part 2 | «ميسي بيديها 'تتش' صغير يمين أو شمال... البوم! المدافع بيبقى في عالم تاني.» | **Signature moment ③ — the touch.** Same diagram as G11 (shared-element continuity): the defender's leg line extends; on «تتش» a tiny orange touch arrow; one held beat; on «البوم!» hard hierarchy hit — «البوم» fills the frame for 6–10 frames with the reel's single low impact SFX, the safe circle shatters into two arcs, the defender dot is displaced off the page edge. «في عالم تاني» settles small. | 5 |
-| A11 | A · 1.08 | «ميسي مش بيمر من المنافسين عشان يفرسهم،» | Face (contrast setup). | 3 |
+| A11 | A · 1.08 | «ميسي مش بيمر من المنافسين عشان يفترسهم،» | Face (contrast setup). | 3 |
 | G13 | G · equation | «ميسي بيمر منهم كأنه بيكتب معادلة رياضية على سبورة؛ بسيطة، مبهرة، ومستحيل تتكرر.» | **The dribble as an equation.** A chalk-on-paper board: the orange dribble path is written stroke by stroke as if handwritten, ink defender dots as terms; then three words stack on their words: «بسيطة» (ink), «مبهرة» (ink), «مستحيل تتكرر» (orange, biggest). | 4 |
 | G14 | G · music | «الكورة في رجله مش أداة لعب.. الكورة دي أداة موسيقية، وهو العازف الوحيد اللي فاهم كل نوتة فيها.» | **The ball as a note.** Five staff lines draw; small balls sit on them as notes; on «العازف الوحيد» one orange ball-note lifts above the staff. Hero «أداة موسيقية». (Start on the face for «مش أداة لعب» if the rhythm needs it.) | 3 |
 | A12 | A · 1.00 | «لعيبة كتير بتجري وتسجل أهداف، بس التاريخ مش بيفتكر مين جري أسرع...» | Face. «مين جري أسرع» half-opacity context, then cut. | 3 |
