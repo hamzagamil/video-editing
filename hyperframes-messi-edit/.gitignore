@@ -8,3 +8,8 @@ snapshots/
 *.mp4
 check.json
 check.err
+
+# render-time scratch
+.final_reel.hf-transaction-*/
+work-*/
+render.log
