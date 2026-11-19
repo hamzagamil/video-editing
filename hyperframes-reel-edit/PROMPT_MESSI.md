@@ -218,22 +218,32 @@ Seek-safe only: one paused GSAP timeline per composition registered on `window._
 
 - The original dialogue is authoritative. Denoise only if the noise floor needs it; no robotic gating. High-pass ≈70 Hz, gentle compression, two-pass loudnorm to ≈ **−14 LUFS** integrated, ≤ **−1 dBTP**, no pumping.
 - No music unless supplied. Voice-only beats unlicensed music.
-- **Sound-effect plan.** Use the files I put in `sfx/` (names below). If a file is missing, use the closest bundled `/media-use` SFX or leave that hit out — never fetch audio from anywhere else. Convert each to 48 kHz WAV, trim silence, add 5–10 ms fades, and place it as its own `<audio>` clip on the SFX track, frame-aligned to the word. Every SFX sits clearly under the voice; check each against the dialogue at that moment.
+- **Sound concept — the sound follows the same code as the colour:** Messi's sounds are **light, crisp, and early** (taps, clicks, a soft whoosh); the defender's sounds are **heavy, low, and late** (thud, stutter, slide); **the future is heard before it is seen** — a reverse swell that peaks exactly on the frame the event happens. Voice is always the hero.
+- **Files.** Use the files I put in `sfx/` (names below). Tier ★★★ = essential, ★★ = recommended, ★ = optional. If a file is missing, use the closest bundled `/media-use` SFX or leave that hit out — never fetch audio from anywhere else. Convert each to 48 kHz WAV, trim silence, add 5–10 ms fades, and place it as its own `<audio>` clip on the SFX track.
+- **Sync:** impacts and taps land on the visual frame or 1 frame before it; whooshes and reverse swells are placed so their **peak** (not their start) hits the motion/word; ticks and heartbeats sit on a steady grid and stop on a word. Measure each file's peak offset and place by the peak.
 
-| File in `sfx/` | Scene / exact moment | Level vs. voice | Rule |
-| --- | --- | --- | --- |
-| `01-data.mp3` (soft computer/data processing) | G3, while «هندسة الماتريكس» assembles; ends on the title lock | −18 to −22 dB | ≤ 1.2 s, soft. **Not** at 0:00 — the hook opens on the voice alone |
-| `02-whoosh.mp3` | G1 pass line on «بيلعب الكورة»; G9 shoulder arrow on «الكتف يمين» | −16 to −20 dB | these two uses only — never on ordinary cuts |
-| `03-click.mp3` (soft shutter / UI click) | G7 blink on «ترمش» | −16 dB | one click on the eyelid close |
-| `04-clock.mp3` (ticking) | G8, under the timer bar filling to «0.3–0.4 ث» | −20 to −24 dB | ticks stop dead on «بس مع ميسي؟» (A6) |
-| `05-glitch.mp3` (short digital stutter) | G10, under the lagging defender bar | −20 dB | ≤ 0.6 s, the reel's only glitch sound |
-| `06-heartbeat.mp3` (slow, deep) | starts in G11 «بيمشي ببطء», continues under A10 | −16 to −20 dB | **stops completely** on the held beat before «تتش» — the silence is the set-up |
-| `07-impact.mp3` (cinematic boom) | G12 on «البوم!» | loudest SFX, still ≥ 8–10 dB under the voice peak | the single impact in the reel |
-| `08-grass.mp3` (grass slide / tackle) | G12, right after the impact, as the defender dot slides off the page | −18 dB | short, under «في عالم تاني» |
-| `09-crowd-roar.mp3` (short stadium roar) | G12, a 1–1.5 s surge after «البوم!», fading under «في عالم تاني» | −18 to −22 dB | replaces the commentator idea; once only |
-| `10-crowd-distant.mp3` (distant calm crowd ambience) | from G15 «تنام في رجليه» through A13 and the CTA card | −24 to −28 dB | slow fade in; fades out over the final card hold, no hard stop |
+| File in `sfx/` | Tier | Scene / exact moment | Level vs. voice | Rule |
+| --- | --- | --- | --- | --- |
+| *(none)* | — | A0 hook, first ≈1–2 s | — | **voice only.** The first sound effect in the reel is the G1 whoosh |
+| `01-whoosh.mp3` | ★★ | G1 pass line on «بيلعب الكورة»; G9 shoulder arrow on «الكتف يمين» | −16 to −20 dB | these two uses only, never on ordinary cuts |
+| `02-data.mp3` | ★ | G3, as «هندسة الماتريكس» assembles; ends on the title lock | −20 to −24 dB | ≤ 1.2 s, soft texture, not sci-fi |
+| `03-ping.mp3` | ★ | G4, one soft ping per scan sweep | −22 dB | max 3 pings, falling slightly in level |
+| `04-reverse.mp3` | ★★★ | G6 peaks on «شاف المستقبل»; G9 peaks on the frame the defender starts to move | −16 to −20 dB | **the sound of the future** — it arrives before the event |
+| `05-click.mp3` | ★★ | G7 eyelid close on «ترمش» | −16 dB | one click |
+| `06-clock.mp3` | ★★★ | G8, under the timer bar filling to «0.3–0.4 ث» | −20 to −24 dB | ticks **stop dead** on «بس مع ميسي؟» (A6) |
+| `07-glitch.mp3` | ★ | G10, under the lagging defender bar | −20 dB | ≤ 0.6 s, the reel's only glitch sound |
+| `08-heartbeat.mp3` | ★★★ | from G11 «بيمشي ببطء», continuing under A10 | −16 to −20 dB | beats slow slightly; **stops completely** after «يقطع الكورة» |
+| `09-tap.mp3` | ★★★ | G12, the tiny touch on «تتش» | −14 to −18 dB | small, crisp. Then **one held beat of voice-only silence** |
+| `10-impact.mp3` | ★★★ | G12 on «البوم!» | loudest SFX, still ≥ 8 dB under the voice peak | the single impact in the reel |
+| `11-roar.mp3` | ★★★ | G12, 1–1.5 s crowd surge starting with the impact, fading under «في عالم تاني» | −18 to −22 dB | replaces commentator audio; once only |
+| `12-grass.mp3` | ★ | G12, a thin layer 2–4 frames after the impact as the defender slides off the page | −22 dB | only if it doesn't muddy the impact |
+| `13-chalk.mp3` | ★★ | G13, while the dribble path is "written" on the board | −20 to −24 dB | follows the stroke timing; stops when the path completes |
+| `14-note.mp3` | ★★ | G14, one soft single note when the orange ball-note lifts on «العازف الوحيد» | −18 to −22 dB | a single note, never a melody or music bed |
+| `15-crowd-far.mp3` | ★★ | slow fade-in from G15 «تنام في رجليه», under A13 and the CTA card | −26 to −30 dB | a slight lift under «عبقرية»; fades out over the final hold, no hard stop |
+| `16-pop.mp3` | ★ | G16, the comment bubble finishing its draw | −20 dB | soft |
 
-- After placing them, re-measure the final mix: still ≈ −14 LUFS integrated, ≤ −1 dBTP, and every word intelligible at each SFX moment (listen-check by rendering a short audio excerpt per moment and comparing short-term loudness of voice vs. SFX).
+- **Restraint rules:** at most one SFX at a time except the G12 stack (tap → silence → impact + roar); never let an SFX cover the onset of a highlighted keyword; after the G12 roar fades, give ≥ 1 s of voice-only before the next SFX.
+- After placing them, re-measure the final mix: ≈ −14 LUFS integrated, ≤ −1 dBTP, and every word intelligible at each SFX moment (render a short audio excerpt per moment and compare short-term loudness of voice vs. SFX). List each SFX with its placed time and level in `REVIEW.md`.
 
 ## 16. Implementation contract
 
