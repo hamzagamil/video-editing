@@ -1,4 +1,4 @@
-# REVIEW — pre-render (Studio approval gate)
+# REVIEW — final render
 
 ## Measured
 - `hyperframes check`: **0 errors** (lint, runtime, layout, motion, contrast, craft, audio).
@@ -9,7 +9,16 @@
 - Dialogue: −14.5 LUFS integrated, −1.5 dBFS peak (two-pass loudnorm, linear). Final mix to be measured on
   the rendered file. The sound was measured, not heard.
 - Snapshots: three passes (first frames and end states of every page, the hit at «تتش» ±, the closing card),
-  then `snapshot --review` for seams and phone sheets.
+  then `snapshot --review` for seams and phone sheets (stopped early to free CPU for the render, so its
+  beat sheets are partial; the rendered file was checked frame by frame at 23 key times instead).
+
+## Rendered file (`final_reel.mp4`, `--quality delivery --sdr --strict`, exit 0)
+- 1080×1920, 30 fps, 6,703 frames, H.264 + AAC 48 kHz stereo, 223.433 s, 239.5 MB (8.6 Mb/s).
+- Final mix: **−14.5 LUFS** integrated, LRA 3.2 LU, true peak **−1.1 dBTP**.
+- `blackdetect` (0.1 s, pix_th 0.06): no black frames. `silencedetect` (−45 dB, 1.5 s): no dead air.
+- A/V: rendered audio vs `dialogue.wav` cross-correlation lag 0 ms at 30 s and 150 s.
+- Decoded frames at 23 key times: grade, crops, captions, page headlines, photos and the closing card as planned.
+- Cover: `cover.png` (G3 «هندسة الماتريكس», 24 s).
 
 ## Director's scores (1–5, after the revision pass)
 | Scene | Hook | Clarity | Mute | Sync | Colour code | Truth | Craft | Rhythm |
