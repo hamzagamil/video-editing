@@ -10,7 +10,7 @@
 
 You are the **director, senior Arabic short-form editor, motion designer, and HyperFrames implementer** of this reel. The subject is **Lionel Messi** (ليونيل ميسي / ليو) and, more precisely, **how his mind reads the game before it happens**. You are not a subtitle operator: you own the story, rhythm, image system, and final quality. Every cut, crop, word, and object must have a reason you can say in one sentence.
 
-Inside the project folder there is exactly one raw talking-head video whose filename begins with `rawreel` (`.mp4`, `.mov`, …). There is no reference video, no SRT, no B-roll, no photos, no match footage. Do not ask for any. The expected script is in §3; the storyboard pre-plan is in §6.
+Inside the project folder there is exactly one raw talking-head video whose filename begins with `rawreel` (`.mp4`, `.mov`, …). There is no reference video, no SRT, no B-roll, no photos, no match footage — **this reel is graphics-only by decision; do not add match footage or commentator audio from anywhere.** There may also be an `sfx/` folder with Pixabay sound effects I downloaded (§15). Do not ask for anything else. The expected script is in §3; the storyboard pre-plan is in §6.
 
 Inspect, transcribe, direct, edit, design, animate, validate, self-review, preview, and render a premium Arabic 9:16 reel using **HyperFrames as the primary and final system**. Build the complete working project — not recommendations, snippets, or an EDL. **Stop only once**, at the Studio-preview approval gate, before rendering.
 
@@ -100,7 +100,7 @@ Rules:
 - **No real imagery or likeness:** no photos or video of Messi or any player, no scraped/downloaded images, no match footage, no TV graphics, and **no AI-generated face or likeness of Messi or any real person.** Messi is the orange dot with a small 10, a left-boot outline, his path.
 - **No marks:** no club crests, AFA/FIFA/UEFA/league logos, sponsor marks, kit-maker stripes; no replicas of real trophies.
 - "Matrix" is the speaker's metaphor; **do not imitate the film's look** (no green falling code, no film typography). "Video game / NPCs" is drawn as a generic, hand-inked game UI — no real game's interface, characters, or fonts.
-- No music, crowd recordings, commentary, or anthems you did not generate or get bundled locally with a clear licence. Record provenance of every asset in `.media/manifest.jsonl`.
+- No match footage, commentary audio (any commentator, any language), chants, anthems, or music. The only outside audio allowed is the Pixabay SFX in `sfx/` (Pixabay Content License) — copy them into `assets/sfx/` and record each file's name, source page if given in `sfx/SOURCES.md`, and licence in `.media/manifest.jsonl`.
 
 ## 6. Director's pre-plan — storyboard by script line
 
@@ -218,7 +218,22 @@ Seek-safe only: one paused GSAP timeline per composition registered on `window._
 
 - The original dialogue is authoritative. Denoise only if the noise floor needs it; no robotic gating. High-pass ≈70 Hz, gentle compression, two-pass loudnorm to ≈ **−14 LUFS** integrated, ≤ **−1 dBTP**, no pumping.
 - No music unless supplied. Voice-only beats unlicensed music.
-- SFX (bundled `/media-use` or locally generated, provenance recorded), all well under the voice: a soft paper/pencil tick on G3's title lock; a tiny blink "tick" on «ترمش» (G7); a soft UI stutter under the lag (G10); **one** low impact/whoosh on «البوم!» (G12) — the loudest SFX, still ≥ 10 dB under the voice; a soft lockup on the CTA card. Nothing else.
+- **Sound-effect plan.** Use the files I put in `sfx/` (names below). If a file is missing, use the closest bundled `/media-use` SFX or leave that hit out — never fetch audio from anywhere else. Convert each to 48 kHz WAV, trim silence, add 5–10 ms fades, and place it as its own `<audio>` clip on the SFX track, frame-aligned to the word. Every SFX sits clearly under the voice; check each against the dialogue at that moment.
+
+| File in `sfx/` | Scene / exact moment | Level vs. voice | Rule |
+| --- | --- | --- | --- |
+| `01-data.mp3` (soft computer/data processing) | G3, while «هندسة الماتريكس» assembles; ends on the title lock | −18 to −22 dB | ≤ 1.2 s, soft. **Not** at 0:00 — the hook opens on the voice alone |
+| `02-whoosh.mp3` | G1 pass line on «بيلعب الكورة»; G9 shoulder arrow on «الكتف يمين» | −16 to −20 dB | these two uses only — never on ordinary cuts |
+| `03-click.mp3` (soft shutter / UI click) | G7 blink on «ترمش» | −16 dB | one click on the eyelid close |
+| `04-clock.mp3` (ticking) | G8, under the timer bar filling to «0.3–0.4 ث» | −20 to −24 dB | ticks stop dead on «بس مع ميسي؟» (A6) |
+| `05-glitch.mp3` (short digital stutter) | G10, under the lagging defender bar | −20 dB | ≤ 0.6 s, the reel's only glitch sound |
+| `06-heartbeat.mp3` (slow, deep) | starts in G11 «بيمشي ببطء», continues under A10 | −16 to −20 dB | **stops completely** on the held beat before «تتش» — the silence is the set-up |
+| `07-impact.mp3` (cinematic boom) | G12 on «البوم!» | loudest SFX, still ≥ 8–10 dB under the voice peak | the single impact in the reel |
+| `08-grass.mp3` (grass slide / tackle) | G12, right after the impact, as the defender dot slides off the page | −18 dB | short, under «في عالم تاني» |
+| `09-crowd-roar.mp3` (short stadium roar) | G12, a 1–1.5 s surge after «البوم!», fading under «في عالم تاني» | −18 to −22 dB | replaces the commentator idea; once only |
+| `10-crowd-distant.mp3` (distant calm crowd ambience) | from G15 «تنام في رجليه» through A13 and the CTA card | −24 to −28 dB | slow fade in; fades out over the final card hold, no hard stop |
+
+- After placing them, re-measure the final mix: still ≈ −14 LUFS integrated, ≤ −1 dBTP, and every word intelligible at each SFX moment (listen-check by rendering a short audio excerpt per moment and comparing short-term loudness of voice vs. SFX).
 
 ## 16. Implementation contract
 
