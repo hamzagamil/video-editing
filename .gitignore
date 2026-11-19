@@ -9,3 +9,7 @@ node_modules/
 hyperframes-reel-edit/work/
 hyperframes-reel-edit/.media/audio/
 __pycache__/
+
+# Pixabay SFX: kept local, not redistributed through git
+sfx/originals/
+sfx/prepared/
