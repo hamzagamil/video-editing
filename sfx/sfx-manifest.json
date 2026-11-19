@@ -1,12 +1,67 @@
 {
   "note": "Prepared files are 48 kHz stereo 16-bit WAV. Transients normalised to -3 dBFS peak, beds to -20 LUFS integrated. Place each clip so its peak_s lands on the target frame (start = target - peak_s). Set final levels against the voice per PROMPT_MESSI.md section 15.",
   "files": {
-    "prepared/04-reverse.wav":    {"duration_s": 1.40, "peak_s": 1.36, "role": "the future: reverse swell, peak at the very end", "derived_from": "originals/10-impact.mp3 (0.02-1.42 s, reversed, high-pass 180 Hz)"},
-    "prepared/06-clock.wav":      {"duration_s": 7.00, "first_tick_s": 0.13, "tick_period_s": 1.00, "ticks": 7, "role": "G8 timer; cut it dead on «بس مع ميسي؟» (fade 5 ms)", "derived_from": "originals/06-clock.mp3 (0.60-7.60 s)"},
-    "prepared/08-heartbeat.wav":  {"duration_s": 5.65, "beats_lub_s": [0.12, 1.66, 3.12, 4.61], "dub_after_lub_s": 0.32, "beat_period_s": 1.5, "role": "G11 -> A10; stop between beats after «يقطع الكورة». Loop from 0.0-4.55 s if the passage is longer", "derived_from": "originals/08-heartbeat.mp3 (0.30-5.95 s)"},
-    "prepared/09-tap.wav":        {"duration_s": 0.36, "peak_s": 0.08, "role": "G12 «تتش»", "derived_from": "originals/09-tap.mp3 (0.04-0.40 s)"},
-    "prepared/10-impact.wav":     {"duration_s": 3.00, "peak_s": 0.08, "role": "G12 «البوم!» (fade-out from 1.8 s)", "derived_from": "originals/10-impact.mp3 (0-3.0 s)"},
-    "prepared/11-roar.wav":       {"duration_s": 2.50, "peak_s": 0.49, "role": "G12 crowd surge with the impact, fades by 2.5 s", "derived_from": "originals/11-roar.mp3 (7.30-9.80 s, the loudest swell)"},
-    "prepared/15-crowd-far.wav":  {"duration_s": 30.0, "role": "distant bed from G15 to the end; already has 2 s fade-in / 3 s fade-out — trim and re-fade to fit", "derived_from": "originals/11-roar.mp3 (9.0-17.4 s, band-limited 120-1600 Hz, looped with 1.5 s crossfades)"}
+    "prepared/04-reverse.wav": {
+      "duration_s": 1.62,
+      "peak_s": 1.48,
+      "stop_s": 1.59,
+      "role": "the future: reverse whoosh that rises and stops dead. Place so stop_s lands on the event frame (start = target - 1.59)",
+      "derived_from": "originals/04-reverse.mp3 (1.90-3.52 s, exp fade-in 0.6 s)"
+    },
+    "prepared/06-clock.wav": {
+      "duration_s": 7.0,
+      "first_tick_s": 0.13,
+      "tick_period_s": 1.0,
+      "ticks": 7,
+      "role": "G8 timer; cut it dead on «بس مع ميسي؟» (fade 5 ms)",
+      "derived_from": "originals/06-clock.mp3 (0.60-7.60 s)"
+    },
+    "prepared/08-heartbeat.wav": {
+      "duration_s": 5.65,
+      "beats_lub_s": [
+        0.12,
+        1.66,
+        3.12,
+        4.61
+      ],
+      "dub_after_lub_s": 0.32,
+      "beat_period_s": 1.5,
+      "role": "G11 -> A10; stop between beats after «يقطع الكورة». Loop from 0.0-4.55 s if the passage is longer",
+      "derived_from": "originals/08-heartbeat.mp3 (0.30-5.95 s)"
+    },
+    "prepared/09-tap.wav": {
+      "duration_s": 0.36,
+      "peak_s": 0.08,
+      "role": "G12 «تتش»",
+      "derived_from": "originals/09-tap.mp3 (0.04-0.40 s)"
+    },
+    "prepared/10-impact.wav": {
+      "duration_s": 3.0,
+      "peak_s": 0.08,
+      "role": "G12 «البوم!» (fade-out from 1.8 s)",
+      "derived_from": "originals/10-impact.mp3 (0-3.0 s)"
+    },
+    "prepared/11-roar.wav": {
+      "duration_s": 2.5,
+      "peak_s": 0.49,
+      "role": "G12 crowd surge with the impact, fades by 2.5 s",
+      "derived_from": "originals/11-roar.mp3 (7.30-9.80 s, the loudest swell)"
+    },
+    "prepared/15-crowd-far.wav": {
+      "duration_s": 30.0,
+      "role": "distant bed from G15 to the end; has 2 s fade-in / 3 s fade-out — trim and re-fade to fit",
+      "derived_from": "originals/15-crowd-far.mp3 (34.0-43.0 s, band-limited 120-1500 Hz, looped with 1.5 s crossfades)"
+    },
+    "prepared/alt/04-reverse-from-boom.wav": {
+      "duration_s": 1.4,
+      "peak_s": 1.36,
+      "role": "alternative 'future' swell made from the reversed boom (darker, ties to «البوم»)",
+      "derived_from": "originals/10-impact.mp3"
+    },
+    "prepared/alt/15-crowd-far-from-roar.wav": {
+      "duration_s": 30.0,
+      "role": "alternative distant bed made from the match crowd",
+      "derived_from": "originals/11-roar.mp3 (9.0-17.4 s)"
+    }
   }
 }
