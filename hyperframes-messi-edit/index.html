@@ -22,8 +22,7 @@
       html, body { width:1080px; height:1920px; overflow:hidden; background:#1B1D1E; }
       #root { position:relative; width:1080px; height:1920px; overflow:hidden; background:#1B1D1E; }
       #aroll-cam { position:absolute; left:0; top:0; width:1080px; height:1920px; z-index:1; }
-      #aroll-cam video, #aroll-cam .aroll-still { position:absolute; left:0; top:0; width:1080px; height:1920px; object-fit:cover; }
-      #aroll-cam .aroll-still { z-index:2; }
+      #aroll-cam video { position:absolute; left:0; top:0; width:1080px; height:1920px; object-fit:cover; }
       .scene-host { position:absolute; inset:0; }
       #captions { z-index:5; }
     </style>
@@ -33,129 +32,7 @@
          data-width="1080" data-height="1920">
       <!-- World A: presenter. Untimed camera wrapper (crop states) around the timed source ranges (graded SDR proxy). -->
       <div id="aroll-cam">
-        <video id="a01" class="clip aroll" src="assets/media/aroll.mp4" data-start="0.0" data-duration="2.0333" data-media-start="0.3" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a02" class="clip aroll" src="assets/media/aroll.mp4" data-start="2.0333" data-duration="0.8667" data-media-start="2.6333" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a03" class="clip aroll" src="assets/media/aroll.mp4" data-start="2.9" data-duration="0.8667" data-media-start="3.7" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a04" class="clip aroll" src="assets/media/aroll.mp4" data-start="3.7667" data-duration="0.7333" data-media-start="5.7667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a05" class="clip aroll" src="assets/media/aroll.mp4" data-start="4.5" data-duration="1.3333" data-media-start="6.6667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a06" class="clip aroll" src="assets/media/aroll.mp4" data-start="5.8333" data-duration="1.6333" data-media-start="8.1" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a07" class="clip aroll" src="assets/media/aroll.mp4" data-start="7.4667" data-duration="0.8333" data-media-start="10.5" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a08" class="clip aroll" src="assets/media/aroll.mp4" data-start="8.3" data-duration="2.8333" data-media-start="12.1333" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a09" class="clip aroll" src="assets/media/aroll.mp4" data-start="11.1333" data-duration="0.7333" data-media-start="16.1666" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a10" class="clip aroll" src="assets/media/aroll.mp4" data-start="11.8667" data-duration="2.4667" data-media-start="19.9333" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a11" class="clip aroll" src="assets/media/aroll.mp4" data-start="14.3333" data-duration="0.8" data-media-start="23.4333" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a12" class="clip aroll" src="assets/media/aroll.mp4" data-start="15.1333" data-duration="1.7667" data-media-start="25.5" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a13" class="clip aroll" src="assets/media/aroll.mp4" data-start="16.9" data-duration="0.9667" data-media-start="27.5667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a14" class="clip aroll" src="assets/media/aroll.mp4" data-start="17.8667" data-duration="1.4" data-media-start="29.8333" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a15" class="clip aroll" src="assets/media/aroll.mp4" data-start="19.2667" data-duration="1.2667" data-media-start="31.4666" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a16" class="clip aroll" src="assets/media/aroll.mp4" data-start="20.5333" data-duration="2.3" data-media-start="34.2" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a17" class="clip aroll" src="assets/media/aroll.mp4" data-start="22.8333" data-duration="2.9" data-media-start="40.7667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a18" class="clip aroll" src="assets/media/aroll.mp4" data-start="25.7333" data-duration="0.7667" data-media-start="44.5334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a19" class="clip aroll" src="assets/media/aroll.mp4" data-start="26.5" data-duration="2.9667" data-media-start="46.4" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a20" class="clip aroll" src="assets/media/aroll.mp4" data-start="29.4667" data-duration="2.6333" data-media-start="49.8667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a21" class="clip aroll" src="assets/media/aroll.mp4" data-start="32.1" data-duration="3.6" data-media-start="53.9666" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a22" class="clip aroll" src="assets/media/aroll.mp4" data-start="35.7" data-duration="2.2667" data-media-start="59.0" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a23" class="clip aroll" src="assets/media/aroll.mp4" data-start="37.9667" data-duration="1.0667" data-media-start="61.9334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a24" class="clip aroll" src="assets/media/aroll.mp4" data-start="39.0333" data-duration="2.6" data-media-start="63.8" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a25" class="clip aroll" src="assets/media/aroll.mp4" data-start="41.6333" data-duration="3.4667" data-media-start="67.7" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a26" class="clip aroll" src="assets/media/aroll.mp4" data-start="45.1" data-duration="4.1" data-media-start="72.6666" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a27" class="clip aroll" src="assets/media/aroll.mp4" data-start="49.2" data-duration="1.0667" data-media-start="77.3" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a28" class="clip aroll" src="assets/media/aroll.mp4" data-start="50.2667" data-duration="2.7" data-media-start="79.8667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a29" class="clip aroll" src="assets/media/aroll.mp4" data-start="52.9667" data-duration="3.2333" data-media-start="84.1" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a30" class="clip aroll" src="assets/media/aroll.mp4" data-start="56.2" data-duration="1.7333" data-media-start="87.6333" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a31" class="clip aroll" src="assets/media/aroll.mp4" data-start="57.9333" data-duration="2.2333" data-media-start="90.1333" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a32" class="clip aroll" src="assets/media/aroll.mp4" data-start="60.1667" data-duration="3.0333" data-media-start="98.7667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a33" class="clip aroll" src="assets/media/aroll.mp4" data-start="63.2" data-duration="0.8667" data-media-start="101.8333" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a34" class="clip aroll" src="assets/media/aroll.mp4" data-start="64.0667" data-duration="0.4" data-media-start="130.7334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a35" class="clip aroll" src="assets/media/aroll.mp4" data-start="64.4667" data-duration="3.6667" data-media-start="131.4" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a36" class="clip aroll" src="assets/media/aroll.mp4" data-start="68.1333" data-duration="2.9" data-media-start="143.6" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a37" class="clip aroll" src="assets/media/aroll.mp4" data-start="71.0333" data-duration="1.0667" data-media-start="147.3334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a38" class="clip aroll" src="assets/media/aroll.mp4" data-start="72.1" data-duration="1.9667" data-media-start="149.7" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a39" class="clip aroll" src="assets/media/aroll.mp4" data-start="74.0667" data-duration="0.8333" data-media-start="155.1" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a40" class="clip aroll" src="assets/media/aroll.mp4" data-start="74.9" data-duration="1.4" data-media-start="156.1333" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a41" class="clip aroll" src="assets/media/aroll.mp4" data-start="76.3" data-duration="1.1667" data-media-start="159.0667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a42" class="clip aroll" src="assets/media/aroll.mp4" data-start="77.4667" data-duration="0.9" data-media-start="160.5" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a43" class="clip aroll" src="assets/media/aroll.mp4" data-start="78.3667" data-duration="2.2667" data-media-start="166.9667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a44" class="clip aroll" src="assets/media/aroll.mp4" data-start="80.6333" data-duration="1.6667" data-media-start="174.0" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a45" class="clip aroll" src="assets/media/aroll.mp4" data-start="82.3" data-duration="1.6333" data-media-start="175.9" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a46" class="clip aroll" src="assets/media/aroll.mp4" data-start="83.9333" data-duration="3.6667" data-media-start="178.3667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a47" class="clip aroll" src="assets/media/aroll.mp4" data-start="87.6" data-duration="0.9" data-media-start="182.7" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a48" class="clip aroll" src="assets/media/aroll.mp4" data-start="88.5" data-duration="0.9667" data-media-start="183.9" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a49" class="clip aroll" src="assets/media/aroll.mp4" data-start="89.4667" data-duration="0.8667" data-media-start="190.1334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a50" class="clip aroll" src="assets/media/aroll.mp4" data-start="90.3333" data-duration="0.8" data-media-start="191.2667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a51" class="clip aroll" src="assets/media/aroll.mp4" data-start="91.1333" data-duration="1.1667" data-media-start="192.1" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a52" class="clip aroll" src="assets/media/aroll.mp4" data-start="92.3" data-duration="0.8667" data-media-start="193.7333" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a53" class="clip aroll" src="assets/media/aroll.mp4" data-start="93.1667" data-duration="1.6333" data-media-start="194.8333" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a54" class="clip aroll" src="assets/media/aroll.mp4" data-start="94.8" data-duration="1.2667" data-media-start="199.6333" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a55" class="clip aroll" src="assets/media/aroll.mp4" data-start="96.0667" data-duration="3.3667" data-media-start="202.8" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a56" class="clip aroll" src="assets/media/aroll.mp4" data-start="99.4333" data-duration="0.9" data-media-start="206.2666" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a57" class="clip aroll" src="assets/media/aroll.mp4" data-start="100.3333" data-duration="2.6333" data-media-start="214.9" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a58" class="clip aroll" src="assets/media/aroll.mp4" data-start="102.9667" data-duration="0.7333" data-media-start="218.5334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a59" class="clip aroll" src="assets/media/aroll.mp4" data-start="103.7" data-duration="2.4333" data-media-start="219.3334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a60" class="clip aroll" src="assets/media/aroll.mp4" data-start="106.1333" data-duration="3.6" data-media-start="221.9334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a61" class="clip aroll" src="assets/media/aroll.mp4" data-start="109.7333" data-duration="1.8" data-media-start="230.2667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a62" class="clip aroll" src="assets/media/aroll.mp4" data-start="111.5333" data-duration="3.4333" data-media-start="232.8" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a63" class="clip aroll" src="assets/media/aroll.mp4" data-start="114.9667" data-duration="1.0667" data-media-start="237.3" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a64" class="clip aroll" src="assets/media/aroll.mp4" data-start="116.0333" data-duration="4.2" data-media-start="248.1333" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a65" class="clip aroll" src="assets/media/aroll.mp4" data-start="120.2333" data-duration="2.5" data-media-start="259.4" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a66" class="clip aroll" src="assets/media/aroll.mp4" data-start="122.7333" data-duration="2.3" data-media-start="271.4" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a67" class="clip aroll" src="assets/media/aroll.mp4" data-start="125.0333" data-duration="2.5667" data-media-start="274.1666" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a68" class="clip aroll" src="assets/media/aroll.mp4" data-start="127.6" data-duration="2.0667" data-media-start="293.8334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a69" class="clip aroll" src="assets/media/aroll.mp4" data-start="129.6667" data-duration="1.2667" data-media-start="295.9667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a70" class="clip aroll" src="assets/media/aroll.mp4" data-start="130.9333" data-duration="1.1" data-media-start="298.3667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a71" class="clip aroll" src="assets/media/aroll.mp4" data-start="132.0333" data-duration="1.7667" data-media-start="304.3334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a72" class="clip aroll" src="assets/media/aroll.mp4" data-start="133.8" data-duration="1.3333" data-media-start="310.4334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a73" class="clip aroll" src="assets/media/aroll.mp4" data-start="135.1333" data-duration="0.7" data-media-start="312.5" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a74" class="clip aroll" src="assets/media/aroll.mp4" data-start="135.8333" data-duration="1.8333" data-media-start="319.3334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a75" class="clip aroll" src="assets/media/aroll.mp4" data-start="137.6667" data-duration="1.1" data-media-start="321.5" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a76" class="clip aroll" src="assets/media/aroll.mp4" data-start="138.7667" data-duration="1.5333" data-media-start="323.6667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a77" class="clip aroll" src="assets/media/aroll.mp4" data-start="140.3" data-duration="1.0333" data-media-start="325.3" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a78" class="clip aroll" src="assets/media/aroll.mp4" data-start="141.3333" data-duration="1.5667" data-media-start="326.6" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a79" class="clip aroll" src="assets/media/aroll.mp4" data-start="142.9" data-duration="2.0333" data-media-start="328.3667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a80" class="clip aroll" src="assets/media/aroll.mp4" data-start="144.9333" data-duration="3.4667" data-media-start="331.8" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a81" class="clip aroll" src="assets/media/aroll.mp4" data-start="148.4" data-duration="2.2667" data-media-start="335.5334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a82" class="clip aroll" src="assets/media/aroll.mp4" data-start="150.6667" data-duration="0.4667" data-media-start="337.9334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a83" class="clip aroll" src="assets/media/aroll.mp4" data-start="151.1333" data-duration="2.7667" data-media-start="339.8" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a84" class="clip aroll" src="assets/media/aroll.mp4" data-start="153.9" data-duration="2.8667" data-media-start="342.6" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a85" class="clip aroll" src="assets/media/aroll.mp4" data-start="156.7667" data-duration="1.2667" data-media-start="350.3" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a86" class="clip aroll" src="assets/media/aroll.mp4" data-start="158.0333" data-duration="3.1" data-media-start="351.7" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a87" class="clip aroll" src="assets/media/aroll.mp4" data-start="161.1333" data-duration="0.9333" data-media-start="355.6" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a88" class="clip aroll" src="assets/media/aroll.mp4" data-start="162.0667" data-duration="1.0" data-media-start="357.4" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a89" class="clip aroll" src="assets/media/aroll.mp4" data-start="163.0667" data-duration="1.0667" data-media-start="358.5667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a90" class="clip aroll" src="assets/media/aroll.mp4" data-start="164.1333" data-duration="2.0" data-media-start="360.0667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a91" class="clip aroll" src="assets/media/aroll.mp4" data-start="166.1333" data-duration="2.0667" data-media-start="363.6666" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a92" class="clip aroll" src="assets/media/aroll.mp4" data-start="168.2" data-duration="1.2" data-media-start="366.1666" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a93" class="clip aroll" src="assets/media/aroll.mp4" data-start="169.4" data-duration="0.8667" data-media-start="368.6333" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a94" class="clip aroll" src="assets/media/aroll.mp4" data-start="170.2667" data-duration="1.0333" data-media-start="372.7" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a95" class="clip aroll" src="assets/media/aroll.mp4" data-start="171.3" data-duration="1.9" data-media-start="374.0" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a96" class="clip aroll" src="assets/media/aroll.mp4" data-start="173.2" data-duration="3.1667" data-media-start="376.9" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a97" class="clip aroll" src="assets/media/aroll.mp4" data-start="176.3667" data-duration="0.5667" data-media-start="380.7" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a98" class="clip aroll" src="assets/media/aroll.mp4" data-start="176.9333" data-duration="2.7" data-media-start="386.4" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a99" class="clip aroll" src="assets/media/aroll.mp4" data-start="179.6333" data-duration="4.1667" data-media-start="405.1333" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a100" class="clip aroll" src="assets/media/aroll.mp4" data-start="183.8" data-duration="0.4" data-media-start="410.1333" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a101" class="clip aroll" src="assets/media/aroll.mp4" data-start="184.2" data-duration="1.3667" data-media-start="412.2334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a102" class="clip aroll" src="assets/media/aroll.mp4" data-start="185.5667" data-duration="1.4667" data-media-start="414.0" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a103" class="clip aroll" src="assets/media/aroll.mp4" data-start="187.0333" data-duration="1.8" data-media-start="416.0667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a104" class="clip aroll" src="assets/media/aroll.mp4" data-start="188.8333" data-duration="0.5" data-media-start="423.2" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a105" class="clip aroll" src="assets/media/aroll.mp4" data-start="189.3333" data-duration="0.8333" data-media-start="424.4" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a106" class="clip aroll" src="assets/media/aroll.mp4" data-start="190.1667" data-duration="1.7" data-media-start="429.7" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a107" class="clip aroll" src="assets/media/aroll.mp4" data-start="191.8667" data-duration="0.7667" data-media-start="431.7" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a108" class="clip aroll" src="assets/media/aroll.mp4" data-start="192.6333" data-duration="2.0" data-media-start="433.9667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a109" class="clip aroll" src="assets/media/aroll.mp4" data-start="194.6333" data-duration="1.0" data-media-start="496.8334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a110" class="clip aroll" src="assets/media/aroll.mp4" data-start="195.6333" data-duration="1.0" data-media-start="498.0334" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a111" class="clip aroll" src="assets/media/aroll.mp4" data-start="196.6333" data-duration="3.1333" data-media-start="499.2" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a112" class="clip aroll" src="assets/media/aroll.mp4" data-start="199.7667" data-duration="1.4" data-media-start="503.5667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a113" class="clip aroll" src="assets/media/aroll.mp4" data-start="201.1667" data-duration="2.8" data-media-start="461.6666" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a114" class="clip aroll" src="assets/media/aroll.mp4" data-start="203.9667" data-duration="0.6667" data-media-start="464.8" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a115" class="clip aroll" src="assets/media/aroll.mp4" data-start="204.6333" data-duration="1.1333" data-media-start="506.1" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a116" class="clip aroll" src="assets/media/aroll.mp4" data-start="205.7667" data-duration="0.2333" data-media-start="507.4" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a117" class="clip aroll" src="assets/media/aroll.mp4" data-start="206.0" data-duration="0.7333" data-media-start="507.7" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a118" class="clip aroll" src="assets/media/aroll.mp4" data-start="206.7333" data-duration="2.7333" data-media-start="510.2667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a119" class="clip aroll" src="assets/media/aroll.mp4" data-start="209.4667" data-duration="0.5" data-media-start="522.4667" muted playsinline preload="auto" data-track-index="0"></video>
-        <video id="a120" class="clip aroll" src="assets/media/aroll.mp4" data-start="209.9667" data-duration="2.0667" data-media-start="523.2667" muted playsinline preload="auto" data-track-index="0"></video>
-        <img id="fz1" class="clip aroll-still" src="assets/media/stills/fz1.jpg" alt="" data-start="100.0333" data-duration="0.3" data-track-index="4">
-        <img id="fz2" class="clip aroll-still" src="assets/media/stills/fz2.jpg" alt="" data-start="127.3667" data-duration="0.2333" data-track-index="4">
-        <img id="fz3" class="clip aroll-still" src="assets/media/stills/fz3.jpg" alt="" data-start="127.6" data-duration="0.2667" data-track-index="4">
+        <video id="aroll" class="clip aroll" src="assets/media/aroll_edit.mp4" data-start="0" data-duration="212.0333" data-media-start="0" muted playsinline preload="auto" data-track-index="0"></video>
       </div>
       <!-- Dialogue: the same retained ranges, processed to -14 LUFS (tools/audio.py) -->
       <audio id="dialogue" class="clip" src="assets/media/dialogue.wav" data-start="0" data-duration="212.0333" data-volume="1" data-track-index="1"></audio>

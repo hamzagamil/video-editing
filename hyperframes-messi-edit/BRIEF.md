@@ -11,5 +11,5 @@ iPhone HLG HDR, 13.5 min) following `../hyperframes-reel-edit/PROMPT_MESSI.md`.
 - Sound: dialogue −14.5 LUFS; Pixabay SFX tied to visible actions; user-supplied Chawali clip to close.
 - Truth: nothing on screen the speaker did not say (`FACT_CHECK.md`).
 
-Build: `python3 -I tools/cut.py && python3 -I tools/audio.py && python3 -I tools/build.py && python3 -I tools/make_srt.py`
+Build: `python3 -I tools/cut.py && python3 -I tools/audio.py && python3 -I tools/build.py && python3 -I tools/aroll_edit.py && python3 -I tools/make_srt.py`
 (the graded A-roll proxy `assets/media/aroll.mp4` is rendered from `../source/work/clips/`, see `source-analysis.md`).
