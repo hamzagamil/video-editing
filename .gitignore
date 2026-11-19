@@ -20,3 +20,6 @@ photos/*.jpg
 photos/*.jpeg
 photos/*.png
 photos/*.webp
+
+# raw source downloads (large media)
+source/
