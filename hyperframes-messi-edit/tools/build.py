@@ -9,7 +9,7 @@ Template tokens: {{k:name}} / {{k:name:e}} = scene-local start / end of cue word
 (plan.CUES), {{w:N}} / {{w:N:e}} = word N, {{D}} = slot length, {{ID}} = scene id.
 Usage: python3 -I tools/build.py
 """
-import json, re, sys, math
+import json, subprocess, re, sys, math
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -261,6 +261,16 @@ def render_root():
             f'        <video id="{s["id"]}" class="clip aroll" src="assets/media/aroll.mp4" '
             f'data-start="{s["out_start"]}" data-duration="{s["duration"]}" data-media-start="{s["proxy_start"]}" '
             f'muted playsinline preload="auto" data-track-index="0"></video>')
+    # freeze patches: a clean frame held over the few frames where a lean overlaps speech
+    stills = ROOT / "assets/media/stills"
+    stills.mkdir(parents=True, exist_ok=True)
+    for fz in tm.get("freezes", []):
+        jpg = stills / f'{fz["id"]}.jpg'
+        subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-ss", str(fz["still_proxy"]), "-i",
+                        str(ROOT / "assets/media/aroll.mp4"), "-frames:v", "1", "-q:v", "1", str(jpg)], check=True)
+        vids.append(
+            f'        <img id="{fz["id"]}" class="clip aroll-still" src="assets/media/stills/{fz["id"]}.jpg" alt="" '
+            f'data-start="{fz["out_start"]}" data-duration="{fz["duration"]}" data-track-index="4">')
     hosts = []
     for sid, tpl, s, e, label, kind in SCENES:
         z = 10 if kind == "page" else 7
@@ -299,7 +309,8 @@ def render_root():
       html, body {{ width:1080px; height:1920px; overflow:hidden; background:#1B1D1E; }}
       #root {{ position:relative; width:1080px; height:1920px; overflow:hidden; background:#1B1D1E; }}
       #aroll-cam {{ position:absolute; left:0; top:0; width:1080px; height:1920px; z-index:1; }}
-      #aroll-cam video {{ position:absolute; left:0; top:0; width:1080px; height:1920px; object-fit:cover; }}
+      #aroll-cam video, #aroll-cam .aroll-still {{ position:absolute; left:0; top:0; width:1080px; height:1920px; object-fit:cover; }}
+      #aroll-cam .aroll-still {{ z-index:2; }}
       .scene-host {{ position:absolute; inset:0; }}
       #captions {{ z-index:5; }}
     </style>

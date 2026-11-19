@@ -89,19 +89,19 @@
 
   // starts exactly as G11 ended: the defender inside his safe circle, leg reaching
   tl.fromTo("#g12-leg", { scaleX: 0.3, svgOrigin: "500 1172" }, { scaleX: 1, svgOrigin: "500 1172", duration: 0.25, ease: "power2.out" }, 0);
-  draw("#g12-touch", 0.713 - 0.06, 0.18, "power4.out");
-  tl.fromTo("#g12-ball", { x: 0, y: 0 }, { x: 170, y: 40, duration: 0.18, ease: "power4.out", immediateRender: false }, 0.713 - 0.04);
+  draw("#g12-touch", 0.714 - 0.06, 0.18, "power4.out");
+  tl.fromTo("#g12-ball", { x: 0, y: 0 }, { x: 170, y: 40, duration: 0.18, ease: "power4.out", immediateRender: false }, 0.714 - 0.04);
   // the hit: the dribble photo flashes full frame for ~0.6 s with the impact
-  slam("#g12-flash", 0.713);
-  off("#g12-flash", 0.713 + 0.6, 0.06);
-  slam("#g12-h1 .in", 0.713 + 0.62);
+  slam("#g12-flash", 0.714);
+  off("#g12-flash", 0.714 + 0.6, 0.06);
+  slam("#g12-h1 .in", 0.714 + 0.62);
   // the safe circle splits, the defender is thrown off the page
-  tl.fromTo("#g12-sa", { x: 0, y: 0, rotation: 0, svgOrigin: "470 1160" }, { x: -120, y: -140, rotation: -40, svgOrigin: "470 1160", duration: 0.5, ease: "power3.out", immediateRender: false }, 0.713 + 0.62);
-  tl.fromTo("#g12-sb", { x: 0, y: 0, rotation: 0, svgOrigin: "470 1160" }, { x: -80, y: 150, rotation: 30, svgOrigin: "470 1160", duration: 0.5, ease: "power3.out", immediateRender: false }, 0.713 + 0.62);
-  tl.fromTo("#g12-safe", { opacity: 1 }, { opacity: 0, duration: 0.3, immediateRender: false }, 0.713 + 0.9);
-  tl.fromTo("#g12-def", { x: 0, rotation: 0, svgOrigin: "470 1160" }, { x: -720, rotation: -50, svgOrigin: "470 1160", duration: 0.55, ease: "power3.in", immediateRender: false }, 0.713 + 0.66);
-  tl.fromTo("#g12-crack", { opacity: 1, scale: 0.6, svgOrigin: "470 1160" }, { opacity: 0, scale: 1.6, svgOrigin: "470 1160", duration: 0.45, ease: "power2.out", immediateRender: false }, 0.713 + 0.62);
-  bin("#g12-h2 .w", 2.013);
+  tl.fromTo("#g12-sa", { x: 0, y: 0, rotation: 0, svgOrigin: "470 1160" }, { x: -120, y: -140, rotation: -40, svgOrigin: "470 1160", duration: 0.5, ease: "power3.out", immediateRender: false }, 0.714 + 0.62);
+  tl.fromTo("#g12-sb", { x: 0, y: 0, rotation: 0, svgOrigin: "470 1160" }, { x: -80, y: 150, rotation: 30, svgOrigin: "470 1160", duration: 0.5, ease: "power3.out", immediateRender: false }, 0.714 + 0.62);
+  tl.fromTo("#g12-safe", { opacity: 1 }, { opacity: 0, duration: 0.3, immediateRender: false }, 0.714 + 0.9);
+  tl.fromTo("#g12-def", { x: 0, rotation: 0, svgOrigin: "470 1160" }, { x: -720, rotation: -50, svgOrigin: "470 1160", duration: 0.55, ease: "power3.in", immediateRender: false }, 0.714 + 0.66);
+  tl.fromTo("#g12-crack", { opacity: 1, scale: 0.6, svgOrigin: "470 1160" }, { opacity: 0, scale: 1.6, svgOrigin: "470 1160", duration: 0.45, ease: "power2.out", immediateRender: false }, 0.714 + 0.62);
+  bin("#g12-h2 .w", 2.014);
   window.__timelines["g12"] = tl;
   </script>
 </template>

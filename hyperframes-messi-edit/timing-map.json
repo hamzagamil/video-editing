@@ -170,7 +170,7 @@
   496.3667,
   505.6
  ],
- "output_duration_speech": 216.3,
+ "output_duration_speech": 212.0333,
  "segments": [
   {
    "id": "a01",
@@ -247,1161 +247,1008 @@
   {
    "id": "a09",
    "take": "T02",
-   "src_start": 41.3667,
-   "src_end": 41.5333,
-   "out_start": 11.1333,
-   "duration": 0.1667,
-   "proxy_start": 15.9
-  },
-  {
-   "id": "a10",
-   "take": "T02",
    "src_start": 41.6333,
    "src_end": 42.3667,
-   "out_start": 11.3,
+   "out_start": 11.1333,
    "duration": 0.7333,
    "proxy_start": 16.1666
   },
   {
-   "id": "a11",
+   "id": "a10",
    "take": "T03",
    "src_start": 49.8333,
    "src_end": 52.3,
-   "out_start": 12.0333,
+   "out_start": 11.8667,
    "duration": 2.4667,
    "proxy_start": 19.9333
   },
   {
-   "id": "a12",
+   "id": "a11",
    "take": "T03",
    "src_start": 53.3333,
    "src_end": 54.1333,
-   "out_start": 14.5,
+   "out_start": 14.3333,
    "duration": 0.8,
    "proxy_start": 23.4333
   },
   {
-   "id": "a13",
+   "id": "a12",
    "take": "T03",
    "src_start": 55.4,
    "src_end": 57.1667,
-   "out_start": 15.3,
+   "out_start": 15.1333,
    "duration": 1.7667,
    "proxy_start": 25.5
   },
   {
-   "id": "a14",
+   "id": "a13",
    "take": "T03",
    "src_start": 57.4667,
    "src_end": 58.4333,
-   "out_start": 17.0667,
+   "out_start": 16.9,
    "duration": 0.9667,
    "proxy_start": 27.5667
   },
   {
-   "id": "a15",
+   "id": "a14",
    "take": "T04",
    "src_start": 68.0,
    "src_end": 69.4,
-   "out_start": 18.0333,
+   "out_start": 17.8667,
    "duration": 1.4,
    "proxy_start": 29.8333
   },
   {
-   "id": "a16",
+   "id": "a15",
    "take": "T04",
    "src_start": 69.6333,
    "src_end": 70.9,
-   "out_start": 19.4333,
+   "out_start": 19.2667,
    "duration": 1.2667,
    "proxy_start": 31.4666
   },
   {
-   "id": "a17",
+   "id": "a16",
    "take": "T05",
    "src_start": 77.8333,
    "src_end": 80.1333,
-   "out_start": 20.7,
+   "out_start": 20.5333,
    "duration": 2.3,
    "proxy_start": 34.2
   },
   {
-   "id": "a18",
+   "id": "a17",
    "take": "T05",
    "src_start": 84.4,
    "src_end": 87.3,
-   "out_start": 23.0,
+   "out_start": 22.8333,
    "duration": 2.9,
    "proxy_start": 40.7667
   },
   {
-   "id": "a19",
+   "id": "a18",
    "take": "T05",
    "src_start": 88.1667,
    "src_end": 88.9333,
-   "out_start": 25.9,
+   "out_start": 25.7333,
    "duration": 0.7667,
    "proxy_start": 44.5334
   },
   {
-   "id": "a20",
+   "id": "a19",
    "take": "T06",
    "src_start": 98.5,
    "src_end": 101.4667,
-   "out_start": 26.6667,
+   "out_start": 26.5,
    "duration": 2.9667,
    "proxy_start": 46.4
   },
   {
-   "id": "a21",
+   "id": "a20",
    "take": "T06",
    "src_start": 101.9667,
    "src_end": 104.6,
-   "out_start": 29.6333,
+   "out_start": 29.4667,
    "duration": 2.6333,
    "proxy_start": 49.8667
   },
   {
-   "id": "a22",
+   "id": "a21",
    "take": "T07",
    "src_start": 110.0333,
    "src_end": 113.6333,
-   "out_start": 32.2667,
+   "out_start": 32.1,
    "duration": 3.6,
    "proxy_start": 53.9666
   },
   {
-   "id": "a23",
+   "id": "a22",
    "take": "T08",
    "src_start": 119.9333,
    "src_end": 122.2,
-   "out_start": 35.8667,
+   "out_start": 35.7,
    "duration": 2.2667,
    "proxy_start": 59.0
   },
   {
-   "id": "a24",
+   "id": "a23",
    "take": "T08",
    "src_start": 122.8667,
    "src_end": 123.9333,
-   "out_start": 38.1333,
+   "out_start": 37.9667,
    "duration": 1.0667,
    "proxy_start": 61.9334
   },
   {
-   "id": "a25",
+   "id": "a24",
    "take": "T08",
    "src_start": 124.7333,
    "src_end": 127.3333,
-   "out_start": 39.2,
+   "out_start": 39.0333,
    "duration": 2.6,
    "proxy_start": 63.8
   },
   {
-   "id": "a26",
+   "id": "a25",
    "take": "T09",
    "src_start": 137.9,
    "src_end": 141.3667,
-   "out_start": 41.8,
+   "out_start": 41.6333,
    "duration": 3.4667,
    "proxy_start": 67.7
   },
   {
-   "id": "a27",
+   "id": "a26",
    "take": "T10",
    "src_start": 161.2333,
    "src_end": 165.3333,
-   "out_start": 45.2667,
+   "out_start": 45.1,
    "duration": 4.1,
    "proxy_start": 72.6666
   },
   {
-   "id": "a28",
+   "id": "a27",
    "take": "T10",
    "src_start": 165.8667,
    "src_end": 166.9333,
-   "out_start": 49.3667,
+   "out_start": 49.2,
    "duration": 1.0667,
    "proxy_start": 77.3
   },
   {
-   "id": "a29",
+   "id": "a28",
    "take": "T11",
    "src_start": 173.2,
    "src_end": 175.9,
-   "out_start": 50.4333,
+   "out_start": 50.2667,
    "duration": 2.7,
    "proxy_start": 79.8667
   },
   {
-   "id": "a30",
+   "id": "a29",
    "take": "T12",
    "src_start": 180.9,
    "src_end": 184.1333,
-   "out_start": 53.1333,
+   "out_start": 52.9667,
    "duration": 3.2333,
    "proxy_start": 84.1
   },
   {
-   "id": "a31",
+   "id": "a30",
    "take": "T12",
    "src_start": 184.4333,
    "src_end": 186.1667,
-   "out_start": 56.3667,
+   "out_start": 56.2,
    "duration": 1.7333,
    "proxy_start": 87.6333
   },
   {
-   "id": "a32",
+   "id": "a31",
    "take": "T12",
    "src_start": 186.9333,
    "src_end": 189.1667,
-   "out_start": 58.1,
+   "out_start": 57.9333,
    "duration": 2.2333,
    "proxy_start": 90.1333
   },
   {
-   "id": "a33",
-   "take": "T12",
-   "src_start": 189.2,
-   "src_end": 189.5667,
-   "out_start": 60.3333,
-   "duration": 0.3667,
-   "proxy_start": 92.4
-  },
-  {
-   "id": "a34",
-   "take": "T12",
-   "src_start": 190.4,
-   "src_end": 190.5667,
-   "out_start": 60.7,
-   "duration": 0.1667,
-   "proxy_start": 93.6
-  },
-  {
-   "id": "a35",
-   "take": "T12",
-   "src_start": 194.6333,
-   "src_end": 194.8,
-   "out_start": 60.8667,
-   "duration": 0.1667,
-   "proxy_start": 97.8333
-  },
-  {
-   "id": "a36",
+   "id": "a32",
    "take": "T12",
    "src_start": 195.5667,
    "src_end": 198.6,
-   "out_start": 61.0333,
+   "out_start": 60.1667,
    "duration": 3.0333,
    "proxy_start": 98.7667
   },
   {
-   "id": "a37",
+   "id": "a33",
    "take": "T12",
    "src_start": 198.6333,
    "src_end": 199.5,
-   "out_start": 64.0667,
+   "out_start": 63.2,
    "duration": 0.8667,
    "proxy_start": 101.8333
   },
   {
-   "id": "a38",
+   "id": "a34",
    "take": "T13",
    "src_start": 233.4667,
    "src_end": 233.8667,
-   "out_start": 64.9333,
+   "out_start": 64.0667,
    "duration": 0.4,
    "proxy_start": 130.7334
   },
   {
-   "id": "a39",
+   "id": "a35",
    "take": "T13",
    "src_start": 234.1333,
    "src_end": 237.8,
-   "out_start": 65.3333,
+   "out_start": 64.4667,
    "duration": 3.6667,
    "proxy_start": 131.4
   },
   {
-   "id": "a40",
+   "id": "a36",
    "take": "T14",
    "src_start": 246.3333,
    "src_end": 249.2333,
-   "out_start": 69.0,
+   "out_start": 68.1333,
    "duration": 2.9,
    "proxy_start": 143.6
   },
   {
-   "id": "a41",
+   "id": "a37",
    "take": "T14",
    "src_start": 250.0667,
    "src_end": 251.1333,
-   "out_start": 71.9,
+   "out_start": 71.0333,
    "duration": 1.0667,
    "proxy_start": 147.3334
   },
   {
-   "id": "a42",
+   "id": "a38",
    "take": "T15",
    "src_start": 259.0667,
-   "src_end": 261.8,
-   "out_start": 72.9667,
-   "duration": 2.7333,
+   "src_end": 261.0333,
+   "out_start": 72.1,
+   "duration": 1.9667,
    "proxy_start": 149.7
   },
   {
-   "id": "a43",
+   "id": "a39",
    "take": "T15",
-   "src_start": 264.4,
+   "src_start": 264.4667,
    "src_end": 265.3,
-   "out_start": 75.7,
-   "duration": 0.9,
-   "proxy_start": 155.0333
+   "out_start": 74.0667,
+   "duration": 0.8333,
+   "proxy_start": 155.1
   },
   {
-   "id": "a44",
+   "id": "a40",
    "take": "T15",
    "src_start": 265.5,
    "src_end": 266.9,
-   "out_start": 76.6,
+   "out_start": 74.9,
    "duration": 1.4,
    "proxy_start": 156.1333
   },
   {
-   "id": "a45",
+   "id": "a41",
    "take": "T16",
    "src_start": 274.9,
    "src_end": 276.0667,
-   "out_start": 78.0,
+   "out_start": 76.3,
    "duration": 1.1667,
    "proxy_start": 159.0667
   },
   {
-   "id": "a46",
+   "id": "a42",
    "take": "T16",
    "src_start": 276.3333,
    "src_end": 277.2333,
-   "out_start": 79.1667,
+   "out_start": 77.4667,
    "duration": 0.9,
    "proxy_start": 160.5
   },
   {
-   "id": "a47",
-   "take": "T16",
-   "src_start": 278.2,
-   "src_end": 278.3667,
-   "out_start": 80.0667,
-   "duration": 0.1667,
-   "proxy_start": 162.3667
-  },
-  {
-   "id": "a48",
-   "take": "T16",
-   "src_start": 278.5667,
-   "src_end": 278.7333,
-   "out_start": 80.2333,
-   "duration": 0.1667,
-   "proxy_start": 162.7334
-  },
-  {
-   "id": "a49",
+   "id": "a43",
    "take": "T16",
    "src_start": 282.8,
    "src_end": 285.0667,
-   "out_start": 80.4,
+   "out_start": 78.3667,
    "duration": 2.2667,
    "proxy_start": 166.9667
   },
   {
-   "id": "a50",
-   "take": "T16",
-   "src_start": 285.7333,
-   "src_end": 285.9,
-   "out_start": 82.6667,
-   "duration": 0.1667,
-   "proxy_start": 169.9
-  },
-  {
-   "id": "a51",
+   "id": "a44",
    "take": "T16",
    "src_start": 289.8333,
    "src_end": 291.5,
-   "out_start": 82.8333,
+   "out_start": 80.6333,
    "duration": 1.6667,
    "proxy_start": 174.0
   },
   {
-   "id": "a52",
+   "id": "a45",
    "take": "T16",
    "src_start": 291.7333,
    "src_end": 293.3667,
-   "out_start": 84.5,
+   "out_start": 82.3,
    "duration": 1.6333,
    "proxy_start": 175.9
   },
   {
-   "id": "a53",
+   "id": "a46",
    "take": "T17",
    "src_start": 299.3,
    "src_end": 302.9667,
-   "out_start": 86.1333,
+   "out_start": 83.9333,
    "duration": 3.6667,
    "proxy_start": 178.3667
   },
   {
-   "id": "a54",
+   "id": "a47",
    "take": "T17",
    "src_start": 303.6333,
    "src_end": 304.5333,
-   "out_start": 89.8,
+   "out_start": 87.6,
    "duration": 0.9,
    "proxy_start": 182.7
   },
   {
-   "id": "a55",
+   "id": "a48",
    "take": "T17",
    "src_start": 304.8333,
    "src_end": 305.8,
-   "out_start": 90.7,
+   "out_start": 88.5,
    "duration": 0.9667,
    "proxy_start": 183.9
   },
   {
-   "id": "a56",
+   "id": "a49",
    "take": "T18",
    "src_start": 311.0667,
    "src_end": 311.9333,
-   "out_start": 91.6667,
+   "out_start": 89.4667,
    "duration": 0.8667,
    "proxy_start": 190.1334
   },
   {
-   "id": "a57",
+   "id": "a50",
    "take": "T18",
    "src_start": 312.2,
    "src_end": 313.0,
-   "out_start": 92.5333,
+   "out_start": 90.3333,
    "duration": 0.8,
    "proxy_start": 191.2667
   },
   {
-   "id": "a58",
+   "id": "a51",
    "take": "T18",
    "src_start": 313.0333,
    "src_end": 314.2,
-   "out_start": 93.3333,
+   "out_start": 91.1333,
    "duration": 1.1667,
    "proxy_start": 192.1
   },
   {
-   "id": "a59",
+   "id": "a52",
    "take": "T19",
    "src_start": 321.6333,
    "src_end": 322.5,
-   "out_start": 94.5,
+   "out_start": 92.3,
    "duration": 0.8667,
    "proxy_start": 193.7333
   },
   {
-   "id": "a60",
+   "id": "a53",
    "take": "T19",
    "src_start": 322.7333,
    "src_end": 324.3667,
-   "out_start": 95.3667,
+   "out_start": 93.1667,
    "duration": 1.6333,
    "proxy_start": 194.8333
   },
   {
-   "id": "a61",
-   "take": "T19",
-   "src_start": 324.8,
-   "src_end": 325.0,
-   "out_start": 97.0,
-   "duration": 0.2,
-   "proxy_start": 196.9
-  },
-  {
-   "id": "a62",
+   "id": "a54",
    "take": "T19",
    "src_start": 327.5333,
    "src_end": 328.8,
-   "out_start": 97.2,
+   "out_start": 94.8,
    "duration": 1.2667,
    "proxy_start": 199.6333
   },
   {
-   "id": "a63",
+   "id": "a55",
    "take": "T20",
    "src_start": 351.7667,
    "src_end": 355.1333,
-   "out_start": 98.4667,
+   "out_start": 96.0667,
    "duration": 3.3667,
    "proxy_start": 202.8
   },
   {
-   "id": "a64",
+   "id": "a56",
    "take": "T20",
    "src_start": 355.2333,
-   "src_end": 356.3667,
-   "out_start": 101.8333,
-   "duration": 1.1333,
+   "src_end": 356.1333,
+   "out_start": 99.4333,
+   "duration": 0.9,
    "proxy_start": 206.2666
   },
   {
-   "id": "a65",
-   "take": "T20",
-   "src_start": 363.3,
-   "src_end": 363.4667,
-   "out_start": 102.9667,
-   "duration": 0.1667,
-   "proxy_start": 214.3333
-  },
-  {
-   "id": "a66",
+   "id": "a57",
    "take": "T20",
    "src_start": 363.8667,
    "src_end": 366.5,
-   "out_start": 103.1333,
+   "out_start": 100.3333,
    "duration": 2.6333,
    "proxy_start": 214.9
   },
   {
-   "id": "a67",
+   "id": "a58",
    "take": "T21",
    "src_start": 372.2667,
    "src_end": 373.0,
-   "out_start": 105.7667,
+   "out_start": 102.9667,
    "duration": 0.7333,
    "proxy_start": 218.5334
   },
   {
-   "id": "a68",
+   "id": "a59",
    "take": "T21",
    "src_start": 373.0667,
    "src_end": 375.5,
-   "out_start": 106.5,
+   "out_start": 103.7,
    "duration": 2.4333,
    "proxy_start": 219.3334
   },
   {
-   "id": "a69",
+   "id": "a60",
    "take": "T21",
    "src_start": 375.6667,
    "src_end": 379.2667,
-   "out_start": 108.9333,
+   "out_start": 106.1333,
    "duration": 3.6,
    "proxy_start": 221.9334
   },
   {
-   "id": "a70",
+   "id": "a61",
    "take": "T22",
    "src_start": 384.0,
    "src_end": 385.8,
-   "out_start": 112.5333,
+   "out_start": 109.7333,
    "duration": 1.8,
    "proxy_start": 230.2667
   },
   {
-   "id": "a71",
-   "take": "T23",
-   "src_start": 390.2,
-   "src_end": 390.3,
-   "out_start": 114.3333,
-   "duration": 0.1,
-   "proxy_start": 232.6
-  },
-  {
-   "id": "a72",
+   "id": "a62",
    "take": "T23",
    "src_start": 390.4,
    "src_end": 393.8333,
-   "out_start": 114.4333,
+   "out_start": 111.5333,
    "duration": 3.4333,
    "proxy_start": 232.8
   },
   {
-   "id": "a73",
+   "id": "a63",
    "take": "T23",
    "src_start": 394.9,
    "src_end": 395.9667,
-   "out_start": 117.8667,
+   "out_start": 114.9667,
    "duration": 1.0667,
    "proxy_start": 237.3
   },
   {
-   "id": "a74",
+   "id": "a64",
    "take": "T24",
    "src_start": 416.5333,
    "src_end": 420.7333,
-   "out_start": 118.9333,
+   "out_start": 116.0333,
    "duration": 4.2,
    "proxy_start": 248.1333
   },
   {
-   "id": "a75",
-   "take": "T25",
-   "src_start": 427.5333,
-   "src_end": 427.7333,
-   "out_start": 123.1333,
-   "duration": 0.2,
-   "proxy_start": 259.1333
-  },
-  {
-   "id": "a76",
+   "id": "a65",
    "take": "T25",
    "src_start": 427.8,
    "src_end": 430.3,
-   "out_start": 123.3333,
+   "out_start": 120.2333,
    "duration": 2.5,
    "proxy_start": 259.4
   },
   {
-   "id": "a77",
+   "id": "a66",
    "take": "T26",
    "src_start": 445.0667,
    "src_end": 447.3667,
-   "out_start": 125.8333,
+   "out_start": 122.7333,
    "duration": 2.3,
    "proxy_start": 271.4
   },
   {
-   "id": "a78",
+   "id": "a67",
    "take": "T26",
    "src_start": 447.8333,
    "src_end": 450.4,
-   "out_start": 128.1333,
+   "out_start": 125.0333,
    "duration": 2.5667,
    "proxy_start": 274.1666
   },
   {
-   "id": "a79",
-   "take": "T27",
-   "src_start": 472.8,
-   "src_end": 472.9667,
-   "out_start": 130.7,
-   "duration": 0.1667,
-   "proxy_start": 292.8667
-  },
-  {
-   "id": "a80",
+   "id": "a68",
    "take": "T27",
    "src_start": 473.7667,
    "src_end": 475.8333,
-   "out_start": 130.8667,
+   "out_start": 127.6,
    "duration": 2.0667,
    "proxy_start": 293.8334
   },
   {
-   "id": "a81",
+   "id": "a69",
    "take": "T27",
    "src_start": 475.9,
    "src_end": 477.1667,
-   "out_start": 132.9333,
+   "out_start": 129.6667,
    "duration": 1.2667,
    "proxy_start": 295.9667
   },
   {
-   "id": "a82",
+   "id": "a70",
    "take": "T28",
    "src_start": 483.1,
    "src_end": 484.2,
-   "out_start": 134.2,
+   "out_start": 130.9333,
    "duration": 1.1,
    "proxy_start": 298.3667
   },
   {
-   "id": "a83",
-   "take": "T28",
-   "src_start": 485.0667,
-   "src_end": 485.2333,
-   "out_start": 135.3,
-   "duration": 0.1667,
-   "proxy_start": 300.3334
-  },
-  {
-   "id": "a84",
+   "id": "a71",
    "take": "T28",
    "src_start": 489.0667,
    "src_end": 490.8333,
-   "out_start": 135.4667,
+   "out_start": 132.0333,
    "duration": 1.7667,
    "proxy_start": 304.3334
   },
   {
-   "id": "a85",
-   "take": "T28",
-   "src_start": 491.3,
-   "src_end": 491.4667,
-   "out_start": 137.2333,
-   "duration": 0.1667,
-   "proxy_start": 306.5667
-  },
-  {
-   "id": "a86",
-   "take": "T28",
-   "src_start": 494.7,
-   "src_end": 494.9667,
-   "out_start": 137.4,
-   "duration": 0.2667,
-   "proxy_start": 309.9667
-  },
-  {
-   "id": "a87",
+   "id": "a72",
    "take": "T28",
    "src_start": 495.1667,
    "src_end": 496.5,
-   "out_start": 137.6667,
+   "out_start": 133.8,
    "duration": 1.3333,
    "proxy_start": 310.4334
   },
   {
-   "id": "a88",
+   "id": "a73",
    "take": "T28",
    "src_start": 497.2333,
    "src_end": 497.9333,
-   "out_start": 139.0,
+   "out_start": 135.1333,
    "duration": 0.7,
    "proxy_start": 312.5
   },
   {
-   "id": "a89",
+   "id": "a74",
    "take": "T29",
    "src_start": 504.0667,
    "src_end": 505.9,
-   "out_start": 139.7,
+   "out_start": 135.8333,
    "duration": 1.8333,
    "proxy_start": 319.3334
   },
   {
-   "id": "a90",
+   "id": "a75",
    "take": "T29",
    "src_start": 506.2333,
    "src_end": 507.3333,
-   "out_start": 141.5333,
+   "out_start": 137.6667,
    "duration": 1.1,
    "proxy_start": 321.5
   },
   {
-   "id": "a91",
+   "id": "a76",
    "take": "T30",
    "src_start": 517.8,
    "src_end": 519.3333,
-   "out_start": 142.6333,
+   "out_start": 138.7667,
    "duration": 1.5333,
    "proxy_start": 323.6667
   },
   {
-   "id": "a92",
+   "id": "a77",
    "take": "T30",
    "src_start": 519.4333,
    "src_end": 520.4667,
-   "out_start": 144.1667,
+   "out_start": 140.3,
    "duration": 1.0333,
    "proxy_start": 325.3
   },
   {
-   "id": "a93",
+   "id": "a78",
    "take": "T30",
    "src_start": 520.7333,
    "src_end": 522.3,
-   "out_start": 145.2,
+   "out_start": 141.3333,
    "duration": 1.5667,
    "proxy_start": 326.6
   },
   {
-   "id": "a94",
+   "id": "a79",
    "take": "T30",
    "src_start": 522.5,
    "src_end": 524.5333,
-   "out_start": 146.7667,
+   "out_start": 142.9,
    "duration": 2.0333,
    "proxy_start": 328.3667
   },
   {
-   "id": "a95",
+   "id": "a80",
    "take": "T30",
    "src_start": 525.9333,
    "src_end": 529.4,
-   "out_start": 148.8,
+   "out_start": 144.9333,
    "duration": 3.4667,
    "proxy_start": 331.8
   },
   {
-   "id": "a96",
+   "id": "a81",
    "take": "T30",
    "src_start": 529.6667,
    "src_end": 531.9333,
-   "out_start": 152.2667,
+   "out_start": 148.4,
    "duration": 2.2667,
    "proxy_start": 335.5334
   },
   {
-   "id": "a97",
+   "id": "a82",
    "take": "T30",
    "src_start": 532.0667,
    "src_end": 532.5333,
-   "out_start": 154.5333,
+   "out_start": 150.6667,
    "duration": 0.4667,
    "proxy_start": 337.9334
   },
   {
-   "id": "a98",
+   "id": "a83",
    "take": "T31",
    "src_start": 544.5333,
    "src_end": 547.3,
-   "out_start": 155.0,
+   "out_start": 151.1333,
    "duration": 2.7667,
    "proxy_start": 339.8
   },
   {
-   "id": "a99",
+   "id": "a84",
    "take": "T31",
    "src_start": 547.3333,
    "src_end": 550.2,
-   "out_start": 157.7667,
+   "out_start": 153.9,
    "duration": 2.8667,
    "proxy_start": 342.6
   },
   {
-   "id": "a100",
-   "take": "T31",
-   "src_start": 550.2667,
-   "src_end": 550.5,
-   "out_start": 160.6333,
-   "duration": 0.2333,
-   "proxy_start": 345.5334
-  },
-  {
-   "id": "a101",
-   "take": "T31",
-   "src_start": 554.3333,
-   "src_end": 554.5,
-   "out_start": 160.8667,
-   "duration": 0.1667,
-   "proxy_start": 349.6
-  },
-  {
-   "id": "a102",
+   "id": "a85",
    "take": "T31",
    "src_start": 555.0333,
    "src_end": 556.3,
-   "out_start": 161.0333,
+   "out_start": 156.7667,
    "duration": 1.2667,
    "proxy_start": 350.3
   },
   {
-   "id": "a103",
+   "id": "a86",
    "take": "T31",
    "src_start": 556.4333,
    "src_end": 559.5333,
-   "out_start": 162.3,
+   "out_start": 158.0333,
    "duration": 3.1,
    "proxy_start": 351.7
   },
   {
-   "id": "a104",
+   "id": "a87",
    "take": "T31",
    "src_start": 560.3333,
    "src_end": 561.2667,
-   "out_start": 165.4,
+   "out_start": 161.1333,
    "duration": 0.9333,
    "proxy_start": 355.6
   },
   {
-   "id": "a105",
+   "id": "a88",
    "take": "T31",
    "src_start": 562.1333,
    "src_end": 563.1333,
-   "out_start": 166.3333,
+   "out_start": 162.0667,
    "duration": 1.0,
    "proxy_start": 357.4
   },
   {
-   "id": "a106",
+   "id": "a89",
    "take": "T31",
    "src_start": 563.3,
    "src_end": 564.3667,
-   "out_start": 167.3333,
+   "out_start": 163.0667,
    "duration": 1.0667,
    "proxy_start": 358.5667
   },
   {
-   "id": "a107",
+   "id": "a90",
    "take": "T31",
    "src_start": 564.8,
    "src_end": 566.8,
-   "out_start": 168.4,
+   "out_start": 164.1333,
    "duration": 2.0,
    "proxy_start": 360.0667
   },
   {
-   "id": "a108",
+   "id": "a91",
    "take": "T32",
    "src_start": 573.7333,
    "src_end": 575.8,
-   "out_start": 170.4,
+   "out_start": 166.1333,
    "duration": 2.0667,
    "proxy_start": 363.6666
   },
   {
-   "id": "a109",
+   "id": "a92",
    "take": "T32",
    "src_start": 576.2333,
    "src_end": 577.4333,
-   "out_start": 172.4667,
+   "out_start": 168.2,
    "duration": 1.2,
    "proxy_start": 366.1666
   },
   {
-   "id": "a110",
+   "id": "a93",
    "take": "T32",
    "src_start": 578.7,
    "src_end": 579.5667,
-   "out_start": 173.6667,
+   "out_start": 169.4,
    "duration": 0.8667,
    "proxy_start": 368.6333
   },
   {
-   "id": "a111",
+   "id": "a94",
    "take": "T32",
    "src_start": 582.7667,
    "src_end": 583.8,
-   "out_start": 174.5333,
+   "out_start": 170.2667,
    "duration": 1.0333,
    "proxy_start": 372.7
   },
   {
-   "id": "a112",
+   "id": "a95",
    "take": "T32",
    "src_start": 584.0667,
    "src_end": 585.9667,
-   "out_start": 175.5667,
+   "out_start": 171.3,
    "duration": 1.9,
    "proxy_start": 374.0
   },
   {
-   "id": "a113",
+   "id": "a96",
    "take": "T32",
    "src_start": 586.9667,
    "src_end": 590.1333,
-   "out_start": 177.4667,
+   "out_start": 173.2,
    "duration": 3.1667,
    "proxy_start": 376.9
   },
   {
-   "id": "a114",
+   "id": "a97",
    "take": "T32",
    "src_start": 590.7667,
    "src_end": 591.3333,
-   "out_start": 180.6333,
+   "out_start": 176.3667,
    "duration": 0.5667,
    "proxy_start": 380.7
   },
   {
-   "id": "a115",
+   "id": "a98",
    "take": "T33",
    "src_start": 626.6,
    "src_end": 629.3,
-   "out_start": 181.2,
+   "out_start": 176.9333,
    "duration": 2.7,
    "proxy_start": 386.4
   },
   {
-   "id": "a116",
+   "id": "a99",
    "take": "T34",
    "src_start": 645.3333,
    "src_end": 649.5,
-   "out_start": 183.9,
+   "out_start": 179.6333,
    "duration": 4.1667,
    "proxy_start": 405.1333
   },
   {
-   "id": "a117",
+   "id": "a100",
    "take": "T34",
    "src_start": 650.3333,
    "src_end": 650.7333,
-   "out_start": 188.0667,
+   "out_start": 183.8,
    "duration": 0.4,
    "proxy_start": 410.1333
   },
   {
-   "id": "a118",
+   "id": "a101",
    "take": "T35",
    "src_start": 659.1667,
    "src_end": 660.5333,
-   "out_start": 188.4667,
+   "out_start": 184.2,
    "duration": 1.3667,
    "proxy_start": 412.2334
   },
   {
-   "id": "a119",
+   "id": "a102",
    "take": "T35",
    "src_start": 660.9333,
    "src_end": 662.4,
-   "out_start": 189.8333,
+   "out_start": 185.5667,
    "duration": 1.4667,
    "proxy_start": 414.0
   },
   {
-   "id": "a120",
+   "id": "a103",
    "take": "T35",
    "src_start": 663.0,
    "src_end": 664.8,
-   "out_start": 191.3,
+   "out_start": 187.0333,
    "duration": 1.8,
    "proxy_start": 416.0667
   },
   {
-   "id": "a121",
+   "id": "a104",
    "take": "T35",
    "src_start": 670.1333,
    "src_end": 670.6333,
-   "out_start": 193.1,
+   "out_start": 188.8333,
    "duration": 0.5,
    "proxy_start": 423.2
   },
   {
-   "id": "a122",
+   "id": "a105",
    "take": "T35",
    "src_start": 671.3333,
    "src_end": 672.1667,
-   "out_start": 193.6,
+   "out_start": 189.3333,
    "duration": 0.8333,
    "proxy_start": 424.4
   },
   {
-   "id": "a123",
+   "id": "a106",
    "take": "T35",
    "src_start": 676.6333,
    "src_end": 678.3333,
-   "out_start": 194.4333,
+   "out_start": 190.1667,
    "duration": 1.7,
    "proxy_start": 429.7
   },
   {
-   "id": "a124",
+   "id": "a107",
    "take": "T35",
    "src_start": 678.6333,
    "src_end": 679.4,
-   "out_start": 196.1333,
+   "out_start": 191.8667,
    "duration": 0.7667,
    "proxy_start": 431.7
   },
   {
-   "id": "a125",
+   "id": "a108",
    "take": "T35",
    "src_start": 680.9,
    "src_end": 682.9,
-   "out_start": 196.9,
+   "out_start": 192.6333,
    "duration": 2.0,
    "proxy_start": 433.9667
   },
   {
-   "id": "a126",
+   "id": "a109",
    "take": "T36",
    "src_start": 769.9667,
    "src_end": 770.9667,
-   "out_start": 198.9,
+   "out_start": 194.6333,
    "duration": 1.0,
    "proxy_start": 496.8334
   },
   {
-   "id": "a127",
+   "id": "a110",
    "take": "T36",
    "src_start": 771.1667,
    "src_end": 772.1667,
-   "out_start": 199.9,
+   "out_start": 195.6333,
    "duration": 1.0,
    "proxy_start": 498.0334
   },
   {
-   "id": "a128",
+   "id": "a111",
    "take": "T36",
    "src_start": 772.3333,
    "src_end": 775.4667,
-   "out_start": 200.9,
+   "out_start": 196.6333,
    "duration": 3.1333,
    "proxy_start": 499.2
   },
   {
-   "id": "a129",
+   "id": "a112",
    "take": "T36",
    "src_start": 776.7,
    "src_end": 778.1,
-   "out_start": 204.0333,
+   "out_start": 199.7667,
    "duration": 1.4,
    "proxy_start": 503.5667
   },
   {
-   "id": "a130",
+   "id": "a113",
    "take": "T37",
    "src_start": 716.0333,
    "src_end": 718.8333,
-   "out_start": 205.4333,
+   "out_start": 201.1667,
    "duration": 2.8,
    "proxy_start": 461.6666
   },
   {
-   "id": "a131",
+   "id": "a114",
    "take": "T37",
    "src_start": 719.1667,
    "src_end": 719.8333,
-   "out_start": 208.2333,
+   "out_start": 203.9667,
    "duration": 0.6667,
    "proxy_start": 464.8
   },
   {
-   "id": "a132",
+   "id": "a115",
    "take": "T38",
    "src_start": 782.5,
    "src_end": 783.6333,
-   "out_start": 208.9,
+   "out_start": 204.6333,
    "duration": 1.1333,
    "proxy_start": 506.1
   },
   {
-   "id": "a133",
+   "id": "a116",
    "take": "T38",
    "src_start": 783.8,
    "src_end": 784.0333,
-   "out_start": 210.0333,
+   "out_start": 205.7667,
    "duration": 0.2333,
    "proxy_start": 507.4
   },
   {
-   "id": "a134",
+   "id": "a117",
    "take": "T38",
    "src_start": 784.1,
    "src_end": 784.8333,
-   "out_start": 210.2667,
+   "out_start": 206.0,
    "duration": 0.7333,
    "proxy_start": 507.7
   },
   {
-   "id": "a135",
+   "id": "a118",
    "take": "T38",
    "src_start": 786.6667,
    "src_end": 789.4,
-   "out_start": 211.0,
+   "out_start": 206.7333,
    "duration": 2.7333,
    "proxy_start": 510.2667
   },
   {
-   "id": "a136",
+   "id": "a119",
    "take": "T39",
    "src_start": 798.8667,
    "src_end": 799.3667,
-   "out_start": 213.7333,
+   "out_start": 209.4667,
    "duration": 0.5,
    "proxy_start": 522.4667
   },
   {
-   "id": "a137",
+   "id": "a120",
    "take": "T39",
    "src_start": 799.6667,
    "src_end": 801.7333,
-   "out_start": 214.2333,
+   "out_start": 209.9667,
    "duration": 2.0667,
    "proxy_start": 523.2667
   }
@@ -1444,11 +1291,6 @@
   },
   {
    "src_start": 40.4333,
-   "src_end": 41.3667,
-   "reason": "pause trimmed"
-  },
-  {
-   "src_start": 41.5333,
    "src_end": 41.6333,
    "reason": "pause trimmed"
   },
@@ -1564,23 +1406,8 @@
   },
   {
    "src_start": 189.1667,
-   "src_end": 189.2,
-   "reason": "pause trimmed"
-  },
-  {
-   "src_start": 189.5667,
-   "src_end": 190.4,
-   "reason": "pause trimmed"
-  },
-  {
-   "src_start": 190.5667,
-   "src_end": 194.6333,
-   "reason": "retake / set-up / dead air"
-  },
-  {
-   "src_start": 194.8,
    "src_end": 195.5667,
-   "reason": "pause trimmed"
+   "reason": "retake / set-up / dead air"
   },
   {
    "src_start": 198.6,
@@ -1613,8 +1440,8 @@
    "reason": "retake / set-up / dead air"
   },
   {
-   "src_start": 261.8,
-   "src_end": 264.4,
+   "src_start": 261.0333,
+   "src_end": 264.4667,
    "reason": "retake / set-up / dead air"
   },
   {
@@ -1634,26 +1461,11 @@
   },
   {
    "src_start": 277.2333,
-   "src_end": 278.2,
-   "reason": "pause trimmed"
-  },
-  {
-   "src_start": 278.3667,
-   "src_end": 278.5667,
-   "reason": "pause trimmed"
-  },
-  {
-   "src_start": 278.7333,
    "src_end": 282.8,
    "reason": "retake / set-up / dead air"
   },
   {
    "src_start": 285.0667,
-   "src_end": 285.7333,
-   "reason": "pause trimmed"
-  },
-  {
-   "src_start": 285.9,
    "src_end": 289.8333,
    "reason": "retake / set-up / dead air"
   },
@@ -1704,11 +1516,6 @@
   },
   {
    "src_start": 324.3667,
-   "src_end": 324.8,
-   "reason": "pause trimmed"
-  },
-  {
-   "src_start": 325.0,
    "src_end": 327.5333,
    "reason": "retake / set-up / dead air"
   },
@@ -1723,14 +1530,9 @@
    "reason": "pause trimmed"
   },
   {
-   "src_start": 356.3667,
-   "src_end": 363.3,
-   "reason": "retake / set-up / dead air"
-  },
-  {
-   "src_start": 363.4667,
+   "src_start": 356.1333,
    "src_end": 363.8667,
-   "reason": "pause trimmed"
+   "reason": "retake / set-up / dead air"
   },
   {
    "src_start": 366.5,
@@ -1754,13 +1556,8 @@
   },
   {
    "src_start": 385.8,
-   "src_end": 390.2,
-   "reason": "retake / set-up / dead air"
-  },
-  {
-   "src_start": 390.3,
    "src_end": 390.4,
-   "reason": "pause trimmed"
+   "reason": "retake / set-up / dead air"
   },
   {
    "src_start": 393.8333,
@@ -1774,13 +1571,8 @@
   },
   {
    "src_start": 420.7333,
-   "src_end": 427.5333,
-   "reason": "retake / set-up / dead air"
-  },
-  {
-   "src_start": 427.7333,
    "src_end": 427.8,
-   "reason": "pause trimmed"
+   "reason": "retake / set-up / dead air"
   },
   {
    "src_start": 430.3,
@@ -1794,13 +1586,8 @@
   },
   {
    "src_start": 450.4,
-   "src_end": 472.8,
-   "reason": "retake / set-up / dead air"
-  },
-  {
-   "src_start": 472.9667,
    "src_end": 473.7667,
-   "reason": "pause trimmed"
+   "reason": "retake / set-up / dead air"
   },
   {
    "src_start": 475.8333,
@@ -1814,28 +1601,13 @@
   },
   {
    "src_start": 484.2,
-   "src_end": 485.0667,
-   "reason": "pause trimmed"
-  },
-  {
-   "src_start": 485.2333,
    "src_end": 489.0667,
    "reason": "retake / set-up / dead air"
   },
   {
    "src_start": 490.8333,
-   "src_end": 491.3,
-   "reason": "pause trimmed"
-  },
-  {
-   "src_start": 491.4667,
-   "src_end": 494.7,
-   "reason": "retake / set-up / dead air"
-  },
-  {
-   "src_start": 494.9667,
    "src_end": 495.1667,
-   "reason": "pause trimmed"
+   "reason": "retake / set-up / dead air"
   },
   {
    "src_start": 496.5,
@@ -1899,18 +1671,8 @@
   },
   {
    "src_start": 550.2,
-   "src_end": 550.2667,
-   "reason": "pause trimmed"
-  },
-  {
-   "src_start": 550.5,
-   "src_end": 554.3333,
-   "reason": "retake / set-up / dead air"
-  },
-  {
-   "src_start": 554.5,
    "src_end": 555.0333,
-   "reason": "pause trimmed"
+   "reason": "retake / set-up / dead air"
   },
   {
    "src_start": 556.3,
@@ -2083,6 +1845,179 @@
    "reason": "pause trimmed"
   }
  ],
+ "dropped_slivers": [
+  {
+   "take": "T02",
+   "src": [
+    41.3667,
+    41.5333
+   ],
+   "rms_db": -47.3
+  },
+  {
+   "take": "T12",
+   "src": [
+    189.2,
+    189.5667
+   ],
+   "rms_db": -50.5
+  },
+  {
+   "take": "T12",
+   "src": [
+    190.4,
+    190.5667
+   ],
+   "rms_db": -47.5
+  },
+  {
+   "take": "T12",
+   "src": [
+    194.6333,
+    194.8
+   ],
+   "rms_db": -49.8
+  },
+  {
+   "take": "T16",
+   "src": [
+    278.2,
+    278.3667
+   ],
+   "rms_db": -45.2
+  },
+  {
+   "take": "T16",
+   "src": [
+    278.5667,
+    278.7333
+   ],
+   "rms_db": -47.4
+  },
+  {
+   "take": "T16",
+   "src": [
+    285.7333,
+    285.9
+   ],
+   "rms_db": -48.6
+  },
+  {
+   "take": "T19",
+   "src": [
+    324.8,
+    325.0
+   ],
+   "rms_db": -42.2
+  },
+  {
+   "take": "T20",
+   "src": [
+    363.3,
+    363.4667
+   ],
+   "rms_db": -50.1
+  },
+  {
+   "take": "T23",
+   "src": [
+    390.2,
+    390.3
+   ],
+   "rms_db": -48.0
+  },
+  {
+   "take": "T25",
+   "src": [
+    427.5333,
+    427.7333
+   ],
+   "rms_db": -51.2
+  },
+  {
+   "take": "T27",
+   "src": [
+    472.8,
+    472.9667
+   ],
+   "rms_db": -55.5
+  },
+  {
+   "take": "T28",
+   "src": [
+    485.0667,
+    485.2333
+   ],
+   "rms_db": -52.6
+  },
+  {
+   "take": "T28",
+   "src": [
+    491.3,
+    491.4667
+   ],
+   "rms_db": -48.5
+  },
+  {
+   "take": "T28",
+   "src": [
+    494.7,
+    494.9667
+   ],
+   "rms_db": -49.1
+  },
+  {
+   "take": "T31",
+   "src": [
+    550.2667,
+    550.5
+   ],
+   "rms_db": -53.9
+  },
+  {
+   "take": "T31",
+   "src": [
+    554.3333,
+    554.5
+   ],
+   "rms_db": -56.6
+  }
+ ],
+ "freezes": [
+  {
+   "id": "fz1",
+   "src": [
+    355.83,
+    356.13
+   ],
+   "still_src": 355.8,
+   "still_proxy": 206.8333,
+   "out_start": 100.0333,
+   "duration": 0.3
+  },
+  {
+   "id": "fz2",
+   "src": [
+    450.17,
+    450.4
+   ],
+   "still_src": 450.13,
+   "still_proxy": 276.4633,
+   "out_start": 127.3667,
+   "duration": 0.2333
+  },
+  {
+   "id": "fz3",
+   "src": [
+    473.77,
+    474.03
+   ],
+   "still_src": 474.07,
+   "still_proxy": 294.1367,
+   "out_start": 127.6,
+   "duration": 0.2667
+  }
+ ],
  "words_output": [
   {
    "id": "w1",
@@ -2231,2480 +2166,2480 @@
   {
    "id": "w25",
    "text": "الماتش",
-   "start": 11.377,
-   "end": 11.957
+   "start": 11.21,
+   "end": 11.79
   },
   {
    "id": "w26",
    "text": "في",
-   "start": 12.033,
-   "end": 12.153
+   "start": 11.867,
+   "end": 11.987
   },
   {
    "id": "w27",
    "text": "الحقيقة",
-   "start": 12.09,
-   "end": 12.59
+   "start": 11.923,
+   "end": 12.423
   },
   {
    "id": "w28",
    "text": "هو",
-   "start": 12.59,
-   "end": 12.77
+   "start": 12.423,
+   "end": 12.603
   },
   {
    "id": "w29",
    "text": "قاعد",
-   "start": 12.77,
-   "end": 13.21
+   "start": 12.603,
+   "end": 13.043
   },
   {
    "id": "w30",
    "text": "بيرسم",
-   "start": 13.21,
-   "end": 13.67
+   "start": 13.043,
+   "end": 13.503
   },
   {
    "id": "w31",
    "text": "خريطة",
-   "start": 13.67,
-   "end": 14.31
+   "start": 13.503,
+   "end": 14.143
   },
   {
    "id": "w32",
    "text": "في",
-   "start": 14.31,
-   "end": 14.5
+   "start": 14.143,
+   "end": 14.333
   },
   {
    "id": "w33",
    "text": "دماغه",
-   "start": 14.577,
-   "end": 15.077
+   "start": 14.41,
+   "end": 14.91
   },
   {
    "id": "w34",
    "text": "إزاي",
-   "start": 15.3,
-   "end": 15.73
+   "start": 15.133,
+   "end": 15.563
   },
   {
    "id": "w35",
    "text": "هيلعب",
-   "start": 15.73,
-   "end": 16.43
+   "start": 15.563,
+   "end": 16.263
   },
   {
    "id": "w36",
    "text": "الكورة",
-   "start": 16.43,
-   "end": 16.95
+   "start": 16.263,
+   "end": 16.783
   },
   {
    "id": "w37",
    "text": "لما",
-   "start": 16.95,
-   "end": 17.31
+   "start": 16.783,
+   "end": 17.143
   },
   {
    "id": "w38",
    "text": "توصل",
-   "start": 17.31,
-   "end": 17.73
+   "start": 17.143,
+   "end": 17.563
   },
   {
    "id": "w39",
    "text": "له.",
-   "start": 17.73,
-   "end": 17.93
+   "start": 17.563,
+   "end": 17.763
   },
   {
    "id": "w40",
    "text": "ده",
-   "start": 18.033,
-   "end": 18.273
+   "start": 17.867,
+   "end": 18.107
   },
   {
    "id": "w41",
    "text": "عقل",
-   "start": 18.273,
-   "end": 18.553
+   "start": 18.107,
+   "end": 18.387
   },
   {
    "id": "w42",
    "text": "بيشتغل",
-   "start": 18.553,
-   "end": 19.293
+   "start": 18.387,
+   "end": 19.127
   },
   {
    "id": "w43",
    "text": "بسرعة",
-   "start": 19.293,
-   "end": 19.8
+   "start": 19.127,
+   "end": 19.633
   },
   {
    "id": "w44",
    "text": "الكمبيوتر.",
-   "start": 19.8,
-   "end": 20.58
+   "start": 19.633,
+   "end": 20.413
   },
   {
    "id": "w45",
    "text": "ودي",
-   "start": 20.7,
-   "end": 20.967
+   "start": 20.533,
+   "end": 20.8
   },
   {
    "id": "w46",
    "text": "اسمها",
-   "start": 20.967,
-   "end": 21.347
+   "start": 20.8,
+   "end": 21.18
   },
   {
    "id": "w47",
    "text": "هندسة",
-   "start": 21.347,
-   "end": 22.047
+   "start": 21.18,
+   "end": 21.88
   },
   {
    "id": "w48",
    "text": "الماتريكس",
-   "start": 22.047,
-   "end": 22.847
+   "start": 21.88,
+   "end": 22.68
   },
   {
    "id": "w49",
    "text": "العقلية",
-   "start": 23.0,
-   "end": 23.63
+   "start": 22.833,
+   "end": 23.463
   },
   {
    "id": "w50",
    "text": "ليونيل",
-   "start": 25.51,
-   "end": 26.143
+   "start": 25.343,
+   "end": 25.977
   },
   {
    "id": "w51",
    "text": "ميسي.",
-   "start": 26.233,
-   "end": 26.553
+   "start": 26.067,
+   "end": 26.387
   },
   {
    "id": "w52",
    "text": "العلماء",
-   "start": 26.667,
-   "end": 27.707
+   "start": 26.5,
+   "end": 27.54
   },
   {
    "id": "w53",
    "text": "وخبراء",
-   "start": 27.707,
-   "end": 28.867
+   "start": 27.54,
+   "end": 28.7
   },
   {
    "id": "w54",
    "text": "التكتيك",
-   "start": 28.867,
-   "end": 29.407
+   "start": 28.7,
+   "end": 29.24
   },
   {
    "id": "w55",
    "text": "قعدوا",
-   "start": 29.407,
-   "end": 30.067
+   "start": 29.24,
+   "end": 29.9
   },
   {
    "id": "w56",
    "text": "يدرسوا",
-   "start": 30.067,
-   "end": 30.707
+   "start": 29.9,
+   "end": 30.54
   },
   {
    "id": "w57",
    "text": "عقلية",
-   "start": 30.707,
-   "end": 31.707
+   "start": 30.54,
+   "end": 31.54
   },
   {
    "id": "w58",
    "text": "ميسي.",
-   "start": 31.707,
-   "end": 32.147
+   "start": 31.54,
+   "end": 31.98
   },
   {
    "id": "w59",
    "text": "واكتشفوا",
-   "start": 32.267,
-   "end": 32.973
+   "start": 32.1,
+   "end": 32.807
   },
   {
    "id": "w60",
    "text": "مصطلح",
-   "start": 32.973,
-   "end": 33.413
+   "start": 32.807,
+   "end": 33.247
   },
   {
    "id": "w61",
    "text": "غريب",
-   "start": 33.413,
-   "end": 33.893
+   "start": 33.247,
+   "end": 33.727
   },
   {
    "id": "w62",
    "text": "اسمه",
-   "start": 33.893,
-   "end": 34.373
+   "start": 33.727,
+   "end": 34.207
   },
   {
    "id": "w63",
    "text": "الماسح",
-   "start": 34.373,
-   "end": 35.193
+   "start": 34.207,
+   "end": 35.027
   },
   {
    "id": "w64",
    "text": "الضوئي.",
-   "start": 35.193,
-   "end": 35.733
+   "start": 35.027,
+   "end": 35.567
   },
   {
    "id": "w65",
    "text": "ميسي",
-   "start": 35.867,
-   "end": 36.353
+   "start": 35.7,
+   "end": 36.187
   },
   {
    "id": "w66",
    "text": "من",
-   "start": 36.353,
-   "end": 36.593
+   "start": 36.187,
+   "end": 36.427
   },
   {
    "id": "w67",
    "text": "أكتر",
-   "start": 36.593,
-   "end": 37.213
+   "start": 36.427,
+   "end": 37.047
   },
   {
    "id": "w68",
    "text": "اللعيبة",
-   "start": 37.213,
-   "end": 37.913
+   "start": 37.047,
+   "end": 37.747
   },
   {
    "id": "w69",
    "text": "اللي",
-   "start": 37.913,
-   "end": 38.407
+   "start": 37.747,
+   "end": 38.24
   },
   {
    "id": "w70",
    "text": "بتعمل",
-   "start": 38.407,
-   "end": 39.087
+   "start": 38.24,
+   "end": 38.92
   },
   {
    "id": "w71",
    "text": "اسكان",
-   "start": 39.157,
-   "end": 39.717
+   "start": 38.99,
+   "end": 39.55
   },
   {
    "id": "w72",
    "text": "للملعب",
-   "start": 39.717,
-   "end": 40.777
+   "start": 39.55,
+   "end": 40.61
   },
   {
    "id": "w73",
    "text": "وهو",
-   "start": 40.777,
-   "end": 41.077
+   "start": 40.61,
+   "end": 40.91
   },
   {
    "id": "w74",
    "text": "بيتحرك.",
-   "start": 41.077,
-   "end": 41.697
+   "start": 40.91,
+   "end": 41.53
   },
   {
    "id": "w75",
    "text": "الاسكان",
-   "start": 41.8,
-   "end": 42.36
+   "start": 41.633,
+   "end": 42.193
   },
   {
    "id": "w76",
    "text": "ده",
-   "start": 42.36,
-   "end": 42.62
+   "start": 42.193,
+   "end": 42.453
   },
   {
    "id": "w77",
    "text": "وهو",
-   "start": 42.62,
-   "end": 43.06
+   "start": 42.453,
+   "end": 42.893
   },
   {
    "id": "w78",
    "text": "لسه",
-   "start": 43.06,
-   "end": 43.5
+   "start": 42.893,
+   "end": 43.333
   },
   {
    "id": "w79",
    "text": "كورة",
-   "start": 43.5,
-   "end": 44.06
+   "start": 43.333,
+   "end": 43.893
   },
   {
    "id": "w80",
    "text": "في",
-   "start": 44.06,
-   "end": 44.26
+   "start": 43.893,
+   "end": 44.093
   },
   {
    "id": "w81",
    "text": "رجل",
-   "start": 44.26,
-   "end": 44.66
+   "start": 44.093,
+   "end": 44.493
   },
   {
    "id": "w82",
    "text": "زميله.",
-   "start": 44.66,
-   "end": 45.14
+   "start": 44.493,
+   "end": 44.973
   },
   {
    "id": "w83",
    "text": "عقل",
-   "start": 45.267,
-   "end": 45.733
+   "start": 45.1,
+   "end": 45.567
   },
   {
    "id": "w84",
    "text": "ميسي",
-   "start": 45.733,
-   "end": 46.133
+   "start": 45.567,
+   "end": 45.967
   },
   {
    "id": "w85",
    "text": "بيكون",
-   "start": 46.133,
-   "end": 46.653
+   "start": 45.967,
+   "end": 46.487
   },
   {
    "id": "w86",
    "text": "على",
-   "start": 46.653,
-   "end": 47.013
+   "start": 46.487,
+   "end": 46.847
   },
   {
    "id": "w87",
    "text": "حسب",
-   "start": 47.013,
-   "end": 47.473
+   "start": 46.847,
+   "end": 47.307
   },
   {
    "id": "w88",
    "text": "سرعة",
-   "start": 47.473,
-   "end": 47.933
+   "start": 47.307,
+   "end": 47.767
   },
   {
    "id": "w89",
    "text": "اللاعب",
-   "start": 47.933,
-   "end": 48.493
+   "start": 47.767,
+   "end": 48.327
   },
   {
    "id": "w90",
    "text": "اللي",
-   "start": 48.493,
-   "end": 48.633
+   "start": 48.327,
+   "end": 48.467
   },
   {
    "id": "w91",
    "text": "قدامه",
-   "start": 48.633,
-   "end": 49.193
+   "start": 48.467,
+   "end": 49.027
   },
   {
    "id": "w92",
    "text": "ومكانة",
-   "start": 49.193,
-   "end": 49.76
+   "start": 49.027,
+   "end": 49.593
   },
   {
    "id": "w93",
    "text": "مركزه.",
-   "start": 49.76,
-   "end": 50.32
+   "start": 49.593,
+   "end": 50.153
   },
   {
    "id": "w94",
    "text": "والزاوية",
-   "start": 50.433,
-   "end": 51.133
+   "start": 50.267,
+   "end": 50.967
   },
   {
    "id": "w95",
    "text": "اللي",
-   "start": 51.133,
-   "end": 51.573
+   "start": 50.967,
+   "end": 51.407
   },
   {
    "id": "w96",
    "text": "بين",
-   "start": 51.573,
-   "end": 51.693
+   "start": 51.407,
+   "end": 51.527
   },
   {
    "id": "w97",
    "text": "رجلين",
-   "start": 51.633,
-   "end": 52.453
+   "start": 51.467,
+   "end": 52.287
   },
   {
    "id": "w98",
    "text": "الحارس.",
-   "start": 52.453,
-   "end": 53.013
+   "start": 52.287,
+   "end": 52.847
   },
   {
    "id": "w99",
    "text": "علشان",
-   "start": 53.133,
-   "end": 53.473
+   "start": 52.967,
+   "end": 53.307
   },
   {
    "id": "w100",
    "text": "كده",
-   "start": 53.473,
-   "end": 53.733
+   "start": 53.307,
+   "end": 53.567
   },
   {
    "id": "w101",
    "text": "الكورة",
-   "start": 53.733,
-   "end": 54.033
+   "start": 53.567,
+   "end": 53.867
   },
   {
    "id": "w102",
    "text": "لما",
-   "start": 54.033,
-   "end": 54.253
+   "start": 53.867,
+   "end": 54.087
   },
   {
    "id": "w103",
    "text": "بتوصل",
-   "start": 54.253,
-   "end": 54.773
+   "start": 54.087,
+   "end": 54.607
   },
   {
    "id": "w104",
    "text": "له",
-   "start": 54.773,
-   "end": 54.953
+   "start": 54.607,
+   "end": 54.787
   },
   {
    "id": "w105",
    "text": "هو",
-   "start": 54.953,
-   "end": 55.093
+   "start": 54.787,
+   "end": 54.927
   },
   {
    "id": "w106",
    "text": "بيبقى",
-   "start": 55.093,
-   "end": 55.593
+   "start": 54.927,
+   "end": 55.427
   },
   {
    "id": "w107",
    "text": "عارف",
-   "start": 55.593,
-   "end": 56.153
+   "start": 55.427,
+   "end": 55.987
   },
   {
    "id": "w108",
    "text": "هو",
-   "start": 56.153,
-   "end": 56.413
+   "start": 55.987,
+   "end": 56.247
   },
   {
    "id": "w109",
    "text": "هيعمل",
-   "start": 56.413,
-   "end": 57.253
+   "start": 56.247,
+   "end": 57.087
   },
   {
    "id": "w110",
    "text": "بيها",
-   "start": 57.253,
-   "end": 57.533
+   "start": 57.087,
+   "end": 57.367
   },
   {
    "id": "w111",
    "text": "إيه.",
-   "start": 57.533,
-   "end": 58.053
+   "start": 57.367,
+   "end": 57.887
   },
   {
    "id": "w112",
    "text": "وهيباصيها",
-   "start": 58.1,
-   "end": 58.787
+   "start": 57.933,
+   "end": 58.62
   },
   {
    "id": "w113",
    "text": "فين",
-   "start": 58.787,
-   "end": 59.167
+   "start": 58.62,
+   "end": 59.0
   },
   {
    "id": "w114",
    "text": "وهيتحرك",
-   "start": 59.167,
-   "end": 59.927
+   "start": 59.0,
+   "end": 59.76
   },
   {
    "id": "w115",
    "text": "فين.",
-   "start": 59.927,
-   "end": 60.247
+   "start": 59.76,
+   "end": 60.08
   },
   {
    "id": "w116",
    "text": "يعني",
-   "start": 61.033,
-   "end": 61.287
+   "start": 60.167,
+   "end": 60.42
   },
   {
    "id": "w117",
    "text": "شايف",
-   "start": 61.287,
-   "end": 61.747
+   "start": 60.42,
+   "end": 60.88
   },
   {
    "id": "w118",
    "text": "المستقبل",
-   "start": 61.747,
-   "end": 62.627
+   "start": 60.88,
+   "end": 61.76
   },
   {
    "id": "w119",
    "text": "زي",
-   "start": 62.627,
-   "end": 62.907
+   "start": 61.76,
+   "end": 62.04
   },
   {
    "id": "w120",
    "text": "ما",
-   "start": 62.907,
-   "end": 63.027
+   "start": 62.04,
+   "end": 62.16
   },
   {
    "id": "w121",
    "text": "بنقول",
-   "start": 62.967,
-   "end": 63.307
+   "start": 62.1,
+   "end": 62.44
   },
   {
    "id": "w122",
    "text": "كده",
-   "start": 63.307,
-   "end": 63.767
+   "start": 62.44,
+   "end": 62.9
   },
   {
    "id": "w123",
    "text": "قبل",
-   "start": 63.767,
-   "end": 64.273
+   "start": 62.9,
+   "end": 63.407
   },
   {
    "id": "w124",
    "text": "ما",
-   "start": 64.273,
-   "end": 64.393
+   "start": 63.407,
+   "end": 63.527
   },
   {
    "id": "w125",
    "text": "يحصل.",
-   "start": 64.393,
-   "end": 64.813
+   "start": 63.527,
+   "end": 63.947
   },
   {
    "id": "w126",
    "text": "عارفين",
-   "start": 64.933,
-   "end": 65.65
+   "start": 64.067,
+   "end": 64.783
   },
   {
    "id": "w127",
    "text": "ده",
-   "start": 65.65,
-   "end": 65.79
+   "start": 64.783,
+   "end": 64.923
   },
   {
    "id": "w128",
    "text": "معناه",
-   "start": 65.79,
-   "end": 66.07
+   "start": 64.923,
+   "end": 65.203
   },
   {
    "id": "w129",
    "text": "إيه",
-   "start": 66.07,
-   "end": 66.23
+   "start": 65.203,
+   "end": 65.363
   },
   {
    "id": "w130",
    "text": "إن",
-   "start": 66.23,
-   "end": 66.47
+   "start": 65.363,
+   "end": 65.603
   },
   {
    "id": "w131",
    "text": "ميسي",
-   "start": 66.47,
-   "end": 66.89
+   "start": 65.603,
+   "end": 66.023
   },
   {
    "id": "w132",
    "text": "مش",
-   "start": 66.89,
-   "end": 67.07
+   "start": 66.023,
+   "end": 66.203
   },
   {
    "id": "w133",
    "text": "بيبتكر",
-   "start": 67.07,
-   "end": 67.75
+   "start": 66.203,
+   "end": 66.883
   },
   {
    "id": "w134",
    "text": "الكورة",
-   "start": 67.75,
-   "end": 68.21
+   "start": 66.883,
+   "end": 67.343
   },
   {
    "id": "w135",
    "text": "في",
-   "start": 68.21,
-   "end": 68.33
+   "start": 67.343,
+   "end": 67.463
   },
   {
    "id": "w136",
    "text": "لحظتها",
-   "start": 68.29,
-   "end": 68.89
+   "start": 67.423,
+   "end": 68.023
   },
   {
    "id": "w137",
    "text": "عارف",
-   "start": 69.117,
-   "end": 69.677
+   "start": 68.25,
+   "end": 68.81
   },
   {
    "id": "w138",
    "text": "بينفذ",
-   "start": 69.677,
-   "end": 70.417
+   "start": 68.81,
+   "end": 69.55
   },
   {
    "id": "w139",
    "text": "خطة",
-   "start": 70.417,
-   "end": 70.997
+   "start": 69.55,
+   "end": 70.13
   },
   {
    "id": "w140",
    "text": "هندسية",
-   "start": 70.997,
-   "end": 71.677
+   "start": 70.13,
+   "end": 70.81
   },
   {
    "id": "w141",
    "text": "رسمها",
-   "start": 71.807,
-   "end": 72.333
+   "start": 70.94,
+   "end": 71.467
   },
   {
    "id": "w142",
    "text": "في",
-   "start": 72.333,
-   "end": 72.453
+   "start": 71.467,
+   "end": 71.587
   },
   {
    "id": "w143",
    "text": "دماغه",
-   "start": 72.453,
-   "end": 72.833
+   "start": 71.587,
+   "end": 71.967
   },
   {
    "id": "w144",
    "text": "تعال",
-   "start": 72.967,
-   "end": 73.2
+   "start": 72.1,
+   "end": 72.333
   },
   {
    "id": "w145",
    "text": "أقولك",
-   "start": 73.2,
-   "end": 73.68
+   "start": 72.333,
+   "end": 72.813
   },
   {
    "id": "w146",
    "text": "على",
-   "start": 73.68,
-   "end": 73.88
+   "start": 72.813,
+   "end": 73.013
   },
   {
    "id": "w147",
    "text": "سر",
-   "start": 73.88,
-   "end": 74.36
+   "start": 73.013,
+   "end": 73.493
   },
   {
    "id": "w148",
    "text": "مرعب.",
-   "start": 74.36,
-   "end": 74.98
+   "start": 73.493,
+   "end": 74.067
   },
   {
    "id": "w149",
    "text": "علمياً",
-   "start": 75.7,
-   "end": 76.33
+   "start": 74.067,
+   "end": 74.63
   },
   {
    "id": "w150",
    "text": "المدافع",
-   "start": 76.33,
-   "end": 77.35
+   "start": 74.63,
+   "end": 75.65
   },
   {
    "id": "w151",
    "text": "العادي",
-   "start": 77.35,
-   "end": 77.83
+   "start": 75.65,
+   "end": 76.13
   },
   {
    "id": "w152",
    "text": "بيشوف",
-   "start": 78.0,
-   "end": 78.47
+   "start": 76.3,
+   "end": 76.77
   },
   {
    "id": "w153",
    "text": "الحركة",
-   "start": 78.47,
-   "end": 79.09
+   "start": 76.77,
+   "end": 77.39
   },
   {
    "id": "w154",
    "text": "وبعدين",
-   "start": 79.09,
-   "end": 79.903
+   "start": 77.39,
+   "end": 78.203
   },
   {
    "id": "w155",
    "text": "عقله",
-   "start": 80.4,
-   "end": 80.92
+   "start": 78.367,
+   "end": 78.887
   },
   {
    "id": "w156",
    "text": "بيبعت",
-   "start": 80.92,
-   "end": 81.88
+   "start": 78.887,
+   "end": 79.847
   },
   {
    "id": "w157",
    "text": "إشارة",
-   "start": 81.88,
-   "end": 82.52
+   "start": 79.847,
+   "end": 80.487
   },
   {
    "id": "w158",
    "text": "للعضلة",
-   "start": 82.833,
-   "end": 83.54
+   "start": 80.633,
+   "end": 81.34
   },
   {
    "id": "w159",
    "text": "علشان",
-   "start": 83.54,
-   "end": 84.2
+   "start": 81.34,
+   "end": 82.0
   },
   {
    "id": "w160",
    "text": "تتحرك",
-   "start": 84.2,
-   "end": 85.047
+   "start": 82.0,
+   "end": 82.847
   },
   {
    "id": "w161",
    "text": "وتنفذ",
-   "start": 85.047,
-   "end": 85.727
+   "start": 82.847,
+   "end": 83.527
   },
   {
    "id": "w162",
    "text": "أمر.",
-   "start": 85.727,
-   "end": 86.027
+   "start": 83.527,
+   "end": 83.827
   },
   {
    "id": "w163",
    "text": "الحركة",
-   "start": 86.133,
-   "end": 87.213
+   "start": 83.933,
+   "end": 85.013
   },
   {
    "id": "w164",
    "text": "دي",
-   "start": 87.213,
-   "end": 87.393
+   "start": 85.013,
+   "end": 85.193
   },
   {
    "id": "w165",
    "text": "بتحتاج",
-   "start": 87.393,
-   "end": 87.853
+   "start": 85.193,
+   "end": 85.653
   },
   {
    "id": "w166",
    "text": "من",
-   "start": 87.853,
-   "end": 87.973
+   "start": 85.653,
+   "end": 85.773
   },
   {
    "id": "w167",
    "text": "3",
-   "start": 87.953,
-   "end": 88.233
+   "start": 85.753,
+   "end": 86.033
   },
   {
    "id": "w168",
    "text": "إلى",
-   "start": 88.233,
-   "end": 88.513
+   "start": 86.033,
+   "end": 86.313
   },
   {
    "id": "w169",
    "text": "4",
-   "start": 88.513,
-   "end": 88.833
+   "start": 86.313,
+   "end": 86.633
   },
   {
    "id": "w170",
    "text": "عشار",
-   "start": 88.833,
-   "end": 89.633
+   "start": 86.633,
+   "end": 87.433
   },
   {
    "id": "w171",
    "text": "من",
-   "start": 89.633,
-   "end": 89.847
+   "start": 87.433,
+   "end": 87.647
   },
   {
    "id": "w172",
    "text": "الثانية",
-   "start": 89.847,
-   "end": 90.567
+   "start": 87.647,
+   "end": 88.367
   },
   {
    "id": "w173",
    "text": "عشان",
-   "start": 90.567,
-   "end": 91.027
+   "start": 88.367,
+   "end": 88.827
   },
   {
    "id": "w174",
    "text": "ينفذها.",
-   "start": 91.027,
-   "end": 91.587
+   "start": 88.827,
+   "end": 89.387
   },
   {
    "id": "w175",
    "text": "بس",
-   "start": 91.667,
-   "end": 91.8
+   "start": 89.467,
+   "end": 89.6
   },
   {
    "id": "w176",
    "text": "مع",
-   "start": 91.8,
-   "end": 91.98
+   "start": 89.6,
+   "end": 89.78
   },
   {
    "id": "w177",
    "text": "ميسي",
-   "start": 91.98,
-   "end": 92.42
+   "start": 89.78,
+   "end": 90.22
   },
   {
    "id": "w178",
    "text": "ده",
-   "start": 92.42,
-   "end": 92.733
+   "start": 90.22,
+   "end": 90.533
   },
   {
    "id": "w179",
    "text": "ما",
-   "start": 92.733,
-   "end": 92.853
+   "start": 90.533,
+   "end": 90.653
   },
   {
    "id": "w180",
    "text": "بيسويش",
-   "start": 92.773,
-   "end": 93.213
+   "start": 90.573,
+   "end": 91.013
   },
   {
    "id": "w181",
    "text": "أي",
-   "start": 93.213,
-   "end": 93.44
+   "start": 91.013,
+   "end": 91.24
   },
   {
    "id": "w182",
    "text": "حاجة",
-   "start": 93.44,
-   "end": 93.94
+   "start": 91.24,
+   "end": 91.74
   },
   {
    "id": "w183",
    "text": "خالص",
-   "start": 93.94,
-   "end": 94.26
+   "start": 91.74,
+   "end": 92.06
   },
   {
    "id": "w184",
    "text": "بالنسبة",
-   "start": 94.26,
-   "end": 94.48
+   "start": 92.06,
+   "end": 92.28
   },
   {
    "id": "w185",
    "text": "له.",
-   "start": 94.48,
-   "end": 94.6
+   "start": 92.28,
+   "end": 92.4
   },
   {
    "id": "w186",
    "text": "خبراء",
-   "start": 94.5,
-   "end": 94.887
+   "start": 92.3,
+   "end": 92.687
   },
   {
    "id": "w187",
    "text": "كتير",
-   "start": 94.887,
-   "end": 95.287
+   "start": 92.687,
+   "end": 93.087
   },
   {
    "id": "w188",
    "text": "بيقولوا",
-   "start": 95.287,
-   "end": 95.813
+   "start": 93.087,
+   "end": 93.613
   },
   {
    "id": "w189",
    "text": "إن",
-   "start": 95.813,
-   "end": 95.933
+   "start": 93.613,
+   "end": 93.733
   },
   {
    "id": "w190",
    "text": "عقل",
-   "start": 95.933,
-   "end": 96.413
+   "start": 93.733,
+   "end": 94.213
   },
   {
    "id": "w191",
    "text": "ميسي",
-   "start": 96.413,
-   "end": 96.873
+   "start": 94.213,
+   "end": 94.673
   },
   {
    "id": "w192",
    "text": "مش",
-   "start": 96.873,
-   "end": 97.2
+   "start": 94.673,
+   "end": 94.8
   },
   {
    "id": "w193",
    "text": "بيستنى",
-   "start": 97.297,
-   "end": 97.757
+   "start": 94.897,
+   "end": 95.357
   },
   {
    "id": "w194",
    "text": "رد",
-   "start": 97.757,
-   "end": 97.997
+   "start": 95.357,
+   "end": 95.597
   },
   {
    "id": "w195",
    "text": "الفعل.",
-   "start": 97.997,
-   "end": 98.357
+   "start": 95.597,
+   "end": 95.957
   },
   {
    "id": "w196",
    "text": "ميسي",
-   "start": 98.467,
-   "end": 98.84
+   "start": 96.067,
+   "end": 96.44
   },
   {
    "id": "w197",
    "text": "هو",
-   "start": 98.84,
-   "end": 99.02
+   "start": 96.44,
+   "end": 96.62
   },
   {
    "id": "w198",
    "text": "اللي",
-   "start": 99.02,
-   "end": 99.3
+   "start": 96.62,
+   "end": 96.9
   },
   {
    "id": "w199",
    "text": "بيبرمج",
-   "start": 99.3,
-   "end": 100.06
+   "start": 96.9,
+   "end": 97.66
   },
   {
    "id": "w200",
    "text": "رد",
-   "start": 100.06,
-   "end": 100.54
+   "start": 97.66,
+   "end": 98.14
   },
   {
    "id": "w201",
    "text": "فعل",
-   "start": 100.54,
-   "end": 100.94
+   "start": 98.14,
+   "end": 98.54
   },
   {
    "id": "w202",
    "text": "المدافع",
-   "start": 100.94,
-   "end": 101.64
+   "start": 98.54,
+   "end": 99.24
   },
   {
    "id": "w203",
    "text": "قبل",
-   "start": 101.64,
-   "end": 102.08
+   "start": 99.24,
+   "end": 99.68
   },
   {
    "id": "w204",
    "text": "ما",
-   "start": 102.08,
-   "end": 102.26
+   "start": 99.68,
+   "end": 99.86
   },
   {
    "id": "w205",
    "text": "يحصل.",
-   "start": 102.26,
-   "end": 102.72
+   "start": 99.86,
+   "end": 100.32
   },
   {
    "id": "w206",
    "text": "وقبل",
-   "start": 103.133,
-   "end": 103.617
+   "start": 100.333,
+   "end": 100.817
   },
   {
    "id": "w207",
    "text": "ما",
-   "start": 103.617,
-   "end": 103.777
+   "start": 100.817,
+   "end": 100.977
   },
   {
    "id": "w208",
    "text": "الكورة",
-   "start": 103.777,
-   "end": 104.157
+   "start": 100.977,
+   "end": 101.357
   },
   {
    "id": "w209",
    "text": "توصل",
-   "start": 104.157,
-   "end": 104.657
+   "start": 101.357,
+   "end": 101.857
   },
   {
    "id": "w210",
    "text": "للمدافع",
-   "start": 104.657,
-   "end": 105.337
+   "start": 101.857,
+   "end": 102.537
   },
   {
    "id": "w211",
    "text": "أصلاً.",
-   "start": 105.337,
-   "end": 105.657
+   "start": 102.537,
+   "end": 102.857
   },
   {
    "id": "w212",
    "text": "هو",
-   "start": 105.767,
-   "end": 105.887
+   "start": 102.967,
+   "end": 103.087
   },
   {
    "id": "w213",
    "text": "عارف",
-   "start": 105.81,
-   "end": 106.39
+   "start": 103.01,
+   "end": 103.59
   },
   {
    "id": "w214",
    "text": "إن",
-   "start": 106.39,
-   "end": 106.603
+   "start": 103.59,
+   "end": 103.803
   },
   {
    "id": "w215",
    "text": "ميسي",
-   "start": 106.603,
-   "end": 107.263
+   "start": 103.803,
+   "end": 104.463
   },
   {
    "id": "w216",
    "text": "لو",
-   "start": 107.263,
-   "end": 107.403
+   "start": 104.463,
+   "end": 104.603
   },
   {
    "id": "w217",
    "text": "عمل",
-   "start": 107.403,
-   "end": 107.883
+   "start": 104.603,
+   "end": 105.083
   },
   {
    "id": "w218",
    "text": "بكتفه",
-   "start": 107.883,
-   "end": 108.323
+   "start": 105.083,
+   "end": 105.523
   },
   {
    "id": "w219",
    "text": "يمين",
-   "start": 108.323,
-   "end": 108.743
+   "start": 105.523,
+   "end": 105.943
   },
   {
    "id": "w220",
    "text": "عارف",
-   "start": 108.743,
-   "end": 109.117
+   "start": 105.943,
+   "end": 106.317
   },
   {
    "id": "w221",
    "text": "إن",
-   "start": 109.117,
-   "end": 109.257
+   "start": 106.317,
+   "end": 106.457
   },
   {
    "id": "w222",
    "text": "اللاعب",
-   "start": 109.257,
-   "end": 109.857
+   "start": 106.457,
+   "end": 107.057
   },
   {
    "id": "w223",
    "text": "هيروح",
-   "start": 109.857,
-   "end": 110.137
+   "start": 107.057,
+   "end": 107.337
   },
   {
    "id": "w224",
    "text": "ناحية",
-   "start": 110.137,
-   "end": 110.517
+   "start": 107.337,
+   "end": 107.717
   },
   {
    "id": "w225",
    "text": "الشمال",
-   "start": 110.517,
-   "end": 110.937
+   "start": 107.717,
+   "end": 108.137
   },
   {
    "id": "w226",
    "text": "بنسبة",
-   "start": 110.937,
-   "end": 111.357
+   "start": 108.137,
+   "end": 108.557
   },
   {
    "id": "w227",
    "text": "تسعة",
-   "start": 111.357,
-   "end": 111.637
+   "start": 108.557,
+   "end": 108.837
   },
   {
    "id": "w228",
    "text": "وتسعين",
-   "start": 111.637,
-   "end": 111.957
+   "start": 108.837,
+   "end": 109.157
   },
   {
    "id": "w229",
    "text": "في",
-   "start": 111.957,
-   "end": 112.077
+   "start": 109.157,
+   "end": 109.277
   },
   {
    "id": "w230",
    "text": "المية.",
-   "start": 112.037,
-   "end": 112.377
+   "start": 109.237,
+   "end": 109.577
   },
   {
    "id": "w231",
    "text": "ميسي",
-   "start": 112.533,
-   "end": 112.753
+   "start": 109.733,
+   "end": 109.953
   },
   {
    "id": "w232",
    "text": "مش",
-   "start": 112.753,
-   "end": 112.893
+   "start": 109.953,
+   "end": 110.093
   },
   {
    "id": "w233",
    "text": "بيجري",
-   "start": 112.893,
-   "end": 113.233
+   "start": 110.093,
+   "end": 110.433
   },
   {
    "id": "w234",
    "text": "أسرع",
-   "start": 113.233,
-   "end": 113.533
+   "start": 110.433,
+   "end": 110.733
   },
   {
    "id": "w235",
    "text": "من",
-   "start": 113.533,
-   "end": 113.653
+   "start": 110.733,
+   "end": 110.853
   },
   {
    "id": "w236",
    "text": "المدافع.",
-   "start": 113.653,
-   "end": 114.213
+   "start": 110.853,
+   "end": 111.413
   },
   {
    "id": "w237",
    "text": "ميسي",
-   "start": 114.333,
-   "end": 114.833
+   "start": 111.533,
+   "end": 111.933
   },
   {
    "id": "w238",
    "text": "عايش",
-   "start": 114.833,
-   "end": 115.513
+   "start": 111.933,
+   "end": 112.613
   },
   {
    "id": "w239",
    "text": "في",
-   "start": 115.513,
-   "end": 115.633
+   "start": 112.613,
+   "end": 112.733
   },
   {
    "id": "w240",
    "text": "المستقبل",
-   "start": 115.613,
-   "end": 116.433
+   "start": 112.713,
+   "end": 113.533
   },
   {
    "id": "w241",
    "text": "وراسم",
-   "start": 116.433,
-   "end": 117.013
+   "start": 113.533,
+   "end": 114.113
   },
   {
    "id": "w242",
    "text": "السيناريو",
-   "start": 117.013,
-   "end": 117.753
+   "start": 114.113,
+   "end": 114.853
   },
   {
    "id": "w243",
    "text": "قبلها",
-   "start": 117.867,
-   "end": 118.287
+   "start": 114.967,
+   "end": 115.387
   },
   {
    "id": "w244",
    "text": "بثانية.",
-   "start": 118.287,
-   "end": 118.807
+   "start": 115.387,
+   "end": 115.907
   },
   {
    "id": "w245",
    "text": "المدافع",
-   "start": 118.933,
-   "end": 119.38
+   "start": 116.033,
+   "end": 116.48
   },
   {
    "id": "w246",
    "text": "بيعمل",
-   "start": 119.38,
-   "end": 119.82
+   "start": 116.48,
+   "end": 116.92
   },
   {
    "id": "w247",
    "text": "زي",
-   "start": 119.82,
-   "end": 119.96
+   "start": 116.92,
+   "end": 117.06
   },
   {
    "id": "w248",
    "text": "الآلة",
-   "start": 119.96,
-   "end": 120.28
+   "start": 117.06,
+   "end": 117.38
   },
   {
    "id": "w249",
    "text": "المكسورة",
-   "start": 120.28,
-   "end": 120.9
+   "start": 117.38,
+   "end": 118.0
   },
   {
    "id": "w250",
    "text": "اللي",
-   "start": 120.9,
-   "end": 121.22
+   "start": 118.0,
+   "end": 118.32
   },
   {
    "id": "w251",
    "text": "بيحاول",
-   "start": 121.22,
-   "end": 121.86
+   "start": 118.32,
+   "end": 118.96
   },
   {
    "id": "w252",
    "text": "يلحق",
-   "start": 121.86,
-   "end": 122.5
+   "start": 118.96,
+   "end": 119.6
   },
   {
    "id": "w253",
    "text": "ميسي.",
-   "start": 122.5,
-   "end": 123.02
+   "start": 119.6,
+   "end": 120.12
   },
   {
    "id": "w254",
    "text": "دايماً",
-   "start": 123.533,
-   "end": 123.973
+   "start": 120.433,
+   "end": 120.873
   },
   {
    "id": "w255",
    "text": "بيكون",
-   "start": 123.973,
-   "end": 124.353
+   "start": 120.873,
+   "end": 121.253
   },
   {
    "id": "w256",
    "text": "متأخر",
-   "start": 124.353,
-   "end": 125.333
+   "start": 121.253,
+   "end": 122.233
   },
   {
    "id": "w257",
    "text": "بخطوة.",
-   "start": 125.333,
-   "end": 125.713
+   "start": 122.233,
+   "end": 122.613
   },
   {
    "id": "w258",
    "text": "المدافع",
-   "start": 125.833,
-   "end": 126.367
+   "start": 122.733,
+   "end": 123.267
   },
   {
    "id": "w259",
    "text": "العادي",
-   "start": 126.367,
-   "end": 126.807
+   "start": 123.267,
+   "end": 123.707
   },
   {
    "id": "w260",
    "text": "بيجري",
-   "start": 126.807,
-   "end": 127.427
+   "start": 123.707,
+   "end": 124.327
   },
   {
    "id": "w261",
    "text": "ورا",
-   "start": 127.427,
-   "end": 127.607
+   "start": 124.327,
+   "end": 124.507
   },
   {
    "id": "w262",
    "text": "الكورة.",
-   "start": 127.607,
-   "end": 128.067
+   "start": 124.507,
+   "end": 124.967
   },
   {
    "id": "w263",
    "text": "لكن",
-   "start": 128.087,
-   "end": 128.32
+   "start": 124.987,
+   "end": 125.22
   },
   {
    "id": "w264",
    "text": "مع",
-   "start": 128.32,
-   "end": 128.5
+   "start": 125.22,
+   "end": 125.4
   },
   {
    "id": "w265",
    "text": "ميسي",
-   "start": 128.5,
-   "end": 128.88
+   "start": 125.4,
+   "end": 125.78
   },
   {
    "id": "w266",
    "text": "الدنيا",
-   "start": 128.88,
-   "end": 129.46
+   "start": 125.78,
+   "end": 126.36
   },
   {
    "id": "w267",
    "text": "بتختلف",
-   "start": 129.46,
-   "end": 129.98
+   "start": 126.36,
+   "end": 126.88
   },
   {
    "id": "w268",
    "text": "تماماً.",
-   "start": 129.98,
-   "end": 130.66
+   "start": 126.88,
+   "end": 127.56
   },
   {
    "id": "w269",
    "text": "المدافع",
-   "start": 130.7,
-   "end": 131.8
+   "start": 127.6,
+   "end": 128.533
   },
   {
    "id": "w270",
    "text": "هو",
-   "start": 131.8,
-   "end": 131.94
+   "start": 128.533,
+   "end": 128.673
   },
   {
    "id": "w271",
    "text": "اللي",
-   "start": 131.94,
-   "end": 132.28
+   "start": 128.673,
+   "end": 129.013
   },
   {
    "id": "w272",
    "text": "بيجري",
-   "start": 132.28,
-   "end": 132.74
+   "start": 129.013,
+   "end": 129.473
   },
   {
    "id": "w273",
    "text": "ورا",
-   "start": 132.74,
-   "end": 133.193
+   "start": 129.473,
+   "end": 129.927
   },
   {
    "id": "w274",
    "text": "وهم",
-   "start": 133.193,
-   "end": 133.633
+   "start": 129.927,
+   "end": 130.367
   },
   {
    "id": "w275",
    "text": "ميسي.",
-   "start": 133.633,
-   "end": 134.093
+   "start": 130.367,
+   "end": 130.827
   },
   {
    "id": "w276",
    "text": "ميسي",
-   "start": 134.2,
-   "end": 134.46
+   "start": 130.933,
+   "end": 131.193
   },
   {
    "id": "w277",
    "text": "بيمشي",
-   "start": 134.46,
-   "end": 134.82
+   "start": 131.193,
+   "end": 131.553
   },
   {
    "id": "w278",
    "text": "ببطء.",
-   "start": 134.82,
-   "end": 135.3
+   "start": 131.553,
+   "end": 132.033
   },
   {
    "id": "w279",
    "text": "بيخلي",
-   "start": 135.467,
-   "end": 135.89
+   "start": 132.033,
+   "end": 132.457
   },
   {
    "id": "w280",
    "text": "المدافع",
-   "start": 135.89,
-   "end": 136.33
+   "start": 132.457,
+   "end": 132.897
   },
   {
    "id": "w281",
    "text": "يقرب",
-   "start": 136.33,
-   "end": 136.69
+   "start": 132.897,
+   "end": 133.257
   },
   {
    "id": "w282",
    "text": "منه.",
-   "start": 136.69,
-   "end": 137.09
+   "start": 133.257,
+   "end": 133.657
   },
   {
    "id": "w283",
    "text": "وبيحس",
-   "start": 137.46,
-   "end": 138.14
+   "start": 133.8,
+   "end": 134.273
   },
   {
    "id": "w284",
    "text": "بالأمان.",
-   "start": 138.14,
-   "end": 138.8
+   "start": 134.273,
+   "end": 134.933
   },
   {
    "id": "w285",
    "text": "وفي",
-   "start": 139.0,
-   "end": 139.187
+   "start": 135.133,
+   "end": 135.32
   },
   {
    "id": "w286",
    "text": "لحظة",
-   "start": 139.187,
-   "end": 139.627
+   "start": 135.32,
+   "end": 135.76
   },
   {
    "id": "w287",
    "text": "المدافع",
-   "start": 139.7,
-   "end": 140.423
+   "start": 135.833,
+   "end": 136.557
   },
   {
    "id": "w288",
    "text": "بيمد",
-   "start": 140.423,
-   "end": 140.863
+   "start": 136.557,
+   "end": 136.997
   },
   {
    "id": "w289",
    "text": "رجله",
-   "start": 140.863,
-   "end": 141.323
+   "start": 136.997,
+   "end": 137.457
   },
   {
    "id": "w290",
    "text": "عشان",
-   "start": 141.323,
-   "end": 141.73
+   "start": 137.457,
+   "end": 137.863
   },
   {
    "id": "w291",
    "text": "يقطع",
-   "start": 141.73,
-   "end": 142.09
+   "start": 137.863,
+   "end": 138.223
   },
   {
    "id": "w292",
    "text": "الكورة.",
-   "start": 142.09,
-   "end": 142.53
+   "start": 138.223,
+   "end": 138.663
   },
   {
    "id": "w293",
    "text": "لكن",
-   "start": 142.633,
-   "end": 142.993
+   "start": 138.767,
+   "end": 139.127
   },
   {
    "id": "w294",
    "text": "في",
-   "start": 142.993,
-   "end": 143.313
+   "start": 139.127,
+   "end": 139.447
   },
   {
    "id": "w295",
    "text": "تتش",
-   "start": 143.313,
-   "end": 143.873
+   "start": 139.447,
+   "end": 140.007
   },
   {
    "id": "w296",
    "text": "سريع",
-   "start": 143.873,
-   "end": 144.613
+   "start": 140.007,
+   "end": 140.747
   },
   {
    "id": "w297",
    "text": "جداً.",
-   "start": 144.613,
-   "end": 144.973
+   "start": 140.747,
+   "end": 141.107
   },
   {
    "id": "w298",
    "text": "ميسي",
-   "start": 145.053,
-   "end": 145.487
+   "start": 141.187,
+   "end": 141.62
   },
   {
    "id": "w299",
    "text": "كل",
-   "start": 145.487,
-   "end": 145.727
+   "start": 141.62,
+   "end": 141.86
   },
   {
    "id": "w300",
    "text": "لمس",
-   "start": 145.727,
-   "end": 146.127
+   "start": 141.86,
+   "end": 142.26
   },
   {
    "id": "w301",
    "text": "الكورة",
-   "start": 146.127,
-   "end": 146.587
+   "start": 142.26,
+   "end": 142.72
   },
   {
    "id": "w302",
    "text": "بعد",
-   "start": 146.587,
-   "end": 146.907
+   "start": 142.72,
+   "end": 143.04
   },
   {
    "id": "w303",
    "text": "ما",
-   "start": 146.907,
-   "end": 147.147
+   "start": 143.04,
+   "end": 143.28
   },
   {
    "id": "w304",
    "text": "اداله",
-   "start": 147.147,
-   "end": 147.627
+   "start": 143.28,
+   "end": 143.76
   },
   {
    "id": "w305",
    "text": "الأمان",
-   "start": 147.627,
-   "end": 148.087
+   "start": 143.76,
+   "end": 144.22
   },
   {
    "id": "w306",
    "text": "تماماً.",
-   "start": 148.087,
-   "end": 148.727
+   "start": 144.22,
+   "end": 144.86
   },
   {
    "id": "w307",
    "text": "دي",
-   "start": 148.8,
-   "end": 149.127
+   "start": 144.933,
+   "end": 145.26
   },
   {
    "id": "w308",
    "text": "اللي",
-   "start": 149.127,
-   "end": 149.627
+   "start": 145.26,
+   "end": 145.76
   },
   {
    "id": "w309",
    "text": "هي",
-   "start": 149.627,
-   "end": 149.747
+   "start": 145.76,
+   "end": 145.88
   },
   {
    "id": "w310",
    "text": "اللحظة",
-   "start": 149.747,
-   "end": 150.487
+   "start": 145.88,
+   "end": 146.62
   },
   {
    "id": "w311",
    "text": "اللي",
-   "start": 150.487,
-   "end": 150.827
+   "start": 146.62,
+   "end": 146.96
   },
   {
    "id": "w312",
    "text": "بيكون",
-   "start": 150.827,
-   "end": 151.147
+   "start": 146.96,
+   "end": 147.28
   },
   {
    "id": "w313",
    "text": "فيها",
-   "start": 151.147,
-   "end": 151.507
+   "start": 147.28,
+   "end": 147.64
   },
   {
    "id": "w314",
    "text": "ميسي",
-   "start": 151.507,
-   "end": 152.027
+   "start": 147.64,
+   "end": 148.16
   },
   {
    "id": "w315",
    "text": "سابق",
-   "start": 152.027,
-   "end": 152.88
+   "start": 148.16,
+   "end": 149.013
   },
   {
    "id": "w316",
    "text": "عقلية",
-   "start": 152.88,
-   "end": 153.64
+   "start": 149.013,
+   "end": 149.773
   },
   {
    "id": "w317",
    "text": "المدافع",
-   "start": 153.64,
-   "end": 154.48
+   "start": 149.773,
+   "end": 150.613
   },
   {
    "id": "w318",
    "text": "بثانية.",
-   "start": 154.48,
-   "end": 154.887
+   "start": 150.613,
+   "end": 151.02
   },
   {
    "id": "w319",
    "text": "ميسي",
-   "start": 155.0,
-   "end": 155.407
+   "start": 151.133,
+   "end": 151.54
   },
   {
    "id": "w320",
    "text": "مش",
-   "start": 155.407,
-   "end": 155.587
+   "start": 151.54,
+   "end": 151.72
   },
   {
    "id": "w321",
    "text": "بيمر",
-   "start": 155.587,
-   "end": 156.007
+   "start": 151.72,
+   "end": 152.14
   },
   {
    "id": "w322",
    "text": "باللعيب",
-   "start": 156.007,
-   "end": 156.637
+   "start": 152.14,
+   "end": 152.77
   },
   {
    "id": "w323",
    "text": "المدافع",
-   "start": 157.567,
-   "end": 158.533
+   "start": 153.7,
+   "end": 154.667
   },
   {
    "id": "w324",
    "text": "ولا",
-   "start": 158.533,
-   "end": 158.753
+   "start": 154.667,
+   "end": 154.887
   },
   {
    "id": "w325",
    "text": "بيمر",
-   "start": 158.753,
-   "end": 159.133
+   "start": 154.887,
+   "end": 155.267
   },
   {
    "id": "w326",
    "text": "منه",
-   "start": 159.133,
-   "end": 159.613
+   "start": 155.267,
+   "end": 155.747
   },
   {
    "id": "w327",
    "text": "عشان",
-   "start": 159.613,
-   "end": 160.313
+   "start": 155.747,
+   "end": 156.447
   },
   {
    "id": "w328",
    "text": "يفترسه.",
-   "start": 160.867,
-   "end": 161.497
+   "start": 156.767,
+   "end": 157.397
   },
   {
    "id": "w329",
    "text": "لا",
-   "start": 162.26,
-   "end": 162.38
+   "start": 157.993,
+   "end": 158.113
   },
   {
    "id": "w330",
    "text": "ده",
-   "start": 162.367,
-   "end": 162.707
+   "start": 158.1,
+   "end": 158.44
   },
   {
    "id": "w331",
    "text": "كأنه",
-   "start": 162.707,
-   "end": 163.167
+   "start": 158.44,
+   "end": 158.9
   },
   {
    "id": "w332",
    "text": "بيكتب",
-   "start": 163.167,
-   "end": 163.647
+   "start": 158.9,
+   "end": 159.38
   },
   {
    "id": "w333",
    "text": "معادلة",
-   "start": 163.647,
-   "end": 164.387
+   "start": 159.38,
+   "end": 160.12
   },
   {
    "id": "w334",
    "text": "هندسية",
-   "start": 164.387,
-   "end": 165.147
+   "start": 160.12,
+   "end": 160.88
   },
   {
    "id": "w335",
    "text": "ماتريكس",
-   "start": 165.217,
-   "end": 166.197
+   "start": 160.95,
+   "end": 161.93
   },
   {
    "id": "w336",
    "text": "على",
-   "start": 166.197,
-   "end": 166.333
+   "start": 161.93,
+   "end": 162.067
   },
   {
    "id": "w337",
    "text": "سبورة",
-   "start": 166.44,
-   "end": 167.16
+   "start": 162.173,
+   "end": 162.893
   },
   {
    "id": "w338",
    "text": "وبيعلمها",
-   "start": 167.16,
-   "end": 168.173
+   "start": 162.893,
+   "end": 163.907
   },
   {
    "id": "w339",
    "text": "لكل",
-   "start": 168.173,
-   "end": 169.1
+   "start": 163.907,
+   "end": 164.833
   },
   {
    "id": "w340",
    "text": "اللي",
-   "start": 169.1,
-   "end": 169.72
+   "start": 164.833,
+   "end": 165.453
   },
   {
    "id": "w341",
    "text": "في",
-   "start": 169.72,
-   "end": 169.84
+   "start": 165.453,
+   "end": 165.573
   },
   {
    "id": "w342",
    "text": "الاستاد.",
-   "start": 169.8,
-   "end": 170.28
+   "start": 165.533,
+   "end": 166.013
   },
   {
    "id": "w343",
    "text": "الكورة",
-   "start": 170.4,
-   "end": 170.767
+   "start": 166.133,
+   "end": 166.5
   },
   {
    "id": "w344",
    "text": "في",
-   "start": 170.767,
-   "end": 170.887
+   "start": 166.5,
+   "end": 166.62
   },
   {
    "id": "w345",
    "text": "رجل",
-   "start": 170.827,
-   "end": 171.027
+   "start": 166.56,
+   "end": 166.76
   },
   {
    "id": "w346",
    "text": "ميسي",
-   "start": 171.027,
-   "end": 171.327
+   "start": 166.76,
+   "end": 167.06
   },
   {
    "id": "w347",
    "text": "مش",
-   "start": 171.327,
-   "end": 171.467
+   "start": 167.06,
+   "end": 167.2
   },
   {
    "id": "w348",
    "text": "لعبة",
-   "start": 171.467,
-   "end": 171.907
+   "start": 167.2,
+   "end": 167.64
   },
   {
    "id": "w349",
    "text": "بس.",
-   "start": 171.907,
-   "end": 172.307
+   "start": 167.64,
+   "end": 168.04
   },
   {
    "id": "w350",
    "text": "الكورة",
-   "start": 172.347,
-   "end": 172.633
+   "start": 168.08,
+   "end": 168.367
   },
   {
    "id": "w351",
    "text": "في",
-   "start": 172.633,
-   "end": 172.753
+   "start": 168.367,
+   "end": 168.487
   },
   {
    "id": "w352",
    "text": "رجل",
-   "start": 172.713,
-   "end": 172.933
+   "start": 168.447,
+   "end": 168.667
   },
   {
    "id": "w353",
    "text": "ميسي",
-   "start": 172.933,
-   "end": 173.493
+   "start": 168.667,
+   "end": 169.227
   },
   {
    "id": "w354",
    "text": "هندسة",
-   "start": 173.667,
-   "end": 174.227
+   "start": 169.4,
+   "end": 169.96
   },
   {
    "id": "w355",
    "text": "وموسيقى",
-   "start": 174.533,
-   "end": 175.327
+   "start": 170.267,
+   "end": 171.06
   },
   {
    "id": "w356",
    "text": "وهو",
-   "start": 175.327,
-   "end": 175.88
+   "start": 171.06,
+   "end": 171.613
   },
   {
    "id": "w357",
    "text": "العازف",
-   "start": 175.88,
-   "end": 176.64
+   "start": 171.613,
+   "end": 172.373
   },
   {
    "id": "w358",
    "text": "الوحيد",
-   "start": 176.64,
-   "end": 177.46
+   "start": 172.373,
+   "end": 173.193
   },
   {
    "id": "w359",
    "text": "اللي",
-   "start": 177.467,
-   "end": 177.7
+   "start": 173.2,
+   "end": 173.433
   },
   {
    "id": "w360",
    "text": "في",
-   "start": 177.7,
-   "end": 177.82
+   "start": 173.433,
+   "end": 173.553
   },
   {
    "id": "w361",
    "text": "الملعب",
-   "start": 177.74,
-   "end": 178.22
+   "start": 173.473,
+   "end": 173.953
   },
   {
    "id": "w362",
    "text": "كله",
-   "start": 178.22,
-   "end": 178.54
+   "start": 173.953,
+   "end": 174.273
   },
   {
    "id": "w363",
    "text": "بيعزف",
-   "start": 178.54,
-   "end": 179.3
+   "start": 174.273,
+   "end": 175.033
   },
   {
    "id": "w364",
    "text": "هذه",
-   "start": 179.3,
-   "end": 179.46
+   "start": 175.033,
+   "end": 175.193
   },
   {
    "id": "w365",
    "text": "الموسيقى",
-   "start": 179.46,
-   "end": 180.52
+   "start": 175.193,
+   "end": 176.253
   },
   {
    "id": "w366",
    "text": "بالكورة.",
-   "start": 180.52,
-   "end": 181.067
+   "start": 176.253,
+   "end": 176.8
   },
   {
    "id": "w367",
    "text": "لعيبة",
-   "start": 181.3,
-   "end": 182.16
+   "start": 177.033,
+   "end": 177.893
   },
   {
    "id": "w368",
    "text": "كتيرة",
-   "start": 182.16,
-   "end": 182.42
+   "start": 177.893,
+   "end": 178.153
   },
   {
    "id": "w369",
    "text": "بتجري",
-   "start": 182.42,
-   "end": 182.76
+   "start": 178.153,
+   "end": 178.493
   },
   {
    "id": "w370",
    "text": "وبتسجل",
-   "start": 182.76,
-   "end": 183.24
+   "start": 178.493,
+   "end": 178.973
   },
   {
    "id": "w371",
    "text": "أهداف.",
-   "start": 183.24,
-   "end": 183.8
+   "start": 178.973,
+   "end": 179.533
   },
   {
    "id": "w372",
    "text": "بس",
-   "start": 183.9,
-   "end": 184.177
+   "start": 179.633,
+   "end": 179.91
   },
   {
    "id": "w373",
    "text": "التاريخ",
-   "start": 184.177,
-   "end": 184.677
+   "start": 179.91,
+   "end": 180.41
   },
   {
    "id": "w374",
    "text": "بيفتكر",
-   "start": 184.677,
-   "end": 185.497
+   "start": 180.41,
+   "end": 181.23
   },
   {
    "id": "w375",
    "text": "مين",
-   "start": 185.497,
-   "end": 185.977
+   "start": 181.23,
+   "end": 181.71
   },
   {
    "id": "w376",
    "text": "اللي",
-   "start": 185.977,
-   "end": 186.257
+   "start": 181.71,
+   "end": 181.99
   },
   {
    "id": "w377",
    "text": "خلى",
-   "start": 186.257,
-   "end": 186.717
+   "start": 181.99,
+   "end": 182.45
   },
   {
    "id": "w378",
    "text": "كورة",
-   "start": 186.717,
-   "end": 187.257
+   "start": 182.45,
+   "end": 182.99
   },
   {
    "id": "w379",
    "text": "في",
-   "start": 187.257,
-   "end": 187.437
+   "start": 182.99,
+   "end": 183.17
   },
   {
    "id": "w380",
    "text": "رجله.",
-   "start": 187.437,
-   "end": 187.897
+   "start": 183.17,
+   "end": 183.63
   },
   {
    "id": "w381",
    "text": "موسيقى.",
-   "start": 188.067,
-   "end": 188.383
+   "start": 183.8,
+   "end": 184.117
   },
   {
    "id": "w382",
    "text": "وكأن",
-   "start": 188.467,
-   "end": 188.97
+   "start": 184.2,
+   "end": 184.703
   },
   {
    "id": "w383",
    "text": "الكورة",
-   "start": 188.97,
-   "end": 189.69
+   "start": 184.703,
+   "end": 185.423
   },
   {
    "id": "w384",
    "text": "بتنام",
-   "start": 189.69,
-   "end": 190.55
+   "start": 185.423,
+   "end": 186.283
   },
   {
    "id": "w385",
    "text": "في",
-   "start": 190.55,
-   "end": 190.67
+   "start": 186.283,
+   "end": 186.403
   },
   {
    "id": "w386",
    "text": "رجله",
-   "start": 190.67,
-   "end": 191.11
+   "start": 186.403,
+   "end": 186.843
   },
   {
    "id": "w387",
    "text": "وبتسمع",
-   "start": 191.11,
-   "end": 192.09
+   "start": 186.843,
+   "end": 187.823
   },
   {
    "id": "w388",
    "text": "كلامه.",
-   "start": 192.09,
-   "end": 192.61
+   "start": 187.823,
+   "end": 188.343
   },
   {
    "id": "w389",
    "text": "ميسي",
-   "start": 193.1,
-   "end": 193.457
+   "start": 188.833,
+   "end": 189.19
   },
   {
    "id": "w390",
    "text": "مش",
-   "start": 193.457,
-   "end": 193.6
+   "start": 189.19,
+   "end": 189.333
   },
   {
    "id": "w391",
    "text": "لعيب",
-   "start": 193.6,
-   "end": 193.937
+   "start": 189.333,
+   "end": 189.67
   },
   {
    "id": "w392",
    "text": "كورة.",
-   "start": 193.937,
-   "end": 194.297
+   "start": 189.67,
+   "end": 190.03
   },
   {
    "id": "w393",
    "text": "ميسي",
-   "start": 194.433,
-   "end": 194.78
+   "start": 190.167,
+   "end": 190.513
   },
   {
    "id": "w394",
    "text": "دي",
-   "start": 194.78,
-   "end": 195.18
+   "start": 190.513,
+   "end": 190.913
   },
   {
    "id": "w395",
    "text": "عبقرية",
-   "start": 195.18,
-   "end": 195.86
+   "start": 190.913,
+   "end": 191.593
   },
   {
    "id": "w396",
    "text": "اتولدت",
-   "start": 195.86,
-   "end": 196.84
+   "start": 191.593,
+   "end": 192.573
   },
   {
    "id": "w397",
    "text": "في",
-   "start": 196.84,
-   "end": 196.96
+   "start": 192.573,
+   "end": 192.693
   },
   {
    "id": "w398",
    "text": "جسم",
-   "start": 196.98,
-   "end": 197.42
+   "start": 192.713,
+   "end": 193.153
   },
   {
    "id": "w399",
    "text": "إنسان.",
-   "start": 197.42,
-   "end": 197.96
+   "start": 193.153,
+   "end": 193.693
   },
   {
    "id": "w400",
    "text": "لو",
-   "start": 198.9,
-   "end": 199.02
+   "start": 194.633,
+   "end": 194.753
   },
   {
    "id": "w401",
    "text": "كنت",
-   "start": 199.013,
-   "end": 199.333
+   "start": 194.747,
+   "end": 195.067
   },
   {
    "id": "w402",
    "text": "فاكر",
-   "start": 199.333,
-   "end": 199.773
+   "start": 195.067,
+   "end": 195.507
   },
   {
    "id": "w403",
    "text": "إن",
-   "start": 199.773,
-   "end": 200.033
+   "start": 195.507,
+   "end": 195.767
   },
   {
    "id": "w404",
    "text": "ميسي",
-   "start": 200.033,
-   "end": 200.393
+   "start": 195.767,
+   "end": 196.127
   },
   {
    "id": "w405",
    "text": "شاطر",
-   "start": 202.107,
-   "end": 202.547
+   "start": 197.84,
+   "end": 198.28
   },
   {
    "id": "w406",
    "text": "بس",
-   "start": 202.547,
-   "end": 202.727
+   "start": 198.28,
+   "end": 198.46
   },
   {
    "id": "w407",
    "text": "عشان",
-   "start": 202.727,
-   "end": 203.007
+   "start": 198.46,
+   "end": 198.74
   },
   {
    "id": "w408",
    "text": "بيجيب",
-   "start": 203.007,
-   "end": 203.407
+   "start": 198.74,
+   "end": 199.14
   },
   {
    "id": "w409",
    "text": "أجوان،",
-   "start": 203.407,
-   "end": 203.907
+   "start": 199.14,
+   "end": 199.64
   },
   {
    "id": "w410",
    "text": "يبقى",
-   "start": 204.033,
-   "end": 204.253
+   "start": 199.767,
+   "end": 199.987
   },
   {
    "id": "w411",
    "text": "أنت",
-   "start": 204.253,
-   "end": 204.373
+   "start": 199.987,
+   "end": 200.107
   },
   {
    "id": "w412",
    "text": "ما",
-   "start": 204.333,
-   "end": 204.453
+   "start": 200.067,
+   "end": 200.187
   },
   {
    "id": "w413",
    "text": "فهمتش",
-   "start": 204.393,
-   "end": 204.693
+   "start": 200.127,
+   "end": 200.427
   },
   {
    "id": "w414",
    "text": "المعادلة",
-   "start": 204.693,
-   "end": 205.073
+   "start": 200.427,
+   "end": 200.807
   },
   {
    "id": "w415",
    "text": "صح.",
-   "start": 205.073,
-   "end": 205.313
+   "start": 200.807,
+   "end": 201.047
   },
   {
    "id": "w416",
    "text": "ميسي",
-   "start": 205.433,
-   "end": 205.88
+   "start": 201.167,
+   "end": 201.613
   },
   {
    "id": "w417",
    "text": "هو",
-   "start": 205.88,
-   "end": 206.16
+   "start": 201.613,
+   "end": 201.893
   },
   {
    "id": "w418",
    "text": "مؤسس",
-   "start": 206.16,
-   "end": 206.86
+   "start": 201.893,
+   "end": 202.593
   },
   {
    "id": "w419",
    "text": "هندسة",
-   "start": 206.86,
-   "end": 207.38
+   "start": 202.593,
+   "end": 203.113
   },
   {
    "id": "w420",
    "text": "الماتريكس",
-   "start": 207.38,
-   "end": 208.16
+   "start": 203.113,
+   "end": 203.893
   },
   {
    "id": "w421",
    "text": "في",
-   "start": 208.16,
-   "end": 208.28
+   "start": 203.893,
+   "end": 204.013
   },
   {
    "id": "w422",
    "text": "الملعب.",
-   "start": 208.233,
-   "end": 208.767
+   "start": 203.967,
+   "end": 204.5
   },
   {
    "id": "w423",
    "text": "شاركنا",
-   "start": 208.9,
-   "end": 209.24
+   "start": 204.633,
+   "end": 204.973
   },
   {
    "id": "w424",
    "text": "في",
-   "start": 209.24,
-   "end": 209.36
+   "start": 204.973,
+   "end": 205.093
   },
   {
    "id": "w425",
    "text": "الكومنتات.",
-   "start": 209.32,
-   "end": 210.0
+   "start": 205.053,
+   "end": 205.733
   },
   {
    "id": "w426",
    "text": "أكتر",
-   "start": 210.0,
-   "end": 210.367
+   "start": 205.733,
+   "end": 206.1
   },
   {
    "id": "w427",
    "text": "لحظة",
-   "start": 210.367,
-   "end": 210.907
+   "start": 206.1,
+   "end": 206.64
   },
   {
    "id": "w428",
    "text": "حسيت",
-   "start": 211.0,
-   "end": 211.463
+   "start": 206.733,
+   "end": 207.197
   },
   {
    "id": "w429",
    "text": "فيها",
-   "start": 211.463,
-   "end": 211.823
+   "start": 207.197,
+   "end": 207.557
   },
   {
    "id": "w430",
    "text": "إن",
-   "start": 211.823,
-   "end": 212.023
+   "start": 207.557,
+   "end": 207.757
   },
   {
    "id": "w431",
    "text": "ميسي",
-   "start": 212.023,
-   "end": 212.443
+   "start": 207.757,
+   "end": 208.177
   },
   {
    "id": "w432",
    "text": "بيلعب",
-   "start": 212.443,
-   "end": 212.923
+   "start": 208.177,
+   "end": 208.657
   },
   {
    "id": "w433",
    "text": "فيديو",
-   "start": 212.923,
-   "end": 213.303
+   "start": 208.657,
+   "end": 209.037
   },
   {
    "id": "w434",
    "text": "جيم",
-   "start": 213.303,
-   "end": 213.623
+   "start": 209.037,
+   "end": 209.357
   },
   {
    "id": "w435",
    "text": "والناس",
-   "start": 214.017,
-   "end": 214.677
+   "start": 209.75,
+   "end": 210.41
   },
   {
    "id": "w436",
    "text": "كلها.",
-   "start": 214.677,
-   "end": 215.137
+   "start": 210.41,
+   "end": 210.87
   },
   {
    "id": "w437",
    "text": "NPCs.",
-   "start": 215.217,
-   "end": 216.177
+   "start": 210.95,
+   "end": 211.91
   }
  ]
 }

@@ -49,7 +49,7 @@
 #g7-sub { top: 600px; font-size: 62px; font-weight: 800; color: var(--ink-soft); }
 
   </style>
-  <div id="root" data-composition-id="g7" data-width="1080" data-height="1920" data-duration="3.8666" lang="ar" dir="rtl" style="--paper:#E9E0D3; --paper-dark:#D4C8B8; --paper-light:#F6F0E7; --cream:#FFFDF7; --ink:#1B1D1E; --ink-soft:#3A3D3E; --graphite:#5A5C5E; --accent-warm:#E66A21; --accent-warm-dark:#C85218; --sky:#75AADB; --sky-ink:#2F5F8A; --gold:#D8A44A; --pitch:#3F6B4A;">
+  <div id="root" data-composition-id="g7" data-width="1080" data-height="1920" data-duration="3.8667" lang="ar" dir="rtl" style="--paper:#E9E0D3; --paper-dark:#D4C8B8; --paper-light:#F6F0E7; --cream:#FFFDF7; --ink:#1B1D1E; --ink-soft:#3A3D3E; --graphite:#5A5C5E; --accent-warm:#E66A21; --accent-warm-dark:#C85218; --sky:#75AADB; --sky-ink:#2F5F8A; --gold:#D8A44A; --pitch:#3F6B4A;">
     <img class="grain" src="assets/textures/paper-grain.png" alt="" aria-hidden="true" data-layout-ignore>
 <div id="g7-k" class="kicker"><span class="w">بينفذ</span></div>
     <div id="g7-h" class="hero"><span class="mask"><span class="in">خطة <span class="warm">هندسية</span></span></span></div>
@@ -93,8 +93,8 @@
   draw("#g7-mpath", 1.35, 0.7, "power2.inOut");
   pop("#g7-x", 1.35 + 0.65, 0.2);
   [1, 2, 3].forEach((i) => bin(`#g7-sub .w:nth-child(${i})`, 2.74 + (i - 1) * 0.12));
-  draw("#g7-exec", 3.386, 0.55, "power3.inOut");
-  tl.fromTo("#g7-dot", { x: 0, y: 0 }, { x: -560, y: -460, duration: 0.55, ease: "power3.inOut", immediateRender: false }, 3.386);
+  draw("#g7-exec", 3.387, 0.55, "power3.inOut");
+  tl.fromTo("#g7-dot", { x: 0, y: 0 }, { x: -560, y: -460, duration: 0.55, ease: "power3.inOut", immediateRender: false }, 3.387);
   window.__timelines["g7"] = tl;
   </script>
 </template>

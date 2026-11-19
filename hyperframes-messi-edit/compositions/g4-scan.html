@@ -52,7 +52,7 @@
 #g4-sub { top: 1190px; font-size: 60px; font-weight: 800; color: var(--ink-soft); }
 
   </style>
-  <div id="root" data-composition-id="g4" data-width="1080" data-height="1920" data-duration="9.5334" lang="ar" dir="rtl" style="--paper:#E9E0D3; --paper-dark:#D4C8B8; --paper-light:#F6F0E7; --cream:#FFFDF7; --ink:#1B1D1E; --ink-soft:#3A3D3E; --graphite:#5A5C5E; --accent-warm:#E66A21; --accent-warm-dark:#C85218; --sky:#75AADB; --sky-ink:#2F5F8A; --gold:#D8A44A; --pitch:#3F6B4A;">
+  <div id="root" data-composition-id="g4" data-width="1080" data-height="1920" data-duration="9.5333" lang="ar" dir="rtl" style="--paper:#E9E0D3; --paper-dark:#D4C8B8; --paper-light:#F6F0E7; --cream:#FFFDF7; --ink:#1B1D1E; --ink-soft:#3A3D3E; --graphite:#5A5C5E; --accent-warm:#E66A21; --accent-warm-dark:#C85218; --sky:#75AADB; --sky-ink:#2F5F8A; --gold:#D8A44A; --pitch:#3F6B4A;">
     <img class="grain" src="assets/textures/paper-grain.png" alt="" aria-hidden="true" data-layout-ignore>
 <div id="g4-k" class="kicker"><span class="w">مصطلح</span> <span class="w">غريب</span> <span class="w">اسمه</span></div>
     <div id="g4-print" class="print"><span class="tape"></span><img id="g4-ph" src="assets/photos/p3-scan.jpg" alt="" style="object-position:55% 0%" data-color-grading='{"preset": null, "intensity": 1, "adjust": {"exposure": 0.04, "contrast": 0.1, "highlights": 0, "shadows": 0, "whites": 0, "blacks": 0, "temperature": 0, "tint": 0, "vibrance": 0, "saturation": 0}, "details": {"vignette": 0, "vignetteMidpoint": 0.5, "vignetteRoundness": 0, "vignetteFeather": 0.65, "grain": 0, "grainSize": 0.25, "grainRoughness": 0.5}, "effects": {"blur": 0, "pixelate": 0, "chromaBleed": 0, "tapeDamage": 0, "tapeTracking": 0, "tapeNoise": 1, "tapeSpeed": 0.5, "filmArtifacts": 0, "halftone": 0, "halftoneSize": 0, "twoInkPrint": 0, "twoInkPrintSize": 0, "ascii": 0, "asciiSize": 0.06578947368421052, "asciiInvert": 0, "asciiStyle": 0, "asciiColor": 1, "asciiRotation": 0, "dither": 0, "ditherSize": 0, "bloom": 0, "bloomRadius": 8, "monoScreen": 1, "monoScreenSize": 0.2, "monoScreenAngle": 0.25, "monoScreenSpread": 0.28, "monoScreenShape": 0, "monoScreenInvert": 0, "scanlines": 0, "scanlineCount": 0, "scanlineSoftness": 0, "chromaticAberration": 0, "chromaticAngle": 0, "crtCurvature": 0, "digitalGlitch": 0, "digitalGlitchColorSplit": 0, "digitalGlitchLineTear": 0, "digitalGlitchPixelate": 0, "digitalGlitchBlockAmount": 0, "digitalGlitchBlockDisplacement": 0, "digitalGlitchBlockOpacity": 0, "digitalGlitchSpeed": 0, "engraving": 0, "engravingSpacing": 0.4117647058823529, "engravingMinThickness": 0.2, "engravingMaxThickness": 0.4571428571428572, "engravingAngle": 0.25, "engravingContrast": 0.4666666666666667, "engravingSharpness": 0.59, "engravingWave": 0.2, "engravingWaveFrequency": 0.2222222222222222, "crosshatch": 0, "crosshatchSpacing": 0.28, "crosshatchThickness": 0.25, "crosshatchAngle": 0.25, "crosshatchContrast": 0.3333333333333333, "crosshatchEdges": 0.5, "crosshatchLineWeight": 0, "crosshatchWave": 0.33, "crosshatchWaveFrequency": 0.2222222222222222, "kuwahara": 0, "kuwaharaRadius": 0.14285714285714285, "kuwaharaSharpness": 0.3125, "kuwaharaSaturation": 0.5}, "lut": null, "colorSpace": "rec709", "palette": ["#1b1d1e", "#efe6d8"]}'></div>
@@ -113,17 +113,17 @@
   draw("#g4-mk2", 2.14 + 0.17, 0.3, "power2.out");
   draw("#g4-mk3", 2.14 + 0.29, 0.3, "power2.out");
   // the photo hands over to the diagram: Messi becomes the orange dot
-  tl.fromTo("#g4-print", { scale: 1, opacity: 1 }, { scale: 0.12, opacity: 0, duration: 0.3, ease: "power3.in", immediateRender: false }, 3.634 - 0.2);
-  off("#g4-arcs", 3.634 - 0.2);
-  off("#g4-k", 3.634 - 0.14);
-  bout("#g4-h1", 3.634 - 0.14);
-  fade("#g4-field", 3.634 + 0.05, 1, 0.2);
-  tl.fromTo("#g4-sweep", { rotation: -20, svgOrigin: "540 630" }, { rotation: 700, svgOrigin: "540 630", duration: 2.6, ease: "power1.inOut" }, 3.634 + 0.05);
-  tl.fromTo(["#g4-d5", "#g4-d1", "#g4-d2", "#g4-d3", "#g4-d4"], { opacity: 0, scale: 0, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.22, ease: "expo.out", stagger: 0.32 }, 3.634 + 0.2);
-  [1, 2, 3, 4].forEach((i) => bin(`#g4-k2 .w:nth-child(${i})`, 3.634 + (i - 1) * 0.12));
-  rise("#g4-h2 .in", 6.924);
-  bin("#g4-sub .w:nth-child(1)", 8.844 - 0.1);
-  bin("#g4-sub .w:nth-child(2)", 8.844);
+  tl.fromTo("#g4-print", { scale: 1, opacity: 1 }, { scale: 0.12, opacity: 0, duration: 0.3, ease: "power3.in", immediateRender: false }, 3.633 - 0.2);
+  off("#g4-arcs", 3.633 - 0.2);
+  off("#g4-k", 3.633 - 0.14);
+  bout("#g4-h1", 3.633 - 0.14);
+  fade("#g4-field", 3.633 + 0.05, 1, 0.2);
+  tl.fromTo("#g4-sweep", { rotation: -20, svgOrigin: "540 630" }, { rotation: 700, svgOrigin: "540 630", duration: 2.6, ease: "power1.inOut" }, 3.633 + 0.05);
+  tl.fromTo(["#g4-d5", "#g4-d1", "#g4-d2", "#g4-d3", "#g4-d4"], { opacity: 0, scale: 0, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.22, ease: "expo.out", stagger: 0.32 }, 3.633 + 0.2);
+  [1, 2, 3, 4].forEach((i) => bin(`#g4-k2 .w:nth-child(${i})`, 3.633 + (i - 1) * 0.12));
+  rise("#g4-h2 .in", 6.923);
+  bin("#g4-sub .w:nth-child(1)", 8.843 - 0.1);
+  bin("#g4-sub .w:nth-child(2)", 8.843);
   window.__timelines["g4"] = tl;
   </script>
 </template>

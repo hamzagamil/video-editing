@@ -4,6 +4,7 @@ Source times are seconds in ../source/rawreel.mov. Word ids (wN) refer to transc
 tools/cut.py regenerates from TAKES; after changing TAKES, rerun cut.py and re-check the ids below.
 """
 
+SLIVER_MAX, SLIVER_DB = 0.40, -40.0  # silent slivers between two pauses are dropped (the speaker leans to read there)
 PAUSE_SPLIT = 0.20  # silences longer than this inside a take are trimmed (to ~3 + 2 frames); map: silencedetect -34 dB
 
 # Re-transcriptions of stretches where the first pass merged a retake into a stretched word.
@@ -28,7 +29,7 @@ TAKES = [
     {"id": "T12", "src": [180.48, 199.50]}, # علشان كده ... يعني شايف المستقبل زي ما بنقول كده قبل ما يحصل  (filler kept: no clean gap to cut it)
     {"id": "T13", "src": [233.19, 237.79]}, # عارفين ده معناه ايه ان ميسي مش بيبتكر الكورة في لحظتها  (4th take)
     {"id": "T14", "src": [246.35, 251.12]}, # عارف بينفذ خطة هندسية رسمها في دماغه
-    {"id": "T15", "src": [258.62, 266.90], "hold": [(261.08, 0.5)]},  # تعال أقولك على سر مرعب.. (held) علمياً المدافع العادي
+    {"id": "T15", "src": [258.62, 266.90]},  # تعال أقولك على سر مرعب.. علمياً المدافع العادي (the held beat was dropped: he leans to read in it)
     {"id": "T16", "src": [274.51, 293.38]}, # بيشوف الحركة وبعدين عقله بيبعت إشارة للعضلة علشان تتحرك وتنفذ أمر
     {"id": "T17", "src": [299.20, 305.80]}, # الحركة دي بتحتاج من 3 إلى 4 عشار من الثانية عشان ينفذها
     {"id": "T18", "src": [310.22, 314.30]}, # بس مع ميسي ده ما بيسويش أي حاجة خالص بالنسبة له
@@ -54,6 +55,16 @@ TAKES = [
     {"id": "T38", "src": [782.08, 789.40]}, # شاركنا في الكومنتات. أكتر لحظة حسيت فيها إن ميسي بيلعب فيديو جيم
     {"id": "T39", "src": [798.88, 801.75]}, # والناس كلها NPCs  (3rd take)
 ]
+
+# Leans that overlap speech: (source from, source to, clean source frame held over them). Video only.
+FREEZE = [
+    (355.83, 356.13, 355.80),  # tail of «يحصل.» (T20)
+    (450.17, 450.40, 450.13),  # tail of «تماماً.» (T26)
+    (473.77, 474.03, 474.07),  # onset of «المدافع» (T27)
+]
+
+# Source spans removed by hand: the lean continues after the last word, in silence.
+TRIM = [(261.03, 261.40), (264.38, 264.45), (356.13, 356.40)]
 
 # Whisper spelling -> what was said (checked against the audio context; Egyptian spelling kept)
 SPELL = {
@@ -106,7 +117,7 @@ SCENES = [
     ("o1", "o1-study.html", ("w", 56, -0.05), ("w", 59, L), "Card: studied (p4)", "overlay"),
     ("g4", "g4-scan.html", ("w", 59, L), ("w", 75, L), "The scanner (p3)"),
     ("g5", "g5-calc.html", ("w", 83, L), ("w", 99, L), "Three measurements"),
-    ("g6", "g6-future.html", ("w", 105, L), ("w", 126, L), "Sees the future"),
+    ("g6", "g6-future.html", ("w", 105, L), ("w", 126, 0.47), "Sees the future (holds over his lean back into frame)"),
     ("g7", "g7-plan.html", ("w", 137, L), ("w", 144, L), "A plan, then executed"),
     ("g8", "g8-chain.html", ("w", 150, L), ("w", 163, L), "The ordinary defender's chain"),
     ("o2", "o2-timer.html", ("w", 166, -0.05), ("w", 175, L), "Card: 0.3-0.4 s", "overlay"),
@@ -114,8 +125,9 @@ SCENES = [
     ("g10", "g10-lag.html", ("w", 245, L), ("w", 258, L), "The broken machine"),
     ("g11", "g11-trap.html", ("w", 276, L), ("w", 285, L), "The trap (p5)"),
     ("g12", "g12-touch.html", ("w", 293, L), ("w", 307, L), "The touch - hero (p6)"),
+    ("gp", "gp-pounce.html", ("w", 327, L), ("w", 329, L), "Cut-away: «عشان يفترسه» (covers a lean)"),
     ("g13", "g13-equation.html", ("w", 329, L), ("w", 343, L), "An equation on a board"),
-    ("g14", "g14-music.html", ("w", 350, L), ("w", 367, L), "The only musician"),
+    ("g14", "g14-music.html", ("w", 350, L), ("w", 367, 0.27), "The only musician (holds over his lean back into frame)"),
     ("g15", "g15-sleep.html", ("w", 382, L), ("w", 389, L), "The ball sleeps (p7)"),
     ("g16", "g16-founder.html", ("w", 416, L), ("w", 423, L), "Founder (title callback)"),
     ("g17", "g17-cta.html", ("w", 426, L), CLOSING_AT, "CTA: video game / NPCs"),
@@ -144,7 +156,7 @@ CAPTIONS = [
     [52, 53, 54], [55, 56], [57, 58],
     [75, 76], [77, 78], [79, 80, 81, 82],
     [99, 100], [101, 102, 103, 104],
-    [126, 127, 128, 129], [130, 131, 132], [133, 134], [135, 136],
+    [127, 128, 129], [130, 131, 132], [133, 134], [135, 136],
     [144, 145], [146, 147, 148], [149],
     [163, 164, 165], [166, 167, 168, 169, 170], [171, 172], [173, 174], [175, 176, 177], [178, 179, 180],
     [181, 182, 183], [184, 185],
@@ -154,9 +166,9 @@ CAPTIONS = [
     [258, 259], [260, 261, 262], [263, 264, 265], [266, 267, 268], [269, 270, 271], [272, 273, 274, 275],
     [285, 286], [287, 288, 289], [290, 291, 292],
     [307, 308, 309, 310], [311, 312, 313], [314, 315], [316, 317], [318], [319, 320, 321], [322, 323],
-    [324, 325, 326], [327, 328],
+    [324, 325, 326],
     [343, 344, 345, 346], [347, 348, 349],
-    [367, 368, 369], [370, 371], [372, 373], [374, 375], [376, 377, 378], [379, 380], [381],
+    [368, 369], [370, 371], [372, 373], [374, 375], [376, 377, 378], [379, 380], [381],
     [389, 390, 391, 392], [393, 394], [395], [396, 397, 398, 399],
     [400, 401, 402], [403, 404, 405], [406, 407, 408, 409], [410, 411, 412, 413], [414, 415],
     [423, 424, 425],
@@ -165,7 +177,7 @@ CAPTION_TEXT = {22: "80%", 378: "الكورة", 79: "الكورة"}
 # one highlight per group: o = warm, s = sky (the future), g = «عبقرية» (warm + gold underline)
 HL = {21: "o", 22: "o", 44: "o", 56: "o", 82: "o", 103: "o", 129: "o", 133: "o", 148: "o", 167: "o",
       172: "o", 177: "o", 180: "o", 193: "o", 199: "o", 205: "o", 211: "o", 234: "o", 240: "s", 244: "o",
-      262: "o", 267: "o", 274: "o", 289: "o", 315: "o", 318: "o", 328: "o", 348: "o", 374: "o",
+      262: "o", 267: "o", 274: "o", 289: "o", 315: "o", 318: "o", 348: "o", 374: "o",
       381: "o", 392: "o", 395: "g", 405: "o", 414: "o", 425: "o"}
 
 # ---------------------------------------------------------------- sound: (id, file, at, gain dB, dur | (from, to), extra attrs)

@@ -52,7 +52,7 @@
 #g13-sub { top: 1196px; font-size: 58px; font-weight: 800; color: var(--ink-soft); }
 
   </style>
-  <div id="root" data-composition-id="g13" data-width="1080" data-height="1920" data-duration="8.1334" lang="ar" dir="rtl" style="--paper:#E9E0D3; --paper-dark:#D4C8B8; --paper-light:#F6F0E7; --cream:#FFFDF7; --ink:#1B1D1E; --ink-soft:#3A3D3E; --graphite:#5A5C5E; --accent-warm:#E66A21; --accent-warm-dark:#C85218; --sky:#75AADB; --sky-ink:#2F5F8A; --gold:#D8A44A; --pitch:#3F6B4A;">
+  <div id="root" data-composition-id="g13" data-width="1080" data-height="1920" data-duration="8.1333" lang="ar" dir="rtl" style="--paper:#E9E0D3; --paper-dark:#D4C8B8; --paper-light:#F6F0E7; --cream:#FFFDF7; --ink:#1B1D1E; --ink-soft:#3A3D3E; --graphite:#5A5C5E; --accent-warm:#E66A21; --accent-warm-dark:#C85218; --sky:#75AADB; --sky-ink:#2F5F8A; --gold:#D8A44A; --pitch:#3F6B4A;">
     <img class="grain" src="assets/textures/paper-grain.png" alt="" aria-hidden="true" data-layout-ignore>
 <div id="g13-k" class="kicker"><span class="w">كأنه</span> <span class="w">بيكتب</span></div>
     <div id="g13-h" class="hero"><span class="mask"><span class="in">معادلة <span class="warm">هندسية</span></span></span></div>
@@ -86,18 +86,18 @@
   const tint = (s, t, c, d = 0.12) => tl.fromTo(s, { color: "#1B1D1E" }, { color: c, duration: d, ease: "none", immediateRender: false }, t);
 
   bin("#g13-k .w:nth-child(1)", 0);
-  bin("#g13-k .w:nth-child(2)", 0.934);
-  rise("#g13-h .in", 1.414);
+  bin("#g13-k .w:nth-child(2)", 0.933);
+  rise("#g13-h .in", 1.413);
   fade("#g13-board", 0, 1, 0.2);
   pop("#g13-dot", 0.05);
   tl.fromTo("#g13-defs path", { opacity: 0 }, { opacity: 1, duration: 0.1, stagger: 0.08 }, 0.1);
   draw("#g13-goal", 0.2, 0.4);
-  bin("#g13-bl .w:nth-child(1)", 3.964);
-  bin("#g13-bl .w:nth-child(2)", 4.207);
+  bin("#g13-bl .w:nth-child(1)", 3.963);
+  bin("#g13-bl .w:nth-child(2)", 4.206);
   // the dribble is written stroke by stroke, like handwriting
-  draw("#g13-path", 1.414, 1.6, "power1.inOut");
-  fade("#g13-eq", 1.414 + 1.55, 1, 0.15);
-  [1, 2, 3, 4, 5].forEach((i) => bin(`#g13-sub .w:nth-child(${i})`, 4.927 + (i - 1) * 0.1));
+  draw("#g13-path", 1.413, 1.6, "power1.inOut");
+  fade("#g13-eq", 1.413 + 1.55, 1, 0.15);
+  [1, 2, 3, 4, 5].forEach((i) => bin(`#g13-sub .w:nth-child(${i})`, 4.926 + (i - 1) * 0.1));
   window.__timelines["g13"] = tl;
   </script>
 </template>

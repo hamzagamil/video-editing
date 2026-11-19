@@ -7,7 +7,10 @@ Inputs (../source/work)
   tools/plan.py        TAKES: source spans in story order, text corrections, deliberate holds
 
 Rule: inside each take span, every silence longer than PAUSE_SPLIT is removed, keeping ~3 frames
-after speech and ~2 before the next word; a `hold` keeps a deliberate pause instead.
+after speech and ~2 before the next word; a `hold` keeps a deliberate pause instead. Slivers left
+between two silences (< SLIVER_MAX s, quieter than SLIVER_DB) are dropped: they carry no speech and
+are where the speaker leans out to read the script. plan.FREEZE holds a clean frame over the few
+frames where a lean overlaps speech (video only; the audio is untouched).
 
 Outputs: transcript.json, timing-map.json (output timeline), printed edit summary.
 Usage: python3 -I tools/cut.py
@@ -51,6 +54,16 @@ for w in words:
         w["text"] = plan.SPELL[core] + tail
 
 sil = [tuple(map(float, l.split()[:2])) for l in open(WORK / "silence.txt")]
+
+import numpy as np  # noqa: E402
+_pcm = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", str(WORK / "audio48k.wav"), "-ac", "1", "-ar", "16000",
+                       "-f", "f32le", "-"], capture_output=True).stdout
+AUD = np.frombuffer(_pcm, np.float32)
+
+
+def rms_db(a, b):
+    x = AUD[int(a * 16000):int(b * 16000)]
+    return float(20 * np.log10(np.sqrt((x.astype(np.float64) ** 2).mean()) + 1e-9)) if len(x) else -120.0
 ranges = json.load(open(WORK / "ranges.json"))
 
 
@@ -107,13 +120,24 @@ def voiced(a, b, holds):
     return [(snap(x), snap(y)) for x, y in keep if snap(y) - snap(x) >= FR]
 
 
-segments, out_words, removed = [], [], []
+segments, out_words, removed, dropped = [], [], [], []
 out_t, prev_end, wid = 0.0, None, 0
 for take in plan.TAKES:
     a, b = take["src"]
     ra, rb = next((x, y) for x, y in ranges if x - 0.3 <= (a + b) / 2 <= y + 0.3)
     a, b = max(a, ra), min(b, rb)
-    keep = voiced(a, b, take.get("hold", []))
+    keep = []
+    for s_, e_ in voiced(a, b, take.get("hold", [])):
+        if e_ - s_ < plan.SLIVER_MAX and rms_db(s_, e_) < plan.SLIVER_DB:
+            dropped.append({"take": take["id"], "src": [s_, e_], "rms_db": round(rms_db(s_, e_), 1)})
+            continue
+        for ta, tb in plan.TRIM:  # explicit removals (lean frames after the last word, no speech)
+            if ta < e_ and tb > s_:
+                if ta - s_ >= FR:
+                    keep.append((s_, snap(ta)))
+                s_ = snap(tb)
+        if e_ - s_ >= FR:
+            keep.append((s_, e_))
     tw = [w for w in words if a - 0.02 <= (w["s"] + w["e"]) / 2 <= b]
     fixes = take.get("text")
     if fixes is not None:
@@ -152,13 +176,29 @@ for take in plan.TAKES:
                           "take": take["id"], "src": [round(w["s"], 3), round(w["e"], 3)], "p": round(w["p"], 3)})
 
 total = snap(out_t)
+
+
+def src_out(t):
+    for sg in segments:
+        if sg["src_start"] - 0.02 <= t <= sg["src_end"] + 0.02:
+            return sg["out_start"] + (min(max(t, sg["src_start"]), sg["src_end"]) - sg["src_start"])
+    raise ValueError(f"freeze time {t} is not in a retained range")
+
+
+freezes = []
+for i, (a, b, still) in enumerate(plan.FREEZE, 1):
+    oa, ob = snap(src_out(a)), snap(src_out(b))
+    freezes.append({"id": f"fz{i}", "src": [a, b], "still_src": still, "still_proxy": round(to_proxy(still), 4),
+                    "out_start": oa, "duration": snap(ob - oa)})
 json.dump(out_words, open(ROOT / "transcript.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 json.dump({"fps": FPS, "source": "../source/rawreel.mov -> graded SDR proxy assets/media/aroll.mp4 (concatenated candidate ranges)",
            "candidate_ranges": ranges, "proxy_offsets": [round(o, 4) for o in offs],
            "output_duration_speech": total, "segments": segments, "removed": removed,
+           "dropped_slivers": dropped, "freezes": freezes,
            "words_output": [{k: w[k] for k in ("id", "text", "start", "end")} for w in out_words]},
           open(ROOT / "timing-map.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-print(f"{len(segments)} retained ranges, {len(out_words)} words, speech timeline {total:.3f}s")
+print(f"{len(segments)} retained ranges, {len(out_words)} words, speech timeline {total:.3f}s, "
+      f"{len(dropped)} silent slivers dropped, {len(freezes)} freeze patches")
 for t in plan.TAKES:
     ws = [w for w in out_words if w["take"] == t["id"]]
     if ws:

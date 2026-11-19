@@ -22,7 +22,7 @@ Peak: G12 «تتش» (photo flash + impact + crowd). Release: the quiet G15 «ب
 «لاعب» (1.57 s): the player appears as the orange dot before he «looks one way and passes the other».
 Alternatives considered: cutting on «بيبص» (3.3 s — too late) or opening on the title (no face, rejected).
 
-**Earned stillness:** 0.5 s kept after «سر مرعب»; one held beat after «يقطع الكورة» (the heartbeat stops,
+**Earned stillness:** one held beat after «يقطع الكورة» (the heartbeat stops,
 then «لكن في تتش»); 0.4 s before «ميسي مش لعيب كورة». The payoff holds one close crop (1.15) for 9 s.
 
 **Mute test:** every page names its idea in one headline (بيبص في حتة / بيرسم خريطة / هندسة الماتريكس /
@@ -34,3 +34,13 @@ presenter sections carry 1–4-word captions with one highlighted word.
 said → the CTA card uses his words «فيديو جيم … NPCs» + «اكتب في الكومنتات»; the 80 % and the 0.3–0.4 s
 stats became cards over the presenter so his face stays on screen; «مؤسس هندسة الماتريكس» (his ad-lib)
 became a callback of the title page.
+
+**Revision after the first render (the speaker's note: «في حاجات بكون بميل علشان اقرا الاسكريبت»):**
+every presenter frame was checked for leans (face tracking on the proxy, then 15 fps strips). Seven leans
+were on screen. 17 silent slivers (≤ 0.4 s, < −40 dB) left between two trimmed pauses were the frames where
+he leans to the script; they are now dropped automatically (`SLIVER_MAX/SLIVER_DB`), which also removed
+three one-frame black flashes the renderer produced after those tiny clips. Leans after the last word are
+trimmed by hand (`TRIM`, incl. the 0.5 s hold after «سر مرعب»); leans that overlap a syllable get a held
+clean frame for 0.23–0.30 s (`FREEZE`, video only); the two leans back into frame after G6 and G14 are
+covered by holding those pages 0.5 s / 0.3 s longer; «عشان يفترسه» (a 0.5 s lean mid-word) is covered by a
+new cut-away page (`gp-pounce`). Speech 216.3 → 212.0 s.

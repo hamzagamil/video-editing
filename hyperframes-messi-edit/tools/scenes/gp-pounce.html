@@ -1,0 +1,27 @@
+<!--STYLE-->
+#gp-k { top: 290px; font-size: 72px; font-weight: 800; color: var(--ink-soft); }
+#gp-h { top: 390px; font-size: 210px; }
+<!--/STYLE-->
+    <svg id="gp-svg" viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <path d="M120 1240 H960" stroke="#5A5C5E" stroke-width="3" opacity=".5" fill="none" />
+      <path id="gp-arc" d="M820 1160 C 760 960, 520 900, 400 1100" stroke="#75AADB" stroke-width="7" stroke-dasharray="16 12" stroke-linecap="round" fill="none" opacity=".9" />
+      <g id="gp-def"><circle cx="380" cy="1160" r="40" fill="#E9E0D3" stroke="#1B1D1E" stroke-width="8" /></g>
+      <circle id="gp-hit" cx="380" cy="1160" r="96" fill="none" stroke="#E66A21" stroke-width="8" stroke-dasharray="44 18" opacity="0" />
+      <g id="gp-messi"><circle cx="820" cy="1160" r="44" fill="#E66A21" /><text x="820" y="1175" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="40" fill="#FFFDF7">10</text></g>
+    </svg>
+    <div id="gp-k" class="kicker"><span class="w">عشان</span></div>
+    <div id="gp-h" class="hero"><span class="mask"><span class="in warm">يفترسه</span></span></div>
+  <script>
+  // a cut-away while «عشان يفترسه» is said: the orange 10 pounces on the hollow defender
+  bin("#gp-k .w", 0);
+  pop("#gp-def", 0, 0.2);
+  pop("#gp-messi", 0, 0.2);
+  fade("#gp-arc", 0, 0.9, 0.2);
+  rise("#gp-h .in", {{w:328}} - 0.06);
+  tl.fromTo("#gp-messi", { x: 0 }, { x: -440, duration: 0.32, ease: "power2.in", immediateRender: false }, {{w:328}} - 0.06);
+  tl.fromTo("#gp-messi", { y: 0 }, { y: -170, duration: 0.16, ease: "power2.out", immediateRender: false }, {{w:328}} - 0.06);
+  tl.fromTo("#gp-messi", { y: -170 }, { y: 0, duration: 0.16, ease: "power2.in", immediateRender: false }, {{w:328}} + 0.1);
+  tl.fromTo("#gp-hit", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.18, ease: "expo.out", immediateRender: false }, {{w:328}} + 0.26);
+  tl.fromTo("#gp-def", { x: 0, rotation: 0, svgOrigin: "380 1160" }, { x: -560, rotation: -50, duration: 0.5, ease: "power3.in", immediateRender: false }, {{w:328}} + 0.3);
+  tl.fromTo("#gp-arc", { opacity: 0.9 }, { opacity: 0, duration: 0.25, immediateRender: false }, {{w:328}} + 0.3);
+  </script>
