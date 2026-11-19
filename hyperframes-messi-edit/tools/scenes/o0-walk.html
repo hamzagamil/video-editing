@@ -1,0 +1,9 @@
+<!--STYLE-->
+#o0-card { left: 676px; top: 186px; width: 300px; height: 420px; }
+<!--/STYLE-->
+    <div id="o0-card" class="print"><span class="tape"></span><img id="o0-ph" src="assets/photos/p1-walking.jpg" alt="" style="object-position:50% 28%" data-color-grading='{{grade}}'></div>
+  <script>
+  snapIn("#o0-card", 0, 3);
+  tl.fromTo("#o0-card", { y: 0 }, { y: -8, duration: {{D}}, ease: "none", immediateRender: false }, 0.2);
+  off("#o0-card", {{D}} - 0.12);
+  </script>

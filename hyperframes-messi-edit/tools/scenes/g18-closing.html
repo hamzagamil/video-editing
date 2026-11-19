@@ -1,0 +1,24 @@
+<!--STYLE-->
+#g18-l1 { top: 290px; font-size: 80px; }
+#g18-l2 { top: 420px; font-size: 80px; }
+#g18-by { top: 560px; font-size: 52px; font-weight: 800; color: var(--ink-soft); }
+#g18-print { left: 170px; top: 720px; width: 740px; height: 520px; }
+#g18-cta { top: 1270px; font-size: 46px; font-weight: 800; color: var(--ink); }
+<!--/STYLE-->
+    <div id="g18-l1" class="hero"><span class="mask"><span class="in">بلغة الغناء أنت <span class="warm">موّال</span></span></span></div>
+    <div id="g18-l2" class="hero"><span class="mask"><span class="in">وبلغة الشعر أنت <span class="warm">قافية</span></span></span></div>
+    <div id="g18-by" class="hero"><span class="w">— عصام الشوالي</span></div>
+    <div id="g18-print" class="print"><span class="tape"></span><img id="g18-ph" src="assets/photos/p8-celebration.jpg" alt="" style="object-position:50% 30%" data-color-grading='{{grade}}'></div>
+    <svg id="g18-svg" viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <path id="g18-gold" d="M150 530 H370" stroke="#D8A44A" stroke-width="8" stroke-linecap="round" fill="none" pathLength="100" stroke-dasharray="100 120" />
+    </svg>
+    <div id="g18-cta" class="hero"><span class="w">اكتب في الكومنتات</span></div>
+  <script>
+  // timed to the commentary clip (scene starts on its first word)
+  rise("#g18-l1 .in", 0);
+  snapIn("#g18-print", 0, 2);
+  bin("#g18-by .w", 1.2);
+  rise("#g18-l2 .in", {{cv:2.78}});
+  draw("#g18-gold", {{cv:4.55}}, 0.45, "power3.out");
+  bin("#g18-cta .w", {{cv:3.0}});
+  </script>

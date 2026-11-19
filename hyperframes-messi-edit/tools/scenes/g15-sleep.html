@@ -1,0 +1,20 @@
+<!--STYLE-->
+#g15-print { left: 230px; top: 300px; width: 620px; height: 560px; }
+#g15-h { top: 960px; font-size: 136px; }
+#g15-sub { top: 1170px; font-size: 64px; font-weight: 800; color: var(--ink-soft); }
+<!--/STYLE-->
+    <div id="g15-print" class="print"><span class="tape"></span><img id="g15-ph" src="assets/photos/p7-ball.jpg" alt="" style="object-position:62% 85%" data-color-grading='{{grade}}'></div>
+    <svg id="g15-svg" viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <circle id="g15-ring" cx="672" cy="770" r="62" fill="none" stroke="#E66A21" stroke-width="7" pathLength="100" stroke-dasharray="100 120" />
+    </svg>
+    <div id="g15-h" class="hero"><span class="mask"><span class="in">بتنام <span class="warm">في رجله</span></span></span></div>
+    <div id="g15-sub" class="hero"><span class="w">وبتسمع</span> <span class="w">كلامه</span></div>
+  <script>
+  snapIn("#g15-print", 0, -2);
+  // the quietest page: almost no motion
+  tl.fromTo("#g15-print", { y: 0 }, { y: -10, duration: {{D}}, ease: "none", immediateRender: false }, 0.2);
+  rise("#g15-h .in", {{k:g15_sleeps}});
+  draw("#g15-ring", {{k:g15_foot}}, 0.6, "power2.inOut");
+  bin("#g15-sub .w:nth-child(1)", {{k:g15_listens}});
+  bin("#g15-sub .w:nth-child(2)", {{k:g15_words}});
+  </script>

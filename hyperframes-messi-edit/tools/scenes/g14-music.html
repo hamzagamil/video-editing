@@ -1,0 +1,34 @@
+<!--STYLE-->
+#g14-k { top: 290px; font-size: 60px; font-weight: 800; color: var(--ink); }
+#g14-h1 { top: 380px; font-size: 94px; }
+#g14-h2 { top: 1080px; font-size: 128px; }
+#g14-sub { top: 1270px; font-size: 52px; font-weight: 800; color: var(--ink-soft); }
+<!--/STYLE-->
+    <div id="g14-k" class="kicker"><span class="w">الكورة</span> <span class="w">في</span> <span class="w">رجل</span> <span class="w">ميسي</span></div>
+    <div id="g14-h1" class="hero"><span class="mask"><span class="in">هندسة <span class="warm">وموسيقى</span></span></span></div>
+    <svg id="g14-svg" viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <g id="g14-staff" fill="none" stroke="#1B1D1E" stroke-width="3" opacity=".7">
+        <path d="M110 640 H970" pathLength="100" stroke-dasharray="100 120" /><path d="M110 700 H970" pathLength="100" stroke-dasharray="100 120" />
+        <path d="M110 760 H970" pathLength="100" stroke-dasharray="100 120" /><path d="M110 820 H970" pathLength="100" stroke-dasharray="100 120" />
+        <path d="M110 880 H970" pathLength="100" stroke-dasharray="100 120" />
+      </g>
+      <g id="g14-notes">
+        <g><circle cx="880" cy="850" r="24" fill="#1B1D1E" /><path d="M902 850 V720" stroke="#1B1D1E" stroke-width="5" /></g>
+        <g><circle cx="760" cy="790" r="24" fill="#1B1D1E" /><path d="M782 790 V660" stroke="#1B1D1E" stroke-width="5" /></g>
+        <g><circle cx="640" cy="820" r="24" fill="#1B1D1E" /><path d="M662 820 V690" stroke="#1B1D1E" stroke-width="5" /></g>
+        <g><circle cx="520" cy="730" r="24" fill="#1B1D1E" /><path d="M542 730 V600" stroke="#1B1D1E" stroke-width="5" /></g>
+        <g><circle cx="400" cy="760" r="24" fill="#1B1D1E" /><path d="M422 760 V630" stroke="#1B1D1E" stroke-width="5" /></g>
+      </g>
+      <g id="g14-solo"><circle cx="250" cy="660" r="34" fill="#E66A21" /><path d="M222 646 C 238 660, 262 660, 278 646 M222 674 C 238 660, 262 660, 278 674" stroke="#FFFDF7" stroke-width="4" fill="none" /></g>
+    </svg>
+    <div id="g14-h2" class="hero"><span class="mask"><span class="in">العازف <span class="warm">الوحيد</span></span></span></div>
+    <div id="g14-sub" class="hero"><span class="w">اللي</span> <span class="w">في</span> <span class="w">الملعب</span> <span class="w">كله</span></div>
+  <script>
+  [1, 2, 3, 4].forEach((i) => bin(`#g14-k .w:nth-child(${i})`, Math.max(0, (i - 1) * 0.09)));
+  tl.fromTo("#g14-staff path", { strokeDashoffset: 110 }, { strokeDashoffset: 0, duration: 0.6, ease: "power2.inOut", stagger: 0.07 }, 0.05);
+  rise("#g14-h1 .in", {{k:g14_eng}});
+  tl.fromTo("#g14-notes > g", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: 0.24, ease: "expo.out", stagger: 0.14 }, {{k:g14_music}});
+  rise("#g14-h2 .in", {{k:g14_player}});
+  tl.fromTo("#g14-solo", { opacity: 0, y: 140, scale: 0.6, svgOrigin: "250 660" }, { opacity: 1, y: 0, scale: 1, svgOrigin: "250 660", duration: 0.45, ease: "expo.out" }, {{k:g14_only}});
+  [1, 2, 3, 4].forEach((i) => bin(`#g14-sub .w:nth-child(${i})`, {{k:g14_field}} + (i - 2) * 0.1));
+  </script>

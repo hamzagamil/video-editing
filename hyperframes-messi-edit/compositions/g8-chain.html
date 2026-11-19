@@ -1,0 +1,108 @@
+<template>
+  <style>
+@font-face{font-family:'Cairo';font-style:normal;font-weight:400;font-display:block;src:url('assets/fonts/cairo-arabic-400-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:400;font-display:block;src:url('assets/fonts/cairo-latin-400-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:600;font-display:block;src:url('assets/fonts/cairo-arabic-600-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:600;font-display:block;src:url('assets/fonts/cairo-latin-600-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:700;font-display:block;src:url('assets/fonts/cairo-arabic-700-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:700;font-display:block;src:url('assets/fonts/cairo-latin-700-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:800;font-display:block;src:url('assets/fonts/cairo-arabic-800-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:800;font-display:block;src:url('assets/fonts/cairo-latin-800-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:900;font-display:block;src:url('assets/fonts/cairo-arabic-900-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:900;font-display:block;src:url('assets/fonts/cairo-latin-900-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+
+#root { position:absolute; inset:0; overflow:hidden; direction:rtl; 
+  font-family:'Cairo', sans-serif; color:var(--ink); }
+#root .grain { position:absolute; inset:0; width:1080px; height:1920px; mix-blend-mode:overlay; opacity:.32; pointer-events:none; }
+#root .kicker { position:absolute; left:80px; right:80px; text-align:center; font-weight:700;
+  font-size:46px; line-height:1.3; color:var(--ink-soft); }
+#root .hero { position:absolute; left:70px; right:70px; text-align:center; font-weight:900;
+  line-height:1.12; color:var(--ink); }
+#root .lbl { position:absolute; font-weight:800; font-size:44px; line-height:1.2; color:var(--ink); }
+#root .mask { display:block; overflow:hidden; padding:0.2em 0.06em 0.36em; margin:-0.1em -0.06em -0.2em; }
+#root .mask.il { display:inline-block; }
+#root .mask > .in { display:block; }
+#root .w { display:inline-block; }
+#root .warm { color:var(--accent-warm-dark); }
+#root .sky { color:var(--sky-ink); }
+#root .gold { color:#9C7426; }
+#root .soft { color:var(--ink-soft); }
+#root bdi, #root .ltr { unicode-bidi:isolate; direction:ltr; }
+#root svg { position:absolute; overflow:visible; }
+#root .print { position:absolute; background:var(--cream); padding:14px 14px 18px; box-shadow:0 10px 26px rgba(27,29,30,.22), 0 1px 0 rgba(27,29,30,.12); }
+#root .print img { display:block; width:100%; height:100%; object-fit:cover; }
+#root .print .tape { position:absolute; width:150px; height:42px; top:-20px; left:50%; margin-left:-75px;
+  background:rgba(236,224,196,.82); box-shadow:0 1px 2px rgba(27,29,30,.15); }
+#root .stamp { position:absolute; font-weight:900; color:var(--accent-warm-dark); border:6px solid var(--accent-warm-dark);
+  padding:2px 22px 10px; border-radius:10px; }
+#root {
+  background-color:#E9E0D3;
+  background-image:
+    linear-gradient(90deg, transparent 989px, rgba(230,106,33,.28) 989px, rgba(230,106,33,.28) 991px, transparent 991px),
+    repeating-linear-gradient(0deg, transparent 0 53px, rgba(27,29,30,.055) 53px 54px),
+    repeating-linear-gradient(90deg, transparent 0 53px, rgba(27,29,30,.04) 53px 54px),
+    radial-gradient(120% 85% at 50% 32%, #F6F0E7 0%, #E9E0D3 58%, #D9CCB9 100%);
+}
+
+#g8-k { top: 290px; font-size: 64px; font-weight: 800; color: var(--ink); }
+.g8-lbl { position:absolute; width: 300px; text-align: center; font-weight: 800; font-size: 50px; line-height: 1.2; color: var(--ink); }
+#g8-l1 { left: 690px; top: 640px; } #g8-l2 { left: 390px; top: 640px; } #g8-l3 { left: 90px; top: 640px; }
+#g8-num { top: 900px; font-size: 190px; line-height: 1; }
+#g8-num .u { font-size: 90px; color: var(--ink-soft); }
+#g8-cap { top: 1130px; font-size: 56px; font-weight: 800; color: var(--ink-soft); }
+#g8-h { top: 860px; font-size: 132px; }
+#g8-sub { top: 1060px; font-size: 58px; font-weight: 800; color: var(--ink-soft); }
+
+  </style>
+  <div id="root" data-composition-id="g8" data-width="1080" data-height="1920" data-duration="9.8" lang="ar" dir="rtl" style="--paper:#E9E0D3; --paper-dark:#D4C8B8; --paper-light:#F6F0E7; --cream:#FFFDF7; --ink:#1B1D1E; --ink-soft:#3A3D3E; --graphite:#5A5C5E; --accent-warm:#E66A21; --accent-warm-dark:#C85218; --sky:#75AADB; --sky-ink:#2F5F8A; --gold:#D8A44A; --pitch:#3F6B4A;">
+    <img class="grain" src="assets/textures/paper-grain.png" alt="" aria-hidden="true" data-layout-ignore>
+<div id="g8-k" class="kicker"><span class="w">المدافع</span> <span class="w">العادي</span></div>
+    <svg id="g8-svg" viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <g fill="none" stroke="#1B1D1E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+        <!-- eye -->
+        <g id="g8-eye"><path d="M770 480 Q 840 410 910 480 Q 840 550 770 480 Z" /><circle cx="840" cy="480" r="22" fill="#1B1D1E" /></g>
+        <!-- head profile with a signal -->
+        <g id="g8-head"><path d="M500 560 C 470 540 470 470 480 440 C 490 400 530 380 570 384 C 620 388 650 430 646 470 L 660 500 L 644 506 L 646 530 C 640 548 620 552 600 550 L 600 580" />
+          <path id="g8-spark" d="M560 440 L548 470 L572 470 L556 506" stroke="#5A5C5E" stroke-width="5" /></g>
+        <!-- muscle / leg -->
+        <g id="g8-leg"><path d="M240 400 C 280 420 290 470 270 520 L 300 580 M240 400 C 200 430 200 490 230 530 L 250 580" /></g>
+      </g>
+      <path id="g8-c1" d="M760 480 H680" stroke="#1B1D1E" stroke-width="6" stroke-dasharray="4 10" stroke-linecap="round" fill="none" opacity=".8" />
+      <path id="g8-c1m" d="M760 480 H672" stroke="#1B1D1E" stroke-width="6" stroke-linecap="round" fill="none" pathLength="100" stroke-dasharray="100 120" />
+      <path id="g8-c2" d="M460 480 H330" stroke="#1B1D1E" stroke-width="6" stroke-linecap="round" fill="none" pathLength="100" stroke-dasharray="100 120" />
+    </svg>
+    <div id="g8-l1" class="g8-lbl"><span class="w">بيشوف</span> <span class="w">الحركة</span></div>
+    <div id="g8-l2" class="g8-lbl"><span class="w">إشارة</span></div>
+    <div id="g8-l3" class="g8-lbl"><span class="w">تتحرك</span></div>
+    <div id="g8-h" class="hero"><span class="mask"><span class="in">وتنفذ <span class="soft">أمر</span></span></span></div>
+  </div>
+  <script>
+  const tl = gsap.timeline({ paused: true });
+  const E0 = (t) => t < 0.06;
+  const rise = (s, t, d = 0.34) => tl.fromTo(s, E0(t) ? { yPercent: 40, opacity: 0.6 } : { yPercent: 108, opacity: 0 }, { yPercent: 0, opacity: 1, duration: d, ease: "expo.out" }, t);
+  const bin = (s, t, d = 0.16) => tl.fromTo(s, E0(t) ? { opacity: 0.55, filter: "blur(3px)" } : { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: d, ease: "power2.out" }, t);
+  const bout = (s, t, d = 0.14) => tl.fromTo(s, { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: d, ease: "power2.in", immediateRender: false }, t);
+  const draw = (s, t, d, e = "power2.inOut") => tl.fromTo(s, { strokeDashoffset: E0(t) ? 60 : 110 }, { strokeDashoffset: 0, duration: d, ease: e }, t);
+  const pop = (s, t, d = 0.3) => tl.fromTo(s, { scale: E0(t) ? 0.6 : 0, transformOrigin: "50% 50%" }, { scale: 1, duration: d, ease: "expo.out" }, t);
+  const fade = (s, t, to = 1, d = 0.2) => tl.fromTo(s, { opacity: E0(t) ? 0.5 : 0 }, { opacity: to, duration: d, ease: "power2.out" }, t);
+  const off = (s, t, d = 0.12) => tl.fromTo(s, { opacity: 1 }, { opacity: 0, duration: d, ease: "power2.in", immediateRender: false }, t);
+  const snapIn = (s, t, rot = -2) => tl.fromTo(s, { opacity: E0(t) ? 0.7 : 0, scale: 1.05, rotation: rot - 1.2, transformOrigin: "50% 40%" }, { opacity: 1, scale: 1, rotation: rot, duration: 0.18, ease: "power3.out" }, t);
+  const slam = (s, t) => tl.fromTo(s, { opacity: 0, scale: 1.45, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.16, ease: "power4.out" }, t);
+  const tint = (s, t, c, d = 0.12) => tl.fromTo(s, { color: "#1B1D1E" }, { color: c, duration: d, ease: "none", immediateRender: false }, t);
+
+  bin("#g8-k .w:nth-child(1)", 0);
+  bin("#g8-k .w:nth-child(2)", 1.05);
+  pop("#g8-eye", 1.7);
+  bin("#g8-l1 .w:nth-child(1)", 1.7);
+  bin("#g8-l1 .w:nth-child(2)", 2.17);
+  draw("#g8-c1m", 2.79, 0.5, "power1.inOut");
+  pop("#g8-head", 4.1);
+  tl.fromTo("#g8-spark", { opacity: 0 }, { opacity: 1, duration: 0.08, ease: "none" }, 5.58);
+  bin("#g8-l2 .w", 5.58);
+  draw("#g8-c2", 5.58 + 0.2, 0.55, "power1.inOut");
+  pop("#g8-leg", 6.533);
+  bin("#g8-l3 .w", 7.9);
+  rise("#g8-h .in", 8.747);
+  window.__timelines["g8"] = tl;
+  </script>
+</template>

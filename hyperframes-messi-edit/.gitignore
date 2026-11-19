@@ -1,0 +1,10 @@
+node_modules/
+assets/media/
+assets/sfx/
+assets/photos/
+renders/
+.hyperframes/
+snapshots/
+*.mp4
+check.json
+check.err

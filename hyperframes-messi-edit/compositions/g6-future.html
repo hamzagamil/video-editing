@@ -1,0 +1,112 @@
+<template>
+  <style>
+@font-face{font-family:'Cairo';font-style:normal;font-weight:400;font-display:block;src:url('assets/fonts/cairo-arabic-400-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:400;font-display:block;src:url('assets/fonts/cairo-latin-400-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:600;font-display:block;src:url('assets/fonts/cairo-arabic-600-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:600;font-display:block;src:url('assets/fonts/cairo-latin-600-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:700;font-display:block;src:url('assets/fonts/cairo-arabic-700-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:700;font-display:block;src:url('assets/fonts/cairo-latin-700-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:800;font-display:block;src:url('assets/fonts/cairo-arabic-800-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:800;font-display:block;src:url('assets/fonts/cairo-latin-800-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:900;font-display:block;src:url('assets/fonts/cairo-arabic-900-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:900;font-display:block;src:url('assets/fonts/cairo-latin-900-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+
+#root { position:absolute; inset:0; overflow:hidden; direction:rtl; 
+  font-family:'Cairo', sans-serif; color:var(--ink); }
+#root .grain { position:absolute; inset:0; width:1080px; height:1920px; mix-blend-mode:overlay; opacity:.32; pointer-events:none; }
+#root .kicker { position:absolute; left:80px; right:80px; text-align:center; font-weight:700;
+  font-size:46px; line-height:1.3; color:var(--ink-soft); }
+#root .hero { position:absolute; left:70px; right:70px; text-align:center; font-weight:900;
+  line-height:1.12; color:var(--ink); }
+#root .lbl { position:absolute; font-weight:800; font-size:44px; line-height:1.2; color:var(--ink); }
+#root .mask { display:block; overflow:hidden; padding:0.2em 0.06em 0.36em; margin:-0.1em -0.06em -0.2em; }
+#root .mask.il { display:inline-block; }
+#root .mask > .in { display:block; }
+#root .w { display:inline-block; }
+#root .warm { color:var(--accent-warm-dark); }
+#root .sky { color:var(--sky-ink); }
+#root .gold { color:#9C7426; }
+#root .soft { color:var(--ink-soft); }
+#root bdi, #root .ltr { unicode-bidi:isolate; direction:ltr; }
+#root svg { position:absolute; overflow:visible; }
+#root .print { position:absolute; background:var(--cream); padding:14px 14px 18px; box-shadow:0 10px 26px rgba(27,29,30,.22), 0 1px 0 rgba(27,29,30,.12); }
+#root .print img { display:block; width:100%; height:100%; object-fit:cover; }
+#root .print .tape { position:absolute; width:150px; height:42px; top:-20px; left:50%; margin-left:-75px;
+  background:rgba(236,224,196,.82); box-shadow:0 1px 2px rgba(27,29,30,.15); }
+#root .stamp { position:absolute; font-weight:900; color:var(--accent-warm-dark); border:6px solid var(--accent-warm-dark);
+  padding:2px 22px 10px; border-radius:10px; }
+#root {
+  background-color:#E9E0D3;
+  background-image:
+    linear-gradient(90deg, transparent 989px, rgba(230,106,33,.28) 989px, rgba(230,106,33,.28) 991px, transparent 991px),
+    repeating-linear-gradient(0deg, transparent 0 53px, rgba(27,29,30,.055) 53px 54px),
+    repeating-linear-gradient(90deg, transparent 0 53px, rgba(27,29,30,.04) 53px 54px),
+    radial-gradient(120% 85% at 50% 32%, #F6F0E7 0%, #E9E0D3 58%, #D9CCB9 100%);
+}
+
+#g6-k { top: 290px; font-size: 60px; font-weight: 800; color: var(--ink); }
+.g6-q { position:absolute; right: 110px; font-weight: 800; font-size: 62px; color: var(--sky-ink); }
+#g6-q1 { top: 380px; } #g6-q2 { top: 470px; } #g6-q3 { top: 560px; }
+#g6-h { top: 990px; font-size: 112px; }
+#g6-sub { top: 1150px; font-size: 58px; font-weight: 800; color: var(--ink-soft); }
+
+  </style>
+  <div id="root" data-composition-id="g6" data-width="1080" data-height="1920" data-duration="10.0" lang="ar" dir="rtl" style="--paper:#E9E0D3; --paper-dark:#D4C8B8; --paper-light:#F6F0E7; --cream:#FFFDF7; --ink:#1B1D1E; --ink-soft:#3A3D3E; --graphite:#5A5C5E; --accent-warm:#E66A21; --accent-warm-dark:#C85218; --sky:#75AADB; --sky-ink:#2F5F8A; --gold:#D8A44A; --pitch:#3F6B4A;">
+    <img class="grain" src="assets/textures/paper-grain.png" alt="" aria-hidden="true" data-layout-ignore>
+<div id="g6-k" class="kicker"><span class="w">هو</span> <span class="w">بيبقى</span> <span class="w">عارف</span></div>
+    <div id="g6-q1" class="g6-q"><span class="w">هيعمل بيها إيه</span></div>
+    <div id="g6-q2" class="g6-q"><span class="w">هيباصيها فين</span></div>
+    <div id="g6-q3" class="g6-q"><span class="w">هيتحرك فين</span></div>
+    <svg id="g6-svg" viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <g id="g6-opts" fill="none" stroke="#75AADB" stroke-width="7" stroke-linecap="round" stroke-dasharray="16 12">
+        <path id="g6-o1" d="M280 760 L200 640" /><path id="g6-o2" d="M280 760 L120 790" /><path id="g6-o3" d="M280 760 L230 900" />
+      </g>
+      <g id="g6-d0"><circle cx="280" cy="760" r="30" fill="#E66A21" />
+      <text x="280" y="771" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="28" fill="#FFFDF7">10</text></g>
+      <!-- time ruler: now -> +1 s -->
+      <g fill="none" stroke="#1B1D1E" stroke-linecap="round">
+        <path id="g6-ruler" d="M140 900 H940" stroke-width="4" pathLength="100" stroke-dasharray="100 120" />
+        <path id="g6-ticks" d="M940 880 V920 M840 888 V912 M740 888 V912 M640 888 V912 M540 880 V920 M440 888 V912 M340 888 V912 M240 888 V912 M140 880 V920" stroke-width="4" pathLength="100" stroke-dasharray="100 120" />
+      </g>
+      <g id="g6-now"><circle cx="800" cy="900" r="34" fill="#E66A21" /><text x="800" y="912" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="32" fill="#FFFDF7">10</text></g>
+      <path id="g6-jump" d="M770 860 C 660 760, 460 760, 360 860" fill="none" stroke="#75AADB" stroke-width="7" stroke-dasharray="16 12" stroke-linecap="round" />
+      <g id="g6-ghost"><circle cx="330" cy="900" r="34" fill="none" stroke="#75AADB" stroke-width="7" stroke-dasharray="12 9" /></g>
+    </svg>
+    <div id="g6-h" class="hero"><span class="mask"><span class="in">شايف <span class="sky">المستقبل</span></span></span></div>
+    <div id="g6-sub" class="hero"><span class="w">قبل</span> <span class="w">ما</span> <span class="w">يحصل</span></div>
+  </div>
+  <script>
+  const tl = gsap.timeline({ paused: true });
+  const E0 = (t) => t < 0.06;
+  const rise = (s, t, d = 0.34) => tl.fromTo(s, E0(t) ? { yPercent: 40, opacity: 0.6 } : { yPercent: 108, opacity: 0 }, { yPercent: 0, opacity: 1, duration: d, ease: "expo.out" }, t);
+  const bin = (s, t, d = 0.16) => tl.fromTo(s, E0(t) ? { opacity: 0.55, filter: "blur(3px)" } : { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: d, ease: "power2.out" }, t);
+  const bout = (s, t, d = 0.14) => tl.fromTo(s, { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: d, ease: "power2.in", immediateRender: false }, t);
+  const draw = (s, t, d, e = "power2.inOut") => tl.fromTo(s, { strokeDashoffset: E0(t) ? 60 : 110 }, { strokeDashoffset: 0, duration: d, ease: e }, t);
+  const pop = (s, t, d = 0.3) => tl.fromTo(s, { scale: E0(t) ? 0.6 : 0, transformOrigin: "50% 50%" }, { scale: 1, duration: d, ease: "expo.out" }, t);
+  const fade = (s, t, to = 1, d = 0.2) => tl.fromTo(s, { opacity: E0(t) ? 0.5 : 0 }, { opacity: to, duration: d, ease: "power2.out" }, t);
+  const off = (s, t, d = 0.12) => tl.fromTo(s, { opacity: 1 }, { opacity: 0, duration: d, ease: "power2.in", immediateRender: false }, t);
+  const snapIn = (s, t, rot = -2) => tl.fromTo(s, { opacity: E0(t) ? 0.7 : 0, scale: 1.05, rotation: rot - 1.2, transformOrigin: "50% 40%" }, { opacity: 1, scale: 1, rotation: rot, duration: 0.18, ease: "power3.out" }, t);
+  const slam = (s, t) => tl.fromTo(s, { opacity: 0, scale: 1.45, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.16, ease: "power4.out" }, t);
+  const tint = (s, t, c, d = 0.12) => tl.fromTo(s, { color: "#1B1D1E" }, { color: c, duration: d, ease: "none", immediateRender: false }, t);
+
+  [1, 2, 3].forEach((i) => bin(`#g6-k .w:nth-child(${i})`, Math.max(0, (i - 1) * 0.1)));
+  bin("#g6-q1 .w", 1.513);
+  fade("#g6-o1", 1.513, 1, 0.15);
+  bin("#g6-q2 .w", 3.2);
+  fade("#g6-o2", 3.2, 1, 0.15);
+  bin("#g6-q3 .w", 4.267);
+  fade("#g6-o3", 4.267, 1, 0.15);
+  // the options collapse into one known future
+  off("#g6-opts", 6.387 - 0.25, 0.15);
+  off("#g6-d0", 6.387 - 0.25, 0.15);
+  ["#g6-q1", "#g6-q2", "#g6-q3"].forEach((s) => off(s, 6.387 - 0.2, 0.15));
+  draw("#g6-ruler", 6.387 - 0.2, 0.4);
+  draw("#g6-ticks", 6.387 - 0.05, 0.35);
+  pop("#g6-now", 6.387 - 0.1);
+  rise("#g6-h .in", 6.387);
+  fade("#g6-jump", 6.847, 1, 0.2);
+  pop("#g6-ghost", 6.847 + 0.1);
+  [1, 2, 3].forEach((i) => bin(`#g6-sub .w:nth-child(${i})`, 8.867 + (i - 1) * 0.12));
+  window.__timelines["g6"] = tl;
+  </script>
+</template>

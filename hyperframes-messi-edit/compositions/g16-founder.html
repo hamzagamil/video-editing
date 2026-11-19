@@ -1,0 +1,91 @@
+<template>
+  <style>
+@font-face{font-family:'Cairo';font-style:normal;font-weight:400;font-display:block;src:url('assets/fonts/cairo-arabic-400-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:400;font-display:block;src:url('assets/fonts/cairo-latin-400-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:600;font-display:block;src:url('assets/fonts/cairo-arabic-600-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:600;font-display:block;src:url('assets/fonts/cairo-latin-600-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:700;font-display:block;src:url('assets/fonts/cairo-arabic-700-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:700;font-display:block;src:url('assets/fonts/cairo-latin-700-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:800;font-display:block;src:url('assets/fonts/cairo-arabic-800-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:800;font-display:block;src:url('assets/fonts/cairo-latin-800-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:900;font-display:block;src:url('assets/fonts/cairo-arabic-900-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:900;font-display:block;src:url('assets/fonts/cairo-latin-900-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+
+#root { position:absolute; inset:0; overflow:hidden; direction:rtl; 
+  font-family:'Cairo', sans-serif; color:var(--ink); }
+#root .grain { position:absolute; inset:0; width:1080px; height:1920px; mix-blend-mode:overlay; opacity:.32; pointer-events:none; }
+#root .kicker { position:absolute; left:80px; right:80px; text-align:center; font-weight:700;
+  font-size:46px; line-height:1.3; color:var(--ink-soft); }
+#root .hero { position:absolute; left:70px; right:70px; text-align:center; font-weight:900;
+  line-height:1.12; color:var(--ink); }
+#root .lbl { position:absolute; font-weight:800; font-size:44px; line-height:1.2; color:var(--ink); }
+#root .mask { display:block; overflow:hidden; padding:0.2em 0.06em 0.36em; margin:-0.1em -0.06em -0.2em; }
+#root .mask.il { display:inline-block; }
+#root .mask > .in { display:block; }
+#root .w { display:inline-block; }
+#root .warm { color:var(--accent-warm-dark); }
+#root .sky { color:var(--sky-ink); }
+#root .gold { color:#9C7426; }
+#root .soft { color:var(--ink-soft); }
+#root bdi, #root .ltr { unicode-bidi:isolate; direction:ltr; }
+#root svg { position:absolute; overflow:visible; }
+#root .print { position:absolute; background:var(--cream); padding:14px 14px 18px; box-shadow:0 10px 26px rgba(27,29,30,.22), 0 1px 0 rgba(27,29,30,.12); }
+#root .print img { display:block; width:100%; height:100%; object-fit:cover; }
+#root .print .tape { position:absolute; width:150px; height:42px; top:-20px; left:50%; margin-left:-75px;
+  background:rgba(236,224,196,.82); box-shadow:0 1px 2px rgba(27,29,30,.15); }
+#root .stamp { position:absolute; font-weight:900; color:var(--accent-warm-dark); border:6px solid var(--accent-warm-dark);
+  padding:2px 22px 10px; border-radius:10px; }
+#root {
+  background-color:#E9E0D3;
+  background-image:
+    linear-gradient(90deg, transparent 989px, rgba(230,106,33,.28) 989px, rgba(230,106,33,.28) 991px, transparent 991px),
+    repeating-linear-gradient(0deg, transparent 0 53px, rgba(27,29,30,.055) 53px 54px),
+    repeating-linear-gradient(90deg, transparent 0 53px, rgba(27,29,30,.04) 53px 54px),
+    radial-gradient(120% 85% at 50% 32%, #F6F0E7 0%, #E9E0D3 58%, #D9CCB9 100%);
+}
+
+#g16-k { top: 300px; font-size: 76px; font-weight: 900; color: var(--ink); }
+#g16-st { left: 50%; top: 440px; font-size: 120px; line-height: 1.1; }
+#g16-h1 { top: 680px; font-size: 176px; }
+#g16-h2 { top: 880px; font-size: 160px; color: var(--accent-warm-dark); }
+#g16-sub { top: 1130px; font-size: 64px; font-weight: 800; color: var(--ink-soft); }
+
+  </style>
+  <div id="root" data-composition-id="g16" data-width="1080" data-height="1920" data-duration="3.4667" lang="ar" dir="rtl" style="--paper:#E9E0D3; --paper-dark:#D4C8B8; --paper-light:#F6F0E7; --cream:#FFFDF7; --ink:#1B1D1E; --ink-soft:#3A3D3E; --graphite:#5A5C5E; --accent-warm:#E66A21; --accent-warm-dark:#C85218; --sky:#75AADB; --sky-ink:#2F5F8A; --gold:#D8A44A; --pitch:#3F6B4A;">
+    <img class="grain" src="assets/textures/paper-grain.png" alt="" aria-hidden="true" data-layout-ignore>
+<svg id="g16-svg" viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <path id="g16-arc" d="M540 560 A 360 360 0 1 1 539 560" fill="none" stroke="#5A5C5E" stroke-width="3" stroke-dasharray="10 12" opacity=".35" />
+      <path id="g16-rule" d="M150 1100 H930" fill="none" stroke="#D8A44A" stroke-width="8" stroke-linecap="round" pathLength="100" stroke-dasharray="100 120" />
+    </svg>
+    <div id="g16-k" class="kicker"><span class="w">ميسي</span> <span class="w">هو</span></div>
+    <div id="g16-st" class="stamp"><span id="g16-sti">مؤسس</span></div>
+    <div id="g16-h1" class="hero"><span class="mask"><span class="in">هندسة</span></span></div>
+    <div id="g16-h2" class="hero"><span class="mask"><span class="in">الماتريكس</span></span></div>
+    <div id="g16-sub" class="hero"><span class="w">في</span> <span class="w">الملعب</span></div>
+  </div>
+  <script>
+  const tl = gsap.timeline({ paused: true });
+  const E0 = (t) => t < 0.06;
+  const rise = (s, t, d = 0.34) => tl.fromTo(s, E0(t) ? { yPercent: 40, opacity: 0.6 } : { yPercent: 108, opacity: 0 }, { yPercent: 0, opacity: 1, duration: d, ease: "expo.out" }, t);
+  const bin = (s, t, d = 0.16) => tl.fromTo(s, E0(t) ? { opacity: 0.55, filter: "blur(3px)" } : { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: d, ease: "power2.out" }, t);
+  const bout = (s, t, d = 0.14) => tl.fromTo(s, { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: d, ease: "power2.in", immediateRender: false }, t);
+  const draw = (s, t, d, e = "power2.inOut") => tl.fromTo(s, { strokeDashoffset: E0(t) ? 60 : 110 }, { strokeDashoffset: 0, duration: d, ease: e }, t);
+  const pop = (s, t, d = 0.3) => tl.fromTo(s, { scale: E0(t) ? 0.6 : 0, transformOrigin: "50% 50%" }, { scale: 1, duration: d, ease: "expo.out" }, t);
+  const fade = (s, t, to = 1, d = 0.2) => tl.fromTo(s, { opacity: E0(t) ? 0.5 : 0 }, { opacity: to, duration: d, ease: "power2.out" }, t);
+  const off = (s, t, d = 0.12) => tl.fromTo(s, { opacity: 1 }, { opacity: 0, duration: d, ease: "power2.in", immediateRender: false }, t);
+  const snapIn = (s, t, rot = -2) => tl.fromTo(s, { opacity: E0(t) ? 0.7 : 0, scale: 1.05, rotation: rot - 1.2, transformOrigin: "50% 40%" }, { opacity: 1, scale: 1, rotation: rot, duration: 0.18, ease: "power3.out" }, t);
+  const slam = (s, t) => tl.fromTo(s, { opacity: 0, scale: 1.45, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.16, ease: "power4.out" }, t);
+  const tint = (s, t, c, d = 0.12) => tl.fromTo(s, { color: "#1B1D1E" }, { color: c, duration: d, ease: "none", immediateRender: false }, t);
+
+  tl.fromTo("#g16-arc", { opacity: 0, rotation: -20, svgOrigin: "540 920" }, { opacity: 0.35, rotation: 0, svgOrigin: "540 920", duration: 1.2, ease: "power2.out" }, 0);
+  bin("#g16-k .w:nth-child(1)", 0);
+  bin("#g16-k .w:nth-child(2)", 0.48);
+  tl.fromTo("#g16-st", { opacity: 0, scale: 1.6, rotation: -14, xPercent: -50 }, { opacity: 1, scale: 1, rotation: -6, xPercent: -50, duration: 0.18, ease: "power4.in" }, 0.76);
+  rise("#g16-h1 .in", 1.46);
+  rise("#g16-h2 .in", 1.98);
+  draw("#g16-rule", 1.98 + 0.2, 0.4, "power3.out");
+  bin("#g16-sub .w:nth-child(1)", 2.76);
+  bin("#g16-sub .w:nth-child(2)", 2.833);
+  window.__timelines["g16"] = tl;
+  </script>
+</template>

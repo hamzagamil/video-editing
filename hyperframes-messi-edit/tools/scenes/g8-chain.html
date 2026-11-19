@@ -1,0 +1,44 @@
+<!--STYLE-->
+#g8-k { top: 290px; font-size: 64px; font-weight: 800; color: var(--ink); }
+.g8-lbl { position:absolute; width: 300px; text-align: center; font-weight: 800; font-size: 50px; line-height: 1.2; color: var(--ink); }
+#g8-l1 { left: 690px; top: 640px; } #g8-l2 { left: 390px; top: 640px; } #g8-l3 { left: 90px; top: 640px; }
+#g8-num { top: 900px; font-size: 190px; line-height: 1; }
+#g8-num .u { font-size: 90px; color: var(--ink-soft); }
+#g8-cap { top: 1130px; font-size: 56px; font-weight: 800; color: var(--ink-soft); }
+#g8-h { top: 860px; font-size: 132px; }
+#g8-sub { top: 1060px; font-size: 58px; font-weight: 800; color: var(--ink-soft); }
+<!--/STYLE-->
+    <div id="g8-k" class="kicker"><span class="w">المدافع</span> <span class="w">العادي</span></div>
+    <svg id="g8-svg" viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <g fill="none" stroke="#1B1D1E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+        <!-- eye -->
+        <g id="g8-eye"><path d="M770 480 Q 840 410 910 480 Q 840 550 770 480 Z" /><circle cx="840" cy="480" r="22" fill="#1B1D1E" /></g>
+        <!-- head profile with a signal -->
+        <g id="g8-head"><path d="M500 560 C 470 540 470 470 480 440 C 490 400 530 380 570 384 C 620 388 650 430 646 470 L 660 500 L 644 506 L 646 530 C 640 548 620 552 600 550 L 600 580" />
+          <path id="g8-spark" d="M560 440 L548 470 L572 470 L556 506" stroke="#5A5C5E" stroke-width="5" /></g>
+        <!-- muscle / leg -->
+        <g id="g8-leg"><path d="M240 400 C 280 420 290 470 270 520 L 300 580 M240 400 C 200 430 200 490 230 530 L 250 580" /></g>
+      </g>
+      <path id="g8-c1" d="M760 480 H680" stroke="#1B1D1E" stroke-width="6" stroke-dasharray="4 10" stroke-linecap="round" fill="none" opacity=".8" />
+      <path id="g8-c1m" d="M760 480 H672" stroke="#1B1D1E" stroke-width="6" stroke-linecap="round" fill="none" pathLength="100" stroke-dasharray="100 120" />
+      <path id="g8-c2" d="M460 480 H330" stroke="#1B1D1E" stroke-width="6" stroke-linecap="round" fill="none" pathLength="100" stroke-dasharray="100 120" />
+    </svg>
+    <div id="g8-l1" class="g8-lbl"><span class="w">بيشوف</span> <span class="w">الحركة</span></div>
+    <div id="g8-l2" class="g8-lbl"><span class="w">إشارة</span></div>
+    <div id="g8-l3" class="g8-lbl"><span class="w">تتحرك</span></div>
+    <div id="g8-h" class="hero"><span class="mask"><span class="in">وتنفذ <span class="soft">أمر</span></span></span></div>
+  <script>
+  bin("#g8-k .w:nth-child(1)", 0);
+  bin("#g8-k .w:nth-child(2)", {{k:g8_ordinary}});
+  pop("#g8-eye", {{k:g8_sees}});
+  bin("#g8-l1 .w:nth-child(1)", {{k:g8_sees}});
+  bin("#g8-l1 .w:nth-child(2)", {{k:g8_move}});
+  draw("#g8-c1m", {{k:g8_then}}, 0.5, "power1.inOut");
+  pop("#g8-head", {{k:g8_brain}});
+  tl.fromTo("#g8-spark", { opacity: 0 }, { opacity: 1, duration: 0.08, ease: "none" }, {{k:g8_signal}});
+  bin("#g8-l2 .w", {{k:g8_signal}});
+  draw("#g8-c2", {{k:g8_signal}} + 0.2, 0.55, "power1.inOut");
+  pop("#g8-leg", {{k:g8_muscle}});
+  bin("#g8-l3 .w", {{k:g8_moves}});
+  rise("#g8-h .in", {{k:g8_exec}});
+  </script>

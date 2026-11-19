@@ -1,0 +1,48 @@
+<!--STYLE-->
+#g2-k { top: 290px; font-size: 60px; font-weight: 800; color: var(--ink); }
+#g2-m1 { top: 372px; font-size: 124px; }
+#g2-m2 { top: 560px; font-size: 64px; font-weight: 800; color: var(--ink-soft); }
+.g2-fp { fill: #1B1D1E; }
+<!--/STYLE-->
+    <div id="g2-k" class="kicker"><span class="w">في</span> <span class="w">الحقيقة</span></div>
+    <div id="g2-m1" class="hero"><span class="mask"><span class="in">بيرسم <span class="warm">خريطة</span></span></span></div>
+    <div id="g2-m2" class="hero"><span class="w">في</span> <span class="w">دماغه</span></div>
+    <svg id="g2-svg" viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <g id="g2-map" fill="none" stroke="#5A5C5E" stroke-width="3" stroke-linecap="round">
+        <path id="g2-pitch" d="M120 700 H960 V1420 H120 Z" pathLength="100" stroke-dasharray="100 120" opacity=".7" />
+        <path id="g2-gx" d="M120 880 H960 M120 1060 H960 M120 1240 H960" pathLength="100" stroke-dasharray="100 120" opacity=".45" />
+        <path id="g2-gy" d="M330 700 V1420 M540 700 V1420 M750 700 V1420" pathLength="100" stroke-dasharray="100 120" opacity=".45" />
+      </g>
+      <g id="g2-steps">
+        <ellipse class="g2-fp" cx="230" cy="1350" rx="12" ry="20" transform="rotate(30 230 1350)" />
+        <ellipse class="g2-fp" cx="275" cy="1300" rx="12" ry="20" transform="rotate(35 275 1300)" />
+        <ellipse class="g2-fp" cx="310" cy="1245" rx="12" ry="20" transform="rotate(40 310 1245)" />
+        <ellipse class="g2-fp" cx="360" cy="1200" rx="12" ry="20" transform="rotate(50 360 1200)" />
+        <ellipse class="g2-fp" cx="410" cy="1150" rx="12" ry="20" transform="rotate(55 410 1150)" />
+        <ellipse class="g2-fp" cx="470" cy="1115" rx="12" ry="20" transform="rotate(65 470 1115)" />
+        <ellipse class="g2-fp" cx="535" cy="1090" rx="12" ry="20" transform="rotate(75 535 1090)" />
+        <ellipse class="g2-fp" cx="600" cy="1080" rx="12" ry="20" transform="rotate(85 600 1080)" />
+      </g>
+      <g id="g2-pins">
+        <rect x="335" y="885" width="200" height="170" fill="#75AADB" fill-opacity=".22" />
+        <rect x="545" y="1065" width="200" height="170" fill="#75AADB" fill-opacity=".22" />
+        <rect x="755" y="885" width="200" height="170" fill="#75AADB" fill-opacity=".14" />
+        <path d="M640 1150 L 860 960" stroke="#75AADB" stroke-width="7" stroke-dasharray="16 12" stroke-linecap="round" fill="none" />
+        <circle cx="860" cy="960" r="30" fill="none" stroke="#75AADB" stroke-width="6" stroke-dasharray="10 8" />
+      </g>
+      <g id="g2-me"><circle cx="640" cy="1150" r="34" fill="#E66A21" /><text x="640" y="1162" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="32" fill="#FFFDF7">10</text></g>
+    </svg>
+  <script>
+  bin("#g2-k .w:nth-child(1)", 0);
+  bin("#g2-k .w:nth-child(2)", Math.min(0.15, {{k:g2_truth}}));
+  tl.fromTo("#g2-steps ellipse", { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 0.8, scale: 1, duration: 0.16, ease: "power2.out", stagger: 0.08 }, 0.05);
+  pop("#g2-me", 0.7);
+  rise("#g2-m1 .in", {{k:g2_draw}});
+  draw("#g2-pitch", 0, 0.5);
+  draw("#g2-gx", {{k:g2_map}}, 0.45);
+  draw("#g2-gy", {{k:g2_map}} + 0.1, 0.45);
+  tl.fromTo("#g2-steps", { opacity: 1 }, { opacity: 0.3, duration: 0.3, immediateRender: false }, {{k:g2_map}} + 0.3);
+  fade("#g2-pins", {{k:g2_map}} + 0.4, 1, 0.25);
+  bin("#g2-m2 .w:nth-child(1)", {{k:g2_head}} - 0.1);
+  bin("#g2-m2 .w:nth-child(2)", {{k:g2_head}});
+  </script>

@@ -1,0 +1,43 @@
+<!--STYLE-->
+#g1-k { top: 280px; font-size: 62px; font-weight: 800; color: var(--ink); }
+#g1-l1 { top: 372px; font-size: 96px; }
+#g1-l2 { top: 500px; font-size: 118px; }
+#g1-l2 .mask.il { vertical-align: top; }
+<!--/STYLE-->
+    <div id="g1-k" class="kicker"><span class="w">لاعب</span> <span class="w">كرة قدم</span></div>
+    <div id="g1-l1" class="hero"><span class="mask"><span class="in"><span class="sky">بيبص</span> في حتة</span></span></div>
+    <div id="g1-l2" class="hero"><span class="mask il"><span id="g1-l2a" class="in">وبيباصي</span></span> <span class="mask il"><span id="g1-l2b" class="in">في <span class="warm">حتة تانية</span></span></span></div>
+    <svg id="g1-svg" viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true"><g transform="translate(0 60)">
+      <g fill="none" stroke="#5A5C5E" stroke-width="3" stroke-linecap="round" opacity=".55">
+        <path id="g1-pitch" d="M120 760 H960 V1440 H120 Z" pathLength="100" stroke-dasharray="100 120" />
+        <path id="g1-circle" d="M400 1440 A140 140 0 0 1 680 1440" pathLength="100" stroke-dasharray="100 120" />
+        <path id="g1-box" d="M330 760 V880 H750 V760" pathLength="100" stroke-dasharray="100 120" />
+      </g>
+      <g id="g1-cone" opacity="0">
+        <path d="M640 1150 L960 960 L960 1250 Z" fill="#75AADB" fill-opacity=".16" />
+        <path d="M640 1150 L960 960 M640 1150 L960 1250" stroke="#75AADB" stroke-width="7" stroke-dasharray="18 14" stroke-linecap="round" fill="none" />
+      </g>
+      <path id="g1-pass" d="M612 1140 C 500 1100, 360 1010, 268 930" fill="none" stroke="#E66A21" stroke-width="10" stroke-linecap="round" pathLength="100" stroke-dasharray="100 120" />
+      <circle id="g1-mate" cx="250" cy="912" r="28" fill="#E9E0D3" stroke="#1B1D1E" stroke-width="7" />
+      <circle id="g1-ball" cx="285" cy="948" r="13" fill="#1B1D1E" />
+      <g id="g1-messi">
+        <circle cx="640" cy="1150" r="38" fill="#E66A21" />
+        <text x="640" y="1163" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="36" fill="#FFFDF7">10</text>
+      </g>
+    </g></svg>
+  <script>
+  bin("#g1-k .w:nth-child(1)", 0);
+  bin("#g1-k .w:nth-child(2)", 0.2);
+  draw("#g1-pitch", 0, 0.7);
+  draw("#g1-box", 0.1, 0.5);
+  draw("#g1-circle", 0.15, 0.5);
+  pop("#g1-messi", 0);
+  rise("#g1-l1 .in", {{k:g1_look}});
+  tl.fromTo("#g1-cone", { opacity: 0, scale: 0.2, svgOrigin: "640 1150" }, { opacity: 1, scale: 1, svgOrigin: "640 1150", duration: 0.4, ease: "expo.out" }, {{k:g1_look}} + 0.08);
+  rise("#g1-l2a", {{k:g1_pass}});
+  draw("#g1-pass", {{k:g1_pass}} + 0.05, 0.55, "power3.out");
+  pop("#g1-mate", {{k:g1_pass}});
+  tl.fromTo("#g1-ball", { opacity: 0, scale: 0, svgOrigin: "285 948" }, { opacity: 1, scale: 1, svgOrigin: "285 948", duration: 0.25, ease: "expo.out" }, {{k:g1_pass}} + 0.5);
+  rise("#g1-l2b", {{k:g1_other}});
+  tl.fromTo("#g1-cone", { opacity: 1 }, { opacity: 0.45, duration: 0.3, ease: "power2.out", immediateRender: false }, {{k:g1_other}});
+  </script>

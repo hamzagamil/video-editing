@@ -1,0 +1,39 @@
+<!--STYLE-->
+#g13-k { top: 290px; font-size: 60px; font-weight: 800; color: var(--ink); }
+#g13-h { top: 366px; font-size: 124px; }
+#g13-board { position:absolute; left: 96px; top: 560px; width: 888px; height: 600px; background: #263129; border-radius: 10px;
+  box-shadow: inset 0 0 0 14px #6B4F35, inset 0 0 0 17px #4E3825, 0 12px 28px rgba(27,29,30,.25); }
+#g13-bl { position:absolute; left: 96px; width: 888px; top: 590px; text-align: center; font-weight: 800; font-size: 50px; color: #EFE6D8; }
+#g13-sub { top: 1196px; font-size: 58px; font-weight: 800; color: var(--ink-soft); }
+<!--/STYLE-->
+    <div id="g13-k" class="kicker"><span class="w">كأنه</span> <span class="w">بيكتب</span></div>
+    <div id="g13-h" class="hero"><span class="mask"><span class="in">معادلة <span class="warm">هندسية</span></span></span></div>
+    <div id="g13-board"></div>
+    <div id="g13-bl"><span class="w">على</span> <span class="w">سبورة</span></div>
+    <svg id="g13-svg" viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <g fill="none" stroke="#EFE6D8" stroke-linecap="round" stroke-linejoin="round" opacity=".9">
+        <g id="g13-defs" stroke-width="6">
+          <path d="M700 820 L730 850 M730 820 L700 850" /><path d="M560 960 L590 990 M590 960 L560 990" /><path d="M420 830 L450 860 M450 830 L420 860" /><path d="M300 980 L330 1010 M330 980 L300 1010" />
+        </g>
+        <path id="g13-goal" d="M170 760 V1060 M170 760 H230 M170 1060 H230" stroke-width="7" pathLength="100" stroke-dasharray="100 120" />
+      </g>
+      <path id="g13-path" d="M880 1080 C 820 960, 760 900, 700 900 S 620 900, 600 920 S 560 900, 500 900 S 420 920, 380 940 S 280 920, 250 900 S 210 880, 182 900" stroke="#F2A86B" stroke-width="9" stroke-linecap="round" fill="none" pathLength="100" stroke-dasharray="100 120" />
+      <g id="g13-dot"><circle cx="880" cy="1080" r="28" fill="#E66A21" /><text x="880" y="1090" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="28" fill="#FFFDF7">10</text></g>
+      <g id="g13-eq" stroke="#EFE6D8" stroke-width="7" stroke-linecap="round"><path d="M150 1110 H200 M150 1128 H200" /></g>
+    </svg>
+    <div id="g13-sub" class="hero"><span class="w">وبيعلمها</span> <span class="w">لكل</span> <span class="w">اللي</span> <span class="w">في</span> <span class="w">الاستاد</span></div>
+  <script>
+  bin("#g13-k .w:nth-child(1)", 0);
+  bin("#g13-k .w:nth-child(2)", {{k:g13_writes}});
+  rise("#g13-h .in", {{k:g13_eq}});
+  fade("#g13-board", 0, 1, 0.2);
+  pop("#g13-dot", 0.05);
+  tl.fromTo("#g13-defs path", { opacity: 0 }, { opacity: 1, duration: 0.1, stagger: 0.08 }, 0.1);
+  draw("#g13-goal", 0.2, 0.4);
+  bin("#g13-bl .w:nth-child(1)", {{k:g13_on}});
+  bin("#g13-bl .w:nth-child(2)", {{k:g13_board}});
+  // the dribble is written stroke by stroke, like handwriting
+  draw("#g13-path", {{k:g13_eq}}, 1.6, "power1.inOut");
+  fade("#g13-eq", {{k:g13_eq}} + 1.55, 1, 0.15);
+  [1, 2, 3, 4, 5].forEach((i) => bin(`#g13-sub .w:nth-child(${i})`, {{k:g13_teach}} + (i - 1) * 0.1));
+  </script>

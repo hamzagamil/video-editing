@@ -1,0 +1,48 @@
+<!--STYLE-->
+#g6-k { top: 290px; font-size: 60px; font-weight: 800; color: var(--ink); }
+.g6-q { position:absolute; right: 110px; font-weight: 800; font-size: 62px; color: var(--sky-ink); }
+#g6-q1 { top: 380px; } #g6-q2 { top: 470px; } #g6-q3 { top: 560px; }
+#g6-h { top: 990px; font-size: 112px; }
+#g6-sub { top: 1150px; font-size: 58px; font-weight: 800; color: var(--ink-soft); }
+<!--/STYLE-->
+    <div id="g6-k" class="kicker"><span class="w">هو</span> <span class="w">بيبقى</span> <span class="w">عارف</span></div>
+    <div id="g6-q1" class="g6-q"><span class="w">هيعمل بيها إيه</span></div>
+    <div id="g6-q2" class="g6-q"><span class="w">هيباصيها فين</span></div>
+    <div id="g6-q3" class="g6-q"><span class="w">هيتحرك فين</span></div>
+    <svg id="g6-svg" viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <g id="g6-opts" fill="none" stroke="#75AADB" stroke-width="7" stroke-linecap="round" stroke-dasharray="16 12">
+        <path id="g6-o1" d="M280 760 L200 640" /><path id="g6-o2" d="M280 760 L120 790" /><path id="g6-o3" d="M280 760 L230 900" />
+      </g>
+      <g id="g6-d0"><circle cx="280" cy="760" r="30" fill="#E66A21" />
+      <text x="280" y="771" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="28" fill="#FFFDF7">10</text></g>
+      <!-- time ruler: now -> +1 s -->
+      <g fill="none" stroke="#1B1D1E" stroke-linecap="round">
+        <path id="g6-ruler" d="M140 900 H940" stroke-width="4" pathLength="100" stroke-dasharray="100 120" />
+        <path id="g6-ticks" d="M940 880 V920 M840 888 V912 M740 888 V912 M640 888 V912 M540 880 V920 M440 888 V912 M340 888 V912 M240 888 V912 M140 880 V920" stroke-width="4" pathLength="100" stroke-dasharray="100 120" />
+      </g>
+      <g id="g6-now"><circle cx="800" cy="900" r="34" fill="#E66A21" /><text x="800" y="912" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="32" fill="#FFFDF7">10</text></g>
+      <path id="g6-jump" d="M770 860 C 660 760, 460 760, 360 860" fill="none" stroke="#75AADB" stroke-width="7" stroke-dasharray="16 12" stroke-linecap="round" />
+      <g id="g6-ghost"><circle cx="330" cy="900" r="34" fill="none" stroke="#75AADB" stroke-width="7" stroke-dasharray="12 9" /></g>
+    </svg>
+    <div id="g6-h" class="hero"><span class="mask"><span class="in">شايف <span class="sky">المستقبل</span></span></span></div>
+    <div id="g6-sub" class="hero"><span class="w">قبل</span> <span class="w">ما</span> <span class="w">يحصل</span></div>
+  <script>
+  [1, 2, 3].forEach((i) => bin(`#g6-k .w:nth-child(${i})`, Math.max(0, (i - 1) * 0.1)));
+  bin("#g6-q1 .w", {{k:g6_do}});
+  fade("#g6-o1", {{k:g6_do}}, 1, 0.15);
+  bin("#g6-q2 .w", {{k:g6_pass}});
+  fade("#g6-o2", {{k:g6_pass}}, 1, 0.15);
+  bin("#g6-q3 .w", {{k:g6_move}});
+  fade("#g6-o3", {{k:g6_move}}, 1, 0.15);
+  // the options collapse into one known future
+  off("#g6-opts", {{k:g6_sees}} - 0.25, 0.15);
+  off("#g6-d0", {{k:g6_sees}} - 0.25, 0.15);
+  ["#g6-q1", "#g6-q2", "#g6-q3"].forEach((s) => off(s, {{k:g6_sees}} - 0.2, 0.15));
+  draw("#g6-ruler", {{k:g6_sees}} - 0.2, 0.4);
+  draw("#g6-ticks", {{k:g6_sees}} - 0.05, 0.35);
+  pop("#g6-now", {{k:g6_sees}} - 0.1);
+  rise("#g6-h .in", {{k:g6_sees}});
+  fade("#g6-jump", {{k:g6_future}}, 1, 0.2);
+  pop("#g6-ghost", {{k:g6_future}} + 0.1);
+  [1, 2, 3].forEach((i) => bin(`#g6-sub .w:nth-child(${i})`, {{k:g6_before}} + (i - 1) * 0.12));
+  </script>

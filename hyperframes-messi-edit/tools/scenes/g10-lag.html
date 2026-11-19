@@ -1,0 +1,35 @@
+<!--STYLE-->
+#g10-k { top: 290px; font-size: 60px; font-weight: 800; color: var(--ink); }
+#g10-h { top: 372px; font-size: 112px; }
+.g10-row { position:absolute; left: 110px; right: 110px; height: 150px; }
+#g10-r1 { top: 680px; } #g10-r2 { top: 900px; }
+.g10-name { position:absolute; right: 0; top: 0; font-weight: 900; font-size: 56px; }
+.g10-track { position:absolute; left: 0; right: 0; top: 84px; height: 46px; border: 4px solid #1B1D1E; border-radius: 23px; }
+.g10-fill { position:absolute; left: 4px; right: 4px; top: 88px; height: 38px; border-radius: 19px; }
+#g10-f1 { background: var(--accent-warm); }
+.g10-ghost { background: #5A5C5E; }
+#g10-pc1 { position:absolute; left: 0; top: 0; font: 900 52px/1 'Cairo',sans-serif; color: var(--accent-warm-dark); direction: ltr; }
+#g10-h2 { top: 1120px; font-size: 128px; }
+<!--/STYLE-->
+    <div id="g10-k" class="kicker"><span class="w">المدافع</span> <span class="w">بيعمل</span> <span class="w">زي</span></div>
+    <div id="g10-h" class="hero"><span class="mask"><span class="in">الآلة <span class="soft">المكسورة</span></span></span></div>
+    <div id="g10-r1" class="g10-row"><div class="g10-name warm">ميسي</div><div id="g10-pc1">100%</div><div class="g10-track"></div><div id="g10-f1" class="g10-fill"></div></div>
+    <div id="g10-r2" class="g10-row"><div class="g10-name">المدافع</div><div class="g10-track"></div>
+      <div id="g10-g3" class="g10-fill g10-ghost" style="opacity:.18"></div>
+      <div id="g10-g2" class="g10-fill g10-ghost" style="opacity:.35"></div>
+      <div id="g10-f2" class="g10-fill g10-ghost"></div></div>
+    <div id="g10-h2" class="hero"><span class="mask"><span class="in"><span class="warm">متأخر</span> بخطوة</span></span></div>
+  <script>
+  [1, 2, 3].forEach((i) => bin(`#g10-k .w:nth-child(${i})`, Math.max(0, (i - 1) * 0.1)));
+  rise("#g10-h .in", {{k:g10_machine}});
+  // Messi's update completes in one clean move; the defender's stutters a frame behind (the reel's only disruption)
+  tl.fromTo("#g10-f1", { scaleX: 0, transformOrigin: "100% 50%" }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, {{k:g10_catch}});
+  bin("#g10-pc1", {{k:g10_catch}} + 0.55);
+  const steps = [0.18, 0.18, 0.34, 0.34, 0.47, 0.5, 0.62, 0.62, 0.7, 0.72];
+  ["#g10-f2", "#g10-g2", "#g10-g3"].forEach((s, k) => {
+    tl.fromTo(s, { scaleX: 0, transformOrigin: "100% 50%" }, { scaleX: 0, duration: 0.01 }, 0);
+    steps.forEach((v, i) => tl.set(s, { scaleX: v }, {{k:g10_catch}} + 0.1 + i * 0.1 + k * 0.067));
+  });
+  tl.fromTo("#g10-r2", { x: 0 }, { x: 6, duration: 0.05, ease: "none", repeat: 5, yoyo: true }, {{k:g10_always}});
+  rise("#g10-h2 .in", {{k:g10_late}});
+  </script>

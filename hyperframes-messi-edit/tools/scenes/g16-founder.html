@@ -1,0 +1,27 @@
+<!--STYLE-->
+#g16-k { top: 300px; font-size: 76px; font-weight: 900; color: var(--ink); }
+#g16-st { left: 50%; top: 440px; font-size: 120px; line-height: 1.1; }
+#g16-h1 { top: 680px; font-size: 176px; }
+#g16-h2 { top: 880px; font-size: 160px; color: var(--accent-warm-dark); }
+#g16-sub { top: 1130px; font-size: 64px; font-weight: 800; color: var(--ink-soft); }
+<!--/STYLE-->
+    <svg id="g16-svg" viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <path id="g16-arc" d="M540 560 A 360 360 0 1 1 539 560" fill="none" stroke="#5A5C5E" stroke-width="3" stroke-dasharray="10 12" opacity=".35" />
+      <path id="g16-rule" d="M150 1100 H930" fill="none" stroke="#D8A44A" stroke-width="8" stroke-linecap="round" pathLength="100" stroke-dasharray="100 120" />
+    </svg>
+    <div id="g16-k" class="kicker"><span class="w">ميسي</span> <span class="w">هو</span></div>
+    <div id="g16-st" class="stamp"><span id="g16-sti">مؤسس</span></div>
+    <div id="g16-h1" class="hero"><span class="mask"><span class="in">هندسة</span></span></div>
+    <div id="g16-h2" class="hero"><span class="mask"><span class="in">الماتريكس</span></span></div>
+    <div id="g16-sub" class="hero"><span class="w">في</span> <span class="w">الملعب</span></div>
+  <script>
+  tl.fromTo("#g16-arc", { opacity: 0, rotation: -20, svgOrigin: "540 920" }, { opacity: 0.35, rotation: 0, svgOrigin: "540 920", duration: 1.2, ease: "power2.out" }, 0);
+  bin("#g16-k .w:nth-child(1)", 0);
+  bin("#g16-k .w:nth-child(2)", {{k:g16_is}});
+  tl.fromTo("#g16-st", { opacity: 0, scale: 1.6, rotation: -14, xPercent: -50 }, { opacity: 1, scale: 1, rotation: -6, xPercent: -50, duration: 0.18, ease: "power4.in" }, {{k:g16_founder}});
+  rise("#g16-h1 .in", {{k:g16_eng}});
+  rise("#g16-h2 .in", {{k:g16_matrix}});
+  draw("#g16-rule", {{k:g16_matrix}} + 0.2, 0.4, "power3.out");
+  bin("#g16-sub .w:nth-child(1)", {{k:g16_in}});
+  bin("#g16-sub .w:nth-child(2)", {{k:g16_field}});
+  </script>

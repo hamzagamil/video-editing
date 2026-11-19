@@ -1,0 +1,43 @@
+<!--STYLE-->
+.g12-h { position:absolute; left: 70px; right: 70px; text-align: center; font-weight: 900; line-height: 1.1; }
+#g12-h1 { top: 300px; font-size: 150px; }
+#g12-h2 { top: 500px; font-size: 76px; color: var(--ink-soft); }
+#g12-flash { left: 90px; top: 210px; width: 900px; height: 1300px; }
+<!--/STYLE-->
+    <svg id="g12-svg" viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <path d="M120 1300 H960" stroke="#5A5C5E" stroke-width="3" opacity=".5" fill="none" />
+      <g fill="#E66A21" opacity=".75">
+        <ellipse cx="900" cy="1150" rx="11" ry="18" transform="rotate(90 900 1150)" /><ellipse cx="850" cy="1170" rx="11" ry="18" transform="rotate(90 850 1170)" />
+        <ellipse cx="800" cy="1150" rx="11" ry="18" transform="rotate(90 800 1150)" /><ellipse cx="750" cy="1170" rx="11" ry="18" transform="rotate(90 750 1170)" />
+      </g>
+      <g id="g12-safe">
+        <path id="g12-sa" d="M374 1160 A 96 96 0 0 1 566 1160" fill="#75AADB" fill-opacity=".16" stroke="#75AADB" stroke-width="5" stroke-dasharray="12 10" />
+        <path id="g12-sb" d="M566 1160 A 96 96 0 0 1 374 1160" fill="#75AADB" fill-opacity=".16" stroke="#75AADB" stroke-width="5" stroke-dasharray="12 10" />
+      </g>
+      <g id="g12-def"><circle cx="470" cy="1160" r="32" fill="#E9E0D3" stroke="#1B1D1E" stroke-width="7" />
+        <path id="g12-leg" d="M520 1176 L590 1192 M568 1176 L592 1192 L570 1208" stroke="#1B1D1E" stroke-width="6" stroke-dasharray="10 7" stroke-linecap="round" stroke-linejoin="round" fill="none" /></g>
+      <g id="g12-messi"><circle cx="680" cy="1160" r="38" fill="#E66A21" /><text x="680" y="1173" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="36" fill="#FFFDF7">10</text></g>
+      <circle id="g12-ball" cx="628" cy="1196" r="13" fill="#1B1D1E" />
+      <path id="g12-touch" d="M640 1210 C 680 1250, 740 1260, 800 1240 M772 1228 L802 1240 L778 1262" stroke="#E66A21" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" pathLength="100" stroke-dasharray="100 120" />
+      <circle id="g12-crack" cx="470" cy="1160" r="70" fill="none" stroke="#E66A21" stroke-width="7" stroke-dasharray="40 16" opacity="0" />
+    </svg>
+    <div id="g12-h1" class="g12-h"><span class="mask"><span class="in"><span class="warm">تتش</span> سريع</span></span></div>
+    <div id="g12-h2" class="g12-h"><span class="w">جداً</span></div>
+    <div id="g12-flash" class="print"><img id="g12-ph" src="assets/photos/p6-dribble.jpg" alt="" style="object-position:50% 45%" data-color-grading='{{grade}}'></div>
+  <script>
+  // starts exactly as G11 ended: the defender inside his safe circle, leg reaching
+  tl.fromTo("#g12-leg", { scaleX: 0.3, svgOrigin: "500 1172" }, { scaleX: 1, svgOrigin: "500 1172", duration: 0.25, ease: "power2.out" }, 0);
+  draw("#g12-touch", {{k:g12_touch}} - 0.06, 0.18, "power4.out");
+  tl.fromTo("#g12-ball", { x: 0, y: 0 }, { x: 170, y: 40, duration: 0.18, ease: "power4.out", immediateRender: false }, {{k:g12_touch}} - 0.04);
+  // the hit: the dribble photo flashes full frame for ~0.6 s with the impact
+  slam("#g12-flash", {{k:g12_touch}});
+  off("#g12-flash", {{k:g12_touch}} + 0.6, 0.06);
+  slam("#g12-h1 .in", {{k:g12_touch}} + 0.62);
+  // the safe circle splits, the defender is thrown off the page
+  tl.fromTo("#g12-sa", { x: 0, y: 0, rotation: 0, svgOrigin: "470 1160" }, { x: -120, y: -140, rotation: -40, svgOrigin: "470 1160", duration: 0.5, ease: "power3.out", immediateRender: false }, {{k:g12_touch}} + 0.62);
+  tl.fromTo("#g12-sb", { x: 0, y: 0, rotation: 0, svgOrigin: "470 1160" }, { x: -80, y: 150, rotation: 30, svgOrigin: "470 1160", duration: 0.5, ease: "power3.out", immediateRender: false }, {{k:g12_touch}} + 0.62);
+  tl.fromTo("#g12-safe", { opacity: 1 }, { opacity: 0, duration: 0.3, immediateRender: false }, {{k:g12_touch}} + 0.9);
+  tl.fromTo("#g12-def", { x: 0, rotation: 0, svgOrigin: "470 1160" }, { x: -720, rotation: -50, svgOrigin: "470 1160", duration: 0.55, ease: "power3.in", immediateRender: false }, {{k:g12_touch}} + 0.66);
+  tl.fromTo("#g12-crack", { opacity: 1, scale: 0.6, svgOrigin: "470 1160" }, { opacity: 0, scale: 1.6, svgOrigin: "470 1160", duration: 0.45, ease: "power2.out", immediateRender: false }, {{k:g12_touch}} + 0.62);
+  bin("#g12-h2 .w", {{k:g12_very}});
+  </script>
