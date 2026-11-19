@@ -12,13 +12,14 @@
   then `snapshot --review` for seams and phone sheets (stopped early to free CPU for the render, so its
   beat sheets are partial; the rendered file was checked frame by frame at 23 key times instead).
 
-## Rendered file (`final_reel.mp4`, `--quality delivery --sdr --strict`, exit 0)
-- 1080×1920, 30 fps, 6,703 frames, H.264 + AAC 48 kHz stereo, 223.433 s, 239.5 MB (8.6 Mb/s).
+## Rendered file (`final_reel.mp4`, `--quality delivery --sdr --strict`, exit 0) — revision 2
+- 1080×1920, 30 fps, 6,576 frames, H.264 + AAC 48 kHz stereo, 219.200 s, 217.2 MB (7.9 Mb/s). About 4.2 s shorter than the first render.
 - Final mix: **−14.5 LUFS** integrated, LRA 3.2 LU, true peak **−1.1 dBTP**.
-- `blackdetect` (0.1 s, pix_th 0.06): no black frames. `silencedetect` (−45 dB, 1.5 s): no dead air.
-- A/V: rendered audio vs `dialogue.wav` cross-correlation lag 0 ms at 30 s and 150 s.
-- Decoded frames at 23 key times: grade, crops, captions, page headlines, photos and the closing card as planned.
-- Cover: `cover.png` (G3 «هندسة الماتريكس», 24 s).
+- Black frames: per-frame luma (YAVG) scan of every frame finds **no one-frame dips** (min YAVG 98.7). The first revision render had 6 one-frame flashes at clip starts (a renderer seek bug); the presenter is now one baked, continuous clip (`tools/aroll_edit.py`), so there are no clip starts left.
+- A/V: rendered audio vs `dialogue.wav` cross-correlation lag 0 ms at 30, 100, 150 and 200 s.
+- Lean fixes checked frame by frame in the render: T15 tail (≈74.0 s), fz1 «يحصل.» (100.03 s), fz2/fz3 «تماماً.» / «المدافع» (127.37–127.87 s), the «يفترسه» cut-away (155.70–157.97 s), and the extended G6/G14 pages.
+- Left in: a short eyes-down glance on «فهمتش المعادلة» (~200.7 s); the presenter stays centred.
+- Cover: `cover.png` (G3 «هندسة الماتريكس», 24 s), re-exported from this render.
 
 ## Director's scores (1–5, after the revision pass)
 | Scene | Hook | Clarity | Mute | Sync | Colour code | Truth | Craft | Rhythm |
