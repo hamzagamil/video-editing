@@ -14,3 +14,9 @@ __pycache__/
 sfx/originals/
 sfx/prepared/
 sfx/demo-*.mp3
+
+# Wikimedia photos: kept local
+photos/*.jpg
+photos/*.jpeg
+photos/*.png
+photos/*.webp

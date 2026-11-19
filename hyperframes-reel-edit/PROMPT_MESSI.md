@@ -10,7 +10,7 @@
 
 You are the **director, senior Arabic short-form editor, motion designer, and HyperFrames implementer** of this reel. The subject is **Lionel Messi** (ليونيل ميسي / ليو) and, more precisely, **how his mind reads the game before it happens**. You are not a subtitle operator: you own the story, rhythm, image system, and final quality. Every cut, crop, word, and object must have a reason you can say in one sentence.
 
-Inside the project folder there is exactly one raw talking-head video whose filename begins with `rawreel` (`.mp4`, `.mov`, …). There is no reference video, no SRT, no B-roll, no photos, no match footage — **this reel is graphics-only by decision; do not add match footage or commentator audio from anywhere.** There is also an `sfx/` folder with Pixabay sound effects I downloaded, already prepared (§15). Do not ask for anything else. The expected script is in §3; the storyboard pre-plan is in §6.
+Inside the project folder there is exactly one raw talking-head video whose filename begins with `rawreel` (`.mp4`, `.mov`, …). There is no reference video, no SRT, no B-roll, no photos, no match footage — **this reel is graphics-only by decision; do not add match footage or commentator audio from anywhere.** There is also an `sfx/` folder with Pixabay sound effects I downloaded, already prepared (§15). There may also be a `photos/` folder with freely licensed Messi photos from Wikimedia Commons and a `photos/CREDITS.md` (§8b). Do not ask for anything else. The expected script is in §3; the storyboard pre-plan is in §6.
 
 Inspect, transcribe, direct, edit, design, animate, validate, self-review, preview, and render a premium Arabic 9:16 reel using **HyperFrames as the primary and final system**. Build the complete working project — not recommendations, snippets, or an EDL. **Stop only once**, at the Studio-preview approval gate, before rendering.
 
@@ -97,7 +97,7 @@ Write `FACT_CHECK.md`: every factual claim with the exact spoken phrase, how it 
 Rules:
 
 - **Never put a number, title, date, record, study, or source on screen that the speaker did not say.** Do not silently correct the speaker; mention every `check-with-user` item at the preview gate.
-- **No real imagery or likeness:** no photos or video of Messi or any player, no scraped/downloaded images, no match footage, no TV graphics, and **no AI-generated face or likeness of Messi or any real person.** Messi is the orange dot with a small 10, a left-boot outline, his path.
+- **Real imagery only from `photos/`:** the only photos allowed are the freely licensed Wikimedia Commons files I put in `photos/` (CC0, public domain, CC BY, or CC BY-SA — check `photos/CREDITS.md`; refuse any file without a licence line). No other photos, no scraped images, no match footage, no TV graphics, and **no AI-generated face or likeness of Messi or any real person.** Do not alter his face or body (no face swaps, no expression edits); cut-outs, crops, duotone, and halftone are fine. Club crests or sponsor marks that appear incidentally in a licensed photo are acceptable, but never crop or zoom to feature them. Outside the photo moments, Messi stays the orange dot with a small 10.
 - **No marks:** no club crests, AFA/FIFA/UEFA/league logos, sponsor marks, kit-maker stripes; no replicas of real trophies.
 - "Matrix" is the speaker's metaphor; **do not imitate the film's look** (no green falling code, no film typography). "Video game / NPCs" is drawn as a generic, hand-inked game UI — no real game's interface, characters, or fonts.
 - No match footage, commentary audio (any commentator, any language), chants, anthems, or music. The only outside audio allowed is the Pixabay SFX in `sfx/` (Pixabay Content License) — copy them into `assets/sfx/` and record each file's name, source page if given in `sfx/SOURCES.md`, and licence in `.media/manifest.jsonl`.
@@ -157,6 +157,36 @@ Target ratio ≈ 48–55 % presenter / 45–52 % pages; check it after measuring
 - **The first frame of every page already shows the scene** (entrances that start at local t≈0 begin part-way revealed). An empty paper frame on a hard cut reads as a mount flash.
 - Pitch diagrams are top-down and minimal: only the lines the idea needs (a touchline, a box, a goal frame), in `--pitch` or graphite at 1.5–3 px.
 - No second subtitle layer on pages: the spoken phrase becomes the page's typography, each chunk revealed at its spoken moment.
+
+## 8b. Photo moments — short, designed, and the presenter stays the star
+
+The photos give the viewer a real Messi for a beat; **the presenter is who the viewer must remember.** Photos are accents, never a slideshow.
+
+**Hard limits**
+- Each photo on screen **0.8–1.2 s** (the «البوم» flash 0.5–0.7 s). Total photo time ≤ ≈ 8 % of the reel. At most 8 photos.
+- **No photo** in the first 2 s, on the thesis line (A8 «عايش في المستقبل»), or on the payoff (A13 «عبقرية») — those belong to the presenter's face.
+- In presenter sections a photo is a **small card** (≤ 35 % of frame width) in the measured negative space beside or above the presenter; it never covers his face, eyes, or active hands, and he stays the largest thing on screen.
+- One photo at a time; a photo always enters on a spoken word and leaves on a cut or the next word.
+
+**Treatment — the photo becomes part of the notebook**
+- Background removed (local cut-out via `/media-use`) or a clean rectangular crop on him; then **duotone ink + paper** (or desaturated with a slight warm cast) with a fine halftone, a thin cream border, and a strip of paper tape. Slight rotation (−3°…+3°).
+- Graphite/orange annotations are drawn **over** the photo, using the same colour code: sky dashed scan arcs around his head, an orange arrow on his shoulder, a circle on the ball. The annotation is what makes it ours.
+- Motion: snap in over 4–6 frames (scale 1.04 → 1.00 with a short ease-out), at most a 2 % drift during the hold, hard cut out. No slow Ken Burns slideshows, no fades.
+
+**Shot list (file names expected in `photos/`; skip any that are missing)**
+
+| File | Scene · trigger word | Format | Annotation | Hold |
+| --- | --- | --- | --- | --- |
+| `p1-walking.jpg` — Messi walking, head down or hands on hips | G2 on «يتمشى» | taped cut-out on the left of the page, then the footsteps grow out of his feet | a dotted footprint trail starting at his boots | 1.0 s |
+| `p2-portrait.jpg` — calm portrait, looking slightly off-camera | G3 on «ليونيل ميسي» | large duotone cut-out behind the title «هندسة الماتريكس» | a compass arc drawn around his head | 1.2 s (also the `cover.png` candidate) |
+| `p3-scan.jpg` — head up, looking sideways, ball not at his feet | G4 on «الماسح الضوئي» | centred cut-out, then it shrinks into the orange 10-dot as the diagram takes over | 2–3 sky dashed scan arcs around the head | 1.2 s |
+| `p4-study.jpg` — Messi in an Argentina shirt, any calm moment | A2 on «يدرسوا ميسي» | small card beside the presenter | a graphite "specimen" label line with «ميسي» | 1.0 s |
+| `p5-feint.jpg` — body lean / shoulder dip in a duel | G9 on «الكتف يمين» | freeze-frame card at the top of the page | an orange arrow on the shoulder, a sky dashed arrow showing where the defender goes | 1.0 s |
+| `p6-dribble.jpg` — dribbling past a defender (a defender off balance is ideal) | G12 on «البوم!» | full-width flash in the middle of the page, cut hard on the impact | a cracked orange circle around the defender | 0.5–0.7 s |
+| `p7-ball.jpg` — the ball close at his left foot | G15 on «تنام في رجليه» | cut-out sitting on the boot outline; the drawn ball lines up with the real ball | one thin orange circle on the ball | 1.2 s |
+| `p8-celebration.jpg` — smiling or celebrating | G16 CTA card | small polaroid in the top corner of the card, beside the comment bubble | none | holds with the card |
+
+- Record every photo actually used, with its scene, timing, author, licence, and source URL from `photos/CREDITS.md`, in `REVIEW.md`, and write `CREDITS.txt` with one ready-to-paste caption line per photo: `صورة: <Author> / Wikimedia Commons / <licence>`.
 
 ## 9. Art direction — palette and texture
 
@@ -268,7 +298,7 @@ Seek-safe only: one paused GSAP timeline per composition registered on `window._
 
 ## 18. Delivery report
 
-The project folder, `final_reel.mp4`, `cover.png`, `captions.srt`, `transcript.json`, `timing-map.json`, and a short report: original/final duration, removed ranges and re-takes, number of scenes, the hero moment, actual A/B ratio, fonts and weights (and how the font was obtained), registry/media dependencies with provenance, director's scores after revision, validation status, kept warnings with reasons, transcript uncertainty and script differences, open fact-check items.
+The project folder, `final_reel.mp4`, `cover.png`, `CREDITS.txt` (if photos were used), `captions.srt`, `transcript.json`, `timing-map.json`, and a short report: original/final duration, removed ranges and re-takes, number of scenes, the hero moment, actual A/B ratio, fonts and weights (and how the font was obtained), registry/media dependencies with provenance, director's scores after revision, validation status, kept warnings with reasons, transcript uncertainty and script differences, open fact-check items.
 
 ## 19. Stop and report — never pretend success
 
