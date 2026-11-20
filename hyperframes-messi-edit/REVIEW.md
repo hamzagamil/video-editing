@@ -12,13 +12,23 @@
   then `snapshot --review` for seams and phone sheets (stopped early to free CPU for the render, so its
   beat sheets are partial; the rendered file was checked frame by frame at 23 key times instead).
 
-## Rendered file (`final_reel.mp4`, `--quality delivery --sdr --strict`, exit 0) — revision 2
-- 1080×1920, 30 fps, 6,576 frames, H.264 + AAC 48 kHz stereo, 219.200 s, 217.2 MB (7.9 Mb/s). About 4.2 s shorter than the first render.
-- Final mix: **−14.5 LUFS** integrated, LRA 3.2 LU, true peak **−1.1 dBTP**.
-- Black frames: per-frame luma (YAVG) scan of every frame finds **no one-frame dips** (min YAVG 98.7). The first revision render had 6 one-frame flashes at clip starts (a renderer seek bug); the presenter is now one baked, continuous clip (`tools/aroll_edit.py`), so there are no clip starts left.
-- A/V: rendered audio vs `dialogue.wav` cross-correlation lag 0 ms at 30, 100, 150 and 200 s.
-- Lean fixes checked frame by frame in the render: T15 tail (≈74.0 s), fz1 «يحصل.» (100.03 s), fz2/fz3 «تماماً.» / «المدافع» (127.37–127.87 s), the «يفترسه» cut-away (155.70–157.97 s), and the extended G6/G14 pages.
-- Left in: a short eyes-down glance on «فهمتش المعادلة» (~200.7 s); the presenter stays centred.
+## Rendered file (`final_reel.mp4`, `--quality delivery --sdr --strict`, exit 0) — revision 3
+- 1080×1920, 30 fps, 6,562 frames, H.264 + AAC 48 kHz stereo, 218.733 s, 207.9 MB (7.6 Mb/s). 0.47 s shorter than revision 2.
+- Final mix: **−14.5 LUFS** integrated, LRA 3.1 LU, sample peak **−1.2 dBFS**.
+- Black frames: per-frame luma (YAVG) scan of every frame finds **no one-frame dips** (min YAVG 98.7).
+- A/V: rendered audio vs `dialogue.wav` cross-correlation lag 0 ms.
+- Leans (reading the script, then coming back): measured with a mediapipe face tracker (nose position + head
+  pitch per frame), not by eye alone. The pattern was a lean down-left at the end of a sentence and the return
+  at the start of the next one. Fixes:
+  - page holds or earlier page starts at about 12 sentence edges (G5–G11, G14–G16);
+  - six full-screen word cards over leans that fall inside speech: «عشان ينفذها» (cw1), «أي حاجة خالص»
+    (cw2), «ميسي» (cw3, cw5), «قبل ما يحصل» (cw4), «المدافع» (cw6);
+  - one silent lean-out after «إنسان.» trimmed (`TRIM` 356.13–356.40);
+  - the fz1–fz3 freeze stills dropped: their held frames were themselves mid-lean.
+- Tracker run on the final render: no uncovered lean left. Remaining flags were checked on contact sheets and
+  are natural: hand-to-head on «عقل ميسي مش» (~94 s), short glances/blinks (~17, 31, 67, 74, 102, 126, 135,
+  138, 155 s), one-frame tracker misses at hard cuts, and the 190.7–194.2 s push-in on «عبقرية اتولدت في
+  جسم إنسان» (face off-centre because of the crop; he is upright and on camera).
 - Cover: `cover.png` (G3 «هندسة الماتريكس», 24 s), re-exported from this render.
 
 ## Director's scores (1–5, after the revision pass)
