@@ -61,5 +61,12 @@
 **Weakest shot:** g14 — the rhythm lane reads as a game, but the falling notes are small at 360 px. With more
 time: bigger ball-notes and a short lane glow on each hit.
 
-## Rendered file
-Not rendered yet — waiting for approval of the preview.
+## Rendered file (`final_reel.mp4`, `--quality delivery --sdr --strict`, exit 0)
+- 1080×1920, 30 fps, 6,562 frames, H.264 + AAC, 218.733 s, 187.9 MB.
+- Final mix: **−14.5 LUFS** integrated, LRA 3.1 LU, sample peak **−1.0 dBFS**.
+- Black frames: per-frame luma scan finds **no one-frame dips** (min YAVG 40.5: the dark game screens).
+- A/V: rendered audio vs `dialogue.wav` cross-correlation lag 0 ms at 30, 100, 150 and 200 s.
+- Decoded frames checked at 25 key times (opening tag, every `cw` flash, fog reveal, title, radar photo, aim
+  assist, LAG, the touch flash and toast, wrong answer, stadium, rhythm, idle, «عبقرية», achievement, select,
+  credits): all screens render as snapshotted, Arabic shaping and dots intact, no stale frames.
+- Cover: `cover.png` (g3 title screen with the P1 portrait, 26.3 s).
