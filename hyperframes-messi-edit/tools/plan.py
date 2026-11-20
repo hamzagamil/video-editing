@@ -58,13 +58,11 @@ TAKES = [
 
 # Leans that overlap speech: (source from, source to, clean source frame held over them). Video only.
 FREEZE = [
-    (355.83, 356.13, 355.80),  # tail of «يحصل.» (T20)
     (450.17, 450.40, 450.13),  # tail of «تماماً.» (T26)
-    (473.77, 474.03, 474.07),  # onset of «المدافع» (T27)
 ]
 
 # Source spans removed by hand: the lean continues after the last word, in silence.
-TRIM = [(261.03, 261.40), (264.38, 264.45), (356.13, 356.40)]
+TRIM = [(261.03, 261.40), (264.38, 264.45), (356.13, 356.40), (682.45, 682.90)]
 
 # Whisper spelling -> what was said (checked against the audio context; Egyptian spelling kept)
 SPELL = {
@@ -116,20 +114,26 @@ SCENES = [
     ("g3", "g3-title.html", ("w", 45, L), ("w", 52, L), "Title page: هندسة الماتريكس (p2)"),
     ("o1", "o1-study.html", ("w", 56, -0.05), ("w", 59, L), "Card: studied (p4)", "overlay"),
     ("g4", "g4-scan.html", ("w", 59, L), ("w", 75, L), "The scanner (p3)"),
-    ("g5", "g5-calc.html", ("w", 83, L), ("w", 99, L), "Three measurements"),
-    ("g6", "g6-future.html", ("w", 105, L), ("w", 126, 0.47), "Sees the future (holds over his lean back into frame)"),
-    ("g7", "g7-plan.html", ("w", 137, L), ("w", 144, L), "A plan, then executed"),
-    ("g8", "g8-chain.html", ("w", 150, L), ("w", 163, L), "The ordinary defender's chain"),
+    ("g5", "g5-calc.html", ("w", 83, L), ("w", 99, -0.005), "Three measurements"),
+    ("g6", "g6-future.html", ("w", 105, L), ("w", 126, 0.68), "Sees the future (holds over his lean back into frame)"),
+    ("g7", "g7-plan.html", ("w", 137, L), ("w", 145, 0.07), "A plan, then executed (holds over his lean back)"),
+    ("g8", "g8-chain.html", ("w", 150, L), ("w", 163, -0.005), "The ordinary defender's chain"),
     ("o2", "o2-timer.html", ("w", 166, -0.05), ("w", 175, L), "Card: 0.3-0.4 s", "overlay"),
-    ("g9", "g9-feint.html", ("w", 212, L), ("w", 231, L), "Shoulder feint, 99%"),
-    ("g10", "g10-lag.html", ("w", 245, L), ("w", 258, L), "The broken machine"),
-    ("g11", "g11-trap.html", ("w", 276, L), ("w", 285, L), "The trap (p5)"),
+    ("cw1", "cw1-tanfiz.html", ("w", 174, -0.03), ("w", 175, 0.07), "Cut-away «عشان ينفذها» (covers a lean)"),
+    ("cw2", "cw2-khales.html", ("w", 183, -0.02), ("w", 186, 0.0), "Cut-away «أي حاجة خالص بالنسبة له» (covers a lean)"),
+    ("cw3", "cw3-messi.html", ("w", 196, L), ("w", 196, 0.36), "Cut-away «ميسي» (covers a lean)"),
+    ("cw4", "cw4-yehsal.html", ("w", 205, 0.0), ("w", 206, 0.2), "Cut-away «قبل ما يحصل» (covers a lean)"),
+    ("g9", "g9-feint.html", ("w", 212, L), ("w", 231, -0.005), "Shoulder feint, 99%"),
+    ("cw5", "cw5-messi.html", ("w", 237, L), ("w", 237, 0.3), "Cut-away «ميسي» (covers a lean)"),
+    ("g10", "g10-lag.html", ("w", 245, L), ("w", 258, 0.42), "The broken machine (holds over his lean back)"),
+    ("cw6", "cw6-defender.html", ("w", 269, L), ("w", 269, 0.77), "Cut-away «المدافع» (covers a lean)"),
+    ("g11", "g11-trap.html", ("w", 276, -0.25), ("w", 285, L), "The trap (p5)"),
     ("g12", "g12-touch.html", ("w", 293, L), ("w", 307, L), "The touch - hero (p6)"),
     ("gp", "gp-pounce.html", ("w", 327, L), ("w", 329, L), "Cut-away: «عشان يفترسه» (covers a lean)"),
     ("g13", "g13-equation.html", ("w", 329, L), ("w", 343, L), "An equation on a board"),
-    ("g14", "g14-music.html", ("w", 350, L), ("w", 367, 0.27), "The only musician (holds over his lean back into frame)"),
-    ("g15", "g15-sleep.html", ("w", 382, L), ("w", 389, L), "The ball sleeps (p7)"),
-    ("g16", "g16-founder.html", ("w", 416, L), ("w", 423, L), "Founder (title callback)"),
+    ("g14", "g14-music.html", ("w", 350, L), ("w", 367, 0.6), "The only musician (holds over his lean back into frame)"),
+    ("g15", "g15-sleep.html", ("w", 382, -0.24), ("w", 389, -0.005), "The ball sleeps (p7)"),
+    ("g16", "g16-founder.html", ("w", 416, -0.2), ("w", 423, 0.25), "Founder (title callback)"),
     ("g17", "g17-cta.html", ("w", 426, L), CLOSING_AT, "CTA: video game / NPCs"),
     ("g18", "g18-closing.html", CLOSING_AT, ("speech_end", 0.5 + 5.333 + 1.3), "Closing verse (p8)"),
 ]
@@ -157,13 +161,13 @@ CAPTIONS = [
     [75, 76], [77, 78], [79, 80, 81, 82],
     [99, 100], [101, 102, 103, 104],
     [127, 128, 129], [130, 131, 132], [133, 134], [135, 136],
-    [144, 145], [146, 147, 148], [149],
+    [145], [146, 147, 148], [149],
     [163, 164, 165], [166, 167, 168, 169, 170], [171, 172], [173, 174], [175, 176, 177], [178, 179, 180],
-    [181, 182, 183], [184, 185],
-    [186, 187, 188], [189, 190, 191], [192, 193], [194, 195], [196, 197, 198], [199], [200, 201, 202],
-    [203, 204, 205], [206, 207, 208], [209, 210, 211],
-    [231, 232, 233], [234, 235, 236], [237, 238], [239, 240], [241, 242], [243, 244],
-    [258, 259], [260, 261, 262], [263, 264, 265], [266, 267, 268], [269, 270, 271], [272, 273, 274, 275],
+    [181, 182, 183],
+    [186, 187, 188], [189, 190, 191], [192, 193], [194, 195], [197, 198], [199], [200, 201, 202],
+    [203, 204, 205], [207, 208], [209, 210, 211],
+    [231, 232, 233], [234, 235, 236], [238], [239, 240], [241, 242], [243, 244],
+    [259], [260, 261, 262], [263, 264, 265], [266, 267, 268], [270, 271], [272, 273, 274, 275],
     [285, 286], [287, 288, 289], [290, 291, 292],
     [307, 308, 309, 310], [311, 312, 313], [314, 315], [316, 317], [318], [319, 320, 321], [322, 323],
     [324, 325, 326],
@@ -171,7 +175,7 @@ CAPTIONS = [
     [368, 369], [370, 371], [372, 373], [374, 375], [376, 377, 378], [379, 380], [381],
     [389, 390, 391, 392], [393, 394], [395], [396, 397, 398, 399],
     [400, 401, 402], [403, 404, 405], [406, 407, 408, 409], [410, 411, 412, 413], [414, 415],
-    [423, 424, 425],
+    [424, 425],
 ]
 CAPTION_TEXT = {22: "80%", 378: "الكورة", 79: "الكورة"}
 # one highlight per group: o = warm, s = sky (the future), g = «عبقرية» (warm + gold underline)

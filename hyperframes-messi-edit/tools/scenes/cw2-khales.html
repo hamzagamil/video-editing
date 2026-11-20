@@ -1,0 +1,14 @@
+<!--STYLE-->
+#{{ID}}-k { top: 640px; font-size: 72px; font-weight: 800; color: var(--ink-soft); }
+#{{ID}}-h { top: 740px; font-size: 200px; }
+#{{ID}}-s { top: 1010px; font-size: 64px; font-weight: 800; color: var(--ink-soft); }
+<!--/STYLE-->
+    <div id="{{ID}}-s" class="kicker"><span class="w">بالنسبة له</span></div>
+    <div id="{{ID}}-k" class="kicker"><span class="w">أي حاجة</span></div>
+    <div id="{{ID}}-h" class="hero"><span class="mask"><span class="in warm">خالص</span></span></div>
+  <script>
+  // a short cut-away while the line is said (covers the presenter leaning to read the script)
+  bin("#{{ID}}-k .w", 0);
+  rise("#{{ID}}-h .in", 0, 0.26);
+  bin("#{{ID}}-s .w", {{w:184}});
+  </script>
