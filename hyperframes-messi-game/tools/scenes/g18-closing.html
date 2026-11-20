@@ -1,0 +1,30 @@
+<!--STYLE-->
+#g18-px { position:absolute; left: 0; right: 0; top: 282px; text-align: center; font-size: 28px; color: var(--gold); }
+#g18-l1 { top: 330px; font-size: 82px; }
+#g18-l2 { top: 460px; font-size: 82px; }
+#g18-by { top: 600px; font-size: 50px; font-weight: 800; color: var(--text-dim); }
+#g18-card { left: 170px; top: 740px; width: 740px; height: 500px; }
+#g18-cta { top: 1300px; font-size: 46px; font-weight: 800; }
+<!--/STYLE-->
+    <div id="g18-px" class="px">CREDITS</div>
+    <div id="g18-l1" class="hero"><span class="mask"><span class="in">بلغة الغناء أنت <span class="p1c">موّال</span></span></span></div>
+    <div id="g18-l2" class="hero"><span class="mask"><span class="in">وبلغة الشعر أنت <span class="p1c">قافية</span></span></span></div>
+    <div id="g18-by" class="hero"><span class="w">— عصام الشوالي</span></div>
+    <div id="g18-card" class="card"><span class="tag gold">P1</span><img id="g18-ph" src="assets/photos/p8-celebration.jpg" alt="" style="object-position:50% 30%" data-color-grading='{{grade}}'></div>
+    <svg viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      <rect id="g18-gold" x="150" y="572" width="236" height="12" fill="#FFC845"/>
+      {{spr:star:g18-s1:110:700:8}}
+      {{spr:star:g18-s2:900:1180:8}}
+    </svg>
+    <div id="g18-cta" class="hero"><span class="w">اكتب في الكومنتات: <span class="p1c">ضد مين؟</span></span></div>
+  <script>
+  // timed to the commentary clip (scene starts on its first word)
+  bin("#g18-px", 0);
+  rise("#g18-l1 .in", 0);
+  card("#g18-card", 0);
+  bin("#g18-by .w", 1.2);
+  rise("#g18-l2 .in", {{cv:2.78}});
+  bin("#g18-cta .w", {{cv:3.0}});
+  tl.fromTo("#g18-gold", { scaleX: 0, transformOrigin: "100% 50%" }, { scaleX: 1, duration: 0.3, ease: "steps(6)" }, {{cv:4.55}});
+  pop("#g18-s1", {{cv:4.55}}, 0.16); pop("#g18-s2", {{cv:4.65}}, 0.16);
+  </script>

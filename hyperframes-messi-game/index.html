@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>ميسي: اللاعب رقم 1</title>
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+@font-face{font-family:'Cairo';font-style:normal;font-weight:400;font-display:block;src:url('assets/fonts/cairo-arabic-400-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:400;font-display:block;src:url('assets/fonts/cairo-latin-400-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:600;font-display:block;src:url('assets/fonts/cairo-arabic-600-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:600;font-display:block;src:url('assets/fonts/cairo-latin-600-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:700;font-display:block;src:url('assets/fonts/cairo-arabic-700-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:700;font-display:block;src:url('assets/fonts/cairo-latin-700-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:800;font-display:block;src:url('assets/fonts/cairo-arabic-800-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:800;font-display:block;src:url('assets/fonts/cairo-latin-800-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:900;font-display:block;src:url('assets/fonts/cairo-arabic-900-normal.woff2') format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;}
+@font-face{font-family:'Cairo';font-style:normal;font-weight:900;font-display:block;src:url('assets/fonts/cairo-latin-900-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'PS2P';font-style:normal;font-weight:400;font-display:block;src:url('assets/fonts/press-start-2p-latin-400-normal.woff2') format('woff2');}
+
+      :root { --bg:#0E1424; --bg-2:#162036; --grid:#22304D; --pitch:#1E5A36; --pitch-2:#246B40; --line:#D9F2E4; --p1:#FF7A1A; --p1-dark:#C2540A; --npc:#8A93A8; --npc-dark:#4A5268; --future:#46D7FF; --future-dark:#1B8FB3; --gold:#FFC845; --alert:#FF4D5E; --text:#FFF6E5; --text-dim:#AEB7C9; }
+      * { margin:0; padding:0; box-sizing:border-box; }
+      html, body { width:1080px; height:1920px; overflow:hidden; background:#0E1424; }
+      #root { position:relative; width:1080px; height:1920px; overflow:hidden; background:#0E1424; }
+      #aroll-cam { position:absolute; left:0; top:0; width:1080px; height:1920px; z-index:1; }
+      #aroll-cam video { position:absolute; left:0; top:0; width:1080px; height:1920px; object-fit:cover; }
+      .scene-host { position:absolute; inset:0; }
+      #captions { z-index:5; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="218.7333" data-fps="30"
+         data-width="1080" data-height="1920">
+      <!-- World A: presenter. Untimed camera wrapper (crop states) around the timed source ranges (graded SDR proxy). -->
+      <div id="aroll-cam">
+        <video id="aroll" class="clip aroll" src="assets/media/aroll_edit.mp4" data-start="0" data-duration="211.6" data-media-start="0" muted playsinline preload="auto" data-track-index="0"></video>
+      </div>
+      <!-- Dialogue: the same retained ranges, processed to -14 LUFS (tools/audio.py) -->
+      <audio id="dialogue" class="clip" src="assets/media/dialogue.wav" data-start="0" data-duration="211.6" data-volume="1" data-track-index="1"></audio>
+      <!-- Word-timed captions (presenter windows only) -->
+      <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html"
+           data-start="0" data-duration="211.6" data-track-index="3" data-track-kind="captions"
+           data-width="1080" data-height="1920"></div>
+      <!-- World B: full-screen game screens, plus overlay cards over the presenter -->
+      <div id="o00" class="scene-host" data-composition-id="o00" data-composition-src="compositions/o00-p1tag.html" data-start="0.0" data-duration="1.5667" data-track-index="5" data-track-kind="graphics" data-width="1080" data-height="1920" title="Opening: P1 tag over his head" style="z-index:7"></div>
+      <div id="g1" class="scene-host" data-composition-id="g1" data-composition-src="compositions/g1-nolook.html" data-start="1.5667" data-duration="7.1666" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="No-look pass + achievement" style="z-index:10"></div>
+      <div id="o0" class="scene-host" data-composition-id="o0" data-composition-src="compositions/o0-walk.html" data-start="9.1" data-duration="2.7333" data-track-index="5" data-track-kind="graphics" data-width="1080" data-height="1920" title="Player card (p1)" style="z-index:7"></div>
+      <div id="g2" class="scene-host" data-composition-id="g2" data-composition-src="compositions/g2-map.html" data-start="11.8333" data-duration="3.2667" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Fog of war: the map clears" style="z-index:10"></div>
+      <div id="g3" class="scene-host" data-composition-id="g3" data-composition-src="compositions/g3-title.html" data-start="20.5" data-duration="5.9667" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Title screen + P1 portrait (p2)" style="z-index:10"></div>
+      <div id="o1" class="scene-host" data-composition-id="o1" data-composition-src="compositions/o1-study.html" data-start="29.8333" data-duration="2.2334" data-track-index="5" data-track-kind="graphics" data-width="1080" data-height="1920" title="Scout card (p4)" style="z-index:7"></div>
+      <div id="g4" class="scene-host" data-composition-id="g4" data-composition-src="compositions/g4-scan.html" data-start="32.0667" data-duration="9.5333" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Radar (p3)" style="z-index:10"></div>
+      <div id="g5" class="scene-host" data-composition-id="g5" data-composition-src="compositions/g5-calc.html" data-start="45.0667" data-duration="7.9" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Target lock x3" style="z-index:10"></div>
+      <div id="g6" class="scene-host" data-composition-id="g6" data-composition-src="compositions/g6-future.html" data-start="54.7333" data-duration="10.0" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Aim assist: the future (holds over a lean)" style="z-index:10"></div>
+      <div id="g7" class="scene-host" data-composition-id="g7" data-composition-src="compositions/g7-plan.html" data-start="68.2" data-duration="4.2" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Move list loaded, then executed (holds over a lean)" style="z-index:10"></div>
+      <div id="g8" class="scene-host" data-composition-id="g8" data-composition-src="compositions/g8-chain.html" data-start="74.6" data-duration="9.3333" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="NPC processing" style="z-index:10"></div>
+      <div id="o2" class="scene-host" data-composition-id="o2" data-composition-src="compositions/o2-timer.html" data-start="85.6" data-duration="3.8333" data-track-index="5" data-track-kind="graphics" data-width="1080" data-height="1920" title="Loading card 0.3-0.4 s" style="z-index:7"></div>
+      <div id="cw1" class="scene-host" data-composition-id="cw1" data-composition-src="compositions/cw1-tanfiz.html" data-start="88.8" data-duration="0.7333" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Cut-away «عشان ينفذها» (covers a lean)" style="z-index:10"></div>
+      <div id="cw2" class="scene-host" data-composition-id="cw2" data-composition-src="compositions/cw2-khales.html" data-start="91.7333" data-duration="0.5667" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Cut-away «أي حاجة خالص بالنسبة له» (covers a lean)" style="z-index:10"></div>
+      <div id="cw3" class="scene-host" data-composition-id="cw3" data-composition-src="compositions/cw3-messi.html" data-start="96.0333" data-duration="0.4" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Cut-away «ميسي» (covers a lean)" style="z-index:10"></div>
+      <div id="cw4" class="scene-host" data-composition-id="cw4" data-composition-src="compositions/cw4-yehsal.html" data-start="99.8667" data-duration="0.6666" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Cut-away «قبل ما يحصل» (covers a lean)" style="z-index:10"></div>
+      <div id="g9" class="scene-host" data-composition-id="g9" data-composition-src="compositions/g9-feint.html" data-start="102.9333" data-duration="6.8" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Shoulder feint, 99%" style="z-index:10"></div>
+      <div id="cw5" class="scene-host" data-composition-id="cw5" data-composition-src="compositions/cw5-messi.html" data-start="111.5" data-duration="0.4" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Cut-away «ميسي» (covers a lean)" style="z-index:10"></div>
+      <div id="g10" class="scene-host" data-composition-id="g10" data-composition-src="compositions/g10-lag.html" data-start="116.0" data-duration="7.1667" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="LAG (holds over a lean)" style="z-index:10"></div>
+      <div id="cw6" class="scene-host" data-composition-id="cw6" data-composition-src="compositions/cw6-defender.html" data-start="127.5667" data-duration="0.8" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Cut-away «المدافع» (covers a lean)" style="z-index:10"></div>
+      <div id="g11" class="scene-host" data-composition-id="g11" data-composition-src="compositions/g11-trap.html" data-start="130.6667" data-duration="4.4333" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="The trap + safe zone (p5)" style="z-index:10"></div>
+      <div id="g12" class="scene-host" data-composition-id="g12" data-composition-src="compositions/g12-touch.html" data-start="138.7333" data-duration="6.1667" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="The touch - hero (p6)" style="z-index:10"></div>
+      <div id="gp" class="scene-host" data-composition-id="gp" data-composition-src="compositions/gp-pounce.html" data-start="155.7" data-duration="2.2667" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Cut-away: «عشان يفترسه» (covers a lean)" style="z-index:10"></div>
+      <div id="g13" class="scene-host" data-composition-id="g13" data-composition-src="compositions/g13-equation.html" data-start="157.9667" data-duration="8.1333" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Equation on a pixel board + stadium" style="z-index:10"></div>
+      <div id="g14" class="scene-host" data-composition-id="g14" data-composition-src="compositions/g14-music.html" data-start="168.0333" data-duration="9.6" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Rhythm lane (holds over a lean)" style="z-index:10"></div>
+      <div id="g15" class="scene-host" data-composition-id="g15" data-composition-src="compositions/g15-sleep.html" data-start="183.9667" data-duration="4.8666" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Idle: the ball sleeps (p7)" style="z-index:10"></div>
+      <div id="g16" class="scene-host" data-composition-id="g16" data-composition-src="compositions/g16-founder.html" data-start="200.5333" data-duration="3.9334" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Achievement unlocked: founder" style="z-index:10"></div>
+      <div id="g17" class="scene-host" data-composition-id="g17" data-composition-src="compositions/g17-cta.html" data-start="205.2667" data-duration="6.8333" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="Character select CTA" style="z-index:10"></div>
+      <div id="g18" class="scene-host" data-composition-id="g18" data-composition-src="compositions/g18-closing.html" data-start="212.1" data-duration="6.6333" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" title="End credits: closing verse (p8)" style="z-index:10"></div>
+      <!-- SFX (Pixabay, prepared in ../sfx/prepared) -->
+      <audio id="sfx-future1" class="clip" src="assets/sfx/04-reverse.wav" data-start="59.3" data-duration="1.62" data-volume="0.2512" data-track-index="7"></audio>
+      <audio id="sfx-clock" class="clip" src="assets/sfx/06-clock.wav" data-start="85.5333" data-duration="3.9" data-volume="0.4467" data-track-index="7" data-fade-out="0.02"></audio>
+      <audio id="sfx-future2" class="clip" src="assets/sfx/04-reverse.wav" data-start="106.0333" data-duration="1.62" data-volume="0.2512" data-track-index="7"></audio>
+      <audio id="sfx-heart1" class="clip" src="assets/sfx/08-heartbeat.wav" data-start="131.0667" data-duration="4.5" data-volume="0.3981" data-track-index="7" data-fade-out="0.05"></audio>
+      <audio id="sfx-heart2" class="clip" src="assets/sfx/08-heartbeat.wav" data-start="135.5667" data-duration="3.1333" data-volume="0.3981" data-track-index="7" data-fade-out="0.08"></audio>
+      <audio id="sfx-tap" class="clip" src="assets/sfx/09-tap.wav" data-start="139.3" data-duration="0.36" data-volume="0.3548" data-track-index="7"></audio>
+      <audio id="sfx-impact" class="clip" src="assets/sfx/10-impact.wav" data-start="139.4" data-duration="3.0" data-volume="0.5012" data-track-index="8"></audio>
+      <audio id="sfx-roar" class="clip" src="assets/sfx/11-roar.wav" data-start="139.4333" data-duration="2.5" data-volume="0.3548" data-track-index="9"></audio>
+      <audio id="sfx-crowd" class="clip" src="assets/sfx/15-crowd-far.wav" data-start="184.1667" data-duration="27.9333" data-volume="0.2512" data-track-index="7" data-fade-in="2" data-fade-out="0.5"></audio>
+      <audio id="sfx-plan" class="clip" src="assets/sfx/click-soft.mp3" data-start="71.7" data-duration="0.36" data-volume="0.1995" data-track-index="7"></audio>
+      <audio id="sfx-stamp" class="clip" src="assets/sfx/ui-up.wav" data-start="201.4333" data-duration="0.3" data-volume="0.1585" data-track-index="8"></audio>
+      <audio id="ui-ach1" class="clip" src="assets/sfx/ui-up.wav" data-start="4.8667" data-duration="0.3" data-volume="0.1413" data-track-index="7"></audio>
+      <audio id="ui-ach2" class="clip" src="assets/sfx/ui-up.wav" data-start="140.3333" data-duration="0.3" data-volume="0.1413" data-track-index="7"></audio>
+      <audio id="ui-lag" class="clip" src="assets/sfx/ui-lag.wav" data-start="118.9667" data-duration="0.5" data-volume="0.1" data-track-index="7"></audio>
+      <audio id="ui-select" class="clip" src="assets/sfx/ui-select.wav" data-start="209.3333" data-duration="0.18" data-volume="0.1585" data-track-index="8"></audio>
+      <audio id="sfx-bubble" class="clip" src="assets/sfx/pop.mp3" data-start="211.7667" data-duration="0.36" data-volume="0.1585" data-track-index="8"></audio>
+      <!-- Closing commentary clip (user-supplied) -->
+      <audio id="closing-vo" class="clip" src="assets/sfx/17-chawali.wav" data-start="212.1" data-duration="5.333" data-volume="0.8913" data-track-index="6"></audio>
+    </div>
+    <script>
+  window.__timelines = window.__timelines || {};
+  const tl = gsap.timeline({ paused: true });
+  const cam = document.getElementById("aroll-cam");
+  tl.set(cam, { transformOrigin: "50% 35%", scale: 1 }, 0);
+  tl.fromTo(cam, { scale: 1 }, { scale: 1.12, duration: 0.7, ease: "expo.out" }, 0);
+  tl.set(cam, { scale: 1.0 }, 8.2667);
+  tl.set(cam, { scale: 1.08 }, 15.1);
+  tl.set(cam, { scale: 1.15 }, 17.8333);
+  tl.set(cam, { scale: 1.0 }, 26.4667);
+  tl.set(cam, { scale: 1.08 }, 41.6);
+  tl.set(cam, { scale: 1.0 }, 52.9333);
+  tl.set(cam, { scale: 1.08 }, 64.0333);
+  tl.set(cam, { scale: 1.15 }, 72.0667);
+  tl.set(cam, { scale: 1.0 }, 83.9);
+  tl.set(cam, { scale: 1.08 }, 89.4333);
+  tl.set(cam, { scale: 1.0 }, 92.2667);
+  tl.set(cam, { scale: 1.08 }, 96.0333);
+  tl.set(cam, { scale: 1.08 }, 109.7);
+  tl.set(cam, { scale: 1.15 }, 111.5);
+  tl.set(cam, { scale: 1.0 }, 122.7);
+  tl.set(cam, { scale: 1.08 }, 127.5667);
+  tl.set(cam, { scale: 1.15 }, 135.1);
+  tl.set(cam, { scale: 1.08 }, 144.9);
+  tl.set(cam, { scale: 1.0 }, 151.1);
+  tl.set(cam, { scale: 1.08 }, 166.1);
+  tl.set(cam, { scale: 1.0 }, 177.0);
+  tl.set(cam, { scale: 1.08 }, 179.6);
+  tl.set(cam, { scale: 1.15 }, 188.8);
+  tl.set(cam, { scale: 1.0 }, 194.1667);
+  tl.set(cam, { scale: 1.08 }, 199.3);
+  tl.set(cam, { scale: 1.08 }, 204.1667);
+  tl.set({}, {}, 218.7333);
+  window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

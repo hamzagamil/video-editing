@@ -1,0 +1,44 @@
+<!--STYLE-->
+#g11-box { left: 120px; right: 120px; top: 372px; height: 240px; padding-top: 16px; }
+#g11-k { font-size: 54px; }
+.g11-h { position:absolute !important; left: 0 !important; right: 0 !important; top: 98px; font-size: 74px; }
+#g11-view { top: 680px; height: 620px; }
+#g11-card { left: 160px; top: 740px; width: 760px; height: 506px; }
+#g11-safe-l { position:absolute; left: 160px; top: 1218px; font-size: 44px; font-weight: 800; color: var(--future); text-shadow: 4px 4px 0 #05080F; opacity: 0; }
+<!--/STYLE-->
+    <div class="hud"><span class="tag p1t">P1</span><span class="tag dark mode">TRAP</span></div>
+    <div id="g11-box" class="box">
+      <div id="g11-k" class="kicker"><span class="w">ميسي بيمشي ببطء</span></div>
+      <div id="g11-ha" class="hero g11-h"><span class="w">بيخلي المدافع</span> <span class="w npcc">يقرب منه</span></div>
+      <div id="g11-hb" class="hero g11-h"><span class="mask"><span class="in">وبيحس <span class="fut">بالأمان</span></span></span></div>
+    </div>
+    <div id="g11-view" class="view">
+      <svg viewBox="0 0 920 620" width="920" height="620" aria-hidden="true">
+        <rect x="0" y="306" width="920" height="8" fill="#D9F2E4" opacity=".5"/>
+        {{ring:g11-safe:250:300:120:#46D7FF:12}}
+        <g id="g11-npcw">{{spr:player:g11-npc:-60:250:8:npc}}</g>
+        <g id="g11-me">{{spr:player:g11-p1:720:250:8:p1}}</g>
+        <g id="g11-bm">{{spr:ball:g11-ball:700:330:8}}</g>
+      </svg>
+    </div>
+    <div id="g11-safe-l">منطقة الأمان</div>
+    <div id="g11-card" class="card"><span class="tag npc" style="left:12px;right:auto">NPC</span><img id="g11-ph" src="assets/photos/p5-trap.jpg" alt="" style="object-position:50% 45%" data-color-grading='{{grade}}'></div>
+  <script>
+  bin("#g11-k .w", 0);
+  bin("#g11-ha .w:nth-child(1)", {{k:g11_lets}});
+  bin("#g11-ha .w:nth-child(2)", {{k:g11_near}});
+  off("#g11-ha", {{k:g11_feels}} - 0.07);
+  rise("#g11-hb .in", {{k:g11_feels}} - 0.02);
+  // P1 walks in slow steps toward the left; the NPC closes in
+  step("#g11-me", 0, { x: -300 }, {{D}}, Math.round({{D}} * 4));
+  step("#g11-bm", 0, { x: -300 }, {{D}}, Math.round({{D}} * 4));
+  step("#g11-npcw", {{k:g11_lets}}, { x: 250 }, Math.max(0.6, {{k:g11_near}} - {{k:g11_lets}}), 6);
+  // the real moment for one beat
+  gsap.set("#g11-card", { opacity: 0 });
+  card("#g11-card", {{k:g11_near}} - 0.03);
+  off("#g11-card", {{k:g11_feels}} - 0.1);
+  // a calm safe circle forms around the defender
+  gsap.set("#g11-safe > *", { opacity: 0 });
+  seq("#g11-safe > *", {{k:g11_feels}}, 0.5);
+  tl.set("#g11-safe-l", { opacity: 1 }, {{k:g11_safe}});
+  </script>

@@ -1,0 +1,15 @@
+<!--STYLE-->
+#gp-box { left: 120px; right: 120px; top: 520px; height: 330px; padding-top: 24px; }
+#gp-k { font-size: 64px; }
+#gp-h { font-size: 124px; line-height: 1.05; }
+#gp-strike { position:absolute; left: 230px; width: 620px; top: 744px; height: 18px; background: var(--alert); box-shadow: 6px 6px 0 #05080F; }
+<!--/STYLE-->
+    <div id="gp-box" class="box"><div id="gp-k" class="kicker"><span class="w">عشان</span></div><div id="gp-h" class="hero"><span class="mask"><span class="in">يفترسه</span></span></div></div>
+    <div id="gp-strike"></div>
+    <svg viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">{{spr:x:gp-x:400:960:40}}</svg>
+  <script>
+  bin("#gp-k .w", 0);
+  rise("#gp-h .in", {{w:328}} - 0.04, 0.24);
+  tl.fromTo("#gp-strike", { scaleX: 0, transformOrigin: "100% 50%" }, { scaleX: 1, duration: 0.16, ease: "steps(4)" }, {{w:328}} + 0.5);
+  pop("#gp-x", {{w:328}} + 0.62, 0.16);
+  </script>

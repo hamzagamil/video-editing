@@ -1,0 +1,36 @@
+<!--STYLE-->
+#g8-box { left: 120px; right: 120px; top: 372px; height: 200px; padding-top: 22px; }
+#g8-h { font-size: 108px; }
+#g8-view { top: 640px; height: 660px; }
+.g8-l { position:absolute; width: 300px; text-align: center; top: 1010px; font-weight: 800; font-size: 44px; line-height: 1.25; color: var(--npc); text-shadow: 4px 4px 0 #05080F; }
+#g8-l1 { left: 690px; } #g8-l2 { left: 390px; } #g8-l3 { left: 90px; }
+#g8-load { position:absolute; left: 140px; top: 1112px; font-size: 28px; color: var(--npc); }
+<!--/STYLE-->
+    <div class="hud"><span class="tag npc p1t">NPC</span><span class="tag dark mode">PROCESSING</span></div>
+    <div id="g8-box" class="box npc"><div id="g8-h" class="hero"><span class="w">المدافع</span> <span class="w npcc">العادي</span></div></div>
+    <div id="g8-view" class="view dark">
+      <svg viewBox="0 0 920 660" width="920" height="660" aria-hidden="true">
+        <g id="g8-n1">{{spr:eye:g8-eye:704:120:12}}</g>
+        <g id="g8-n2">{{spr:player:g8-npc:412:96:8:npc}}</g>
+        <g id="g8-n3" fill="#8A93A8"><rect x="140" y="110" width="40" height="70"/><rect x="132" y="180" width="48" height="40"/><rect x="140" y="220" width="40" height="40"/><rect x="140" y="260" width="72" height="24"/><rect x="128" y="130" width="12" height="40" fill="#4A5268"/></g>
+        {{dash:g8-c1:680:170:540:170:#8A93A8:8:16:12}}
+        {{dash:g8-c2:390:170:240:170:#8A93A8:8:16:12}}
+        <rect x="56" y="520" width="808" height="56" fill="#0E1424" stroke="#4A5268" stroke-width="8"/>
+        <rect id="g8-bar" x="68" y="532" width="784" height="32" fill="#8A93A8"/>
+      </svg>
+    </div>
+    <div id="g8-l1" class="g8-l"><span class="w">بيشوف<br>الحركة</span></div>
+    <div id="g8-l2" class="g8-l"><span class="w">عقله بيبعت<br>إشارة</span></div>
+    <div id="g8-l3" class="g8-l"><span class="w">العضلة<br>تتحرك</span></div>
+    <div id="g8-load" class="px">LOADING...</div>
+  <script>
+  bin("#g8-h .w:nth-child(1)", 0);
+  bin("#g8-h .w:nth-child(2)", {{k:g8_ordinary}});
+  gsap.set(["#g8-n1", "#g8-n2", "#g8-n3"], { opacity: 0.3 });
+  tl.set("#g8-n1", { opacity: 1 }, {{k:g8_sees}}); bin("#g8-l1 .w", {{k:g8_sees}});
+  seq("#g8-c1 > *", {{k:g8_brain}} - 0.2, 0.9); tl.set("#g8-n2", { opacity: 1 }, {{k:g8_brain}}); bin("#g8-l2 .w", {{k:g8_signal}});
+  seq("#g8-c2 > *", {{k:g8_muscle}} - 0.1, 0.9); tl.set("#g8-n3", { opacity: 1 }, {{k:g8_moves}}); bin("#g8-l3 .w", {{k:g8_moves}});
+  // a slow loading bar, all grey: heavier and later than anything P1 does
+  tl.fromTo("#g8-bar", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 0.85, duration: Math.max(1, {{k:g8_exec}} - {{k:g8_sees}}), ease: "steps(12)" }, {{k:g8_sees}});
+  blink("#g8-load", {{k:g8_sees}}, 4, 0.8);
+  </script>

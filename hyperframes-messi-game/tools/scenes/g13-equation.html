@@ -1,0 +1,55 @@
+<!--STYLE-->
+#g13-box { left: 120px; right: 120px; top: 372px; height: 300px; padding-top: 16px; }
+#g13-k { font-size: 54px; }
+#g13-h { font-size: 112px; }
+.g13-k2 { position:absolute !important; left: 0 !important; right: 0 !important; top: 214px; font-size: 52px; }
+#g13-view { top: 740px; height: 560px; background-color: #12301F; background-image: none; }
+.g13-op { position:absolute; font-size: 40px; color: #D9F2E4; }
+<!--/STYLE-->
+    <div class="hud"><span class="tag p1t">P1</span><span class="tag dark mode">BOARD</span></div>
+    <div id="g13-box" class="box">
+      <div id="g13-k" class="kicker"><span class="w">كأنه بيكتب</span></div>
+      <div id="g13-h" class="hero"><span class="w p1c">معادلة</span> <span class="w">هندسية</span></div>
+      <div id="g13-k2a" class="kicker g13-k2"><span class="w">على سبورة</span></div>
+      <div id="g13-k2b" class="kicker g13-k2"><span class="w">وبيعلمها لكل اللي في</span> <span class="w gld">الاستاد</span></div>
+    </div>
+    <div id="g13-view" class="view">
+      <svg viewBox="0 0 920 560" width="920" height="560" aria-hidden="true">
+        <g id="g13-crowd"></g>
+        <rect x="0" y="150" width="920" height="8" fill="#D9F2E4" opacity=".35"/>
+        {{dash:g13-p1:120:470:300:330:#FF7A1A:10:22:8}}
+        {{dash:g13-p2:300:330:480:430:#FF7A1A:10:22:8}}
+        {{dash:g13-p3:480:430:660:300:#FF7A1A:10:22:8}}
+        {{dash:g13-p4:660:300:820:380:#FF7A1A:10:22:8}}
+        <g id="g13-t1">{{spr:player:g13-n1:250:380:6:npc}}</g>
+        <g id="g13-t2">{{spr:player:g13-n2:430:240:6:npc}}</g>
+        <g id="g13-t3">{{spr:player:g13-n3:610:380:6:npc}}</g>
+        <g id="g13-me">{{spr:player:g13-p1s:84:410:6:p1}}</g>
+        <g id="g13-eq" fill="#D9F2E4"><rect x="836" y="350" width="40" height="10"/><rect x="836" y="372" width="40" height="10"/></g>
+        <g id="g13-st">{{spr:star:g13-star:840:280:6}}</g>
+      </svg>
+    </div>
+  <script>
+  // pixel crowd in the stands: 4 rows that light up row by row
+  (function () {
+    const g = document.getElementById("g13-crowd"); const NS = "http://www.w3.org/2000/svg";
+    for (let r = 0; r < 4; r++) for (let c = 0; c < 38; c++) {
+      const t = document.createElementNS(NS, "rect");
+      t.setAttribute("x", 16 + c * 24 + (r % 2) * 12); t.setAttribute("y", 18 + r * 32); t.setAttribute("width", 14); t.setAttribute("height", 18);
+      t.setAttribute("fill", ["#AEB7C9", "#FFC845", "#FF9A4D", "#FFF6E5"][(c * 7 + r * 3) % 4]); t.setAttribute("class", "g13-r" + r); g.appendChild(t);
+    }
+  })();
+  bin("#g13-k .w", {{k:g13_writes}} - 0.5);
+  bin("#g13-h .w:nth-child(1)", {{k:g13_eq}}); bin("#g13-h .w:nth-child(2)", {{w:334}});
+  bin("#g13-k2a .w", {{k:g13_board}}); off("#g13-k2a", {{k:g13_teach}} - 0.07);
+  bin("#g13-k2b .w:nth-child(1)", {{k:g13_teach}}); bin("#g13-k2b .w:nth-child(2)", {{w:342}});
+  // the dribble is written stroke by stroke, the NPCs are the terms
+  const a = {{k:g13_eq}}, b = {{k:g13_board}} + 0.3, q = (b - a) / 4;
+  ["#g13-p1", "#g13-p2", "#g13-p3", "#g13-p4"].forEach((s, i) => seq(s + " > *", a + i * q, q * 0.9));
+  gsap.set(["#g13-eq", "#g13-st"], { opacity: 0 });
+  tl.set("#g13-eq", { opacity: 1 }, b); tl.set("#g13-st", { opacity: 1 }, b + 0.1); pop("#g13-st", b + 0.1, 0.16);
+  // the stadium lights up row by row on «لكل اللي في الاستاد»
+  gsap.set("#g13-crowd rect", { opacity: 0.18 });
+  const c0 = {{w:339}}, c1 = {{w:342}};
+  [3, 2, 1, 0].forEach((r, i) => tl.set(".g13-r" + r, { opacity: 1 }, c0 + (c1 - c0) * i / 3));
+  </script>

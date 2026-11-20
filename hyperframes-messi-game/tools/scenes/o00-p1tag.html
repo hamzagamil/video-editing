@@ -1,0 +1,15 @@
+<!--STYLE-->
+#o00-tag { left: 488px; top: 236px; font-size: 34px; padding: 14px 16px 12px; }
+#o00-svg { left: 0; top: 0; }
+<!--/STYLE-->
+    <span id="o00-tag" class="tag">P1</span>
+    <svg id="o00-svg" viewBox="0 0 1080 1920" width="1080" height="1920" aria-hidden="true">
+      <g id="o00-arr" fill="#FF7A1A"><rect x="516" y="306" width="40" height="8"/><rect x="524" y="314" width="24" height="8"/><rect x="532" y="322" width="8" height="8"/></g>
+    </svg>
+  <script>
+  pop("#o00-tag", 0.12);
+  pop("#o00-arr", 0.16);
+  tl.fromTo("#o00-arr", { y: 0 }, { y: 8, duration: 0.6, ease: "steps(2)", immediateRender: false }, 0.5);
+  off("#o00-tag", {{D}} - 0.07);
+  off("#o00-arr", {{D}} - 0.07);
+  </script>

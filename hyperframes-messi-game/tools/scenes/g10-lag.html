@@ -1,0 +1,46 @@
+<!--STYLE-->
+#g10-box { left: 120px; right: 120px; top: 372px; height: 300px; padding-top: 16px; }
+#g10-k { font-size: 54px; }
+#g10-ha { position:absolute !important; left: 0 !important; right: 0 !important; top: 96px; font-size: 92px; }
+#g10-hb { position:absolute !important; left: 0 !important; right: 0 !important; top: 86px; font-size: 120px; }
+#g10-view { top: 740px; height: 560px; }
+#g10-lag { left: 220px; top: 960px; font-size: 30px; opacity: 0; }
+<!--/STYLE-->
+    <div class="hud"><span class="tag p1t">P1</span><span class="tag red mode">LAG</span></div>
+    <div id="g10-box" class="box red">
+      <div id="g10-k" class="kicker"><span class="w">زي الآلة المكسورة</span></div>
+      <div id="g10-ha" class="hero"><span class="w">بيحاول يلحق</span> <span class="w p1c">ميسي</span></div>
+      <div id="g10-hb" class="hero"><span class="mask"><span class="in"><span class="red">متأخر</span> بخطوة</span></span></div>
+    </div>
+    <div id="g10-view" class="view">
+      <svg viewBox="0 0 920 560" width="920" height="560" aria-hidden="true">
+        <rect x="0" y="276" width="920" height="8" fill="#D9F2E4" opacity=".5"/>
+        <g id="g10-sig">
+          <rect id="g10-s1" x="40" y="70" width="18" height="24" fill="#46D7FF"/><rect id="g10-s2" x="66" y="58" width="18" height="36" fill="#46D7FF"/>
+          <rect id="g10-s3" x="92" y="46" width="18" height="48" fill="#46D7FF"/><rect id="g10-s4" x="118" y="34" width="18" height="60" fill="#46D7FF"/>
+        </g>
+        <g id="g10-g1" opacity=".22">{{spr:player:g10-n1:60:260:8:npc}}</g>
+        <g id="g10-g2" opacity=".38">{{spr:player:g10-n2:60:260:8:npc}}</g>
+        <g id="g10-npc">{{spr:player:g10-n:60:260:8:npc}}</g>
+        <g id="g10-me">{{spr:player:g10-p1:260:260:8:p1}}</g>
+      </svg>
+    </div>
+    <span id="g10-lag" class="tag red">LAG</span>
+  <script>
+  bin("#g10-k .w", {{k:g10_machine}} - 0.6);
+  bin("#g10-ha .w:nth-child(1)", {{k:g10_catch}} - 0.6);
+  bin("#g10-ha .w:nth-child(2)", {{w:253}});
+  off("#g10-ha", {{k:g10_late}} - 0.07);
+  rise("#g10-hb .in", {{k:g10_late}} - 0.02);
+  // P1 glides at a steady 12 steps a second...
+  step("#g10-me", 0.2, { x: 480 }, 6.4, 77);
+  // ...the NPC jumps late, in heavy chunks, its ghosts a step behind
+  const jumps = [[1.2, 90], [2.3, 170], [3.2, 230], [4.1, 300], [5.0, 360], [6.0, 420]];
+  jumps.forEach(([t, x]) => { tl.set("#g10-npc", { x: x }, t); tl.set("#g10-g2", { x: x - 30 }, t + 0.1); tl.set("#g10-g1", { x: x - 60 }, t + 0.2); });
+  // the connection drops bar by bar
+  [["#g10-s4", {{k:g10_machine}}], ["#g10-s3", {{k:g10_catch}}], ["#g10-s2", {{k:g10_always}}]].forEach(([s, t]) => tl.set(s, { fill: "#FF4D5E", opacity: 0.25 }, t));
+  tl.set("#g10-s1", { fill: "#FF4D5E" }, {{k:g10_always}});
+  tl.set("#g10-lag", { opacity: 1 }, {{k:g10_catch}});
+  blink("#g10-lag", {{k:g10_catch}} + 0.1, 3, 0.4);
+  tl.fromTo("#g10-lag", { x: 0 }, { x: 330, duration: 4, ease: "steps(6)", immediateRender: false }, {{k:g10_catch}});
+  </script>

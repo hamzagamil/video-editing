@@ -1,0 +1,13 @@
+<!--STYLE-->
+#o1-card { left: 612px; top: 236px; width: 380px; height: 250px; }
+#o1-lbl { position:absolute; left: 612px; width: 380px; top: 512px; text-align: center; font-size: 44px; font-weight: 800; color: var(--text);
+  text-shadow: 4px 4px 0 #0A0F1C; }
+<!--/STYLE-->
+    <div id="o1-card" class="card"><span class="tag dark">SCOUT</span><img id="o1-ph" src="assets/photos/p4-study.jpg" alt="" style="object-position:28% 50%" data-color-grading='{{grade}}'></div>
+    <div id="o1-lbl"><span class="p1c">◀</span> ميسي</div>
+  <script>
+  card("#o1-card", 0);
+  bin("#o1-lbl", 0.1);
+  off("#o1-card", Math.min({{D}} - 0.07, 1.1));
+  off("#o1-lbl", Math.min({{D}} - 0.07, 1.1));
+  </script>

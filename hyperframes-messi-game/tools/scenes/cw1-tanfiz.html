@@ -1,0 +1,14 @@
+<!--STYLE-->
+#cw1-box { left: 120px; right: 120px; top: 470px; height: 240px; padding-top: 26px; }
+#cw1-h { font-size: 128px; }
+#cw1-track { position:absolute; left: 290px; width: 500px; top: 1250px; height: 48px; background:#0E1424; box-shadow: 0 0 0 8px #4A5268; }
+#cw1-bar { position:absolute; left: 298px; width: 484px; top: 1258px; height: 32px; background:#8A93A8; }
+<!--/STYLE-->
+    <div id="cw1-box" class="box npc"><div id="cw1-h" class="hero"><span class="mask"><span class="in">عشان <span class="npcc">ينفذها</span></span></span></div></div>
+    <svg viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">{{spr:player:cw1-n:456:830:14:npc}}</svg>
+    <span class="tag npc" style="left:498px;top:780px">NPC</span>
+    <div id="cw1-track"></div><div id="cw1-bar"></div>
+  <script>
+  rise("#cw1-h .in", 0, 0.2);
+  tl.fromTo("#cw1-bar", { scaleX: 0.85, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.3, ease: "steps(3)" }, 0.05);
+  </script>

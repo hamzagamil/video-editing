@@ -1,0 +1,34 @@
+<!--STYLE-->
+#g15-box { left: 120px; right: 120px; top: 372px; height: 270px; padding-top: 16px; }
+#g15-h { font-size: 82px; }
+#g15-k { font-size: 50px; margin-top: 16px; }
+#g15-view { top: 700px; height: 600px; }
+#g15-card { left: 220px; top: 760px; width: 640px; height: 480px; }
+.g15-z { position:absolute; font-size: 36px; color: var(--text); text-shadow: 4px 4px 0 #05080F; }
+#g15-z1 { left: 640px; top: 1000px; } #g15-z2 { left: 680px; top: 940px; font-size: 44px; } #g15-z3 { left: 724px; top: 870px; font-size: 54px; }
+<!--/STYLE-->
+    <div class="hud"><span class="tag p1t">P1</span><span class="tag dark mode">IDLE</span></div>
+    <div id="g15-box" class="box">
+      <div id="g15-h" class="hero"><span class="w">الكورة</span> <span class="w p1c">بتنام</span> <span class="w">في رجله</span></div>
+      <div id="g15-k" class="kicker"><span class="w">وبتسمع كلامه</span></div>
+    </div>
+    <div id="g15-view" class="view">
+      <svg viewBox="0 0 920 600" width="920" height="600" aria-hidden="true">
+        <rect x="0" y="296" width="920" height="8" fill="#D9F2E4" opacity=".4"/>
+        {{spr:player:g15-p1:388:200:12:p1}}
+        <g id="g15-bm">{{spr:ball:g15-ball:540:320:10}}</g>
+      </svg>
+    </div>
+    <div id="g15-z1" class="g15-z px">z</div><div id="g15-z2" class="g15-z px">z</div><div id="g15-z3" class="g15-z px">z</div>
+    <div id="g15-card" class="card"><span class="tag">P1</span><img id="g15-ph" src="assets/photos/p7-ball.jpg" alt="" style="object-position:50% 60%" data-color-grading='{{grade}}'></div>
+  <script>
+  typeW([["#g15-h .w:nth-child(1)", {{w:383}} - 0.05], ["#g15-h .w:nth-child(2)", {{k:g15_sleeps}}], ["#g15-h .w:nth-child(3)", {{k:g15_foot}}]]);
+  bin("#g15-k .w", {{k:g15_listens}});
+  gsap.set("#g15-card", { opacity: 0 });
+  card("#g15-card", {{k:g15_sleeps}} - 0.04);
+  off("#g15-card", {{k:g15_sleeps}} + 1.16);
+  // the quietest screen: one slow idle bob and three z's
+  tl.fromTo("#g15-bm", { y: 0 }, { y: -6, duration: 1.2, ease: "steps(2)", immediateRender: false }, 0.6);
+  gsap.set(".g15-z", { opacity: 0 });
+  ["#g15-z1", "#g15-z2", "#g15-z3"].forEach((z, i) => tl.set(z, { opacity: 1 }, {{k:g15_sleeps}} + 1.3 + i * 0.5));
+  </script>

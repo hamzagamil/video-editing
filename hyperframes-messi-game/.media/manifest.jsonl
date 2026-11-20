@@ -1,0 +1,3 @@
+{"file": "assets/sfx/ui-up.wav", "kind": "sfx", "source": "synthesized locally with ffmpeg aevalsrc (no third-party audio)", "purpose": "rising square-wave blip, achievement toasts", "license": "original"}
+{"file": "assets/sfx/ui-lag.wav", "kind": "sfx", "source": "synthesized locally with ffmpeg aevalsrc (no third-party audio)", "purpose": "low pulsed square buzz under the LAG tag", "license": "original"}
+{"file": "assets/sfx/ui-select.wav", "kind": "sfx", "source": "synthesized locally with ffmpeg aevalsrc (no third-party audio)", "purpose": "two-tone select blip, character select", "license": "original"}

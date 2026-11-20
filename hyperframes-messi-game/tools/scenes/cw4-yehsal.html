@@ -1,0 +1,17 @@
+<!--STYLE-->
+#cw4-box { left: 120px; right: 120px; top: 460px; height: 300px; padding-top: 20px; }
+#cw4-k { font-size: 64px; }
+#cw4-h { font-size: 150px; line-height: 1.05; }
+<!--/STYLE-->
+    <div id="cw4-box" class="box"><div id="cw4-k" class="kicker"><span class="w">قبل ما</span></div><div id="cw4-h" class="hero"><span class="mask"><span class="in fut">يحصل</span></span></div></div>
+    <svg viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      {{dash:cw4-d:420:1080:640:1080:#46D7FF:8:18:12}}
+      <g id="cw4-g">{{spr:player:cw4-gh:660:930:14:ghost}}</g>
+      {{spr:player:cw4-p:240:930:14:p1}}
+    </svg>
+  <script>
+  bin("#cw4-k .w", 0);
+  rise("#cw4-h .in", {{w:205}}, 0.2);
+  seq("#cw4-d > *", 0, 0.2);
+  fade("#cw4-g", 0.08);
+  </script>

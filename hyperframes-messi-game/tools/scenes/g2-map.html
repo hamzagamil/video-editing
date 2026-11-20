@@ -1,0 +1,45 @@
+<!--STYLE-->
+#g2-box { left: 120px; right: 120px; top: 372px; height: 250px; padding-top: 18px; }
+#g2-k { font-size: 50px; }
+#g2-h { font-size: 76px; margin-top: 6px; }
+#g2-view { top: 690px; height: 600px; }
+<!--/STYLE-->
+    <div class="hud"><span class="tag p1t">P1</span><span class="tag dark mode">MAP</span></div>
+    <div id="g2-box" class="box">
+      <div id="g2-k" class="kicker"><span class="w">في الحقيقة هو قاعد</span></div>
+      <div id="g2-h" class="hero"><span class="w">بيرسم</span> <span class="w p1c">خريطة</span> <span class="w">في دماغه</span></div>
+    </div>
+    <div id="g2-view" class="view">
+      <svg viewBox="0 0 920 600" width="920" height="600" aria-hidden="true">
+        <g fill="#D9F2E4" opacity=".75">
+          <rect x="0" y="296" width="920" height="8"/>
+          <rect x="40" y="40" width="840" height="8"/><rect x="40" y="552" width="840" height="8"/>
+          <rect x="40" y="40" width="8" height="520"/><rect x="872" y="40" width="8" height="520"/>
+          <rect x="300" y="40" width="8" height="110"/><rect x="612" y="40" width="8" height="110"/><rect x="300" y="142" width="320" height="8"/>
+          <rect x="300" y="450" width="8" height="110"/><rect x="612" y="450" width="8" height="110"/><rect x="300" y="450" width="320" height="8"/>
+        </g>
+        {{ring:g2-circle:460:300:80:#D9F2E4:8}}
+        <g id="g2-me">{{spr:player:g2-p1:412:330:8:p1}}</g>
+        <g id="g2-fog"></g>
+      </svg>
+    </div>
+  <script>
+  // fog of war: 23 x 15 tiles, revealed in rings outward from P1
+  (function () {
+    const g = document.getElementById("g2-fog"); const NS = "http://www.w3.org/2000/svg";
+    for (let r = 0; r < 15; r++) for (let c = 0; c < 23; c++) {
+      const t = document.createElementNS(NS, "rect");
+      t.setAttribute("x", c * 40); t.setAttribute("y", r * 40); t.setAttribute("width", 40); t.setAttribute("height", 40);
+      t.setAttribute("fill", "#0A0F1C"); t.setAttribute("class", "g2-t");
+      const d = Math.max(Math.abs(c - 11.5), Math.abs(r - 9.5) * 1.3);
+      t.dataset.d = Math.round(d); g.appendChild(t);
+    }
+  })();
+  bin("#g2-k .w", 0);
+  typeW([["#g2-h .w:nth-child(1)", {{k:g2_draw}}], ["#g2-h .w:nth-child(2)", {{k:g2_map}}], ["#g2-h .w:nth-child(3)", {{k:g2_head}}]]);
+  // tiles near P1 clear first; ring k clears at draw + k*step
+  const span = Math.max(0.8, {{k:g2_head}} + 0.3 - {{k:g2_draw}});
+  document.querySelectorAll("#g2-fog .g2-t").forEach((t) => {
+    const k = +t.dataset.d; tl.set(t, { opacity: 0 }, {{k:g2_draw}} + (k / 13) * span);
+  });
+  </script>

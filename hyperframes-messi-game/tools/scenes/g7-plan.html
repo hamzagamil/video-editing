@@ -1,0 +1,43 @@
+<!--STYLE-->
+#g7-box { left: 120px; right: 120px; top: 372px; height: 300px; padding-top: 16px; }
+#g7-k { font-size: 54px; }
+#g7-h { font-size: 112px; }
+#g7-k2 { font-size: 52px; }
+#g7-view { top: 740px; height: 560px; }
+<!--/STYLE-->
+    <div class="hud"><span class="tag p1t">P1</span><span class="tag dark mode">MOVE LIST</span></div>
+    <div id="g7-box" class="box">
+      <div id="g7-k" class="kicker"><span class="w">بينفذ</span></div>
+      <div id="g7-h" class="hero"><span class="w">خطة</span> <span class="w p1c">هندسية</span></div>
+      <div id="g7-k2" class="kicker"><span class="w">رسمها في دماغه</span></div>
+    </div>
+    <div id="g7-view" class="view">
+      <svg viewBox="0 0 920 560" width="920" height="560" aria-hidden="true">
+        <g id="g7-list">
+          <g id="g7-c1"><rect x="150" y="28" width="104" height="80" fill="#0E1424"/><path d="M182 68 h40 M206 52 l16 16 l-16 16" stroke="#AEB7C9" stroke-width="10" fill="none" stroke-linecap="square"/></g>
+          <g id="g7-c2"><rect x="280" y="28" width="104" height="80" fill="#0E1424"/><path d="M332 88 v-40 M316 64 l16 -16 l16 16" stroke="#AEB7C9" stroke-width="10" fill="none" stroke-linecap="square"/></g>
+          <g id="g7-c3"><rect x="410" y="28" width="104" height="80" fill="#0E1424"/><path d="M442 68 h40 M466 52 l16 16 l-16 16" stroke="#AEB7C9" stroke-width="10" fill="none" stroke-linecap="square"/></g>
+          <g id="g7-c4"><rect x="540" y="28" width="104" height="80" fill="#0E1424"/><path d="M592 48 v40 M576 72 l16 16 l16 -16" stroke="#AEB7C9" stroke-width="10" fill="none" stroke-linecap="square"/></g>
+          <g id="g7-c5"><rect x="670" y="28" width="104" height="80" fill="#0E1424"/><path d="M702 68 h40 M726 52 l16 16 l-16 16" stroke="#AEB7C9" stroke-width="10" fill="none" stroke-linecap="square"/></g>
+        </g>
+        <g id="g7-on" fill="none" stroke="#FF7A1A" stroke-width="8">
+          <rect id="g7-o1" x="150" y="28" width="104" height="80"/><rect id="g7-o2" x="280" y="28" width="104" height="80"/><rect id="g7-o3" x="410" y="28" width="104" height="80"/><rect id="g7-o4" x="540" y="28" width="104" height="80"/><rect id="g7-o5" x="670" y="28" width="104" height="80"/>
+        </g>
+        <g id="g7-me">{{spr:player:g7-p1:120:300:8:p1}}</g>
+      </svg>
+    </div>
+  <script>
+  bin("#g7-k .w", 0);
+  bin("#g7-h .w:nth-child(1)", {{k:g7_plan}});
+  bin("#g7-h .w:nth-child(2)", {{w:140}});
+  bin("#g7-k2 .w", {{k:g7_drew}});
+  // the plan loads input by input...
+  gsap.set("#g7-list > g", { opacity: 0 });
+  gsap.set("#g7-on rect", { opacity: 0 });
+  const a = {{k:g7_plan}}, b = {{k:g7_drew}};
+  [1, 2, 3, 4, 5].forEach((i) => tl.set("#g7-c" + i, { opacity: 1 }, a + (b - a) * (i - 1) / 5));
+  // ...then he executes it, step by step
+  const e = {{k:g7_head}} - 0.2, seg = 0.17;
+  const moves = [{ x: 150 }, { y: -110 }, { x: 300 }, { y: 0 }, { x: 520 }];
+  moves.forEach((m, i) => { step("#g7-me", e + i * seg, m, seg, 3); tl.set("#g7-o" + (i + 1), { opacity: 1 }, e + (i + 1) * seg); });
+  </script>

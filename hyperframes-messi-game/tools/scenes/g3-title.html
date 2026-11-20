@@ -1,0 +1,32 @@
+<!--STYLE-->
+#g3-logo { left: 90px; right: 90px; top: 300px; height: 400px; padding-top: 30px; }
+#g3-l1 { font-size: 132px; line-height: 1.05; }
+#g3-l2 { font-size: 132px; line-height: 1.05; }
+#g3-l3 { font-size: 64px; margin-top: 8px; }
+#g3-card { left: 250px; top: 800px; width: 580px; height: 390px; }
+#g3-name { top: 1236px; font-size: 76px; }
+#g3-start { position:absolute; left: 0; right: 0; top: 1390px; text-align: center; font-size: 34px; color: var(--text); }
+<!--/STYLE-->
+    <div id="g3-logo" class="box gold">
+      <div id="g3-l1" class="hero"><span class="w">هندسة</span></div>
+      <div id="g3-l2" class="hero"><span class="w gld">الماتريكس</span></div>
+      <div id="g3-l3" class="kicker"><span class="w">العقلية</span></div>
+    </div>
+    <svg viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">
+      {{spr:star:g3-s1:118:258:8}}
+      {{spr:star:g3-s2:890:258:8}}
+    </svg>
+    <div id="g3-card" class="card"><span class="tag">P1</span><img id="g3-ph" src="assets/photos/p2-portrait.jpg" alt="" style="object-position:50% 30%" data-color-grading='{{grade}}'></div>
+    <div id="g3-name" class="hero"><span class="w">ليونيل</span> <span class="w p1c">ميسي</span></div>
+    <div id="g3-start" class="px">PRESS START</div>
+  <script>
+  pop("#g3-s1", 0); pop("#g3-s2", 0);
+  rise("#g3-l1 .w", {{k:g3_eng}} - 0.02);
+  rise("#g3-l2 .w", {{k:g3_matrix}} - 0.02);
+  bin("#g3-l3 .w", {{k:g3_mental}});
+  card("#g3-card", {{k:g3_lionel}} - 0.04);
+  bin("#g3-name .w:nth-child(1)", {{k:g3_lionel}});
+  bin("#g3-name .w:nth-child(2)", {{k:g3_messi}});
+  bin("#g3-start", {{k:g3_messi}} - 0.3);
+  blink("#g3-start", {{k:g3_messi}}, 2, 0.3);
+  </script>

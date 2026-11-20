@@ -1,0 +1,43 @@
+<!--STYLE-->
+#g4-box { left: 120px; right: 120px; top: 372px; height: 350px; padding-top: 18px; }
+#g4-k { font-size: 50px; }
+#g4-h { font-size: 96px; margin-top: 2px; }
+#g4-k2 { font-size: 52px; margin-top: 14px; }
+#g4-view { top: 770px; height: 540px; }
+#g4-card { left: 340px; top: 790px; width: 400px; height: 500px; }
+<!--/STYLE-->
+    <div class="hud"><span class="tag p1t">P1</span><span class="tag dark mode">RADAR</span></div>
+    <div id="g4-box" class="box">
+      <div id="g4-k" class="kicker"><span class="w">واكتشفوا مصطلح غريب اسمه</span></div>
+      <div id="g4-h" class="hero"><span class="w fut">الماسح الضوئي</span></div>
+      <div id="g4-k2" class="kicker"><span class="w">بيعمل</span> <span class="w fut">اسكان</span> <span class="w">للملعب</span></div>
+    </div>
+    <div id="g4-view" class="view dark">
+      <svg viewBox="0 0 920 540" width="920" height="540" aria-hidden="true">
+        {{ring:g4-r1:460:270:110:#1B8FB3:8}}
+        {{ring:g4-r2:460:270:200:#1B8FB3:8}}
+        <rect x="456" y="40" width="8" height="460" fill="#1B8FB3" opacity=".5"/><rect x="200" y="266" width="520" height="8" fill="#1B8FB3" opacity=".5"/>
+        <g id="g4-sweep"><polygon points="460,270 460,40 560,60" fill="#46D7FF" fill-opacity=".28"/><rect x="456" y="40" width="8" height="230" fill="#46D7FF"/></g>
+        <g id="g4-b1">{{spr:player:g4-n1:200:110:5:npc}}</g>
+        <g id="g4-b2">{{spr:player:g4-n2:660:120:5:npc}}</g>
+        <g id="g4-b3">{{spr:player:g4-n3:690:360:5:npc}}</g>
+        <g id="g4-b4">{{spr:player:g4-n4:180:380:5:npc}}</g>
+        <g id="g4-b5">{{spr:player:g4-n5:430:440:5:mate}}</g>
+        <g id="g4-me">{{spr:player:g4-p1:412:222:8:p1}}</g>
+      </svg>
+    </div>
+    <div id="g4-card" class="card"><span class="tag fut">SCAN</span><img id="g4-ph" src="assets/photos/p3-scan.jpg" alt="" style="object-position:50% 12%" data-color-grading='{{grade}}'></div>
+  <script>
+  bin("#g4-k .w", 0);
+  rise("#g4-h .w", {{k:g4_scanner}} - 0.02);
+  typeW([["#g4-k2 .w:nth-child(1)", {{w:70}}], ["#g4-k2 .w:nth-child(2)", {{k:g4_scan}}], ["#g4-k2 .w:nth-child(3)", {{w:72}}]]);
+  // the real scanning look for ~1.2 s, then he becomes the P1 dot of the radar
+  card("#g4-card", {{k:g4_scanner}});
+  tl.fromTo("#g4-card", { scale: 1 }, { scale: 0.2, opacity: 0, duration: 0.2, ease: "steps(4)", immediateRender: false }, {{k:g4_scanner}} + 1.2);
+  gsap.set(["#g4-b1", "#g4-b2", "#g4-b3", "#g4-b4", "#g4-b5"], { opacity: 0 });
+  // three finite sweeps from «ميسي», each revealing blips
+  const s0 = {{k:g4_messi}};
+  tl.fromTo("#g4-sweep", { rotation: 0, svgOrigin: "460 270" }, { rotation: 1080, svgOrigin: "460 270", duration: Math.max(3, {{k:g4_moving}} - s0), ease: "steps(48)" }, s0);
+  const per = Math.max(3, {{k:g4_moving}} - s0) / 3;
+  [["#g4-b2", 0.12], ["#g4-b3", 0.36], ["#g4-b5", 0.5], ["#g4-b4", 0.62], ["#g4-b1", 0.88]].forEach(([b, f]) => tl.set(b, { opacity: 1 }, s0 + per * f));
+  </script>

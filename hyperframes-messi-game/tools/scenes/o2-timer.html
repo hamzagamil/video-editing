@@ -1,0 +1,14 @@
+<!--STYLE-->
+#o2-card { left: 600px; top: 236px; width: 400px; height: 230px; padding-top: 22px; }
+#o2-num { font-size: 82px; font-weight: 900; line-height: 1.1; color: var(--text); }
+#o2-num .u { font-size: 50px; color: var(--text-dim); }
+#o2-px { position:absolute; left: 30px; top: 120px; font-size: 28px; color: var(--npc); }
+#o2-track { position:absolute; left: 30px; right: 30px; top: 164px; height: 36px; background: #0E1424; box-shadow: 0 0 0 6px #4A5268; }
+#o2-bar { position:absolute; left: 36px; right: 36px; top: 170px; height: 24px; background: #8A93A8; }
+<!--/STYLE-->
+    <div id="o2-card" class="box npc"><div id="o2-num"><bdi>0.3–0.4</bdi> <span class="u">ث</span></div><div id="o2-px" class="px">LOADING</div><div id="o2-track"></div><div id="o2-bar"></div></div>
+  <script>
+  card("#o2-card", 0);
+  tl.fromTo("#o2-bar", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 0.9, duration: Math.max(0.6, {{k:o2_second}} - 0.1), ease: "steps(10)" }, 0.1);
+  off("#o2-card", {{D}} - 0.07);
+  </script>

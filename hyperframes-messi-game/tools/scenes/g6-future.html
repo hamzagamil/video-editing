@@ -1,0 +1,48 @@
+<!--STYLE-->
+#g6-box { left: 120px; right: 120px; top: 372px; height: 320px; padding-top: 16px; }
+#g6-k { font-size: 50px; }
+#g6-ha { position:absolute !important; left: 0 !important; right: 0 !important; top: 96px; font-size: 76px; }
+#g6-hb { position:absolute !important; left: 0 !important; right: 0 !important; top: 84px; font-size: 90px; }
+#g6-k2 { position:absolute !important; left: 0 !important; right: 0 !important; top: 240px; font-size: 50px; }
+#g6-view { top: 740px; height: 560px; }
+#g6-gl { position:absolute; left: 652px; top: 1006px; font-size: 44px; font-weight: 900; color: var(--future); text-shadow: 4px 4px 0 #05080F; }
+<!--/STYLE-->
+    <div class="hud"><span class="tag p1t">P1</span><span class="tag dark mode">AIM ASSIST</span></div>
+    <div id="g6-box" class="box">
+      <div id="g6-k" class="kicker"><span class="w">هو بيبقى عارف</span></div>
+      <div id="g6-ha" class="hero"><span class="w">هيباصيها فين؟</span> <span class="w">وهيتحرك فين؟</span></div>
+      <div id="g6-hb" class="hero"><span class="mask"><span class="in">شايف <span class="fut">المستقبل</span></span></span></div>
+      <div id="g6-k2" class="kicker"><span class="w">قبل ما يحصل</span></div>
+    </div>
+    <div id="g6-view" class="view">
+      <svg viewBox="0 0 920 560" width="920" height="560" aria-hidden="true">
+        <rect x="0" y="276" width="920" height="8" fill="#D9F2E4" opacity=".6"/>
+        {{dash:g6-pl:260:420:700:150:#46D7FF:8:18:12}}
+        {{dash:g6-rl:250:470:600:440:#46D7FF:8:18:12}}
+        {{spr:player:g6-mate:700:60:8:mate}}
+        <g id="g6-gh">{{spr:player:g6-ghost:560:330:8:ghost}}</g>
+        <g id="g6-gb">{{spr:ball:g6-gball:690:150:8:ghost}}</g>
+        <g id="g6-me">{{spr:player:g6-p1:160:330:8:p1}}</g>
+        <g id="g6-bm">{{spr:ball:g6-ball:232:420:8}}</g>
+      </svg>
+    </div>
+    <div id="g6-gl"><bdi>+1</bdi> ث</div>
+  <script>
+  bin("#g6-k .w", 0);
+  bin("#g6-ha .w:nth-child(1)", {{k:g6_pass}});
+  bin("#g6-ha .w:nth-child(2)", {{k:g6_move}});
+  off("#g6-ha", {{k:g6_sees}} - 0.07);
+  rise("#g6-hb .in", {{k:g6_sees}} - 0.02);
+  bin("#g6-k2 .w", {{k:g6_before}});
+  // the future is drawn before he moves
+  seq("#g6-pl > *", {{k:g6_pass}}, 0.35);
+  gsap.set("#g6-gb", { opacity: 0 }); tl.set("#g6-gb", { opacity: 1 }, {{k:g6_pass}} + 0.35);
+  seq("#g6-rl > *", {{k:g6_move}}, 0.35);
+  gsap.set(["#g6-gh", "#g6-gl"], { opacity: 0 }); tl.set(["#g6-gh", "#g6-gl"], { opacity: 1 }, {{k:g6_move}} + 0.35);
+  // ...then it happens exactly as drawn
+  step("#g6-bm", {{k:g6_future}}, { x: 458, y: -270 }, 0.45, 6);
+  step("#g6-me", {{k:g6_future}} + 0.1, { x: 400, y: 0 }, 0.9, 11);
+  off("#g6-gb", {{k:g6_future}} + 0.45);
+  off("#g6-gh", {{k:g6_future}} + 1.0);
+  off("#g6-gl", {{k:g6_future}} + 1.0);
+  </script>

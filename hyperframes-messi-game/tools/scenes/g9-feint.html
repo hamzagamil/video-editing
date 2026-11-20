@@ -1,0 +1,37 @@
+<!--STYLE-->
+#g9-box { left: 120px; right: 120px; top: 372px; height: 270px; padding-top: 16px; }
+#g9-l1 { font-size: 72px; }
+#g9-l2 { font-size: 72px; }
+#g9-view { top: 710px; height: 590px; }
+#g9-pct { position:absolute; left: 150px; top: 726px; font-size: 150px; font-weight: 900; color: var(--text); text-shadow: 8px 8px 0 #05080F; }
+<!--/STYLE-->
+    <div class="hud"><span class="tag p1t">P1</span><span class="tag dark mode">NPC SCRIPT</span></div>
+    <div id="g9-box" class="box">
+      <div id="g9-l1" class="hero"><span class="w">لو عمل</span> <span class="w">بكتفه</span> <span class="w p1c">يمين</span></div>
+      <div id="g9-l2" class="hero"><span class="w">هيروح</span> <span class="w">ناحية</span> <span class="w npcc">الشمال</span></div>
+    </div>
+    <div id="g9-view" class="view">
+      <svg viewBox="0 0 920 590" width="920" height="590" aria-hidden="true">
+        <rect x="0" y="526" width="920" height="8" fill="#D9F2E4" opacity=".6"/>
+        {{dash:g9-script:380:330:90:330:#46D7FF:8:18:12}}
+        <g id="g9-sarr" fill="#FF7A1A"><rect x="610" y="280" width="90" height="16"/><rect x="700" y="264" width="16" height="48"/><rect x="716" y="272" width="16" height="32"/><rect x="732" y="280" width="16" height="16"/></g>
+        <g id="g9-npcw">{{spr:player:g9-npc:330:250:9:npc}}</g>
+        <g id="g9-me">{{spr:player:g9-p1:500:250:9:p1}}</g>
+      </svg>
+    </div>
+    <div id="g9-pct"><bdi>99٪</bdi></div>
+  <script>
+  typeW([["#g9-l1 .w:nth-child(1)", {{w:216}}], ["#g9-l1 .w:nth-child(2)", {{k:g9_shoulder}}], ["#g9-l1 .w:nth-child(3)", {{w:219}}]]);
+  typeW([["#g9-l2 .w:nth-child(1)", {{k:g9_go}}], ["#g9-l2 .w:nth-child(2)", {{w:224}}], ["#g9-l2 .w:nth-child(3)", {{k:g9_left}}]]);
+  // P1's input: shoulder to the viewer's right
+  gsap.set("#g9-sarr", { opacity: 0 });
+  blink("#g9-sarr", {{k:g9_shoulder}} - 0.36, 1, 0.36);
+  tl.set("#g9-sarr", { opacity: 1 }, {{w:219}});
+  step("#g9-me", {{w:219}}, { x: 24 }, 0.12, 2);
+  // the NPC's script is drawn before he moves...
+  seq("#g9-script > *", {{k:g9_knows2}}, 0.5);
+  // ...then he follows it, exactly
+  step("#g9-npcw", {{k:g9_left}} - 0.1, { x: -240 }, 0.5, 6);
+  step("#g9-me", {{k:g9_left}} + 0.3, { x: 24, y: -200 }, 0.5, 6);
+  slam("#g9-pct", {{k:g9_pct}});
+  </script>

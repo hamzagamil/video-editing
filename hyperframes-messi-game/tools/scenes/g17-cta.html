@@ -1,0 +1,34 @@
+<!--STYLE-->
+#g17-sel { position:absolute; left: 0; right: 0; top: 300px; text-align: center; font-size: 28px; color: var(--text-dim); }
+#g17-box { left: 130px; right: 130px; top: 372px; height: 250px; padding-top: 16px; }
+#g17-k { font-size: 40px; }
+#g17-h { font-size: 118px; }
+.g17-slot { position:absolute; width: 190px; height: 240px; background: #0E1424; box-shadow: 0 0 0 8px var(--npc-dark); }
+#g17-sp1 { left: 445px; top: 680px; box-shadow: 0 0 0 8px var(--p1), 12px 12px 0 8px #05080F; }
+.g17-npc { top: 1000px; }
+#g17-s1 { left: 160px; } #g17-s2 { left: 445px; } #g17-s3 { left: 730px; }
+.g17-q { position:absolute; left: 0; right: 0; top: 70px; text-align: center; font-size: 72px; color: var(--npc); }
+.g17-slot .tag { left: 40px; top: 196px; font-size: 28px; }
+#g17-cta { left: 100px; right: 100px; top: 1330px; height: 116px; padding-top: 20px; }
+#g17-cta .t { font-size: 46px; font-weight: 900; line-height: 1.4; }
+<!--/STYLE-->
+    <div id="g17-sel" class="px">SELECT YOUR RIVAL</div>
+    <div id="g17-box" class="box">
+      <div id="g17-k" class="kicker"><span class="w">أكتر لحظة حسيت فيها إن ميسي بيلعب</span></div>
+      <div id="g17-h" class="hero"><span class="mask"><span class="in p1c">فيديو جيم</span></span></div>
+    </div>
+    <div id="g17-sp1" class="g17-slot"><span class="tag">P1</span></div>
+    <svg viewBox="0 0 1080 1920" width="1080" height="1920" style="left:0;top:0" aria-hidden="true">{{spr:player:g17-p1:476:722:8:p1}}</svg>
+    <div id="g17-s1" class="g17-slot g17-npc"><div class="g17-q px">?</div><span class="tag npc">NPC</span></div>
+    <div id="g17-s2" class="g17-slot g17-npc"><div class="g17-q px">?</div><span class="tag npc">NPC</span></div>
+    <div id="g17-s3" class="g17-slot g17-npc"><div class="g17-q px">?</div><span class="tag npc">NPC</span></div>
+    <div id="g17-cta" class="box p1"><span class="t">اكتب في الكومنتات: <span class="p1c">كانت ضد مين؟</span></span></div>
+  <script>
+  bin("#g17-sel", 0);
+  bin("#g17-k .w", 0);
+  rise("#g17-h .in", {{k:g17_video}} - 0.02);
+  [["#g17-s1", 0], ["#g17-s2", 0.12], ["#g17-s3", 0.24]].forEach(([s, d]) => pop(s, {{k:g17_people}} + d, 0.16));
+  gsap.set(".g17-npc .tag", { opacity: 0 });
+  tl.set(".g17-npc .tag", { opacity: 1 }, {{k:g17_npc}});
+  card("#g17-cta", {{k:g17_people}} + 0.45);
+  </script>

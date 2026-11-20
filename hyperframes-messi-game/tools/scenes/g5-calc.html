@@ -1,0 +1,38 @@
+<!--STYLE-->
+#g5-box { left: 120px; right: 120px; top: 372px; height: 150px; padding-top: 26px; }
+#g5-k { font-size: 64px; }
+#g5-view { top: 590px; height: 720px; }
+.g5-l { position:absolute; right: 120px; font-weight: 800; font-size: 54px; text-shadow: 4px 4px 0 #05080F; color: var(--text); }
+#g5-l1 { top: 650px; } #g5-l2 { top: 880px; } #g5-l3 { top: 1080px; line-height: 1.2; }
+<!--/STYLE-->
+    <div class="hud"><span class="tag p1t">P1</span><span class="tag dark mode">LOCK-ON</span></div>
+    <div id="g5-box" class="box"><div id="g5-k" class="kicker"><span class="w">عقل ميسي بيكون على حسب</span></div></div>
+    <div id="g5-view" class="view dark">
+      <svg viewBox="0 0 920 720" width="920" height="720" aria-hidden="true">
+        <rect x="0" y="236" width="920" height="8" fill="#22304D"/><rect x="0" y="476" width="920" height="8" fill="#22304D"/>
+        <g id="g5-m1">{{spr:player:g5-n1:120:60:8:npc}}</g>
+        {{dash:g5-v1:250:120:400:120:#46D7FF:8:16:10}}
+        <g id="g5-v1h" fill="#46D7FF"><rect x="396" y="104" width="12" height="32"/><rect x="408" y="112" width="12" height="16"/></g>
+        <g id="g5-m2">{{spr:player:g5-n2:120:300:8:npc}}</g>
+        <g id="g5-pin" fill="#46D7FF"><rect x="300" y="300" width="40" height="40"/><rect x="312" y="340" width="16" height="40"/><rect x="290" y="380" width="60" height="8"/></g>
+        <g id="g5-m3">{{spr:keeper:g5-k:120:536:8:keeper}}</g>
+        <polygon id="g5-ang" points="176,640 140,700 216,700" fill="#46D7FF" fill-opacity=".45"/>
+        {{dash:g5-a1:176:640:140:700:#46D7FF:6:10:6}}
+        {{dash:g5-a2:176:640:216:700:#46D7FF:6:10:6}}
+        <g id="g5-lk1" fill="none" stroke="#46D7FF" stroke-width="8"><path d="M96 48 h30 M96 48 v30 M240 48 h-30 M240 48 v30 M96 188 h30 M96 188 v-30 M240 188 h-30 M240 188 v-30"/></g>
+        <g id="g5-lk2" fill="none" stroke="#46D7FF" stroke-width="8"><path d="M96 288 h30 M96 288 v30 M240 288 h-30 M240 288 v30 M96 428 h30 M96 428 v-30 M240 428 h-30 M240 428 v-30"/></g>
+        <g id="g5-lk3" fill="none" stroke="#46D7FF" stroke-width="8"><path d="M96 524 h30 M96 524 v30 M240 524 h-30 M240 524 v30 M96 708 h30 M96 708 v-30 M240 708 h-30 M240 708 v-30"/></g>
+      </svg>
+    </div>
+    <div id="g5-l1" class="g5-l"><span class="w">سرعة <span class="fut">اللاعب</span></span></div>
+    <div id="g5-l2" class="g5-l"><span class="w">مكانة <span class="fut">مركزه</span></span></div>
+    <div id="g5-l3" class="g5-l"><span class="w">الزاوية اللي بين<br><span class="fut">رجلين الحارس</span></span></div>
+  <script>
+  bin("#g5-k .w", 0);
+  gsap.set(["#g5-m1", "#g5-m2", "#g5-m3"], { opacity: 0.35 });
+  const mod = (i, t) => { tl.set("#g5-m" + i, { opacity: 1 }, t); pop("#g5-lk" + i, t, 0.16); bin("#g5-l" + i + " .w", t); };
+  mod(1, {{k:g5_speed}} - 0.04); seq("#g5-v1 > *", {{k:g5_speed}} + 0.05, 0.3); bin("#g5-v1h", {{k:g5_speed}} + 0.35);
+  mod(2, {{k:g5_pos}} - 0.04); pop("#g5-pin", {{k:g5_pos}} + 0.08, 0.16);
+  mod(3, {{k:g5_angle}} - 0.04);
+  seq("#g5-a1 > *", {{k:g5_keeper}} - 0.6, 0.3); seq("#g5-a2 > *", {{k:g5_keeper}} - 0.6, 0.3); fade("#g5-ang", {{k:g5_keeper}} - 0.3);
+  </script>
